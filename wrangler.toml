@@ -1,0 +1,11 @@
+name = "seinuc-forca-tarefa"
+compatibility_date = "2024-01-01"
+pages_build_output_dir = "."
+
+# Variáveis de ambiente (configurar no dashboard do Cloudflare)
+# GITHUB_TOKEN = "seu_token_aqui"
+# GITHUB_OWNER = "NGEO-IDEFLOR-Bio"
+# GITHUB_REPO = "seinuc-forca-tarefa"
+
+[env.production]
+# Variáveis específicas de produção

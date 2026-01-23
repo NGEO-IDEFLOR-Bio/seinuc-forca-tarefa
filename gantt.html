@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint 1 - Gantt Chart | SertanAI App</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --bg-column: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --border: #475569;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .header {
+            max-width: 1600px;
+            margin: 0 auto 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-left .subtitle {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-link {
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .nav-link:hover {
+            background: var(--bg-column);
+            border-color: var(--primary);
+        }
+
+        .gantt-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid var(--border);
+        }
+
+        .gantt-header {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .gantt-dates {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.5rem;
+            text-align: center;
+        }
+
+        .gantt-date {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .gantt-date.today {
+            color: var(--primary);
+        }
+
+        .gantt-row {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+            align-items: center;
+        }
+
+        .task-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .task-id {
+            font-size: 0.75rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .task-name {
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .task-meta {
+            display: flex;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .gantt-timeline {
+            position: relative;
+            height: 40px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.5rem;
+        }
+
+        .gantt-bar {
+            position: absolute;
+            height: 32px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            padding: 0 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .gantt-bar:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .gantt-bar.p0 {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+        }
+
+        .gantt-bar.p1 {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+
+        .gantt-bar.p2 {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+        }
+
+        .gantt-bar.in-progress {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .gantt-bar.done {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        .legend {
+            max-width: 1600px;
+            margin: 2rem auto 0;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .legend h3 {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .legend-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .legend-color {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 4rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-left">
+            <h1>Sprint 1 - Gantt Chart</h1>
+            <p class="subtitle">Semana 1 (19-23/01/2026) | Timeline Visual</p>
+        </div>
+        <div class="nav-links">
+            <a href="kanban.html" class="nav-link">
+                <i data-lucide="layout-dashboard" style="width: 16px; height: 16px;"></i>
+                Kanban
+            </a>
+        </div>
+    </div>
+
+    <div class="gantt-container">
+        <div class="gantt-header">
+            <div style="font-weight: 600;">Tarefa</div>
+            <div class="gantt-dates" id="gantt-dates">
+                <!-- Datas serão preenchidas via JS -->
+            </div>
+        </div>
+        <div id="gantt-content" class="loading">
+            <i data-lucide="loader" style="width: 32px; height: 32px; animation: spin 1s linear infinite;"></i>
+            <p>Carregando timeline...</p>
+        </div>
+    </div>
+
+    <div class="legend">
+        <h3>📖 Legenda</h3>
+        <div class="legend-items">
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #ef4444, #dc2626);"></div>
+                <span>P0 - Crítico</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #f59e0b, #d97706);"></div>
+                <span>P1 - Alto</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #3b82f6, #2563eb);"></div>
+                <span>P2 - Normal</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #10b981, #059669);"></div>
+                <span>Concluído</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function loadTasks() {
+            try {
+                // Ler arquivo local com cache busting
+                const response = await fetch('tasks.json?v=' + Date.now());
+                const data = await response.json();
+                renderGantt(data);
+            } catch (error) {
+                document.getElementById('gantt-content').innerHTML = `
+                    <p style="color: var(--danger);">Erro ao carregar tarefas: ${error.message}</p>
+                `;
+            }
+        }
+
+        function renderGantt(data) {
+            const sprint = data.sprint;
+            const tasks = data.tasks;
+
+            // Gerar datas da sprint
+            const startDate = new Date(sprint.startDate);
+            const endDate = new Date(sprint.endDate);
+            const dates = [];
+
+            for (let date = new Date(startDate); date <= endDate; date.setDate(date.getDate() + 1)) {
+                dates.push(new Date(date));
+            }
+
+            // Renderizar cabeçalho de datas
+            const datesContainer = document.getElementById('gantt-dates');
+            const today = new Date().toDateString();
+
+            datesContainer.innerHTML = dates.map(date => {
+                const isToday = date.toDateString() === today;
+                const dayName = date.toLocaleDateString('pt-BR', { weekday: 'short' });
+                const dayNum = date.getDate();
+                return `<div class="gantt-date ${isToday ? 'today' : ''}">${dayName}<br/>${dayNum}/01</div>`;
+            }).join('');
+
+            // Renderizar tarefas
+            const content = document.getElementById('gantt-content');
+            content.className = '';
+            content.innerHTML = tasks.map(task => {
+                const taskStart = new Date(task.startDate);
+                const taskDuration = task.duration;
+
+                // Calcular posição e largura da barra
+                const daysDiff = Math.floor((taskStart - startDate) / (1000 * 60 * 60 * 24));
+                const leftPercent = (daysDiff / dates.length) * 100;
+                const widthPercent = (taskDuration / dates.length) * 100;
+
+                const statusClass = task.status === 'done' ? 'done' : (task.status === 'in-progress' ? 'in-progress' : '');
+
+                return `
+                    <div class="gantt-row">
+                        <div class="task-info">
+                            <span class="task-id">${task.id}</span>
+                            <span class="task-name">${task.title}</span>
+                            <div class="task-meta">
+                                <span>${task.gate || ''}</span>
+                                ${task.responsible ? `<span>👤 ${task.responsible}</span>` : ''}
+                            </div>
+                        </div>
+                        <div class="gantt-timeline">
+                            <div class="gantt-bar ${task.priority} ${statusClass}" 
+                                 style="left: ${leftPercent}%; width: ${widthPercent}%;"
+                                 title="${task.description}">
+                                ${task.duration}d
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            lucide.createIcons();
+        }
+
+        // Carregar ao inicializar
+        loadTasks();
+
+        // Adicionar animação de spin
+        const style = document.createElement('style');
+        style.textContent = '@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }';
+        document.head.appendChild(style);
+    </script>
+</body>
+
+</html>
