@@ -681,21 +681,23 @@
 
             // Agrupar tarefas por status
             const columns = {
-                'backlog': [],
+                'todo': [],
                 'in-progress': [],
-                'review': [],
+                'in-review': [],
                 'done': []
             };
 
             tasksData.tasks.forEach(task => {
-                columns[task.status].push(task);
+                if (columns[task.status]) {
+                    columns[task.status].push(task);
+                }
             });
 
             // Renderizar colunas
             board.innerHTML = `
-                ${renderColumn('backlog', 'inbox', 'Backlog', columns['backlog'])}
+                ${renderColumn('todo', 'inbox', 'Backlog', columns['todo'])}
                 ${renderColumn('in-progress', 'play-circle', 'Em Andamento', columns['in-progress'])}
-                ${renderColumn('review', 'search', 'Review', columns['review'])}
+                ${renderColumn('in-review', 'search', 'Review', columns['in-review'])}
                 ${renderColumn('done', 'check-circle', 'Concluído', columns['done'])}
             `;
 
