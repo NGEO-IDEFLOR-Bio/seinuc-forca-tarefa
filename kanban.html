@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint 1 - Kanban Board | SertanAI App</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --bg-column: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --border: #475569;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .header {
+            max-width: 1600px;
+            margin: 0 auto 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-left .subtitle {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-link {
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .nav-link:hover {
+            background: var(--bg-column);
+            border-color: var(--primary);
+        }
+
+        .stats {
+            max-width: 1600px;
+            margin: 0 auto 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-card .label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .kanban-board {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .column {
+            background: var(--bg-column);
+            border-radius: 12px;
+            padding: 1.5rem;
+            min-height: 400px;
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .column.drag-over {
+            border-color: var(--primary);
+        }
+
+        .column-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .column-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .column-count {
+            background: var(--bg-dark);
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 8px;
+            padding: 1.25rem;
+            border: 1px solid var(--border);
+            cursor: move;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .card.dragging {
+            opacity: 0.5;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-id {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .priority {
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .priority.p0 {
+            background: rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
+        }
+
+        .priority.p1 {
+            background: rgba(245, 158, 11, 0.2);
+            color: #fcd34d;
+        }
+
+        .priority.p2 {
+            background: rgba(59, 130, 246, 0.2);
+            color: #93c5fd;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .card-desc {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .card-footer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .tag {
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            background: rgba(59, 130, 246, 0.2);
+            color: #93c5fd;
+        }
+
+        .tag.gate {
+            background: rgba(139, 92, 246, 0.2);
+            color: #c4b5fd;
+        }
+
+        .tag.tipo-doc {
+            background: rgba(16, 185, 129, 0.2);
+            color: #6ee7b7;
+        }
+
+        .tag.tipo-decisao {
+            background: rgba(245, 158, 11, 0.2);
+            color: #fcd34d;
+        }
+
+        .tag.tipo-execucao {
+            background: rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
+        }
+
+        .tag.tipo-ritual {
+            background: rgba(168, 85, 247, 0.2);
+            color: #d8b4fe;
+        }
+
+        .responsible {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .deadline {
+            font-size: 0.75rem;
+            color: var(--warning);
+            font-weight: 500;
+        }
+
+        .add-card-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background: rgba(59, 130, 246, 0.1);
+            border: 2px dashed var(--primary);
+            border-radius: 8px;
+            color: var(--primary);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .add-card-btn:hover {
+            background: rgba(59, 130, 246, 0.2);
+            border-color: #3b82f6;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 600px;
+            width: 90%;
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-header h2 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .close-btn:hover {
+            background: var(--bg-dark);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.875rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-secondary {
+            background: var(--bg-dark);
+            color: var(--text-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--border);
+        }
+
+        .icon {
+            width: 16px;
+            height: 16px;
+            vertical-align: middle;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 4rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .kanban-board {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-left">
+            <h1>Sprint 1 - Kanban Board</h1>
+            <p class="subtitle">Semana 1 (19-23/01/2026) | Fundações Técnicas para Mobile V0.5</p>
+        </div>
+        <div class="nav-links">
+            <a href="gantt.html" class="nav-link">
+                <i data-lucide="gantt-chart" style="width: 16px; height: 16px;"></i>
+                Gantt
+            </a>
+        </div>
+    </div>
+
+    <div class="stats">
+        <div class="stat-card">
+            <div class="label">Total de Tarefas</div>
+            <div class="value" style="color: var(--primary);" id="stat-total">0</div>
+        </div>
+        <div class="stat-card">
+            <div class="label">Críticas (P0)</div>
+            <div class="value" style="color: var(--danger);" id="stat-critical">0</div>
+        </div>
+        <div class="stat-card">
+            <div class="label">Em Andamento</div>
+            <div class="value" style="color: var(--warning);" id="stat-progress">0</div>
+        </div>
+        <div class="stat-card">
+            <div class="label">Concluídas</div>
+            <div class="value" style="color: var(--success);" id="stat-done">0</div>
+        </div>
+    </div>
+
+    <div id="kanban-board" class="loading">
+        <i data-lucide="loader" style="width: 32px; height: 32px; animation: spin 1s linear infinite;"></i>
+        <p>Carregando tarefas...</p>
+    </div>
+
+    <!-- Modal para adicionar card -->
+    <div class="modal" id="addCardModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Criar Novo Card</h2>
+                <button class="close-btn" onclick="closeModal()">
+                    <i data-lucide="x" class="icon"></i>
+                </button>
+            </div>
+            <form id="addCardForm">
+                <div class="form-group">
+                    <label for="cardId">ID da Tarefa *</label>
+                    <input type="text" id="cardId" placeholder="Ex: W1-11" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cardTitle">Título *</label>
+                    <input type="text" id="cardTitle" placeholder="Ex: Configurar Hasura CLI" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cardDesc">Descrição</label>
+                    <textarea id="cardDesc" placeholder="Descreva a tarefa..."></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cardPriority">Prioridade *</label>
+                        <select id="cardPriority" required>
+                            <option value="p0">P0 — Crítico</option>
+                            <option value="p1">P1 — Alto</option>
+                            <option value="p2">P2 — Normal</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cardType">Tipo</label>
+                        <select id="cardType">
+                            <option value="">Nenhum</option>
+                            <option value="tipo-doc">Doc</option>
+                            <option value="tipo-decisao">Decisão</option>
+                            <option value="tipo-execucao">Execução</option>
+                            <option value="tipo-ritual">Ritual</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cardGate">Gate</label>
+                        <input type="text" id="cardGate" placeholder="Ex: G1, GAP A">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cardDeadline">Prazo</label>
+                        <input type="date" id="cardDeadline">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="cardResponsible">Responsável</label>
+                    <input type="text" id="cardResponsible" placeholder="Ex: Samuel Santos">
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Criar Card</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para editar card -->
+    <div class="modal" id="editCardModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Editar Card</h2>
+                <button class="close-btn" onclick="closeEditModal()">
+                    <i data-lucide="x" class="icon"></i>
+                </button>
+            </div>
+            <form id="editCardForm">
+                <div class="form-group">
+                    <label for="editCardId">ID da Tarefa *</label>
+                    <input type="text" id="editCardId" readonly
+                        style="background: var(--bg-column); cursor: not-allowed;">
+                </div>
+
+                <div class="form-group">
+                    <label for="editCardTitle">Título *</label>
+                    <input type="text" id="editCardTitle" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="editCardDesc">Descrição</label>
+                    <textarea id="editCardDesc"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editCardPriority">Prioridade *</label>
+                        <select id="editCardPriority" required>
+                            <option value="p0">P0 — Crítico</option>
+                            <option value="p1">P1 — Alto</option>
+                            <option value="p2">P2 — Normal</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editCardType">Tipo</label>
+                        <select id="editCardType">
+                            <option value="">Nenhum</option>
+                            <option value="tipo-doc">Doc</option>
+                            <option value="tipo-decisao">Decisão</option>
+                            <option value="tipo-execucao">Execução</option>
+                            <option value="tipo-ritual">Ritual</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editCardGate">Gate</label>
+                        <input type="text" id="editCardGate">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editCardDeadline">Prazo</label>
+                        <input type="date" id="editCardDeadline">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editCardResponsible">Responsável</label>
+                        <input type="text" id="editCardResponsible">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editCardDuration">Duração (dias)</label>
+                        <input type="number" id="editCardDuration" min="1" value="1">
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeEditModal()">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let tasksData = null;
+        let currentColumn = null;
+
+
+        // Carregar tarefas do JSON
+        async function loadTasks() {
+            try {
+                // Ler arquivo local com cache busting
+                // O Vercel faz redeploy automático quando há push no Git
+                const response = await fetch('tasks.json?v=' + Date.now());
+                tasksData = await response.json();
+                renderKanban();
+            } catch (error) {
+                document.getElementById('kanban-board').innerHTML = `
+                    <p style="color: var(--danger);">Erro ao carregar tarefas: ${error.message}</p>
+                `;
+            }
+        }
+
+
+        function renderKanban() {
+            const board = document.getElementById('kanban-board');
+            board.className = 'kanban-board';
+
+            // Agrupar tarefas por status
+            const columns = {
+                'backlog': [],
+                'in-progress': [],
+                'review': [],
+                'done': []
+            };
+
+            tasksData.tasks.forEach(task => {
+                columns[task.status].push(task);
+            });
+
+            // Renderizar colunas
+            board.innerHTML = `
+                ${renderColumn('backlog', 'inbox', 'Backlog', columns['backlog'])}
+                ${renderColumn('in-progress', 'play-circle', 'Em Andamento', columns['in-progress'])}
+                ${renderColumn('review', 'search', 'Review', columns['review'])}
+                ${renderColumn('done', 'check-circle', 'Concluído', columns['done'])}
+            `;
+
+            updateStats();
+            setupDragAndDrop();
+            lucide.createIcons();
+        }
+
+        function renderColumn(id, icon, title, tasks) {
+            const cardsHTML = tasks.map(task => renderCard(task)).join('');
+
+            return `
+                <div class="column" id="${id}">
+                    <div class="column-header">
+                        <div class="column-title">
+                            <i data-lucide="${icon}" class="icon"></i> ${title}
+                        </div>
+                        <div class="column-count">${tasks.length}</div>
+                    </div>
+                    <div class="cards">
+                        ${cardsHTML}
+                    </div>
+                    <button class="add-card-btn" data-column="${id}">
+                        <i data-lucide="plus-circle" class="icon"></i>
+                        Adicionar Card
+                    </button>
+                </div>
+            `;
+        }
+
+        function renderCard(task) {
+            const priorityText = {
+                'p0': 'P0 — Crítico',
+                'p1': 'P1 — Alto',
+                'p2': 'P2 — Normal'
+            }[task.priority];
+
+            const typeLabels = {
+                'tipo-doc': 'Doc',
+                'tipo-decisao': 'Decisão',
+                'tipo-execucao': 'Execução',
+                'tipo-ritual': 'Ritual'
+            };
+
+            let typeTag = '';
+            if (task.type) {
+                typeTag = `<span class="tag ${task.type}">${typeLabels[task.type]}</span>`;
+            }
+
+            let gateTag = '';
+            if (task.gate) {
+                gateTag = `<span class="tag gate">${task.gate}</span>`;
+            }
+
+            let deadline = '';
+            if (task.deadline) {
+                const date = new Date(task.deadline);
+                const formattedDate = date.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' });
+                deadline = `<span class="deadline">📅 ${formattedDate}</span>`;
+            }
+
+            let responsible = '';
+            if (task.responsible) {
+                responsible = `<div class="responsible">👤 ${task.responsible}</div>`;
+            }
+
+            return `
+                <div class="card" draggable="true" data-id="${task.id}" ondblclick="openEditModal('${task.id}')" title="Duplo-clique para editar">
+                    <div class="card-header">
+                        <div class="card-id">${task.id}</div>
+                        <div class="priority ${task.priority}">${priorityText}</div>
+                    </div>
+                    <div class="card-title">${task.title}</div>
+                    ${task.description ? `<div class="card-desc">${task.description}</div>` : ''}
+                    <div class="card-footer">
+                        ${gateTag}
+                        ${typeTag}
+                        ${deadline}
+                    </div>
+                    ${responsible}
+                </div>
+            `;
+        }
+
+        // Edit card functions
+        let editingTaskId = null;
+
+        function openEditModal(taskId) {
+            editingTaskId = taskId;
+            const task = tasksData.tasks.find(t => t.id === taskId);
+
+            if (!task) return;
+
+            // Preencher formulário
+            document.getElementById('editCardId').value = task.id;
+            document.getElementById('editCardTitle').value = task.title;
+            document.getElementById('editCardDesc').value = task.description || '';
+            document.getElementById('editCardPriority').value = task.priority;
+            document.getElementById('editCardType').value = task.type || '';
+            document.getElementById('editCardGate').value = task.gate || '';
+            document.getElementById('editCardDeadline').value = task.deadline || '';
+            document.getElementById('editCardResponsible').value = task.responsible || '';
+            document.getElementById('editCardDuration').value = task.duration || 1;
+
+            document.getElementById('editCardModal').classList.add('active');
+        }
+
+        function closeEditModal() {
+            document.getElementById('editCardModal').classList.remove('active');
+            document.getElementById('editCardForm').reset();
+            editingTaskId = null;
+        }
+
+        document.getElementById('editCardForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const task = tasksData.tasks.find(t => t.id === editingTaskId);
+            if (!task) return;
+
+            // Atualizar dados
+            task.title = document.getElementById('editCardTitle').value;
+            task.description = document.getElementById('editCardDesc').value;
+            task.priority = document.getElementById('editCardPriority').value;
+            task.type = document.getElementById('editCardType').value;
+            task.gate = document.getElementById('editCardGate').value;
+            task.deadline = document.getElementById('editCardDeadline').value;
+            task.responsible = document.getElementById('editCardResponsible').value;
+            task.duration = parseInt(document.getElementById('editCardDuration').value) || 1;
+
+            renderKanban();
+            saveTaskState();
+            closeEditModal();
+        });
+
+        function setupDragAndDrop() {
+            const cards = document.querySelectorAll('.card');
+            const columns = document.querySelectorAll('.column');
+
+            cards.forEach(card => {
+                card.addEventListener('dragstart', () => {
+                    card.classList.add('dragging');
+                });
+
+                card.addEventListener('dragend', () => {
+                    card.classList.remove('dragging');
+                    saveTaskState();
+                });
+            });
+
+            columns.forEach(column => {
+                column.addEventListener('dragover', e => {
+                    e.preventDefault();
+                    const afterElement = getDragAfterElement(column, e.clientY);
+                    const draggable = document.querySelector('.dragging');
+                    const cardsContainer = column.querySelector('.cards');
+
+                    if (afterElement == null) {
+                        cardsContainer.appendChild(draggable);
+                    } else {
+                        cardsContainer.insertBefore(draggable, afterElement);
+                    }
+
+                    column.classList.add('drag-over');
+                });
+
+                column.addEventListener('dragleave', () => {
+                    column.classList.remove('drag-over');
+                });
+
+                column.addEventListener('drop', () => {
+                    column.classList.remove('drag-over');
+                });
+            });
+
+            // Setup add card buttons
+            document.querySelectorAll('.add-card-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    openModal(btn.dataset.column);
+                });
+            });
+        }
+
+        function getDragAfterElement(column, y) {
+            const draggableElements = [...column.querySelectorAll('.card:not(.dragging)')];
+
+            return draggableElements.reduce((closest, child) => {
+                const box = child.getBoundingClientRect();
+                const offset = y - box.top - box.height / 2;
+
+                if (offset < 0 && offset > closest.offset) {
+                    return { offset: offset, element: child };
+                } else {
+                    return closest;
+                }
+            }, { offset: Number.NEGATIVE_INFINITY }).element;
+        }
+
+        async function saveTaskState() {
+            const columns = document.querySelectorAll('.column');
+
+            columns.forEach(column => {
+                const status = column.id;
+                const cardIds = [...column.querySelectorAll('.card')].map(card => card.dataset.id);
+
+                tasksData.tasks.forEach(task => {
+                    if (cardIds.includes(task.id)) {
+                        task.status = status;
+                    }
+                });
+            });
+
+            // Salvar localmente primeiro (backup)
+            localStorage.setItem('tasks-data', JSON.stringify(tasksData));
+            updateStats();
+
+            // Salvar no servidor via API
+            try {
+                const response = await fetch('/api/save-tasks', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(tasksData)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Erro HTTP: ${response.status}`);
+                }
+
+                const result = await response.json();
+                console.log('✅ Salvo automaticamente:', result);
+
+                // Mostrar notificação discreta
+                showNotification('Salvo automaticamente!', 'success');
+            } catch (error) {
+                console.error('❌ Erro ao salvar:', error);
+                showNotification('Salvo localmente (servidor indisponível)', 'warning');
+            }
+        }
+
+        function showNotification(message, type = 'success') {
+            const colors = {
+                'success': 'var(--success)',
+                'error': 'var(--danger)',
+                'warning': 'var(--warning)'
+            };
+
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 2rem;
+                right: 2rem;
+                padding: 1rem 1.5rem;
+                background: ${colors[type]};
+                color: white;
+                border-radius: 8px;
+                font-weight: 600;
+                z-index: 10000;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                animation: slideIn 0.3s ease;
+            `;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 2000);
+        }
+
+        // Adicionar animações de notificação
+        const notifStyle = document.createElement('style');
+        notifStyle.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(400px); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(400px); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(notifStyle);
+
+        function updateStats() {
+            const stats = {
+                total: tasksData.tasks.length,
+                critical: tasksData.tasks.filter(t => t.priority === 'p0').length,
+                progress: tasksData.tasks.filter(t => t.status === 'in-progress').length,
+                done: tasksData.tasks.filter(t => t.status === 'done').length
+            };
+
+            document.getElementById('stat-total').textContent = stats.total;
+            document.getElementById('stat-critical').textContent = stats.critical;
+            document.getElementById('stat-progress').textContent = stats.progress;
+            document.getElementById('stat-done').textContent = stats.done;
+
+            // Atualizar contadores das colunas
+            document.querySelectorAll('.column').forEach(column => {
+                const count = column.querySelectorAll('.card').length;
+                column.querySelector('.column-count').textContent = count;
+            });
+        }
+
+        // Modal functions
+        function openModal(columnId) {
+            currentColumn = columnId;
+            document.getElementById('addCardModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('addCardModal').classList.remove('active');
+            document.getElementById('addCardForm').reset();
+            currentColumn = null;
+        }
+
+        document.getElementById('addCardForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const newTask = {
+                id: document.getElementById('cardId').value,
+                title: document.getElementById('cardTitle').value,
+                description: document.getElementById('cardDesc').value,
+                status: currentColumn,
+                priority: document.getElementById('cardPriority').value,
+                type: document.getElementById('cardType').value,
+                gate: document.getElementById('cardGate').value,
+                deadline: document.getElementById('cardDeadline').value,
+                responsible: document.getElementById('cardResponsible').value,
+                startDate: new Date().toISOString().split('T')[0],
+                duration: 1
+            };
+
+            tasksData.tasks.push(newTask);
+            renderKanban();
+            saveTaskState();
+            closeModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+                closeEditModal();
+            }
+        });
+
+        document.getElementById('addCardModal').addEventListener('click', (e) => {
+            if (e.target.id === 'addCardModal') closeModal();
+        });
+
+        document.getElementById('editCardModal').addEventListener('click', (e) => {
+            if (e.target.id === 'editCardModal') closeEditModal();
+        });
+
+        // Adicionar animação de spin
+        const style = document.createElement('style');
+        style.textContent = '@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }';
+        document.head.appendChild(style);
+
+        // Carregar tarefas ao iniciar
+        loadTasks();
+    </script>
+</body>
+
+</html>

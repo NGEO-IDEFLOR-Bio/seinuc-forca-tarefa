@@ -1,0 +1,70 @@
+{
+    "sprint": {
+        "name": "Sprint 1",
+        "startDate": "2026-01-19",
+        "endDate": "2026-01-23",
+        "goal": "Objetivo principal da sprint"
+    },
+    "tasks": [
+        {
+            "id": "T001",
+            "title": "Configurar ambiente de desenvolvimento",
+            "description": "Instalar dependências e configurar ferramentas necessárias",
+            "status": "done",
+            "priority": "p0",
+            "type": "setup",
+            "gate": "Gate 1",
+            "startDate": "2026-01-19",
+            "duration": 1,
+            "responsible": "Dev Team"
+        },
+        {
+            "id": "T002",
+            "title": "Implementar autenticação",
+            "description": "Criar sistema de login e registro de usuários",
+            "status": "in-progress",
+            "priority": "p0",
+            "type": "feat",
+            "gate": "Gate 2",
+            "startDate": "2026-01-20",
+            "duration": 2,
+            "responsible": "Backend Team"
+        },
+        {
+            "id": "T003",
+            "title": "Criar interface de dashboard",
+            "description": "Desenvolver tela principal com métricas e widgets",
+            "status": "in-review",
+            "priority": "p1",
+            "type": "feat",
+            "gate": "Gate 2",
+            "startDate": "2026-01-21",
+            "duration": 2,
+            "responsible": "Frontend Team"
+        },
+        {
+            "id": "T004",
+            "title": "Escrever testes unitários",
+            "description": "Cobertura mínima de 80% para módulos críticos",
+            "status": "todo",
+            "priority": "p1",
+            "type": "test",
+            "gate": "Gate 3",
+            "startDate": "2026-01-22",
+            "duration": 2,
+            "responsible": "QA Team"
+        },
+        {
+            "id": "T005",
+            "title": "Documentar API endpoints",
+            "description": "Criar documentação OpenAPI/Swagger completa",
+            "status": "todo",
+            "priority": "p2",
+            "type": "docs",
+            "gate": "Gate 3",
+            "startDate": "2026-01-23",
+            "duration": 1,
+            "responsible": "Tech Writer"
+        }
+    ]
+}
