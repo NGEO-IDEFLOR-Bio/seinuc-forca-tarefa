@@ -33,7 +33,9 @@
       "deadline": "2026-01-31",
       "duration": 3,
       "responsible": "Coordenação SEINUC",
-      "dependencies": ["EPIC1-T1"],
+      "dependencies": [
+        "EPIC1-T1"
+      ],
       "notes": "Copiar lógica de MG para garantir previsibilidade do processo"
     },
     {
@@ -52,18 +54,6 @@
       "notes": "Modelo: Portaria IEPHA nº 26/2021"
     },
     {
-<<<<<<< HEAD
-      "id": "T003",
-      "title": "Criar interface de dashboard",
-      "description": "Desenvolver tela principal com métricas e widgets",
-      "status": "done",
-      "priority": "p1",
-      "type": "feat",
-      "gate": "Gate 2",
-      "startDate": "2026-01-21",
-      "duration": 2,
-      "responsible": "Frontend Team"
-=======
       "id": "EPIC2-T4",
       "title": "Estruturar Módulo de Caracterização Ambiental (Quadro I)",
       "description": "Criar formulário padrão para cadastro de fauna, flora, recursos hídricos, clima e solos da UC. Adaptar conceito de Fichas de Inventário de MG focado em dados biológicos",
@@ -75,9 +65,10 @@
       "deadline": "2026-02-05",
       "duration": 6,
       "responsible": "Analista Ambiental",
-      "dependencies": ["EPIC1-T3"],
+      "dependencies": [
+        "EPIC1-T3"
+      ],
       "notes": "Referência: Art. 67, §2º da Lei 10.306/2023"
->>>>>>> 706c2a8 (feat: Adiciona tarefas detalhadas do SEINUC/PA ao Kanban - 4 Épicos e 12 tarefas com dependências e prazos)
     },
     {
       "id": "EPIC2-T5",
@@ -91,7 +82,9 @@
       "deadline": "2026-02-06",
       "duration": 6,
       "responsible": "Geoprocessamento",
-      "dependencies": ["EPIC1-T3"],
+      "dependencies": [
+        "EPIC1-T3"
+      ],
       "notes": "Exigir coordenadas como MG faz para tombamentos"
     },
     {
@@ -106,7 +99,9 @@
       "deadline": "2026-02-06",
       "duration": 5,
       "responsible": "Analista Socioambiental",
-      "dependencies": ["EPIC1-T3"],
+      "dependencies": [
+        "EPIC1-T3"
+      ],
       "notes": "Incluir: Lei de criação, Conselho atuante, Fundo Municipal"
     },
     {
@@ -121,7 +116,11 @@
       "deadline": "2026-02-06",
       "duration": 4,
       "responsible": "Equipe de Dados",
-      "dependencies": ["EPIC2-T4", "EPIC2-T5", "EPIC2-T6"],
+      "dependencies": [
+        "EPIC2-T4",
+        "EPIC2-T5",
+        "EPIC2-T6"
+      ],
       "notes": "Exigência: Art. 67, §3º da Lei 10.306/2023"
     },
     {
@@ -136,7 +135,9 @@
       "deadline": "2026-02-10",
       "duration": 3,
       "responsible": "Equipe de TI",
-      "dependencies": ["EPIC1-T3"],
+      "dependencies": [
+        "EPIC1-T3"
+      ],
       "notes": "Avaliar infraestrutura disponível e volume de dados"
     },
     {
@@ -151,7 +152,10 @@
       "deadline": "2026-02-11",
       "duration": 3,
       "responsible": "Coordenação SEINUC",
-      "dependencies": ["EPIC1-T3", "EPIC2-T4"],
+      "dependencies": [
+        "EPIC1-T3",
+        "EPIC2-T4"
+      ],
       "notes": "Adaptar Check list geral de MG"
     },
     {
@@ -166,7 +170,9 @@
       "deadline": "2026-02-12",
       "duration": 3,
       "responsible": "Equipe Jurídica",
-      "dependencies": ["EPIC3-T9"],
+      "dependencies": [
+        "EPIC3-T9"
+      ],
       "notes": "Garantir princípios de contraditório e ampla defesa"
     },
     {
@@ -181,7 +187,9 @@
       "deadline": "2026-02-13",
       "duration": 5,
       "responsible": "Equipe de TI",
-      "dependencies": ["EPIC2-T7"],
+      "dependencies": [
+        "EPIC2-T7"
+      ],
       "notes": "Atender Art. 67, §1º - acompanhamento pela sociedade"
     },
     {
@@ -196,7 +204,9 @@
       "deadline": "2026-02-14",
       "duration": 4,
       "responsible": "Coordenação SEINUC",
-      "dependencies": ["EPIC4-T11"],
+      "dependencies": [
+        "EPIC4-T11"
+      ],
       "notes": "Cumprimento do Art. 113 da Lei 10.306/2023"
     }
   ]
