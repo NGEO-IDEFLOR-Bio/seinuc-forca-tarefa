@@ -24,9 +24,9 @@ export default async function handler(req, res) {
 
         // Configuração do GitHub
         const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-        const GITHUB_OWNER = process.env.GITHUB_OWNER || 'Sertan-AI';
-        const GITHUB_REPO = process.env.GITHUB_REPO || 'app-sprint-1';
-        const FILE_PATH = 'docs/sprints/tasks.json';
+        const GITHUB_OWNER = process.env.GITHUB_OWNER;
+        const GITHUB_REPO = process.env.GITHUB_REPO;
+        const FILE_PATH = 'tasks.json';
 
         if (!GITHUB_TOKEN) {
             console.error('❌ GITHUB_TOKEN não configurado');
