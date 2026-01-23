@@ -1,8 +1,8 @@
-# 🚀 Guia de Uso Rápido
+# Guia de Uso Rápido
 
-## 📋 Checklist de Setup (5 minutos)
+## Checklist de Setup (5 minutos)
 
-### ✅ Passo 1: Criar Novo Repositório
+### Passo 1: Criar Novo Repositório
 
 1. Vá em: https://github.com/new
 2. Nome: `meu-sprint-kanban` (ou qualquer nome)
@@ -10,7 +10,7 @@
 4. **NÃO** adicione README, .gitignore ou license
 5. Create repository
 
-### ✅ Passo 2: Copiar Template
+### Passo 2: Copiar Template
 
 ```bash
 # Na pasta onde está o template
@@ -27,7 +27,7 @@ git branch -M main
 git push -u origin main
 ```
 
-### ✅ Passo 3: Customizar Tasks
+### Passo 3: Customizar Tasks
 
 Edite `tasks.json` com suas tarefas reais:
 
@@ -49,7 +49,7 @@ Edite `tasks.json` com suas tarefas reais:
 }
 ```
 
-### ✅ Passo 4: Deploy no Vercel
+### Passo 4: Deploy no Vercel
 
 ```bash
 # Se não tem Vercel CLI instalado
@@ -67,14 +67,14 @@ vercel
 # Override settings: NO (enter)
 ```
 
-### ✅ Passo 5: Configurar GitHub Token
+### Passo 5: Configurar GitHub Token
 
 **Criar Token**:
 1. https://github.com/settings/tokens
 2. "Generate new token (classic)"
 3. Note: `Vercel Sprint Kanban`
 4. Expiration: 90 dias (ou No expiration)
-5. Scope: **repo** ✅ (marque apenas este)
+5. Scope: **repo** (marque apenas este)
 6. Generate → **COPIE O TOKEN**
 
 **Adicionar no Vercel**:
@@ -86,9 +86,9 @@ Via Dashboard:
 
 | Name | Value | Environments |
 |------|-------|--------------|
-| `GITHUB_TOKEN` | `ghp_seu_token_aqui` | ✅ Production, Preview, Development |
-| `GITHUB_OWNER` | `seu_usuario_github` | ✅ Production, Preview, Development |
-| `GITHUB_REPO` | `meu-sprint-kanban` | ✅ Production, Preview, Development |
+| `GITHUB_TOKEN` | `ghp_seu_token_aqui` | Production, Preview, Development |
+| `GITHUB_OWNER` | `seu_usuario_github` | Production, Preview, Development |
+| `GITHUB_REPO` | `meu-sprint-kanban` | Production, Preview, Development |
 
 4. Save
 
@@ -97,7 +97,7 @@ Via Dashboard:
 vercel --prod
 ```
 
-### ✅ Passo 6: Conectar Repositório (Deploy Automático)
+### Passo 6: Conectar Repositório (Deploy Automático)
 
 1. Vercel Dashboard → Seu Projeto → Settings → Git
 2. "Connect Git Repository"
@@ -105,22 +105,22 @@ vercel --prod
 4. Branch: `main`
 5. Save
 
-✅ **Pronto!** Agora cada commit = deploy automático!
+**Pronto!** Agora cada commit = deploy automático!
 
 ---
 
-## 🎯 Testando
+## Testando
 
 1. Acesse: `https://seu-projeto.vercel.app/kanban.html`
 2. Arraste um card para outra coluna
-3. Veja notificação: "Salvo automaticamente!" ✅
+3. Veja notificação: "Salvo automaticamente!"
 4. Aguarde ~30 segundos
 5. Recarregue a página (F5)
-6. **Mudança persistiu!** 🎉
+6. **Mudança persistiu!**
 
 ---
 
-## 📊 URLs do Seu Projeto
+## URLs do Seu Projeto
 
 Após deploy:
 
@@ -130,7 +130,7 @@ Após deploy:
 
 ---
 
-## 🔧 Personalizações Comuns
+## Personalizações Comuns
 
 ### Mudar Nome da Sprint
 
@@ -181,7 +181,7 @@ Edite variáveis CSS em `kanban.html` e `gantt.html` (~linha 15):
 
 ---
 
-## 🐛 Problemas Comuns
+## Problemas Comuns
 
 ### "Failed to connect repository"
 
@@ -209,15 +209,15 @@ Edite variáveis CSS em `kanban.html` e `gantt.html` (~linha 15):
 
 ---
 
-## 💡 Dicas
+## Dicas
 
-✅ **Use commits descritivos**: Os commits automáticos aparecem como `🔄 Auto-save: Kanban atualizado via web`
+**Use commits descritivos**: Os commits automáticos aparecem como `Auto-save: Kanban atualizado via web`
 
-✅ **Monitore deployments**: Aba Deployments no Vercel mostra cada build em tempo real
+**Monitore deployments**: Aba Deployments no Vercel mostra cada build em tempo real
 
-✅ **Backup regular**: `tasks.json` é versionado = histórico completo no Git!
+**Backup regular**: `tasks.json` é versionado = histórico completo no Git!
 
-✅ **Branch para experimentos**: Teste mudanças em branch separada antes de mergear
+**Branch para experimentos**: Teste mudanças em branch separada antes de mergear
 
 ---
 

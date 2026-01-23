@@ -1,21 +1,21 @@
-# 📊 Sprint Kanban + Gantt Template
+# Sprint Kanban + Gantt Template
 
 Sistema completo de gestão de sprints com Kanban interativo e visualização Gantt, com salvamento automático via GitHub API.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Vercel](https://img.shields.io/badge/deploy-Vercel-black.svg)
 
-## ✨ Features
+## Features
 
-- ✅ **Kanban Interativo**: Drag-and-drop entre colunas
-- ✅ **Criação/Edição de Cards**: Modal completo com todos os campos
-- ✅ **Visualização Gantt**: Timeline visual das tarefas
-- ✅ **Salvamento Automático**: Commits direto no GitHub via API
-- ✅ **Deploy Automático**: Vercel redesenha a cada commit
-- ✅ **Tema Dark Premium**: Design moderno com paleta profissional
-- ✅ **Zero Dependências**: HTML/CSS/JS puro
+- **Kanban Interativo**: Drag-and-drop entre colunas
+- **Criação/Edição de Cards**: Modal completo com todos os campos
+- **Visualização Gantt**: Timeline visual das tarefas
+- **Salvamento Automático**: Commits direto no GitHub via API
+- **Deploy Automático**: Vercel redesenha a cada commit
+- **Tema Dark Premium**: Design moderno com paleta profissional
+- **Zero Dependências**: HTML/CSS/JS puro
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Copiar Template
 
@@ -62,7 +62,7 @@ vercel
 **Criar token**:
 1. https://github.com/settings/tokens
 2. "Generate new token (classic)"
-3. Scope: `repo` ✅
+3. Scope: `repo`
 4. Copiar token
 
 **Adicionar no Vercel**:
@@ -83,9 +83,9 @@ vercel --prod
 1. Vercel Dashboard → Settings → Git
 2. Connect Git Repository
 3. Selecionar seu repo
-4. ✅ Deploy automático ativado!
+4. Deploy automático ativado!
 
-## 📁 Estrutura
+## Estrutura
 
 ```
 sprint-kanban-template/
@@ -99,7 +99,7 @@ sprint-kanban-template/
 └── README.md                  # Este arquivo
 ```
 
-## 🎨 Personalização
+## Personalização
 
 ### Cores
 
@@ -149,7 +149,7 @@ Edite o modal e a estrutura de dados em `tasks.json`:
 }
 ```
 
-## 🔧 Como Funciona
+## Como Funciona
 
 ### Fluxo de Salvamento
 
@@ -164,12 +164,12 @@ Edite o modal e a estrutura de dados em `tasks.json`:
 
 ### Segurança
 
-- ✅ Token em variável de ambiente (nunca no código)
-- ✅ CORS configurado
-- ✅ Validação de dados na API
-- ✅ HTTPS automático (Vercel)
+- Token em variável de ambiente (nunca no código)
+- CORS configurado
+- Validação de dados na API
+- HTTPS automático (Vercel)
 
-## 📖 Uso
+## Uso
 
 ### Kanban
 
@@ -192,7 +192,7 @@ Edite o modal e a estrutura de dados em `tasks.json`:
 - Animação para tarefas em andamento
 - Tooltip com descrição
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Erro 500 ao salvar
 
@@ -221,7 +221,7 @@ Edite o modal e a estrutura de dados em `tasks.json`:
 2. Garantir que há tarefas no array
 3. Verificar console do navegador (F12)
 
-## 📦 Deploy em Outras Plataformas
+## Deploy em Outras Plataformas
 
 ### Netlify
 
@@ -238,7 +238,7 @@ Edite o modal e a estrutura de dados em `tasks.json`:
 
 Similar ao Vercel - adicionar variáveis de ambiente e conectar repo.
 
-## 🤝 Contribuindo
+## Contribuindo
 
 Este é um template! Sinta-se livre para:
 
@@ -247,11 +247,11 @@ Este é um template! Sinta-se livre para:
 - Criar novos campos
 - Integrar com outras ferramentas
 
-## 📄 Licença
+## Licença
 
 MIT License - Use como quiser!
 
-## 💡 Créditos
+## Créditos
 
 Template criado para facilitar gestão ágil de sprints com persistência real via Git.
 
@@ -259,4 +259,4 @@ Template criado para facilitar gestão ágil de sprints com persistência real v
 
 **Precisa de ajuda?** Abra uma issue ou consulte a documentação do Vercel.
 
-**Gostou?** ⭐ Dê uma estrela no repo!
+**Gostou?** Dê uma estrela no repo!
