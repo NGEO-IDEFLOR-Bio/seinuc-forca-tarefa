@@ -30,6 +30,8 @@ Grandes áreas temáticas que agrupam tarefas relacionadas. O projeto está divi
 | **Épico 3** | Fluxo Operacional | Processos de envio, validação e recursos |
 | **Épico 4** | Transparência e Controle Social | Portal público e relatórios |
 
+**Ver detalhamento completo**: [EPICOS.md](EPICOS.md)
+
 #### **Prioridades (P0, P1, P2)**
 
 | Prioridade | Nome | Significado | Cor |
