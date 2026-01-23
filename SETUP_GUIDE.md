@@ -1,6 +1,9 @@
 # Guia de Uso Rápido
 
-## Checklist de Setup (5 minutos)
+## Checklist de Setup (10 minutos)
+
+> **IMPORTANTE**: Este template requer integração GitHub para funcionar!
+> O salvamento automático faz commits direto no repositório.
 
 ### Passo 1: Criar Novo Repositório
 
@@ -49,25 +52,37 @@ Edite `tasks.json` com suas tarefas reais:
 }
 ```
 
-### Passo 4: Deploy no Vercel
+### Passo 4: Deploy no Vercel via GitHub
+
+**Opção A: Via Dashboard (Recomendado)**
+
+1. Acesse: https://vercel.com/new
+2. Clique em "Import Git Repository"
+3. Selecione seu repositório `meu-sprint-kanban`
+4. Framework Preset: Other
+5. Deploy
+
+**Opção B: Via CLI** (se preferir)
 
 ```bash
-# Se não tem Vercel CLI instalado
 npm install -g vercel
-
-# Login
 vercel login
-
-# Deploy
 vercel
-
-# Quando perguntar "Link to existing project?": NO
-# Nome do projeto: aceite ou altere
-# Directory: ./ (enter)
-# Override settings: NO (enter)
 ```
 
-### Passo 5: Configurar GitHub Token
+### Passo 5: Conectar Repositório (OBRIGATÓRIO)
+
+> **CRÍTICO**: Sem esta etapa, o salvamento automático **NÃO funciona**!
+
+1. Vercel Dashboard → Seu Projeto → Settings → Git
+2. **Connect Git Repository**
+3. Autorize o Vercel a acessar o GitHub
+4. Selecione o repositório
+5. Branch: `main`
+
+✅ Agora cada `git push` = deploy automático!
+
+### Passo 6: Configurar GitHub Token
 
 **Criar Token**:
 1. https://github.com/settings/tokens
@@ -92,31 +107,27 @@ Via Dashboard:
 
 4. Save
 
-**Redeploy**:
-```bash
-vercel --prod
-```
+**Aplicar variáveis**:
 
-### Passo 6: Conectar Repositório (Deploy Automático)
-
-1. Vercel Dashboard → Seu Projeto → Settings → Git
-2. "Connect Git Repository"
-3. Selecione `seu_usuario/meu-sprint-kanban`
-4. Branch: `main`
-5. Save
-
-**Pronto!** Agora cada commit = deploy automático!
+1. Vercel Dashboard → Deployments
+2. Latest Deployment → ⋯ → Redeploy
+3. Aguardar conclusão
 
 ---
 
-## Testando
+## Testando o Salvamento Automático
 
 1. Acesse: `https://seu-projeto.vercel.app/kanban.html`
 2. Arraste um card para outra coluna
 3. Veja notificação: "Salvo automaticamente!"
-4. Aguarde ~30 segundos
-5. Recarregue a página (F5)
-6. **Mudança persistiu!**
+4. Verifique no GitHub:
+   - Vá no seu repositório
+   - Veja que foi criado um commit automático!
+5. Aguarde ~30 segundos (Vercel redeploy)
+6. Recarregue a página (F5)
+7. **Mudança persistiu!** 
+
+> **Como funciona**: A API faz commit → GitHub trigger → Vercel redeploy → Mudança salva!
 
 ---
 
@@ -211,13 +222,15 @@ Edite variáveis CSS em `kanban.html` e `gantt.html` (~linha 15):
 
 ## Dicas
 
-**Use commits descritivos**: Os commits automáticos aparecem como `Auto-save: Kanban atualizado via web`
+**Deploy automático**: Cada `git push` dispara deploy. Não use `vercel --prod` manualmente!
+
+**Commits automáticos**: Quando você move cards, a API cria commits como `Auto-save: Kanban atualizado via web`
 
 **Monitore deployments**: Aba Deployments no Vercel mostra cada build em tempo real
 
-**Backup regular**: `tasks.json` é versionado = histórico completo no Git!
+**Histórico completo**: Como tudo é versionado no Git, você pode reverter mudanças se necessário!
 
-**Branch para experimentos**: Teste mudanças em branch separada antes de mergear
+**Desenvolvimento local**: Edite `tasks.json` localmente e dê push - deploy automático acontece
 
 ---
 

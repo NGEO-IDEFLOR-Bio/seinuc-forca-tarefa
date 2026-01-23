@@ -57,7 +57,20 @@ vercel login
 vercel
 ```
 
-### 4. Configurar GitHub Token
+### 4. Conectar Repositório ao Vercel (OBRIGATÓRIO)
+
+> **IMPORTANTE**: A integração GitHub é **obrigatória** para o salvamento automático funcionar!
+> A API precisa fazer commits no repositório quando você move cards no Kanban.
+
+1. Vercel Dashboard → Seu Projeto → Settings → Git
+2. **Connect Git Repository**
+3. Selecionar seu repositório GitHub
+4. Branch: `main`
+5. Save
+
+✅ **Deploy automático ativado!** Cada `git push` = deploy automático.
+
+### 5. Configurar GitHub Token
 
 **Criar token**:
 1. https://github.com/settings/tokens
@@ -72,18 +85,7 @@ vercel
    - `GITHUB_OWNER` = seu_usuario
    - `GITHUB_REPO` = nome_do_repo
 3. Save
-
-**Redeploy**:
-```bash
-vercel --prod
-```
-
-### 5. Conectar Repositório
-
-1. Vercel Dashboard → Settings → Git
-2. Connect Git Repository
-3. Selecionar seu repo
-4. Deploy automático ativado!
+4. Deployments → Latest → Redeploy
 
 ## Estrutura
 
@@ -151,16 +153,18 @@ Edite o modal e a estrutura de dados em `tasks.json`:
 
 ## Como Funciona
 
-### Fluxo de Salvamento
+### Fluxo de Salvamento Automático
 
 1. Usuário arrasta card ou cria/edita tarefa
 2. Frontend chama `/api/save-tasks` (POST)
 3. Serverless function:
-   - Autentica com GitHub via token
+   - Autentica com GitHub via `GITHUB_TOKEN`
    - Busca SHA atual do `tasks.json`
-   - Faz commit com novo conteúdo
-4. Vercel detecta commit → Redeploy automático (~30s)
+   - **Faz commit direto no repositório GitHub**
+4. GitHub trigger → Vercel detecta commit → Redeploy automático (~30s)
 5. Próximo carregamento: frontend lê arquivo atualizado
+
+> **Por isso a integração GitHub é obrigatória!** Sem ela, os commits não chegam ao repositório.
 
 ### Segurança
 
@@ -205,12 +209,21 @@ Edite o modal e a estrutura de dados em `tasks.json`:
 
 ### Mudanças não refletem
 
-**Causa**: Repo não conectado ao Vercel
+**Causa**: Repositório GitHub não conectado ao Vercel
 
 **Solução**:
-1. Settings → Git → Connect Repository
-2. Aguardar deploy automático (~30-60s)
-3. Hard refresh: `Ctrl + Shift + R`
+1. Vercel Dashboard → Settings → Git → Connect Repository
+2. **Conectar ao repositório GitHub** (obrigatório!)
+3. Aguardar deploy automático (~30-60s)
+4. Hard refresh: `Ctrl + Shift + R`
+
+### Erro de permissão ao usar `vercel --prod`
+
+**Causa**: Você não precisa usar CLI quando tem integração GitHub!
+
+**Solução**:
+- Simplesmente faça `git push` - o deploy é automático
+- Ignore comandos `vercel --prod` da CLI
 
 ### Cards desaparecem
 
