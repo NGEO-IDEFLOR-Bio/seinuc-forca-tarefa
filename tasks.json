@@ -34,7 +34,7 @@
       "id": "T003",
       "title": "Criar interface de dashboard",
       "description": "Desenvolver tela principal com métricas e widgets",
-      "status": "done",
+      "status": "in-review",
       "priority": "p1",
       "type": "feat",
       "gate": "Gate 2",
