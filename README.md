@@ -15,6 +15,17 @@ Sistema completo de gestão de sprints com Kanban interativo e visualização Ga
 - **Tema Dark Premium**: Design moderno com paleta profissional
 - **Zero Dependências**: HTML/CSS/JS puro
 
+## Demo
+
+### Interface Principal
+![Kanban Board Inicial](demo/1-inicial.png)
+
+### Drag and Drop
+![Movendo Tarefa entre Colunas](demo/2-task-movida.png)
+
+### Edição de Cards
+![Modal de Edição](demo/3-editar-card.png)
+
 ## Quick Start
 
 ### 1. Copiar Template
