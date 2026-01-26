@@ -1,8 +1,7 @@
+### Tarefa 12: Homologação e Integração (Finalização do Ciclo)
 
-### Tarefa 12: Homologação e Integração (O Resultado Final)
-*Conclusão do ciclo anual e alimentação do banco de dados oficial exigido pelo Art. 67 da lei paraense.*
+*Conclusão do ciclo anual e consolidação do banco de dados oficial, em observância ao Art. 67 da legislação estadual.*
 
-*   **O que você precisa definir:**
-    *   **Decisão Final:** Quem julga os recursos? Em MG, a Diretoria de Promoção decide em 5 dias; se negar, sobe para o Presidente do órgão. No Pará, pode ser uma câmara técnica do COEMA ou diretoria da SEMAS.
-    *   **Publicação Definitiva:** A publicação da listagem final ("Pontuação Definitiva") que encerra o ciclo administrativo daquele ano.
-    *   **Rotina de Exportação (CNUC):** Estabelecer o momento em que os dados validados no SEINUC são enviados para o Cadastro Nacional (CNUC), conforme exige o §3º do Art. 67 da Lei 10.306.
+* **Instância Julgadora Final:** Definição das autoridades competentes para o julgamento de recursos em última instância administrativa. Devem ser estabelecidas as atribuições para a tomada de decisão, podendo estas recair sobre uma câmara técnica do COEMA ou uma diretoria específica da SEMAS, com prazos definidos para a deliberação.
+* **Homologação e Publicação Definitiva:** Formalização do encerramento do ciclo administrativo anual por meio da publicação da listagem final e da "Pontuação Definitiva" em veículo oficial de comunicação.
+* **Sincronização com o Cadastro Nacional (CNUC):** Estabelecimento de rotinas técnicas para a exportação e transmissão dos dados validados no SEINUC para o Cadastro Nacional de Unidades de Conservação (CNUC), assegurando o cumprimento do §3º do Art. 67 da Lei nº 10.306.
