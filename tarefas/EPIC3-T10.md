@@ -1,7 +1,7 @@
-### Tarefa 10: Estabelecer o Ciclo de Análise Técnica
-*Como os técnicos da SEMAS/IDEFLOR-Bio avaliarão o conteúdo (Planos de Manejo, Inventários, etc.).*
+### Tarefa 10: Estabelecimento do Ciclo de Análise Técnica
 
-*   **O que você precisa definir:**
-    *   **Janela de Análise:** Definir o período que os técnicos do estado terão para ler os documentos. Em MG, isso ocorre entre **janeiro e julho**.
-    *   **Fichas de Análise:** Criar o formulário que o técnico do Estado preenche. Em MG, essas fichas apontam se o item foi "Aprovado", "Aprovado com Ressalvas" ou "Reprovado", e justificam a pontuação.
-    *   **Critério de Ressalva:** Definir o que acontece se o documento for bom, mas tiver um erro pequeno. Em MG, se aprovado com ressalvas, o município deve corrigir no ano seguinte para continuar pontuando.
+*Definição dos procedimentos de avaliação qualitativa e quantitativa dos instrumentos de gestão (Planos de Manejo, Inventários, etc.) pelas equipes da SEMAS/IDEFLOR-Bio.*
+
+* **Janela de Análise Técnica:** Delimitação do cronograma destinado à revisão documental pelo corpo técnico estadual, estabelecendo-se o período entre janeiro e julho para a conclusão das análises.
+* **Instrumentos de Avaliação (Fichas de Análise):** Implementação de formulários de avaliação padronizados para o registro dos pareceres técnicos. O sistema deve contemplar as classificações de "Aprovado", "Aprovado com Ressalvas" ou "Reprovado", com campos obrigatórios para a fundamentação técnica e justificativa da pontuação atribuída.
+* **Regulamentação de Ressalvas:** Instituição de critérios para o tratamento de inconformidades técnicas de baixa gravidade. Documentos aprovados com ressalvas implicam na obrigatoriedade de retificação e adequação no ciclo anual subsequente, sob pena de perda da pontuação no período seguinte.
