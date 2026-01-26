@@ -1,7 +1,7 @@
-### Tarefa 9: Criar a Triagem e Responsabilidade (O "Checklist")
-*Antes da análise técnica profunda, existe uma triagem documental para verificar se o básico foi cumprido.*
+### Tarefa 9: Instituição de Protocolos de Triagem e Responsabilidade (Checklist de Admissibilidade)
 
-*   **O que você precisa definir:**
-    *   **Declaração de Veracidade:** Criar um modelo de declaração onde o Prefeito ou Gestor da UC atesta que os documentos são verdadeiros e espelham ações realizadas, sob pena de responsabilidade administrativa e penal.
-    *   **Checklist de Entrada:** Uma lista de verificação automática. Se faltar a assinatura no "Ofício de Encaminhamento" ou na "Declaração", o processo nem segue para análise técnica.
-    *   **Legibilidade:** Definir que documentos digitalizados de forma ilegível não serão aceitos/pontuados.
+*Esta etapa estabelece a triagem documental prévia à análise técnica, visando verificar o cumprimento dos requisitos formais mínimos.*
+
+* **Declaração de Veracidade:** Instituição de modelo padronizado no qual a autoridade competente (Prefeito ou Gestor da Unidade de Conservação) atesta a autenticidade das informações e documentos apresentados, bem como a fidedignidade das ações declaradas, sob pena de responsabilização administrativa e penal.
+* **Checklist de Admissibilidade:** Implementação de lista de verificação para conferência de requisitos essenciais de entrada. A ausência de elementos obrigatórios, como assinaturas no "Ofício de Encaminhamento" ou na "Declaração de Veracidade", impede o prosseguimento do processo para a fase de análise técnica.
+* **Requisitos de Legibilidade:** Estabelecimento de que documentos digitalizados que apresentem ilegibilidade ou qualidade técnica insuficiente para a conferência de dados não serão admitidos para análise ou pontuação.
