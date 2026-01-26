@@ -1,19 +1,21 @@
+### 3. Definição do Cronograma Anual (Calendário Operacional)
 
-### 3. Definição do Cronograma Anual (O "Calendário")
-Você precisa estabelecer os prazos do ciclo de gestão. O modelo de Minas Gerais é muito eficiente e pode ser copiado:
-*   **Ano-Base (Ação):** De 01 de janeiro a 31 de dezembro (período em que a UC realiza as ações de fiscalização, reuniões de conselho, etc.).
-*   **Ano de Exercício (Validação/Repasse):** O ano seguinte, onde a documentação é analisada.
-    *   *Sugestão de Cronograma para o Pará (Baseado em MG):*
-        *   **Até 10 de Janeiro:** Prazo final para gestores enviarem a documentação do ano anterior.
-        *   **Jan a Julho:** Equipe da SEMAS/IDEFLOR-Bio analisa os documentos.
-        *   **20 de Julho:** Publicação da Pontuação Provisória.
-        *   **Agosto:** Prazo para recursos (10 a 15 dias).
-        *   **Setembro:** Publicação da Pontuação Definitiva e integração ao CNUC.
+Estabelecimento dos prazos relativos ao ciclo de gestão, estruturado para garantir a fluidez dos processos de monitoramento e repasse:
 
-### O que você precisa das Unidades AGORA?
-Para este Épico 1, você não precisa dos documentos delas, mas precisa fazer um **Mapeamento dos Tipos de Documentos** que elas *conseguem* produzir.
+* **Ano-Base (Execução):** Período de 01 de janeiro a 31 de dezembro destinado à execução das ações finalísticas da UC (fiscalização, reuniões de conselho, gestão territorial).
+* **Ano de Exercício (Validação/Repasse):** Ano subsequente ao ano-base, dedicado à análise técnica e processamento da documentação.
+* **Proposta de Cronograma (Referencial):**
+* **Até 10 de Janeiro:** Prazo limite para o envio da documentação comprobatória do ano-base pelos gestores.
+* **Janeiro a Julho:** Análise técnica dos documentos pelas equipes da SEMAS/IDEFLOR-Bio.
+* **20 de Julho:** Publicação da Pontuação Provisória.
+* **Agosto:** Período para interposição de recursos (estimativa de 10 a 15 dias).
+* **Setembro:** Publicação da Pontuação Definitiva e integração dos dados ao CNUC.
 
-Não adianta exigir um documento que ninguém tem. Portanto, sua tarefa agora é listar:
-1.  **Atos de Criação:** A Lei/Decreto que criou cada UC (para validar a existência legal).
-2.  **Atos de Gestão:** Atas de reunião do Conselho, Portaria de nomeação do Gerente.
-3.  **Documentos Técnicos:** Plano de Manejo, Zoneamento (Shapes), Inventários de Fauna/Flora.
+
+### Mapeamento Documental das Unidades de Conservação
+
+Nesta etapa inicial, torna-se necessário o **Mapeamento dos Tipos de Documentos** passíveis de produção pelas unidades, visando alinhar as exigências normativas à realidade técnica institucional. A listagem deve contemplar:
+
+1. **Atos de Criação:** Diplomas legais (Leis ou Decretos) de criação das UCs para validação de existência jurídica.
+2. **Atos de Gestão:** Registros de governança, como atas de reuniões de Conselhos e portarias de nomeação de gestores.
+3. **Documentos Técnicos:** Instrumentos de planejamento e dados geoespaciais, incluindo Planos de Manejo, Zoneamentos (arquivos em formato shapefile) e inventários biológicos.
