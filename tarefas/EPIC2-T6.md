@@ -1,8 +1,8 @@
-### Tarefa 6: Estruturar o Módulo de "Gestão e Socioeconomia"
-*Esta tarefa visa cumprir o Art. 67, §2º, inciso IV da Lei do Pará e monitorar a governança.*
+### Tarefa 6: Estruturação do Módulo de "Gestão e Socioeconomia"
 
-*   **O que você precisa definir:**
-    *   **Dados do Conselho:** Campos para cadastro dos conselheiros (Titular/Suplente, Instituição, Período de Mandato). Em Minas, exige-se o envio da lei de criação do conselho e atas de reuniões para provar que ele é "atuante". O SEINUC deve ter um *upload* específico para "Ata de Reunião" e "Regimento Interno".
-    *   **Plano de Gestão:** Um campo de *status* ("Não iniciado", "Em elaboração", "Aprovado") e data de vigência. A lei exige revisão a cada 5 anos. O sistema deve alertar quando o plano estiver vencendo.
-    *   **Uso Público e Turismo:** Campos para inserção de dados de visitação (número de visitantes/ano) e arrecadação com ingressos ou concessões.
-    *   **Dados Antropológicos:** Cadastro das comunidades tradicionais residentes (número de famílias, tipo de atividade extrativista).
+*Esta tarefa visa ao cumprimento do Art. 67, §2º, inciso IV da Lei do Pará e ao monitoramento da governança institucional.*
+
+* **Dados do Conselho Gestor:** Implementação de campos para o cadastramento de conselheiros (titulares e suplentes), instituições representadas e respectivos períodos de mandato. O sistema SEINUC deve prever funcionalidades para o *upload* de documentos comprobatórios de atuação, especificamente "Ata de Reunião" e "Regimento Interno", essenciais para a validação da atividade do conselho.
+* **Plano de Gestão:** Criação de indicadores de *status* ("Não iniciado", "Em elaboração", "Aprovado") e registro da data de vigência. O sistema deve incorporar mecanismos de alerta automatizados para sinalizar a proximidade do vencimento do prazo de revisão (periodicidade quinquenal), conforme estabelecido em lei.
+* **Uso Público e Turismo:** Disponibilização de campos para a inserção de estatísticas de visitação (quantitativo anual) e dados financeiros relativos à arrecadação com bilheteria, serviços ou concessões.
+* **Dados Antropológicos e Socioeconômicos:** Estruturação de cadastro para as comunidades tradicionais residentes, incluindo o quantitativo de famílias e a tipologia das atividades extrativistas desenvolvidas.
