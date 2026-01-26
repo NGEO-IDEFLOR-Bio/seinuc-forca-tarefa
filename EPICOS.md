@@ -11,7 +11,7 @@ O projeto visa cumprir o **Art. 67 da Lei Estadual nº 10.306/2023**, utilizando
 
 ### O que teremos ao final deste Épico (DoD):
 1.  **Minuta do Decreto Regulamentador:** Texto legal definindo a governança do SEINUC, em cumprimento ao Art. 67, §5º da Lei 10.306/2023.
-2.  **Minuta da Portaria Técnica:** Documento detalhando as regras de formatação (PDF/Shapefile), responsabilidades e critérios de pontuação/validação, Baseado na *Portaria IEPHA nº 34/2024 (Modelo de Processo)*.
+2.  **Minuta da Portaria Técnica:** Documento detalhando as regras de formatação (PDF/Shapefile), responsabilidades e critérios de pontuação/validação, baseado na *Portaria IEPHA nº 34/2024 (Modelo de Processo)*.
 3.  **Calendário de Gestão:** Definição clara dos prazos de "Ano-Base" (ação) e "Ano de Exercício" (validação/repasse).
 
 ### Lista de Tarefas
