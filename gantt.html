@@ -101,13 +101,13 @@
 
         .gantt-dates {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 0.5rem;
+            grid-template-columns: repeat(21, 1fr);
+            gap: 0.25rem;
             text-align: center;
         }
 
         .gantt-date {
-            font-size: 0.875rem;
+            font-size: 0.7rem;
             color: var(--text-secondary);
             font-weight: 600;
         }
@@ -153,8 +153,8 @@
             position: relative;
             height: 40px;
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 0.5rem;
+            grid-template-columns: repeat(21, 1fr);
+            gap: 0.25rem;
         }
 
         .gantt-bar {
@@ -253,7 +253,7 @@
     <div class="header">
         <div class="header-left">
             <h1>Sprint 1 - Gantt Chart</h1>
-            <p class="subtitle">Semana 1 (19-23/01/2026) | Timeline Visual</p>
+            <p class="subtitle">3 Semanas (27/01 - 16/02/2026) | Timeline Visual</p>
         </div>
         <div class="nav-links">
             <a href="kanban.html" class="nav-link">
@@ -333,7 +333,8 @@
                 const isToday = date.toDateString() === today;
                 const dayName = date.toLocaleDateString('pt-BR', { weekday: 'short' });
                 const dayNum = date.getDate();
-                return `<div class="gantt-date ${isToday ? 'today' : ''}">${dayName}<br/>${dayNum}/01</div>`;
+                const month = date.getMonth() + 1;
+                return `<div class="gantt-date ${isToday ? 'today' : ''}">${dayName}<br/>${dayNum}/${month.toString().padStart(2, '0')}</div>`;
             }).join('');
 
             // Renderizar tarefas
