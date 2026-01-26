@@ -1,9 +1,8 @@
-### Tarefa 8: Desenhar o Protocolo de Envio (Upload e Prazos)
-*Esta tarefa define como os documentos entram no sistema. O Art. 68 da Lei do Pará define que a SEMAS organiza o sistema, mas precisa receber dados dos municípios e do IDEFLOR-Bio.*
+### Tarefa 8: Estabelecimento do Protocolo de Transmissão (Upload e Prazos)
 
-*   **O que você precisa definir:**
-    *   **Canal de Envio:** O IEPHA/MG utiliza um servidor **FTP** (Protocolo de Transferência de Arquivos) para documentos digitais e aceita remessas postais para itens físicos específicos. Para o SEINUC, recomenda-se definir se será um portal web (upload direto) ou FTP.
-    *   **Padronização de Arquivos:** Você deve criar uma regra estrita de nomenclatura. Em MG, o arquivo PDF deve ser nomeado como: `NOME_DO_MUNICIPIO_QUADRO_EXERCICIO`. Isso evita perda de dados.
-    *   **Organização Interna do Arquivo:** Definir que os documentos digitais (PDF) devem conter "Folha de Rosto" e "Sumário" indicando o conteúdo e a paginação.
-    *   **Prazo Fatal:** Estabelecer a data limite de envio (em MG é até 10 de janeiro do ano seguinte ao ano-base). Documentos enviados fora do prazo devem ser sumariamente descartados.
+*Esta etapa regulamenta a entrada de dados no sistema, em conformidade com o Art. 68 da Lei do Pará, que atribui à SEMAS a organização do sistema e o recebimento de informações provenientes dos municípios e do IDEFLOR-Bio.*
 
+* **Canais de Transmissão:** Definição da infraestrutura tecnológica para o recebimento de arquivos, optando-se por portal web (upload direto) ou servidor FTP (Protocolo de Transferência de Arquivos), visando a segurança e a integridade do tráfego de dados.
+* **Padronização da Nomenclatura:** Instituição de regras estritas para a nomeação de arquivos digitais. A padronização deve seguir um modelo uniforme (ex: `MUNICIPIO_QUADRO_EXERCICIO`) para assegurar a rastreabilidade e evitar a perda de informações durante o processamento.
+* **Estruturação Interna de Documentos:** Exigência de que os arquivos em formato PDF apresentem organização interna padronizada, contendo obrigatoriamente Folha de Rosto e Sumário com indicação de conteúdo e paginação.
+* **Prazos Fatais e Admissibilidade:** Estabelecimento de data limite improrrogável para o envio da documentação (referencial de 10 de janeiro do ano subsequente ao ano-base). O descumprimento do prazo regulamentar enseja o descarte automático e a não análise dos documentos enviados.
