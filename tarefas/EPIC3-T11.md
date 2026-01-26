@@ -1,8 +1,7 @@
+### Tarefa 11: Estruturação da Fase Recursal (Garantia de Segurança Jurídica)
 
-### Tarefa 11: Estruturar a Fase Recursal (O "Direito de Defesa")
-*Essencial para garantir a segurança jurídica do sistema e evitar judicialização.*
+Instituição de mecanismos de revisão administrativa destinados a assegurar a segurança jurídica do sistema e mitigar riscos de judicialização dos resultados.
 
-*   **O que você precisa definir:**
-    *   **Publicação Provisória:** O sistema deve gerar uma lista preliminar de UCs validadas (ou pontuadas). Em MG, isso é publicado no site oficial e abre o prazo de recurso.
-    *   **Prazo de Recurso:** Estabelecer quantos dias o gestor tem para reclamar. O modelo mineiro utiliza **10 dias** para recurso contra documentação rejeitada e **15 dias** para impugnação da pontuação provisória.
-    *   **Canal de Recurso:** Definir um e-mail ou aba no sistema específico para receber recursos (ex: `recurso.seinuc@semas.pa.gov.br`), proibindo o envio de *novos* documentos nessa fase, aceitando apenas argumentação sobre o que já foi enviado.
+* **Publicação dos Resultados Provisórios:** Implementação de funcionalidade para geração e divulgação da lista preliminar de Unidades de Conservação (UCs) validadas ou pontuadas. A publicação deve ocorrer em canal oficial, marcando o início da fase de interposição de recursos.
+* **Prazos para Recurso Administrativo:** Fixação de prazos peremptórios para manifestação dos gestores. Estabelecimento de períodos distintos para contestação, tais como 10 dias para recursos contra o indeferimento de documentação e 15 dias para a impugnação da pontuação provisória atribuída.
+* **Canais e Protocolos de Recebimento:** Definição de canal exclusivo para o protocolo de recursos, seja via módulo específico no sistema ou endereço eletrônico institucional dedicado. Nesta fase, fica vedada a inclusão de novos documentos comprobatórios, limitando-se o pleito à fundamentação técnica e jurídica sobre os elementos previamente apresentados.
