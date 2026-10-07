@@ -6,22 +6,19 @@ Este documento apresenta a trajetória cronológica e sequencial para o desenvol
 
 ## Visão Geral das Fases
 
+```mermaid
+flowchart LR
+    F1["FASE 1 — 100%<br/>Arcabouço Normativo<br/>Decreto, Ciclo & LEPA"] --> F2["FASE 2 — 100%<br/>Arquitetura de Dados<br/>Módulos I a IV & Schemas"]
+    F2 --> F3["FASE 3 — 100%<br/>Esteira Operacional<br/>Portaria, Envio & Triagem"]
+    F3 --> F4["FASE 4 — 100%<br/>Transparência & OGC<br/>Portal, WMS/WFS & CSW"]
+
+    style F1 fill:#1E4D2B,color:#FFFFFF,stroke-width:1.5px
+    style F2 fill:#1E4D2B,color:#FFFFFF,stroke-width:1.5px
+    style F3 fill:#1E4D2B,color:#FFFFFF,stroke-width:1.5px
+    style F4 fill:#1E4D2B,color:#FFFFFF,stroke-width:1.5px
 ```
-[FASE 1: BASE REGULAMENTAR] 🟢 (Concluído - 100%)
-Decreto Regulamentador (T1), Ciclo Anual (T2) e Governança Recursal (T10)
-       │
-       ▼
-[FASE 2: ARQUITETURA DE DADOS] 🟢 (Concluído - 100%)
-Módulos de Dados: Ambiental/Clima (T4), Geotecnologias/ZA (T5), Gestão/UCs Legadas (T6), Fundiário/RPPN e Integração (T7)
-       │
-       ▼
-[FASE 3: ESTEIRA OPERACIONAL] 🟢 (Concluído - 100%)
-Portaria Técnica (T3), Protocolo de Envio (T8) e Checklist de Triagem (T9)
-       │
-       ▼
-[FASE 4: TRANSPARÊNCIA E SERVIÇOS] 🟢 (Concluído - 100%)
-Portal do SEINUC e Geoserviços OGC (T11)
-```
+
+![Figura 1: Visão Geral Sequencial das Fases do Roadmap de Implementação do SEINUC/PA](producao/docs/img/diagrama_fases_roadmap.png)
 
 ---
 

@@ -165,6 +165,7 @@ def convert_md_to_abnt_docx(md_path, docx_path):
     
     is_legal_minuta = 'minuta' in os.path.basename(md_path).lower()
     in_code_block = False
+    is_mermaid_block = False
     code_buffer = []
     in_table = False
     table_lines = []
@@ -174,37 +175,40 @@ def convert_md_to_abnt_docx(md_path, docx_path):
         line = lines[i]
         stripped = line.strip()
         
-        # 1. Bloco de Código / Schema
+        # 1. Bloco de Código / Schema / Mermaid
         if stripped.startswith('```'):
             if not in_code_block:
                 in_code_block = True
+                is_mermaid_block = stripped.startswith('```mermaid')
                 code_buffer = []
             else:
                 in_code_block = False
-                # Render Code Block as a shaded ABNT box
-                code_text = "\n".join(code_buffer)
-                tbl = doc.add_table(rows=1, cols=1)
-                tbl.alignment = WD_TABLE_ALIGNMENT.CENTER
-                set_code_block_borders(tbl)
-                cell = tbl.rows[0].cells[0]
-                set_cell_shading(cell, BG_LIGHT_GRAY)
-                set_cell_margins(cell, top=120, bottom=120, left=180, right=180)
-                
-                cp = cell.paragraphs[0]
-                cp.paragraph_format.line_spacing = 1.0
-                cp.paragraph_format.space_before = Pt(4)
-                cp.paragraph_format.space_after = Pt(4)
-                cp.paragraph_format.first_line_indent = Cm(0)
-                
-                crun = cp.add_run(code_text)
-                crun.font.name = 'Consolas'
-                crun.font.size = Pt(9.5)
-                crun.font.color.rgb = RGBColor(30, 30, 30)
-                
-                # Spacer paragraph after table
-                sp = doc.add_paragraph()
-                sp.paragraph_format.space_after = Pt(6)
-                sp.paragraph_format.line_spacing = 1.0
+                if not is_mermaid_block:
+                    # Render JSON/code block as a shaded ABNT box
+                    code_text = "\n".join(code_buffer)
+                    tbl = doc.add_table(rows=1, cols=1)
+                    tbl.alignment = WD_TABLE_ALIGNMENT.CENTER
+                    set_code_block_borders(tbl)
+                    cell = tbl.rows[0].cells[0]
+                    set_cell_shading(cell, BG_LIGHT_GRAY)
+                    set_cell_margins(cell, top=120, bottom=120, left=180, right=180)
+                    
+                    cp = cell.paragraphs[0]
+                    cp.paragraph_format.line_spacing = 1.0
+                    cp.paragraph_format.space_before = Pt(4)
+                    cp.paragraph_format.space_after = Pt(4)
+                    cp.paragraph_format.first_line_indent = Cm(0)
+                    
+                    crun = cp.add_run(code_text)
+                    crun.font.name = 'Consolas'
+                    crun.font.size = Pt(9.5)
+                    crun.font.color.rgb = RGBColor(30, 30, 30)
+                    
+                    # Spacer paragraph after table
+                    sp = doc.add_paragraph()
+                    sp.paragraph_format.space_after = Pt(6)
+                    sp.paragraph_format.line_spacing = 1.0
+                is_mermaid_block = False
             i += 1
             continue
             
@@ -212,8 +216,54 @@ def convert_md_to_abnt_docx(md_path, docx_path):
             code_buffer.append(line)
             i += 1
             continue
+
+        # 2. Imagem em Markdown: ![Caption](img_path)
+        img_match = re.match(r'^!\[(.*?)\]\((.*?)\)', stripped)
+        if img_match:
+            caption_text = img_match.group(1).strip()
+            rel_img_path = img_match.group(2).strip()
             
-        # 2. Tabelas Markdown
+            abs_img_path = os.path.normpath(os.path.join(os.path.dirname(md_path), rel_img_path))
+            
+            if os.path.exists(abs_img_path):
+                # ABNT NBR 14724 item 5.8: Título da ilustração acima da imagem
+                cap_top = doc.add_paragraph()
+                cap_top.alignment = WD_ALIGN_PARAGRAPH.CENTER
+                cap_top.paragraph_format.space_before = Pt(12)
+                cap_top.paragraph_format.space_after = Pt(4)
+                cap_top.paragraph_format.first_line_indent = Cm(0)
+                trun = cap_top.add_run(caption_text)
+                trun.font.name = 'Times New Roman'
+                trun.font.size = Pt(10)
+                trun.font.bold = True
+                
+                # Render Image
+                img_p = doc.add_paragraph()
+                img_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+                img_p.paragraph_format.space_before = Pt(2)
+                img_p.paragraph_format.space_after = Pt(4)
+                img_p.paragraph_format.first_line_indent = Cm(0)
+                irun = img_p.add_run()
+                irun.add_picture(abs_img_path, width=Inches(6.2))
+                
+                # ABNT NBR 14724 item 5.8: Fonte abaixo da ilustração
+                src_p = doc.add_paragraph()
+                src_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+                src_p.paragraph_format.space_before = Pt(2)
+                src_p.paragraph_format.space_after = Pt(12)
+                src_p.paragraph_format.first_line_indent = Cm(0)
+                srun = src_p.add_run("Fonte: Elaboração própria / SEINUC/PA (2026).")
+                srun.font.name = 'Times New Roman'
+                srun.font.size = Pt(9.5)
+                srun.font.italic = True
+                srun.font.color.rgb = RGBColor(100, 100, 100)
+            else:
+                print(f"⚠️ Imagem não encontrada: {abs_img_path}")
+                
+            i += 1
+            continue
+            
+        # 3. Tabelas Markdown
         if '|' in stripped and not stripped.startswith('>'):
             if not in_table:
                 in_table = True
@@ -229,17 +279,17 @@ def convert_md_to_abnt_docx(md_path, docx_path):
                 render_markdown_table(doc, table_lines)
                 table_lines = []
                 
-        # 3. Linha em branco
+        # 4. Linha em branco
         if not stripped:
             i += 1
             continue
             
-        # 4. Divisores / Linha horizontal
+        # 5. Divisores / Linha horizontal
         if stripped in ['---', '***', '___']:
             i += 1
             continue
             
-        # 5. Títulos (Headings)
+        # 6. Títulos (Headings)
         if stripped.startswith('#'):
             h_match = re.match(r'^(#+)\s+(.*)', stripped)
             if h_match:
@@ -264,7 +314,7 @@ def convert_md_to_abnt_docx(md_path, docx_path):
                 i += 1
                 continue
                 
-        # 6. Ementa em Atos Normativos (linhas iniciando com `>`)
+        # 7. Ementa em Atos Normativos (linhas iniciando com `>`)
         if stripped.startswith('>'):
             e_text = re.sub(r'^>\s*', '', stripped).strip()
             
@@ -279,7 +329,7 @@ def convert_md_to_abnt_docx(md_path, docx_path):
             i += 1
             continue
 
-        # 7. Preâmbulo em Atos Normativos ("O GOVERNADOR...", "RESOLVEM:")
+        # 8. Preâmbulo em Atos Normativos ("O GOVERNADOR...", "RESOLVEM:")
         if is_legal_minuta and (stripped.startswith('**O GOVERNADOR') or stripped.startswith('**O SECRETÁRIO') or stripped == '**DECRETA:**' or stripped == '**RESOLVEM:**' or stripped.startswith('PALÁCIO DO GOVERNO')):
             p = doc.add_paragraph()
             p.paragraph_format.line_spacing = 1.5
@@ -297,7 +347,7 @@ def convert_md_to_abnt_docx(md_path, docx_path):
             i += 1
             continue
 
-        # 8. Listas / Bullets
+        # 9. Listas / Bullets
         if stripped.startswith('* ') or stripped.startswith('- ') or re.match(r'^\d+\.\s', stripped):
             is_num_list = bool(re.match(r'^\d+\.\s', stripped))
             item_text = re.sub(r'^(\*|-|\d+\.)\s*', '', stripped).strip()
@@ -315,7 +365,7 @@ def convert_md_to_abnt_docx(md_path, docx_path):
             i += 1
             continue
 
-        # 9. Parágrafo Padrão (ABNT Body Text)
+        # 10. Parágrafo Padrão (ABNT Body Text)
         p = doc.add_paragraph()
         p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
         p.paragraph_format.line_spacing = 1.5
@@ -345,7 +395,6 @@ def render_markdown_table(doc, table_lines):
     """Renderiza tabelas do Markdown como tabelas ABNT NBR 14724"""
     parsed_rows = []
     for line in table_lines:
-        # Ignore separator lines like |---|---|
         if re.match(r'^\|?\s*:?-+:?\s*\|', line):
             continue
         cells = [c.strip() for c in line.strip('|').split('|')]

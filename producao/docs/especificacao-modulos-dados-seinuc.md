@@ -9,13 +9,22 @@
 
 O presente documento estabelece o Dicionário de Dados, a estrutura de atributos espaciais, as regras de validação e os esquemas de integração (JSON Schema) para os quatro eixos temáticos que compõem o banco de dados oficial do SEINUC/PA.
 
+```mermaid
+flowchart TD
+    ROOT["SEINUC/PA — BANCO DE DADOS OFICIAL<br/>(Arquitetura Canônica)"]
+    ROOT --> MOD_1["MÓDULO I — AMBIENTAL & CLIMA<br/>Fauna, Flora, Hidrografia, Solos, Relevo,<br/>Clima e Espécies Ameaçadas/Exóticas"]
+    ROOT --> MOD_2["MÓDULO II — GEOTECNOLOGIAS & ZA<br/>SIRGAS 2000 (EPSG:4674), Perímetros,<br/>Zoneamento e Zonas de Amortecimento"]
+    ROOT --> MOD_3["MÓDULO III — GESTÃO & UCS LEGADAS<br/>Conselhos, Planos de Gestão, UCs Legadas,<br/>Aspectos Antropológicos e Repasse (20%)"]
+    ROOT --> MOD_4["MÓDULO IV — FUNDIÁRIO & RPPNS<br/>Situação Dominial, Regularização Fundiária,<br/>RPPNs e Averbação no RGI"]
+
+    style ROOT fill:#003366,stroke:#001F3F,stroke-width:2px,color:#FFFFFF,font-weight:bold
+    style MOD_1 fill:#1E4D2B,stroke:#11331B,stroke-width:1.5px,color:#FFFFFF
+    style MOD_2 fill:#1E4D2B,stroke:#11331B,stroke-width:1.5px,color:#FFFFFF
+    style MOD_3 fill:#1E4D2B,stroke:#11331B,stroke-width:1.5px,color:#FFFFFF
+    style MOD_4 fill:#1E4D2B,stroke:#11331B,stroke-width:1.5px,color:#FFFFFF
 ```
-SEINUC/PA - ARQUITETURA CANÔNICA DE MÓDULOS DE DADOS
-├── MÓDULO I: Caracterização Ambiental, Biodiversidade e Clima (Quadro I)
-├── MÓDULO II: Geotecnologias, Delimitação e Zonas de Amortecimento (Quadro II)
-├── MÓDULO III: Gestão, Governança, Aspectos Antropológicos e UCs Legadas (Quadro III)
-└── MÓDULO IV: Caracterização Fundiária, Dominial e RPPNs (Quadro IV)
-```
+
+![Figura 1: Arquitetura Canônica dos Módulos de Dados do SEINUC/PA](img/diagrama_arquitetura_modulos.png)
 
 ---
 

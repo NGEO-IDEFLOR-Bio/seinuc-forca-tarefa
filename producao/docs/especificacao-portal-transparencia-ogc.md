@@ -17,12 +17,20 @@ O objetivo precípuo consiste em garantir o controle social, a publicidade irres
 
 O Portal Público do SEINUC/PA será estruturado em três módulos integrados de livre acesso ao cidadão, pesquisadores e órgãos de controle, isentos de necessidade de cadastro prévio:
 
+```mermaid
+flowchart TD
+    ROOT["PORTAL PÚBLICO SEINUC/PA<br/>(Transparência Ativa)"]
+    ROOT --> MOD_A["MÓDULO A<br/>Visualizador WebGIS Interativo"]
+    ROOT --> MOD_B["MÓDULO B<br/>Repositório e Consulta Documental"]
+    ROOT --> MOD_C["MÓDULO C<br/>Painel Transparente do ICMS Ecológico"]
+
+    style ROOT fill:#003366,stroke:#001F3F,stroke-width:2px,color:#FFFFFF,font-weight:bold
+    style MOD_A fill:#1E4D2B,stroke:#11331B,stroke-width:1.5px,color:#FFFFFF
+    style MOD_B fill:#1E4D2B,stroke:#11331B,stroke-width:1.5px,color:#FFFFFF
+    style MOD_C fill:#D97706,stroke:#92400E,stroke-width:1.5px,color:#FFFFFF
 ```
-PORTAL PÚBLICO SEINUC/PA (TRANSPARÊNCIA ATIVA)
-├── MÓDULO A: Visualizador WebGIS Interativo de UCs e Zoneamento
-├── MÓDULO B: Repositório e Consulta Documental de Unidades de Conservação
-└── MÓDULO C: Painel Transparente do ICMS Ecológico por Município
-```
+
+![Figura 1: Arquitetura do Portal Público de Transparência Ativa do SEINUC/PA](img/diagrama_portal_transparencia.png)
 
 ### 2.1. Módulo A - Visualizador WebGIS Interativo
 * **Funcionalidade:** Interface cartográfica de alto desempenho para navegação espacial sobre as Unidades de Conservação estaduais, municipais e RPPNs.
