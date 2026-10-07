@@ -250,6 +250,15 @@ html_content = '''<!DOCTYPE html>
                 </div>
             </div>
 
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a href="#pasta-documentos" class="bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-bold px-6 py-3 rounded-xl transition-colors inline-flex items-center gap-2 shadow-lg shadow-emerald-900/40">
+                    <i class="fa-solid fa-download"></i> Baixar Documentação Oficial (.docx)
+                </a>
+                <a href="#pasta-catalogo" class="bg-slate-800/90 hover:bg-slate-700 border border-slate-700 text-slate-200 text-sm font-bold px-6 py-3 rounded-xl transition-colors inline-flex items-center gap-2">
+                    <i class="fa-solid fa-book-open"></i> Catálogo dos Produtos & Fontes
+                </a>
+            </div>
+
             <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-xs font-semibold text-slate-400">
                 <span><i class="fa-solid fa-arrow-down-long text-emerald-400 mr-2 animate-bounce"></i> Role a página para explorar as pastas com os componentes do sistema</span>
             </div>
@@ -259,12 +268,95 @@ html_content = '''<!DOCTYPE html>
     <!-- DRAWER FOLDERS STACK CONTAINER -->
     <main class="py-12">
         <div class="drawer-container" id="drawer">
-            
-            <!-- FOLDER 1: MINUTA DO DECRETO ESTADUAL -->
+
+            <!-- FOLDER 1: CENTRAL DE DOCUMENTOS OFICIAIS (.DOCX) -->
+            <div class="folder" id="pasta-documentos">
+                <div class="folder-tab">
+                    <span class="folder-tab-badge"></span>
+                    <span>I. CENTRAL DE DOCUMENTOS OFICIAIS (.DOCX)</span>
+                </div>
+                <div class="folder-body">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
+                        <div>
+                            <span class="text-xs font-mono uppercase text-emerald-400 tracking-wider">Download direto — Word formatado (Norma ABNT NBR 14724:2023)</span>
+                            <h2 class="text-2xl font-bold text-white mt-1">Documentos Oficiais do Pacote SEINUC/PA</h2>
+                        </div>
+                        <span class="text-xs font-mono bg-emerald-950 text-emerald-300 px-3 py-1.5 rounded border border-emerald-800 whitespace-nowrap">5 arquivos disponíveis</span>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="bg-slate-900/90 p-5 rounded-xl border border-sky-800/60 hover:border-sky-500/70 transition-all">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="h-11 w-11 rounded-lg bg-sky-500/15 border border-sky-500/30 flex items-center justify-center"><i class="fa-solid fa-file-contract text-sky-400 text-xl"></i></div>
+                                <strong class="text-white text-sm">Decreto Regulamentador</strong>
+                            </div>
+                            <p class="text-[11px] text-slate-400 leading-relaxed mb-3">Institui a governança, os Módulos I–IV e a sincronização com o ICMS Verde (Lei 10.306/2023).</p>
+                            <div class="flex gap-2">
+                                <a href="producao/docs/docx/minuta-decreto-seinuc.docx" class="inline-flex items-center gap-1.5 text-[11px] font-bold bg-sky-600/90 hover:bg-sky-500 text-white px-3 py-1.5 rounded-lg transition-colors"><i class="fa-solid fa-download"></i> Baixar .docx</a>
+                                <a href="producao/docs/minuta-decreto-seinuc.md" class="inline-flex items-center gap-1.5 text-[11px] font-semibold border border-slate-700 text-slate-300 hover:text-white hover:border-sky-500/60 px-3 py-1.5 rounded-lg transition-colors"><i class="fa-solid fa-file-lines"></i> Ver .md</a>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-900/90 p-5 rounded-xl border border-purple-800/60 hover:border-purple-500/70 transition-all">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="h-11 w-11 rounded-lg bg-purple-500/15 border border-purple-500/30 flex items-center justify-center"><i class="fa-solid fa-file-contract text-purple-400 text-xl"></i></div>
+                                <strong class="text-white text-sm">Portaria Conjunta (Diretrizes)</strong>
+                            </div>
+                            <p class="text-[11px] text-slate-400 leading-relaxed mb-3">Padrões técnicos, cartografia SIRGAS 2000, nomenclatura e Declaração de Veracidade (SEMAS/IDEFLOR-Bio).</p>
+                            <div class="flex gap-2">
+                                <a href="producao/docs/docx/minuta-portaria-diretrizes-tecnicas.docx" class="inline-flex items-center gap-1.5 text-[11px] font-bold bg-purple-600/90 hover:bg-purple-500 text-white px-3 py-1.5 rounded-lg transition-colors"><i class="fa-solid fa-download"></i> Baixar .docx</a>
+                                <a href="producao/docs/minuta-portaria-diretrizes-tecnicas.md" class="inline-flex items-center gap-1.5 text-[11px] font-semibold border border-slate-700 text-slate-300 hover:text-white hover:border-purple-500/60 px-3 py-1.5 rounded-lg transition-colors"><i class="fa-solid fa-file-lines"></i> Ver .md</a>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-900/90 p-5 rounded-xl border border-emerald-800/60 hover:border-emerald-500/70 transition-all">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="h-11 w-11 rounded-lg bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center"><i class="fa-solid fa-database text-emerald-400 text-xl"></i></div>
+                                <strong class="text-white text-sm">Especificação de Dados</strong>
+                            </div>
+                            <p class="text-[11px] text-slate-400 leading-relaxed mb-3">Dicionário de dados e JSON Schemas dos Módulos I–IV, no padrão oficial do IDEFLOR-Bio.</p>
+                            <div class="flex gap-2">
+                                <a href="producao/docs/docx/especificacao-modulos-dados-seinuc.docx" class="inline-flex items-center gap-1.5 text-[11px] font-bold bg-emerald-600/90 hover:bg-emerald-500 text-white px-3 py-1.5 rounded-lg transition-colors"><i class="fa-solid fa-download"></i> Baixar .docx</a>
+                                <a href="producao/docs/especificacao-modulos-dados-seinuc.md" class="inline-flex items-center gap-1.5 text-[11px] font-semibold border border-slate-700 text-slate-300 hover:text-white hover:border-emerald-500/60 px-3 py-1.5 rounded-lg transition-colors"><i class="fa-solid fa-file-lines"></i> Ver .md</a>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-900/90 p-5 rounded-xl border border-amber-800/60 hover:border-amber-500/70 transition-all">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="h-11 w-11 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center"><i class="fa-solid fa-truck-fast text-amber-400 text-xl"></i></div>
+                                <strong class="text-white text-sm">Manual de Envio e Triagem</strong>
+                            </div>
+                            <p class="text-[11px] text-slate-400 leading-relaxed mb-3">Protocolo digital, SHA-256, checklist de admissibilidade e prazos em dias úteis (LEPA).</p>
+                            <div class="flex gap-2">
+                                <a href="producao/docs/docx/manual-fluxo-envio-e-triagem.docx" class="inline-flex items-center gap-1.5 text-[11px] font-bold bg-amber-600/90 hover:bg-amber-500 text-white px-3 py-1.5 rounded-lg transition-colors"><i class="fa-solid fa-download"></i> Baixar .docx</a>
+                                <a href="producao/docs/manual-fluxo-envio-e-triagem.md" class="inline-flex items-center gap-1.5 text-[11px] font-semibold border border-slate-700 text-slate-300 hover:text-white hover:border-amber-500/60 px-3 py-1.5 rounded-lg transition-colors"><i class="fa-solid fa-file-lines"></i> Ver .md</a>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-900/90 p-5 rounded-xl border border-teal-800/60 hover:border-teal-500/70 transition-all">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="h-11 w-11 rounded-lg bg-teal-500/15 border border-teal-500/30 flex items-center justify-center"><i class="fa-solid fa-globe text-teal-400 text-xl"></i></div>
+                                <strong class="text-white text-sm">Portal WebGIS & Serviços OGC</strong>
+                            </div>
+                            <p class="text-[11px] text-slate-400 leading-relaxed mb-3">Transparência ativa, WMS/WFS/WCS/CSW, metadados MGB/INDE, LGPD e SisGen.</p>
+                            <div class="flex gap-2">
+                                <a href="producao/docs/docx/especificacao-portal-transparencia-ogc.docx" class="inline-flex items-center gap-1.5 text-[11px] font-bold bg-teal-600/90 hover:bg-teal-500 text-white px-3 py-1.5 rounded-lg transition-colors"><i class="fa-solid fa-download"></i> Baixar .docx</a>
+                                <a href="producao/docs/especificacao-portal-transparencia-ogc.md" class="inline-flex items-center gap-1.5 text-[11px] font-semibold border border-slate-700 text-slate-300 hover:text-white hover:border-teal-500/60 px-3 py-1.5 rounded-lg transition-colors"><i class="fa-solid fa-file-lines"></i> Ver .md</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-400 italic text-center mt-5">
+                        Documentos finalizados e validados tecnicamente e juridicamente, prontos para tramitação (PGE/PA e consulta pública FAMEP).
+                    </p>
+                </div>
+            </div>
+
+            <!-- FOLDER 2: MINUTA DO DECRETO ESTADUAL -->
             <div class="folder" id="pasta-decreto">
                 <div class="folder-tab">
                     <span class="folder-tab-badge"></span>
-                    <span>I. MINUTA DO DECRETO ESTADUAL (ARCABOUÇO NORMATIVO)</span>
+                    <span>II. MINUTA DO DECRETO ESTADUAL (ARCABOUÇO NORMATIVO)</span>
                 </div>
                 <div class="folder-body">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
@@ -319,7 +411,7 @@ html_content = '''<!DOCTYPE html>
             <div class="folder" id="pasta-schema">
                 <div class="folder-tab">
                     <span class="folder-tab-badge"></span>
-                    <span>II. ARQUITETURA DE DADOS (OS 4 MÓDULOS REGULADOS)</span>
+                    <span>III. ARQUITETURA DE DADOS (OS 4 MÓDULOS REGULADOS)</span>
                 </div>
                 <div class="folder-body">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
@@ -402,7 +494,7 @@ html_content = '''<!DOCTYPE html>
             <div class="folder" id="pasta-portal">
                 <div class="folder-tab">
                     <span class="folder-tab-badge"></span>
-                    <span>III. PORTAL PÚBLICO & GEOSERVIÇOS OGC (WEBGIS ESTADUAL)</span>
+                    <span>IV. PORTAL PÚBLICO & GEOSERVIÇOS OGC (WEBGIS ESTADUAL)</span>
                 </div>
                 <div class="folder-body">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
@@ -453,7 +545,7 @@ html_content = '''<!DOCTYPE html>
             <div class="folder" id="pasta-icms">
                 <div class="folder-tab">
                     <span class="folder-tab-badge"></span>
-                    <span>IV. ICMS ECOLÓGICO & REPASSE FINANCEIRO MUNICIPAL</span>
+                    <span>V. ICMS ECOLÓGICO & REPASSE FINANCEIRO MUNICIPAL</span>
                 </div>
                 <div class="folder-body">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
@@ -497,7 +589,7 @@ html_content = '''<!DOCTYPE html>
             <div class="folder" id="pasta-manual">
                 <div class="folder-tab">
                     <span class="folder-tab-badge"></span>
-                    <span>V. MANUAL OPERACIONAL DE TRIAGEM & REQUISITOS TÉCNICOS</span>
+                    <span>VI. MANUAL OPERACIONAL DE TRIAGEM & REQUISITOS TÉCNICOS</span>
                 </div>
                 <div class="folder-body">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
@@ -548,7 +640,7 @@ html_content = '''<!DOCTYPE html>
             <div class="folder" id="pasta-tramitacao">
                 <div class="folder-tab">
                     <span class="folder-tab-badge"></span>
-                    <span>VI. PACOTE NORMATIVO & TRAMITAÇÃO INSTITUCIONAL</span>
+                    <span>VII. PACOTE NORMATIVO & TRAMITAÇÃO INSTITUCIONAL</span>
                 </div>
                 <div class="folder-body">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
@@ -590,6 +682,126 @@ html_content = '''<!DOCTYPE html>
                     <p class="text-xs text-slate-400 italic text-center">
                         Consulte abaixo a Central de Documentos de Gabinete para baixar todos os 5 arquivos normativos e técnicos em formato Word (.docx).
                     </p>
+                </div>
+            </div>
+
+            <!-- FOLDER 7: CATÁLOGO DE PRODUTOS & FONTES TÉCNICAS -->
+            <div class="folder" id="pasta-catalogo">
+                <div class="folder-tab">
+                    <span class="folder-tab-badge"></span>
+                    <span>VIII. CATÁLOGO DE PRODUTOS & FONTES TÉCNICAS</span>
+                </div>
+                <div class="folder-body">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
+                        <div>
+                            <span class="text-xs font-mono uppercase text-sky-400 tracking-wider">O que é cada documento do projeto</span>
+                            <h2 class="text-2xl font-bold text-white mt-1">Catálogo de Produtos e Base Técnica</h2>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-300 leading-relaxed mb-6">
+                        Os produtos consolidados do SEINUC/PA foram elaborados com base na <strong>Lei Estadual nº 10.306/2023</strong> (que institui o SEUC/PA e o SEINUC/PA) e complementados pelas fontes normativas e técnicas detalhadas abaixo.
+                    </p>
+
+                    <div class="space-y-3 mb-8">
+                        <div class="bg-slate-900/90 p-5 rounded-xl border border-slate-800">
+                            <div class="flex flex-wrap items-center gap-3 mb-2">
+                                <i class="fa-solid fa-file-contract text-sky-400 text-xl"></i>
+                                <strong class="text-white text-sm">1. Minuta do Decreto Regulamentador do SEINUC/PA</strong>
+                                <span class="text-[10px] text-slate-500 ml-auto space-x-2">
+                                    <a href="producao/docs/minuta-decreto-seinuc.md" class="text-sky-400 hover:underline">.md</a>
+                                    <a href="producao/docs/docx/minuta-decreto-seinuc.docx" class="text-sky-400 hover:underline">.docx</a>
+                                </span>
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-1"><strong class="text-slate-200">O que é:</strong> ato do Chefe do Executivo que regulamenta o SEINUC/PA (art. 67 da Lei 10.306/2023).</p>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-1"><strong class="text-slate-200">Finalidade:</strong> governança (SEMAS organiza/mantém; IDEFLOR-Bio executa), Módulos I a IV, ciclo anual sincronizado ao ICMS Verde (Decreto 1.064/2020), CT-SEINUC, fase recursal em 15 dias úteis (LEPA), transparência/sigilo/LGPD/SisGen e sanções.</p>
+                            <p class="text-xs text-slate-400 leading-relaxed"><strong class="text-slate-300">Base legal:</strong> Lei 10.306/2023 (arts. 67, 68, 110-114); LEPA 8.972/2020; Lei 7.638/2012; Decreto 1.064/2020.</p>
+                        </div>
+
+                        <div class="bg-slate-900/90 p-5 rounded-xl border border-slate-800">
+                            <div class="flex flex-wrap items-center gap-3 mb-2">
+                                <i class="fa-solid fa-file-contract text-purple-400 text-xl"></i>
+                                <strong class="text-white text-sm">2. Portaria Conjunta de Diretrizes Técnicas (SEMAS/IDEFLOR-Bio)</strong>
+                                <span class="text-[10px] text-slate-500 ml-auto space-x-2">
+                                    <a href="producao/docs/minuta-portaria-diretrizes-tecnicas.md" class="text-sky-400 hover:underline">.md</a>
+                                    <a href="producao/docs/docx/minuta-portaria-diretrizes-tecnicas.docx" class="text-sky-400 hover:underline">.docx</a>
+                                </span>
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-1"><strong class="text-slate-200">O que é:</strong> ato normativo conjunto que fixa as diretrizes técnicas de apresentação e envio de dados.</p>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-1"><strong class="text-slate-200">Finalidade:</strong> formatos de arquivo (PDF-OCR, 50 MB/arquivo, 200 MB/pacote), padrão cartográfico SIRGAS 2000, topologia, nomenclatura, contingência de prazo, autenticação SHA-256 e o modelo da Declaração de Veracidade (Anexo I).</p>
+                            <p class="text-xs text-slate-400 leading-relaxed"><strong class="text-slate-300">Base legal:</strong> Arts. 6º e 16 do Decreto Regulamentador; Lei 10.306/2023.</p>
+                        </div>
+
+                        <div class="bg-slate-900/90 p-5 rounded-xl border border-slate-800">
+                            <div class="flex flex-wrap items-center gap-3 mb-2">
+                                <i class="fa-solid fa-database text-emerald-400 text-xl"></i>
+                                <strong class="text-white text-sm">3. Especificação Técnica e Dicionário de Dados (Módulos I a IV)</strong>
+                                <span class="text-[10px] text-slate-500 ml-auto space-x-2">
+                                    <a href="producao/docs/especificacao-modulos-dados-seinuc.md" class="text-sky-400 hover:underline">.md</a>
+                                    <a href="producao/docs/docx/especificacao-modulos-dados-seinuc.docx" class="text-sky-400 hover:underline">.docx</a>
+                                </span>
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-1"><strong class="text-slate-200">O que é:</strong> especificação da arquitetura de dados e do dicionário de campos do SEINUC/PA.</p>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-1"><strong class="text-slate-200">Finalidade:</strong> campos, tabela DBF no padrão oficial do IDEFLOR-Bio, JSON Schemas com validação (regra condicional de conselho, rastreio do art. 117) e protocolo de integração com CNUC, ITERPA e SEMAS Licenciamento.</p>
+                            <p class="text-xs text-slate-400 leading-relaxed"><strong class="text-slate-300">Base legal:</strong> Art. 67, §2º/§3º e Art. 68 da Lei 10.306/2023.</p>
+                        </div>
+
+                        <div class="bg-slate-900/90 p-5 rounded-xl border border-slate-800">
+                            <div class="flex flex-wrap items-center gap-3 mb-2">
+                                <i class="fa-solid fa-truck-fast text-amber-400 text-xl"></i>
+                                <strong class="text-white text-sm">4. Manual de Protocolo Digital, Envio e Triagem</strong>
+                                <span class="text-[10px] text-slate-500 ml-auto space-x-2">
+                                    <a href="producao/docs/manual-fluxo-envio-e-triagem.md" class="text-sky-400 hover:underline">.md</a>
+                                    <a href="producao/docs/docx/manual-fluxo-envio-e-triagem.docx" class="text-sky-400 hover:underline">.docx</a>
+                                </span>
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-1"><strong class="text-slate-200">O que é:</strong> guia operacional de transmissão e recepção documental.</p>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-1"><strong class="text-slate-200">Finalidade:</strong> estrutura de diretórios do pacote, canais (Portal Web/SFTP), recibo com SHA-256 + selo de tempo ICP-Brasil, checklist de admissibilidade (vícios eliminatórios e sanáveis) e ficha de aceite da triagem.</p>
+                            <p class="text-xs text-slate-400 leading-relaxed"><strong class="text-slate-300">Base legal:</strong> Arts. 5º-9º do Decreto Regulamentador; Portaria Conjunta.</p>
+                        </div>
+
+                        <div class="bg-slate-900/90 p-5 rounded-xl border border-slate-800">
+                            <div class="flex flex-wrap items-center gap-3 mb-2">
+                                <i class="fa-solid fa-globe text-teal-400 text-xl"></i>
+                                <strong class="text-white text-sm">5. Especificação do Portal de Transparência e Serviços de Mapas (OGC)</strong>
+                                <span class="text-[10px] text-slate-500 ml-auto space-x-2">
+                                    <a href="producao/docs/especificacao-portal-transparencia-ogc.md" class="text-sky-400 hover:underline">.md</a>
+                                    <a href="producao/docs/docx/especificacao-portal-transparencia-ogc.docx" class="text-sky-400 hover:underline">.docx</a>
+                                </span>
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-1"><strong class="text-slate-200">O que é:</strong> especificação do portal público e da infraestrutura de geoserviços.</p>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-1"><strong class="text-slate-200">Finalidade:</strong> três módulos públicos (WebGIS, repositório documental e painel ICMS Ecológico), geoserviços WMS/WFS/WCS/CSW, metadados MGB/INDE, mascaramento de espécies criticamente ameaçadas (CR), LGPD (SEMAS Controladora) e Lei 13.123/2015 (SisGen).</p>
+                            <p class="text-xs text-slate-400 leading-relaxed"><strong class="text-slate-300">Base legal:</strong> Art. 67, §6º e Art. 111 da Lei 10.306/2023; Arts. 13-14 do Decreto Regulamentador.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-slate-900/90 p-5 rounded-xl border border-slate-800">
+                            <div class="text-sky-400 font-bold text-xs uppercase mb-3 flex items-center">
+                                <i class="fa-solid fa-scale-balanced mr-2"></i> Fontes Normativas
+                            </div>
+                            <ul class="text-xs text-slate-300 leading-relaxed list-disc list-inside space-y-1">
+                                <li><strong>Lei Estadual nº 10.306/2023</strong> — SEUC/PA e SEINUC/PA (art. 67).</li>
+                                <li><strong>Lei Federal nº 9.985/2000 + Decreto Federal nº 4.340/2002</strong> — SNUC e sua regulamentação.</li>
+                                <li><strong>Lei Estadual nº 7.638/2012 + Decreto Estadual nº 1.064/2020</strong> — ICMS Ecológico/Verde.</li>
+                                <li><strong>Lei Estadual nº 8.972/2020</strong> — LEPA (processo administrativo estadual).</li>
+                                <li><strong>Lei Federal nº 12.527/2011</strong> — LAI (Acesso à Informação).</li>
+                                <li><strong>Lei Federal nº 13.709/2018</strong> — LGPD (proteção de dados).</li>
+                                <li><strong>Lei Federal nº 13.123/2015</strong> — Lei da Biodiversidade (SisGen).</li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-900/90 p-5 rounded-xl border border-slate-800">
+                            <div class="text-emerald-400 font-bold text-xs uppercase mb-3 flex items-center">
+                                <i class="fa-solid fa-map-location-dot mr-2"></i> Fontes Técnicas
+                            </div>
+                            <ul class="text-xs text-slate-300 leading-relaxed list-disc list-inside space-y-1">
+                                <li><strong>SIRGAS 2000 (EPSG:4674)</strong> — datum oficial das bases vetoriais.</li>
+                                <li><strong>Padrões OGC</strong> — WMS 1.3.0, WFS 2.0.0, WCS 2.0.1 e CSW 2.0.2.</li>
+                                <li><strong>Perfil MGB / INDE</strong> — catalogação de metadados geográficos.</li>
+                                <li><strong>CNUC (MMA)</strong> — integração com o Cadastro Nacional de Unidades de Conservação.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
 
