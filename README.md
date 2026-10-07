@@ -23,7 +23,9 @@ A documentação do projeto está estruturada em formato Markdown (.md) de modo 
 * **Matriz de Acompanhamento (`EPICOS.md`):** Apresenta o detalhamento dos 4 eixos estratégicos do projeto e o estado atual de cada entrega.
 * **Documentação de Tarefas (`tarefas/`):** Contém as especificações técnicas, parâmetros regulatórios e fluxos de cada tarefa individual (`EPIC1-T1.md` a `EPIC4-T12.md`).
 * **Acervo Normativo e Referências (`documentos/referencias/`):** Reúne a legislação federal, estadual comparada, diretrizes do CONAMA e estudos técnicos, catalogados em `INDEX.md`.
-* **Produtos Consolidados (`producao/docs/`):** Armazena as minutas de atos normativos e documentos regulamentares finalizados.
+* **Auditoria e Conformidade (`documentos/auditoria-conformidade-seinuc.md`):** Relatório de auditoria técnica e jurídica do acervo, consolidado em 4 rodadas de reavaliação (Partes I a IV).
+* **Produtos Consolidados (`producao/docs/`):** Armazena as minutas de atos normativos e documentos regulamentares finalizados (Texto Final Sanado).
+* **Arquivados (`producao/arquivados/`):** Versões superadas de documentos produzidos durante o processo (ex.: minuta anterior em `.docx`).
 
 ---
 
@@ -64,14 +66,16 @@ Define os parâmetros para o Portal de Transparência do SEINUC, a disponibiliza
 │   ├── EPIC4-T11.md               # Portal de Transparência e Serviços de Mapas (OGC) [Concluído]
 │   └── EPIC4-T12.md               # Relatórios de Efetividade da Gestão (Art. 113) [Concluído]
 ├── producao/
-│   └── docs/
-│       ├── minuta-decreto-seinuc.md            # Minuta do Decreto Regulamentador (Texto Final Sanado)
-│       ├── minuta-portaria-diretrizes-tecnicas.md # Portaria Conjunta SEMAS/IDEFLOR-Bio (Texto Final Sanado)
-│       ├── especificacao-modulos-dados-seinuc.md # Especificação Técnica dos Módulos I a IV (SIRGAS 2000)
-│       ├── manual-fluxo-envio-e-triagem.md       # Manual de Protocolo Digital, Envio e Triagem
-│       ├── especificacao-portal-transparencia-ogc.md # Portal de Transparência e Geoserviços OGC (WMS/WFS)
-│       └── auditoria-conformidade-seinuc.md    # Relatório de Auditoria Técnica e Jurídica
+│   ├── docs/
+│   │   ├── minuta-decreto-seinuc.md            # Minuta do Decreto Regulamentador (Texto Final Sanado)
+│   │   ├── minuta-portaria-diretrizes-tecnicas.md # Portaria Conjunta SEMAS/IDEFLOR-Bio (Texto Final Sanado)
+│   │   ├── especificacao-modulos-dados-seinuc.md # Especificação Técnica dos Módulos I a IV (SIRGAS 2000)
+│   │   ├── manual-fluxo-envio-e-triagem.md       # Manual de Protocolo Digital, Envio e Triagem
+│   │   └── especificacao-portal-transparencia-ogc.md # Portal de Transparência e Geoserviços OGC (WMS/WFS)
+│   └── arquivados/
+│       └── minuta-elberth.docx                # Versão anterior da minuta do Decreto (arquivada)
 └── documentos/
-    └── referencias/               # Base legal, resoluções e estudos técnicos (PDFs)
-        └── INDEX.md               # Catálogo sistematizado do acervo de referência
+    ├── referencias/               # Base legal, resoluções e estudos técnicos (PDFs)
+    │   └── INDEX.md               # Catálogo sistematizado do acervo de referência
+    └── auditoria-conformidade-seinuc.md # Relatório de Auditoria Técnica e Jurídica (4 rodadas)
 ```

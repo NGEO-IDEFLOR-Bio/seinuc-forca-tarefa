@@ -422,11 +422,53 @@ O Decreto, nas suas funções de regular a lei, sincronizar-se com o ICMS Verde 
 
 ---
 
+# PARTE IV — CERTIFICAÇÃO DE APROVAÇÃO
+
+> **Data:** 07/10/2026.
+> **Natureza:** encerramento formal do processo de auditoria do acervo documental do SEINUC/PA.
+> **Objeto certificado:** os 5 produtos consolidados de `producao/docs/`, `ROADMAP.md`, `EPICOS.md` e `tarefas/`.
+
+## 1. Refinamentos verificados nesta etapa
+
+| Refinamento | Verificação | Status |
+| :--- | :--- | :---: |
+| **1. Schema Módulo III** | `then` com `"required": ["conselho_reunioes_qtd"]` + `minimum: 2` quando `conselho_status: true`. | ✅ Completo |
+| **2. Catálogo de triagem** | Decreto Art. 8º, I e Manual item 05: Datum incompatível = eliminatório/insanável; ajustes de topologia vetorial = sanáveis (5 dias úteis). | ✅ Completo |
+| **3. Nomenclatura** | Manual diretório `PLANO_GESTAO.pdf`. | ✅ Completo |
+| **4. Itens R3–R5** | Diferidos para a Portaria Conjunta de implementação (antes do 1º ciclo de envio, 31/01). | ✅ Documentado |
+| **5. Terminologia "Plano de Gestão"** | Portal (Módulo B) e Decreto Art. 4º, III, "b" padronizados ao termo estadual, com nota de equivalência ao plano de manejo federal (art. 2º, XXII, da Lei nº 10.306/2023). | ✅ Completo |
+
+## 2. Status final por eixo
+
+| Eixo | Status |
+| :--- | :---: |
+| Conformidade legal (competência, rito, calendário, sanções, sigilo/LGPD/SisGen) | ✅ Pronto |
+| Processo administrativo (LEPA, contraditório, ampla defesa, motivação, efeito suspensivo) | ✅ Pronto |
+| Rigor técnico/cartográfico e schemas JSON | ✅ Pronto |
+| LAI/LGPD/SisGen e mascaramento espacial | ✅ Pronto |
+| Consistência documental (ROADMAP/EPICOS/produtos) | ✅ Pronto |
+| Formal (digitação, data do Decreto 1.064, nomenclatura) | ✅ Pronto |
+
+## 3. Certificação
+
+Certifico que o acervo documental do **Sistema Estadual de Informações sobre Unidades de Conservação do Estado do Pará (SEINUC/PA)**:
+
+1. Atende integralmente os requisitos dos arts. 67, 68, 110, 111, 113, 114 e 117 da **Lei Estadual nº 10.306/2023**, em harmonia com o SNUC (Lei nº 9.985/2000), o Decreto Federal nº 4.340/2002, a Lei do ICMS Ecológico (nº 7.638/2012) e o Decreto Estadual nº 1.064/2020;
+2. Observa a Lei Estadual nº 8.972/2020 (LEPA) no rito recursal, na contagem de prazos em dias úteis, no contraditório, na ampla defesa e na motivação das decisões;
+3. Implementa transparência ativa (LAI), proteção de dados pessoais (LGPD, com SEMAS = Controladora e IDEFLOR-Bio = Operador) e salvaguardas de patrimônio genético e conhecimento tradicional associado (Lei nº 13.123/2015 e SisGen);
+4. Apresenta especificações cartográficas corretas (SIRGAS 2000/EPSG:4674, OGC WMS/WFS/WCS/CSW, Perfil MGB/INDE) e schemas JSON completos e validáveis para os Módulos I a IV.
+
+**APROVO o acervo para encaminhamento institucional** — parecer da Procuradoria-Geral do Estado (PGE/PA) e consulta pública com os municípios (FAMEP) — e para a edição da Portaria Conjunta de implementação, que deverá detalhar os itens operacionais R3–R5 (integração com o protocolo eletrônico estadual, SLA/backup/DR e tabela oficial de siglas de UCs) antes da abertura do primeiro ciclo de envio (31 de janeiro).
+
+*Encerramento do processo de auditoria realizado em quatro rodadas (Partes I a IV).*
+
+---
+
 ## ANEXO — Referências de rastreabilidade
 
 - Produtos auditados: `minuta-decreto-seinuc.md`, `especificacao-modulos-dados-seinuc.md`, `minuta-portaria-diretrizes-tecnicas.md`, `manual-fluxo-envio-e-triagem.md`, `especificacao-portal-transparencia-ogc.md`.
 - Planejamento: `ROADMAP.md`, `EPICOS.md`, `tarefas/EPIC1..EPIC4`.
-- Minuta anterior comparada: `producao/docs/minuta-elberth.docx`.
+- Minuta anterior comparada: `producao/arquivados/minuta-elberth.docx`.
 - Fontes normativas externas conferidas: Lei PA 7.638/2012 e Decreto PA 1.064/2020 (SEMAS/ICMS Verde); Lei PA 8.972/2020 (LEPA); Lei PA 8.096/2015 (estrutura administrativa); Decreto PA 775/2013.
 
 > **Observação de método:** os PDFs não são legíveis diretamente pelo modelo auditor; o texto da Lei nº 10.306/2023 foi extraído integralmente e as normas ausentes no repositório (7.638/2012, 1.064/2020, 8.972/2020) foram conferidas em fontes oficiais. Recomenda-se juntar ao repositório os PDFs do Decreto 1.064/2020 e da Lei 8.972/2020, hoje referenciados sem estar disponíveis em `documentos/referencias/`.

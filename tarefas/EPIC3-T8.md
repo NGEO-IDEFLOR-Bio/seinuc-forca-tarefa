@@ -1,7 +1,7 @@
 # EPIC3-T8: Desenhar o Fluxo de Envio de Documentos (Upload)
 
 **Status:** Concluído  
-**Produto Entregue:** [`producao/docs/manual-fluxo-envio-e-triagem.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/manual-fluxo-envio-e-triagem.md)  
+**Produto Entregue:** [`producao/docs/manual-fluxo-envio-e-triagem.md`](../producao/docs/manual-fluxo-envio-e-triagem.md)  
 **Responsável:** Equipe de TI / Processos  
 **Base Legal:** Arts. 5º e 6º do Decreto Regulamentador do SEINUC/PA | Portaria Conjunta SEMAS/IDEFLOR-Bio nº ____/202X
 
@@ -9,7 +9,7 @@
 
 ## 1. Resumo da Entrega
 
-A arquitetura e os fluxos de transmissão digital do SEINUC/PA foram especificados e consolidados no manual oficial de operação em [`producao/docs/manual-fluxo-envio-e-triagem.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/manual-fluxo-envio-e-triagem.md).
+A arquitetura e os fluxos de transmissão digital do SEINUC/PA foram especificados e consolidados no manual oficial de operação em [`producao/docs/manual-fluxo-envio-e-triagem.md`](../producao/docs/manual-fluxo-envio-e-triagem.md).
 
 ### Elementos Especificados:
 * **Estrutura de Pastas de Envio:** Organização padronizada de diretórios por Módulos I a IV.

@@ -37,7 +37,7 @@ PORTAL PÚBLICO SEINUC/PA (TRANSPARÊNCIA ATIVA)
 * **Funcionalidade:** Mecanismo de busca textual e download público de documentos oficiais vinculados às UCs.
 * **Acervo Disponível:**
   * Atos Legais de Criação (Leis e Decretos).
-  * Planos de Manejo / Planos de Gestão em formato PDF pesquisável.
+  * Planos de Gestão (equivalentes ao plano de manejo federal — art. 2º, XXII, da Lei nº 10.306/2023) em formato PDF pesquisável.
   * Portarias de instituição e Atas de Reuniões dos Conselhos Gestores.
   * Fichas de Caracterização Ambiental e Resumos Executivos.
 

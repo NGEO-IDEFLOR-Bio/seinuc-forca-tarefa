@@ -12,7 +12,7 @@ Decreto Regulamentador (T1), Ciclo Anual (T2) e Governança Recursal (T10)
        │
        ▼
 [FASE 2: ARQUITETURA DE DADOS] 🟢 (Concluído - 100%)
-Módulos de Dados: Ambiental (T4), Geo/Fundiário (T5), Gestão (T6) e Integração (T7)
+Módulos de Dados: Ambiental/Clima (T4), Geotecnologias/ZA (T5), Gestão/UCs Legadas (T6), Fundiário/RPPN e Integração (T7)
        │
        ▼
 [FASE 3: ESTEIRA OPERACIONAL] 🟢 (Concluído - 100%)
@@ -45,7 +45,7 @@ Portal do SEINUC e Geoserviços OGC (T11)
 
 * [x] **Milestone 2.1:** Módulo I - Caracterização Ambiental, Biodiversidade e Clima ([`especificacao-modulos-dados-seinuc.md`](producao/docs/especificacao-modulos-dados-seinuc.md)) — `T4`
 * [x] **Milestone 2.2:** Módulo II - Georreferenciamento, Delimitação e Zonas de Amortecimento ([`especificacao-modulos-dados-seinuc.md`](producao/docs/especificacao-modulos-dados-seinuc.md)) — `T5`
-* [x] **Milestone 2.3:** Módulo III - Gestão, Socioeconomia e UCs Legadas ([`especificacao-modulos-dados-seinuc.md`](producao/docs/especificacao-modulos-dados-seinuc.md)) — `T6`
+* [x] **Milestone 2.3:** Módulo III - Gestão, Governança, Aspectos Antropológicos e UCs Legadas ([`especificacao-modulos-dados-seinuc.md`](producao/docs/especificacao-modulos-dados-seinuc.md)) — `T6`
 * [x] **Milestone 2.4:** Módulo IV - Caracterização Fundiária, Dominial e RPPNs ([`especificacao-modulos-dados-seinuc.md`](producao/docs/especificacao-modulos-dados-seinuc.md)) — `T5`
 * [x] **Milestone 2.5:** Protocolo de Integração CNUC, ITERPA e SEMAS ([`especificacao-modulos-dados-seinuc.md`](producao/docs/especificacao-modulos-dados-seinuc.md)) — `T7`
 
@@ -55,8 +55,8 @@ Portal do SEINUC e Geoserviços OGC (T11)
 **Status:** Concluído (100%)  
 **Objetivo:** Traduzir os módulos de dados em minuta de Portaria Técnica e instrumentos formais de recebimento e triagem.
 
-* [x] **Milestone 3.1:** Minuta da Portaria de Diretrizes Técnicas ([`minuta-portaria-diretrizes-tecnicas.md`](producao/docs/minuta-portaria-diretrizes-tecnicas.md)) — `T3`
-* [x] **Milestone 3.2:** Protocolo Digital de Transmissão, Nomenclatura e FTP ([`manual-fluxo-envio-e-triagem.md`](producao/docs/manual-fluxo-envio-e-triagem.md)) — `T8`
+* [x] **Milestone 3.1:** Minuta da Portaria Conjunta de Diretrizes Técnicas ([`minuta-portaria-diretrizes-tecnicas.md`](producao/docs/minuta-portaria-diretrizes-tecnicas.md)) — `T3`
+* [x] **Milestone 3.2:** Protocolo Digital de Transmissão, Nomenclatura e SFTP ([`manual-fluxo-envio-e-triagem.md`](producao/docs/manual-fluxo-envio-e-triagem.md)) — `T8`
 * [x] **Milestone 3.3:** Checklist de Triagem e Ficha de Admissibilidade Formal ([`manual-fluxo-envio-e-triagem.md`](producao/docs/manual-fluxo-envio-e-triagem.md)) — `T9`
 
 ---

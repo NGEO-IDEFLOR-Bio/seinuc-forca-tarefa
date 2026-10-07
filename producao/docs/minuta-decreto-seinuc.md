@@ -35,7 +35,7 @@
   * c) delimitação dos limites verticais (subsolo e espaço aéreo), nos casos em que couber conforme o ato de criação ou plano de gestão.
 * **III - Módulo III (Gestão, Governança, Aspectos Antropológicos e UCs Legadas):**
   * a) cadastro dos Conselhos Gestores, atos de criação, paridade e atas de reuniões ordinárias e extraordinárias;
-  * b) situação e vigência do Plano de Gestão / Plano de Manejo;
+  * b) situação e vigência do Plano de Gestão (art. 2º, XXII, da Lei nº 10.306/2023);
   * c) caracterização socioeconômica, turística, arqueológica, antropológica e de comunidades tradicionais;
   * d) rastreamento do cumprimento dos prazos de readequação de Sítios Pesqueiros em Reserva Estadual de Pesca (Art. 112) e de UCs legadas criadas sob legislações anteriores (Art. 114 da Lei nº 10.306/2023).
 * **IV - Módulo IV (Caracterização Fundiária, Dominial e RPPNs):**

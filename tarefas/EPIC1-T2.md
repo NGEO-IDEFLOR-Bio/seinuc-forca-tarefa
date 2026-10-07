@@ -1,24 +1,24 @@
 # EPIC1-T2: Definição do Ciclo Anual de Gestão (Cronograma Operacional)
 
 **Status:** Concluído  
-**Normatizado em:** Arts. 4º, 5º, 7º, 8º e 9º do Decreto Regulamentador ([`producao/docs/minuta-decreto-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md))  
-**Responsável:** Coordenação SEINUC / IDEFLOR-Bio  
-**Base Legal:** Art. 4º, I e Capítulo III da Minuta do Decreto SEINUC/PA | Lei Estadual nº 7.638/2012 (ICMS Ecológico)
+**Normatizado em:** Capítulo III e Arts. 8º a 10 do Decreto Regulamentador ([`producao/docs/minuta-decreto-seinuc.md`](../producao/docs/minuta-decreto-seinuc.md))  
+**Responsável:** Coordenação SEINUC / SEMAS e IDEFLOR-Bio  
+**Base Legal:** Arts. 5º a 10 da Minuta do Decreto SEINUC/PA | Lei Estadual nº 7.638/2012 (ICMS Ecológico) | Decreto Estadual nº 1.064/2020 (calendário do ICMS Verde)
 
 ---
 
 ## 1. Rito Temporal e Calendário Regulamentado pelo Decreto
 
-Conforme estabelecido nos Arts. 4º a 9º do Decreto Regulamentador do SEINUC/PA, o ciclo anual é composto pelas seguintes janelas e prazos vinculantes:
+Conforme estabelecido nos Arts. 5º a 10 do Decreto Regulamentador do SEINUC/PA, o ciclo anual é síncrono com o calendário do ICMS Verde (Decreto Estadual nº 1.064/2020):
 
 ```mermaid
 flowchart LR
-    A["Ano-Base (01/Jan a 31/Dez N-1)<br/>Execução de Gestão"] --> B["Até 31/Jan (Ano N)<br/>Protocolo Eletrônico"]
-    B --> C["Fev a Jun<br/>Triagem e Análise pela CT-SEINUC"]
-    C --> D["Até 15/Jul<br/>Publicação do Extrato Provisório"]
-    D --> E["15 Dias Corridos<br/>Fase de Recurso Administrativo"]
-    E --> F["Até 31/Ago<br/>Julgamento dos Recursos"]
-    F --> G["Até 30/Set<br/>Homologação e Envio à SEFA/PA"]
+    A["Ano-Base (01/Jan a 31/Dez N-1)<br/>Execução de Gestão"] --> B["Até 31/Jan (Ano N)<br/>Transmissão do pacote"]
+    B --> C["Até 28/Fev<br/>Triagem de Admissibilidade"]
+    C --> D["Mar a Abr<br/>Análise de Mérito pela CT-SEINUC"]
+    D --> E["Até 31/Mai<br/>Publicação do Resultado Provisório (motivado por quesito)"]
+    E --> F["15 Dias Úteis<br/>Recurso Administrativo (LEPA)"]
+    F --> G["Até 31/Jul<br/>Resultado Definitivo e envio à SEFA/PA"]
 ```
 
 ---
@@ -26,8 +26,9 @@ flowchart LR
 ## 2. Prazos e Competências Consolidadas
 
 1. **Ano-Base (N-1):** Período de 01 de janeiro a 31 de dezembro dedicado à execução das ações de gestão, conselhos, inventários e fiscalização nas UCs.
-2. **Protocolo Eletrônico (Até 31 de Janeiro do Ano N):** Transmissão digital dos documentos com OCR e vetores SIRGAS 2000, acompanhada da Declaração de Veracidade.
-3. **Análise Técnica (Fevereiro a Junho):** Exame dos processos pela Comissão Técnica de Avaliação (CT-SEINUC/IDEFLOR-Bio).
-4. **Publicação Provisória (Até 15 de Julho):** Divulgação em Diário Oficial do Estado e Portal SEINUC.
-5. **Fase Recursal (15 Dias Corridos):** Prazo peremptório para impugnação de notas ou indeferimentos.
-6. **Julgamento e Homologação (Até 30 de Setembro):** Julgamento final e envio do índice definitivo de repasse à SEFA/PA.
+2. **Transmissão (Até 31 de Janeiro do Ano N):** Envio digital dos documentos com OCR, vetores SIRGAS 2000 e Declaração de Veracidade. Contingência por indisponibilidade do portal (24h) e justificativa de força maior em até 2 dias úteis.
+3. **Triagem de Admissibilidade (Até 28 de Fevereiro):** Verificação formal pela CT-SEINUC, com notificação para saneamento de vícios sanáveis em 5 dias úteis.
+4. **Análise de Mérito (Março a Abril):** Exame pelos técnicos da CT-SEINUC e emissão das Fichas de Avaliação.
+5. **Publicação Provisória (Até 31 de Maio):** Divulgação no DOE e no Portal SEINUC, sincronizada ao ICMS Verde (Decreto 1.064/2020), com Ficha motivada por quesito.
+6. **Fase Recursal (15 Dias Úteis):** Prazo peremptório, contado em dias úteis (art. 83 da LEPA), com efeito suspensivo na parcela impugnada.
+7. **Julgamento e Homologação (Até 31 de Julho):** Decisão final do titular da SEMAS e envio do índice definitivo à SEFA/PA.
