@@ -195,7 +195,7 @@ html_content = '''<!DOCTYPE html>
                 </span>
             </div>
 
-            <a href="https://github.com/NGEO-IDEFLOR-Bio/seinuc-forca-tarefa" target="_blank" class="inline-flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2 rounded-lg text-xs font-semibold transition-all border border-slate-700 shadow-sm">
+            <a href="https://github.com/NGEO-IDEFLOR-Bio/seinuc-pa" target="_blank" class="inline-flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2 rounded-lg text-xs font-semibold transition-all border border-slate-700 shadow-sm">
                 <i class="fa-brands fa-github text-sm"></i>
                 <span class="hidden sm:inline">Repositório Oficial</span>
             </a>
