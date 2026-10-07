@@ -240,6 +240,7 @@ SEINUC/PA - ARQUITETURA CANÔNICA DE MÓDULOS DE DADOS
         "properties": { "conselho_status": { "const": true } }
       },
       "then": {
+        "required": ["conselho_reunioes_qtd"],
         "properties": {
           "conselho_reunioes_qtd": { "type": "integer", "minimum": 2 }
         }

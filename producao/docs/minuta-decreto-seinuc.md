@@ -69,7 +69,7 @@
 § 2º Compete à CT-SEINUC realizar a triagem formal, a análise de mérito dos processos, emitir pareceres e julgar os recursos administrativos interpostos pelos municípios.
 
 **Art. 8º** O rito de avaliação e publicação observará rigorosamente o calendário unificado do ICMS Verde:
-* **I - Triagem de Admissibilidade Formal:** Realizada até 28 de fevereiro. Inconformidades formais sanáveis (falhas de OCR, nomenclatura ou omissão de documento complementar) ensejarão notificação motivada para saneamento no prazo de 5 (cinco) dias úteis. A intempestividade não justificada ou a ausência de ofício/declaração de veracidade ensejarão o indeferimento sumário;
+* **I - Triagem de Admissibilidade Formal:** Realizada até 28 de fevereiro. Inconformidades formais sanáveis (falhas de OCR, nomenclatura de arquivos, ajustes de topologia vetorial ou omissão de documento complementar) ensejarão notificação motivada para saneamento no prazo de 5 (cinco) dias úteis. A intempestividade não justificada, o Datum cartográfico incompatível (divergente do SIRGAS 2000) ou a ausência de ofício/declaração de veracidade ensejarão o indeferimento sumário;
 * **II - Análise de Mérito:** Realizada entre março e abril pelas equipes técnicas;
 * **III - Publicação dos Resultados Provisórios:** Divulgação no Diário Oficial do Estado (DOE) e Portal SEINUC até o dia **31 de maio do Ano de Exercício** (sincronizado ao Decreto Estadual nº 1.064/2020), acompanhada da Ficha de Avaliação motivada por quesito.
 

@@ -27,7 +27,7 @@ Os gestores deverão organizar o pacote digital de transmissão obedecendo à se
 ├── 04_MODULO_III_GESTAO/
 │   ├── [COD_IBGE]_[SIGLA_UC]_Q3_2025.pdf
 │   ├── [COD_IBGE]_[SIGLA_UC]_ATAS_CONSELHO_2025.pdf
-│   └── [COD_IBGE]_[SIGLA_UC]_PLANO_MANEJO.pdf
+│   └── [COD_IBGE]_[SIGLA_UC]_PLANO_GESTAO.pdf
 └── 05_MODULO_IV_FUNDIARIO_RPPN/
     └── [COD_IBGE]_[SIGLA_UC]_MATRICULA_RGI.pdf
 ```
@@ -60,8 +60,8 @@ Antes da análise de mérito da documentação pela equipe técnica, o processo 
 | **01** | **Prazo Regulamentar:** Transmissão realizada até 31/Jan do Ano de Exercício | Eliminatório | Data <= 31/Jan | Rejeição Sumária por Intempestividade (salvo prorrogação automática ou justificativa de força maior apresentada em até 2 dias úteis). |
 | **02** | **Ofício de Encaminhamento:** Anexado e assinado por autoridade competente | Eliminatório | Presente e Assinado | Rejeição Sumária do Protocolo. |
 | **03** | **Declaração de Veracidade:** Modelo Anexo I assinado digitalmente (Gov.br/ICP) | Eliminatório | Presente e Válida | Rejeição Sumária do Protocolo. |
-| **04** | **Padrão PDF/OCR:** Arquivos textuais pesquisáveis e legíveis | Sanável | Camada OCR Válida | Notificação para Diligência em 5 (cinco) dias úteis. |
-| **05** | **Padrão Vetorial (Datum):** Shapefile em SIRGAS 2000 (EPSG:4674) | Eliminatório | Datum Correto | Rejeição do Bloco Vetorial. |
+| **04** | **Padrão PDF/OCR e Nomenclatura:** Arquivos textuais pesquisáveis e nomeação | Sanável | OCR e Sintaxe Válidos | Notificação para Diligência em 5 (cinco) dias úteis. |
+| **05** | **Padrão Vetorial (Datum e Topologia):** Geometrias em SIRGAS 2000 (EPSG:4674) | Eliminatório (Datum) / Sanável (Topologia) | Datum SIRGAS 2000 e fecho topológico | Rejeição Sumária por Datum incompatível. Notificação para Diligência em 5 (cinco) dias úteis se houver apenas inconformidades topológicas sanáveis. |
 | **06** | **Nomenclatura Oficial:** Arquivos nomeados segundo o padrão oficial da Portaria | Sanável | Sintaxe Correta | Notificação para Diligência em 5 (cinco) dias úteis. |
 | **07** | **Averbação de RPPN:** Certidão de RGI anexada (quando aplicável) | Eliminatório | Matrícula Válida | Glosa da Pontuação de RPPN. |
 
