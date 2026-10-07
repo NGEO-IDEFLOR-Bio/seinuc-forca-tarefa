@@ -71,7 +71,13 @@ Define os parâmetros para o Portal de Transparência do SEINUC, a disponibiliza
 │   │   ├── minuta-portaria-diretrizes-tecnicas.md # Portaria Conjunta SEMAS/IDEFLOR-Bio (Texto Final Sanado)
 │   │   ├── especificacao-modulos-dados-seinuc.md # Especificação Técnica dos Módulos I a IV (SIRGAS 2000)
 │   │   ├── manual-fluxo-envio-e-triagem.md       # Manual de Protocolo Digital, Envio e Triagem
-│   │   └── especificacao-portal-transparencia-ogc.md # Portal de Transparência e Geoserviços OGC (WMS/WFS)
+│   │   ├── especificacao-portal-transparencia-ogc.md # Portal de Transparência e Geoserviços OGC (WMS/WFS)
+│   │   └── docx/                               # Arquivos Finais em Word (.docx) Formatados em ABNT
+│   │       ├── minuta-decreto-seinuc.docx
+│   │       ├── minuta-portaria-diretrizes-tecnicas.docx
+│   │       ├── especificacao-modulos-dados-seinuc.docx
+│   │       ├── manual-fluxo-envio-e-triagem.docx
+│   │       └── especificacao-portal-transparencia-ogc.docx
 │   └── arquivados/
 │       └── minuta-elberth.docx                # Versão anterior da minuta do Decreto (arquivada)
 └── documentos/
