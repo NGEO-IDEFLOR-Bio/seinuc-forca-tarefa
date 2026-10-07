@@ -61,13 +61,13 @@ Este repositório contém o planejamento, a estrutura normativa e a arquitetura 
 **Objetivo:** Regulamentar a publicidade dos dados no Portal SEINUC, a integração cartográfica oficial e a prestação de contas periódica.
 
 ### Critérios de Conclusão (DoD):
-1. **Portal de Transparência do SEINUC e Geoserviços:** Diretrizes de publicação pública e serviços OGC (WMS/WFS) para a Cartografia Oficial do Estado.
+1. **Portal de Transparência do SEINUC e Geoserviços [Concluído]:** Diretrizes de publicação pública e serviços OGC (WMS/WFS) para a Cartografia Oficial do Estado ([`especificacao-portal-transparencia-ogc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-portal-transparencia-ogc.md)).
 2. **Relatórios de Efetividade da Gestão [Concluído]:** Regulamentação do relatório anual e do relatório quadrienal de efetividade da gestão ([`minuta-decreto-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md)).
 
 ### Lista de Tarefas
 | ID | Tarefa | Status | Documento de Trabalho / Produto Oficial |
 | :--- | :--- | :---: | :--- |
-| **T11** | Projetar o Portal de Transparência e Serviços de Mapas (OGC) | Em Aberto | [EPIC4-T11.md](tarefas/EPIC4-T11.md) |
+| **T11** | Projetar o Portal de Transparência e Serviços de Mapas (OGC) | Concluído | [especificacao-portal-transparencia-ogc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-portal-transparencia-ogc.md) |
 | **T12** | Definir a Publicação do Relatório de Efetividade da Gestão | Concluído | [minuta-decreto-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md) |
 
 ---

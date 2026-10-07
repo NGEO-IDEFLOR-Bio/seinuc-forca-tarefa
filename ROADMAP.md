@@ -19,7 +19,7 @@ Módulos de Dados: Ambiental (T4), Geo/Fundiário (T5), Gestão (T6) e Integraç
 Portaria Técnica (T3), Protocolo de Envio (T8) e Checklist de Triagem (T9)
        │
        ▼
-[FASE 4: TRANSPARÊNCIA E SERVIÇOS] 🟡 (Em Andamento)
+[FASE 4: TRANSPARÊNCIA E SERVIÇOS] 🟢 (Concluído - 100%)
 Portal do SEINUC e Geoserviços OGC (T11)
 ```
 
@@ -61,11 +61,11 @@ Portal do SEINUC e Geoserviços OGC (T11)
 ---
 
 ### Fase 4: Transparência, Serviços OGC e Divulgação
-**Status:** Em Andamento (Próximo Passo)  
+**Status:** Concluído (100%)  
 **Objetivo:** Regulamentar os serviços de publicação de dados abertos e interoperabilidade cartográfica estadual.
 
-* [ ] **Milestone 4.1 (Próximo Passo):** Requisitos do Portal de Transparência e Geoserviços OGC (WMS/WFS) ([`EPIC4-T11.md`](tarefas/EPIC4-T11.md))
-* [ ] **Milestone 4.2:** Consolidação e Fechamento da Documentação de Produção.
+* [x] **Milestone 4.1:** Requisitos do Portal de Transparência e Geoserviços OGC (WMS/WFS) ([`especificacao-portal-transparencia-ogc.md`](producao/docs/especificacao-portal-transparencia-ogc.md)) — `T11`
+* [x] **Milestone 4.2:** Consolidação e Fechamento da Documentação de Produção.
 
 ---
-*Roadmap atualizado em consonância com a Lei Estadual nº 10.306/2023.*
+*Roadmap finalizado em conformidade integral com a Lei Estadual nº 10.306/2023.*
