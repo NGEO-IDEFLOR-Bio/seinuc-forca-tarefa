@@ -1,0 +1,40 @@
+# Resumo {.unnumbered}
+
+**Do not remove the tags**! (they look like this: `%:::% tag %:::%`)
+
+```latex
+%:::% foreign-abstract reference begin %:::%
+[SOBRENOME DO AUTOR], [Inicial(is) do(s) prenome(s) do autor].  \textbf{[Título]}. {\imprimirdata}. {\thelastpage}p. [Dissertação/Tese]  ([Título acadêmico]) -- [Escola/Faculdade], [Universidade], [Cidade/Local], {\imprimirdata}.
+%:::% foreign-abstract reference end %:::%
+```
+
+<!-- %:::% foreign-abstract body begin %:::% -->
+[abnt](https://github.com/danielvartan/abnt) é um formato [Quarto](https://quarto.org) projetado para criar teses e dissertações que atendem às diretrizes estabelecidas pela Associação Brasileira de Normas Técnicas ([ABNT](https://www.abnt.org.br/)). Saiba mais em <https://github.com/danielvartan/abnt>.
+<!-- %:::% foreign-abstract body end %:::% -->
+
+```{r}
+#| eval: false
+#| echo: false
+
+library(clipr)
+library(lorem)
+library(withr)
+
+with_seed(
+  seed = 45447848,
+  code = {
+    ipsum(3) |>
+      as.character() |>
+      paste(collapse = "\n\n")
+  }
+) |>
+  write_clip()
+```
+
+```latex
+%:::% foreign-abstract keywords begin %:::%
+\begin{tabular}{p{3.6cm} p{12.3cm}}
+  \textbf{Palavras-chaves}: & [Palavra-chave 1]. [Palavra-chave 2]. [Palavra-chave 3].
+\end{tabular}
+%:::% foreign-abstract keywords end %:::%
+```

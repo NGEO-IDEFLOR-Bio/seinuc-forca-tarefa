@@ -1,0 +1,12 @@
+# Anexo A {.unnumbered}
+
+<!-- 
+  Anexos: Documentos NÃO elaborados pelo autor, que servem de 
+  fundamentação, comprovação ou ilustração (mapas, leis, etc.).
+-->
+
+[Adicione aqui o conteúdo do anexo.]
+
+## Exemplo de Seção no Anexo
+
+[Conteúdo da seção.]

@@ -1,0 +1,100 @@
+% Author: Daniel Vartanian
+% License: GNU General Public License v3 or later
+% Code repository: <https://github.com/danielvartan/abnt>
+%
+% Based on `template.tex` developed by the Quarto team and
+% `abtex2-modelo-trabalho-academico.tex` developed by Lauro César Araújo
+% and the abnTeX2 team, with additional guidance from the theses and
+% dissertations regulations of the University of São Paulo (USP).
+
+% -----
+% Preamble
+% -----
+
+% Don´t move the `\PassOptionsToPackage` macros.
+% See why: <https://tex.stackexchange.com/a/433605/234832>.
+\PassOptionsToPackage{
+unicode$for(hyperrefoptions)$,$hyperrefoptions$$endfor$
+}{hyperref}
+
+\PassOptionsToPackage{hyphens}{url}
+
+$if(colorlinks)$
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+$endif$
+
+$if(CJKmainfont)$
+\PassOptionsToPackage{space}{xeCJK}
+$endif$
+
+$doc-class.tex()$
+
+% \usepackage{showframe}
+
+$packages.tex()$
+
+$lengths.tex()$
+
+$layout.tex()$
+
+$babel.tex()$
+
+$abntex2.tex()$
+
+$colors.tex()$
+
+$graphics.tex()$
+
+$tables.tex()$
+
+$tightlist.tex()$
+
+$def.tex()$
+
+$title.tex()$
+
+$hypersetup.tex()$
+
+$toc.tex()$
+
+$biblio.tex()$
+
+$index.tex()$
+
+$lua.tex()$
+
+$others.tex()$
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+% -----
+% Body
+% -----
+
+\begin{document}
+
+% Top Matter -----
+
+\pretextual
+
+$before-body.tex()$
+
+$for(include-before)$
+$include-before$
+$endfor$
+
+% Main and Back Matter -----
+
+\textual
+
+$body$
+
+$for(include-after)$
+$include-after$
+$endfor$
+
+$after-body.tex()$
+
+\end{document}

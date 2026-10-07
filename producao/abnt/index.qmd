@@ -1,0 +1,60 @@
+# [Título do Capítulo] {#sec-introduction}
+
+<!-- 
+  Este é o arquivo principal do documento. 
+  Edite este arquivo para adicionar o conteúdo da introdução.
+-->
+
+```{r}
+#| label: setup
+#| include: false
+
+# Carregar pacotes R necessários
+# library(ggplot2)
+# library(dplyr)
+```
+
+## Contexto e Justificativa
+
+[Descreva o contexto do trabalho e justifique sua importância.]
+
+## Objetivos
+
+### Objetivo Geral
+
+[Descreva o objetivo geral do trabalho.]
+
+### Objetivos Específicos
+
+- [Objetivo específico 1]
+- [Objetivo específico 2]
+- [Objetivo específico 3]
+
+## Organização do Documento
+
+Este documento está organizado da seguinte forma:
+
+- **Capítulo 1**: [Descrição]
+- **Capítulo 2**: [Descrição]
+- **Capítulo 3**: [Descrição]
+
+<!-- 
+  Exemplos de uso:
+  
+  Para adicionar uma figura:
+  ![Legenda da figura](images/figura.png){#fig-exemplo width=80%}
+  
+  Para adicionar uma tabela:
+  | Coluna 1 | Coluna 2 |
+  |----------|----------|
+  | Valor 1  | Valor 2  |
+  : Tabela de exemplo {#tbl-exemplo}
+  
+  Para citar referências:
+  Segundo [@autor2020], ...
+  
+  Para equações:
+  $$
+  E = mc^2
+  $$ {#eq-einstein}
+-->

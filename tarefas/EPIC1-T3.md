@@ -1,21 +1,38 @@
-### 3. Definição do Cronograma Anual (Calendário Operacional)
+# EPIC1-T3: Criar a Portaria de Diretrizes Técnicas
 
-Estabelecimento dos prazos relativos ao ciclo de gestão, estruturado para garantir a fluidez dos processos de monitoramento e repasse:
+**Status:** 🟡 **EM ABERTO**  
+**Responsável:** Equipe Técnica / Geoprocessamento  
+**Base Legal:** Art. 4º, II e III e Art. 12 da Minuta do Decreto SEINUC/PA | Benchmark Portaria IEPHA nº 34/2024
 
-* **Ano-Base (Execução):** Período de 01 de janeiro a 31 de dezembro destinado à execução das ações finalísticas da UC (fiscalização, reuniões de conselho, gestão territorial).
-* **Ano de Exercício (Validação/Repasse):** Ano subsequente ao ano-base, dedicado à análise técnica e processamento da documentação.
-* **Proposta de Cronograma (Referencial):**
-* **Até 10 de Janeiro:** Prazo limite para o envio da documentação comprobatória do ano-base pelos gestores.
-* **Janeiro a Julho:** Análise técnica dos documentos pelas equipes da SEMAS/IDEFLOR-Bio.
-* **20 de Julho:** Publicação da Pontuação Provisória.
-* **Agosto:** Período para interposição de recursos (estimativa de 10 a 15 dias).
-* **Setembro:** Publicação da Pontuação Definitiva e integração dos dados ao CNUC.
+---
 
+## 📄 Escopo da Portaria Técnica
 
-### Mapeamento Documental das Unidades de Conservação
+A Portaria de Diretrizes Técnicas fixará os requisitos formais para formatação, validação e transmissão dos documentos exigidos pelo SEINUC/PA, garantindo padronização digital e integridade cartográfica.
 
-Nesta etapa inicial, torna-se necessário o **Mapeamento dos Tipos de Documentos** passíveis de produção pelas unidades, visando alinhar as exigências normativas à realidade técnica institucional. A listagem deve contemplar:
+---
 
-1. **Atos de Criação:** Diplomas legais (Leis ou Decretos) de criação das UCs para validação de existência jurídica.
-2. **Atos de Gestão:** Registros de governança, como atas de reuniões de Conselhos e portarias de nomeação de gestores.
-3. **Documentos Técnicos:** Instrumentos de planejamento e dados geoespaciais, incluindo Planos de Manejo, Zoneamentos (arquivos em formato shapefile) e inventários biológicos.
+## 🎯 Subtarefas de Execução
+
+### Subtarefa 1: Formato e Padrão de Arquivos Digitais
+* **Documentos Textuais e Comprovantes:**
+  * Formato obrigatório: **PDF searchable (com camada OCR de texto)**.
+  * Organização obrigatória: **Folha de Rosto** identificando o Ente/UC, seguido de **Sumário Paginado**.
+  * Tamanho máximo por arquivo: 50 MB (para arquivos maiores, fracionar em volumes codificados: `VOL_01`, `VOL_02`).
+* **Dados Geoespaciais (Vetores):**
+  * Formatos aceitos: **Shapefile (.shp, .dbf, .shx, .prj compressos em .zip)** ou **KML/KMZ**.
+  * Sistema de Referência de Coordenadas (Datum): **SIRGAS 2000 (EPSG:4674)**.
+  * Obrigatoriedade de fecho topológico: Polígonos sem sobreposição de vértices ou lacunas (*gap/overlap* zero).
+
+### Subtarefa 2: Regras de Nomenclatura e Indexação
+Padronização rígida do nome dos arquivos para garantir recepção e processamento por algoritmos de triagem:
+* `[CODIGO_MUNICIPIO]_[SIGLA_UC]_[QUADRO]_[ANO_BASE].[ext]`
+* *Exemplo:* `PARAGOMINAS_APA_BOSQUE_Q1_2025.pdf` | `PARAGOMINAS_APA_BOSQUE_VETOR_2025.zip`
+
+### Subtarefa 3: Declaração de Veracidade das Informações
+Criação do modelo oficial de **Declaração de Veracidade e Responsabilidade Técnica** (Anexo I da Portaria):
+* Assinatura obrigatória do Prefeito Municipal, Secretário de Meio Ambiente ou Gestor da UC.
+* Inclusão do termo expresso de ciência das sanções administrativas e penais da Lei nº 9.605/1998 para prestação de informações falsas.
+
+### Subtarefa 4: Elaboração da Minuta da Portaria
+Redação dos artigos normativos estabelecendo os critérios de recusa imediata na fase de triagem (ilegibilidade, ausência de assinatura, sistema de projeção inconsistente).

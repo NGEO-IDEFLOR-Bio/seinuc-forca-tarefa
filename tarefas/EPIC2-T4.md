@@ -1,9 +1,35 @@
-### Tarefa 4: Estruturação do Módulo de "Caracterização Ambiental"
+# EPIC2-T4: Estruturar Módulo de Caracterização Ambiental (Quadro I)
 
-*Esta etapa visa ao cumprimento do Art. 67, §2º, inciso I da Lei do Pará, que exige dados relativos à paisagem, fauna, flora, clima e solo.*
+**Status:** 🟡 **EM ABERTO**  
+**Responsável:** Analista Ambiental  
+**Base Legal:** Art. 67, §2º, I da Lei PA nº 10.306/2023 | Art. 3º, I da Minuta do Decreto SEINUC/PA
 
-* **Padronização Taxonômica:** Implementação de listas de seleção fechada para nomes científicos de fauna e flora, evitando a utilização de campos de texto livre. O sistema deve prever a integração com a lista oficial de espécies ameaçadas, com atualizações quinquenais sob responsabilidade do órgão gestor.
-* **Fichas de Inventário:** Instituição de "Fichas de Biodiversidade" padronizadas, destinadas à sistematização dos dados técnicos coletados em campo.
-* **Definição de Campos Obrigatórios:**
-* *Clima, Solo e Hidrografia:* Disponibilização de campos para descrição textual e seleção de bacia hidrográfica.
-* *Espécies Exóticas:* Inclusão de campo específico para o registro de espécies invasoras, em observância à exigência legal de elaboração de planos de controle.
+---
+
+## 🌿 Escopo do Módulo de Caracterização Ambiental
+
+Estruturação do dicionário de dados e formulários para registro das informações ecológicas e bióticas das Unidades de Conservação do Estado do Pará.
+
+---
+
+## 🎯 Subtarefas de Execução
+
+### Subtarefa 1: Dicionário de Dados de Fauna e Flora
+* **Padronização Taxonômica:** Restrição de preenchimento a vocabulários controlados (base Flora e Funga do Brasil / Catálogo Taxonômico da Fauna do Brasil).
+* **Campos Específicos:**
+  * Nome Científico (*Gênero espécie*).
+  * Nome Popular / Regional.
+  * Categoria de Ameaça (Portaria MMA / Lista Estadual de Espécies Ameaçadas do Pará - Ex: CR, EN, VU).
+  * Endemismo (Sim/Não).
+
+### Subtarefa 2: Caracterização Abiótica e Ecossistêmica
+* **Bioma / Fitofisionomia:** Floresta Ombrófila Densa, Floresta Ombrófila Aberta, Manguezal, Campinarana, Cerrado/Savana.
+* **Recursos Hídricos:** Bacia Hidrográfica de inserção, presença de nascentes e corpos d'água principais.
+* **Aspectos Físicos:** Tipologia de solo e relevo predominante.
+
+### Subtarefa 3: Monitoramento de Espécies Exóticas Invasoras
+* Cadastro de espécies exóticas invasoras registradas no território da UC.
+* Status do Plano de Erradicação/Controle (Não possui, Em elaboração, Em execução).
+
+### Subtarefa 4: Ficha de Inventário e Matriz JSON/Formulário
+Definição dos esquemas de dados em formato estruturado (JSON/Formulário) para inserção no sistema web SEINUC.

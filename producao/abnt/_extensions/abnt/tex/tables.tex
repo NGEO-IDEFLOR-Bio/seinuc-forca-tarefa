@@ -1,0 +1,18 @@
+\renewcommand{\arraystretch}{$if(linestretch)$$linestretch$$else$1.5$endif$}
+\setlength{\aboverulesep}{0ex}
+\setlength{\belowrulesep}{0ex}
+
+% Allow Footnotes in `longtable` Head/Footer ----
+
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+
+% Set Tabular Environment -----
+
+\AtBeginEnvironment{table}{\ABNTEXfontereduzida}
+\AtBeginEnvironment{tabular}{\ABNTEXfontereduzida}
+
+\AtBeginEnvironment{longtable}{\ABNTEXfontereduzida \addvspace{\tinyskipamount}}
+\AtBeginEnvironment{longtable*}{\ABNTEXfontereduzida \addvspace{\tinyskipamount}}
+
+\floatplacement{table}{H}

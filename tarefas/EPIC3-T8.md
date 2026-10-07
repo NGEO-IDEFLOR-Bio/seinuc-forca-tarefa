@@ -1,8 +1,40 @@
-### Tarefa 8: Estabelecimento do Protocolo de Transmissão (Upload e Prazos)
+# EPIC3-T8: Desenhar o Fluxo de Envio de Documentos (Upload)
 
-*Esta etapa regulamenta a entrada de dados no sistema, em conformidade com o Art. 68 da Lei do Pará, que atribui à SEMAS a organização do sistema e o recebimento de informações provenientes dos municípios e do IDEFLOR-Bio.*
+**Status:** 🟡 **EM ABERTO**  
+**Responsável:** Equipe de TI / Processos  
+**Base Legal:** Art. 4º, II da Minuta do Decreto SEINUC/PA | Benchmark IEPHA/MG
 
-* **Canais de Transmissão:** Definição da infraestrutura tecnológica para o recebimento de arquivos, optando-se por portal web (upload direto) ou servidor FTP (Protocolo de Transferência de Arquivos), visando a segurança e a integridade do tráfego de dados.
-* **Padronização da Nomenclatura:** Instituição de regras estritas para a nomeação de arquivos digitais. A padronização deve seguir um modelo uniforme (ex: `MUNICIPIO_QUADRO_EXERCICIO`) para assegurar a rastreabilidade e evitar a perda de informações durante o processamento.
-* **Estruturação Interna de Documentos:** Exigência de que os arquivos em formato PDF apresentem organização interna padronizada, contendo obrigatoriamente Folha de Rosto e Sumário com indicação de conteúdo e paginação.
-* **Prazos Fatais e Admissibilidade:** Estabelecimento de data limite improrrogável para o envio da documentação (referencial de 10 de janeiro do ano subsequente ao ano-base). O descumprimento do prazo regulamentar enseja o descarte automático e a não análise dos documentos enviados.
+---
+
+## 📤 Escopo da Esteira Digital de Envio de Documentos
+
+Desenho da infraestrutura e regras de transmissão para envio dos dados das UCs pelos gestores municipais e executores estaduais ao sistema SEINUC.
+
+---
+
+## 🎯 Subtarefas de Execução
+
+### Subtarefa 1: Arquitetura de Recepção Digital
+* **Portal Web SEINUC (Upload Direto):** Interface web para preenchimento dos formulários dos Quadros I, II e III e envio de arquivos até 50 MB.
+* **Repositório Seguro FTP / SFTP:** Servidor seguro para o recebimento de arquivos pesados (ex: relatórios volumosos, acervos fotográficos e bases vetoriais brutas).
+
+### Subtarefa 2: Regras de Nomenclatura e Organização de Pastas
+Estruturação de diretórios obrigatória para recepção dos pacotes de dados:
+
+```
+[PACOTE_ENVIO]/
+├── 01_OFICIO_E_DECLARACAO/
+│   ├── OFICIO_ENCAMINHAMENTO.pdf
+│   └── DECLARACAO_VERACIDADE.pdf
+├── 02_DOCUMENTOS_GESTAO/
+│   ├── ATO_CRIACAO.pdf
+│   ├── ATAS_CONSELHO_2025.pdf
+│   └── PLANO_DE_MANEJO.pdf
+├── 03_DADOS_VETORIAIS/
+│   └── LIMITES_E_ZONEAMENTO_SIRGAS2000.zip
+└── 04_INVENTARIOS_AMBIENTAIS/
+    └── RELATORIO_FAUNA_FLORA.pdf
+```
+
+### Subtarefa 3: Recibo Eletrônico de Protocolo
+* Emissão automática de **Recibo de Envio com Hash de Validação (SHA-256)**, comprovando a data, hora exata e a relação de arquivos transmitidos pelo gestor.

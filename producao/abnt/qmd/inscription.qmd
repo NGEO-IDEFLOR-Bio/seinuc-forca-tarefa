@@ -1,0 +1,15 @@
+# Inscription {.unnumbered}
+
+**Do not remove the tags**! (they look like this: `%:::% tag %:::%`)
+
+```latex
+%:::% inscription body begin %:::%
+\textit{To the worm that first gnawed on the cold flesh of my corpse,}
+
+\textit{I dedicate, as a fond remembrance, these posthumous memories.}\footnotemark{}
+
+\footnotetext{
+	ASSIS, M. \textbf{Memórias póstumas de Brás Cubas} [The Posthumous Memoirs of Brás Cubas]. São Paulo: Companhia das Letras, 2014. ISBN 978-85-438-0163-6.
+}
+%:::% inscription body end %:::%
+```
