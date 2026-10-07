@@ -130,5 +130,5 @@
 
 PALÁCIO DO GOVERNO, __ de __________ de 202X.
 
-**HELDER BARBALHO**  
-*Governador do Estado do Pará*
+**[NOME DO(A) GOVERNADOR(A)]**  
+*Governador(a) do Estado do Pará*
