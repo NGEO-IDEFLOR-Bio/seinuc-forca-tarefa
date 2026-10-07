@@ -1,18 +1,18 @@
 # EPIC3-T10: Estabelecer o Ciclo de Análise Técnica e Fase Recursal
 
-**Status:** 🟡 **EM ABERTO**  
+**Status:** Em Aberto  
 **Responsável:** Equipe Jurídica e Técnica / IDEFLOR-Bio  
 **Base Legal:** Princípios do Contraditório e Ampla Defesa | Art. 4º da Minuta do Decreto SEINUC/PA
 
 ---
 
-## ⚖️ Escopo da Avaliação Técnica e Fase Recursal
+## 1. Escopo da Avaliação Técnica e Fase Recursal
 
 Regulamentação da metodologia de avaliação qualitativa dos documentos de gestão, da atribuição de notas/ressalvas e do rito processual para interposição e julgamento de recursos administrativos.
 
 ---
 
-## 🎯 Subtarefas de Execução
+## 2. Subtarefas de Execução
 
 ### Subtarefa 1: Rito de Avaliação Técnica (Fase 2 - Conteúdo)
 * **Atribuição de Status:**

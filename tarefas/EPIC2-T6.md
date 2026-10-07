@@ -1,18 +1,18 @@
 # EPIC2-T6: Estruturar Módulo de Gestão e Socioeconomia (Quadro III)
 
-**Status:** 🟡 **EM ABERTO**  
+**Status:** Em Aberto  
 **Responsável:** Analista Socioambiental  
 **Base Legal:** Art. 67, §2º, IV, Art. 112 e Art. 114 da Lei PA nº 10.306/2023 | Art. 3º, III e IV da Minuta do Decreto SEINUC/PA
 
 ---
 
-## 👥 Escopo do Módulo de Gestão e Socioeconomia
+## 1. Escopo do Módulo de Gestão e Socioeconomia
 
 Estruturação das informações administrativas, instrumentos de governança, conselho gestor, sustentabilidade financeira, integração social e acompanhamento de adequação de UCs legadas.
 
 ---
 
-## 🎯 Subtarefas de Execução
+## 2. Subtarefas de Execução
 
 ### Subtarefa 1: Conselho Gestor e Governança
 * **Tipo de Conselho:** Consultivo ou Deliberativo.

@@ -1,18 +1,18 @@
 # EPIC1-T3: Criar a Portaria de Diretrizes Técnicas
 
-**Status:** 🟡 **EM ABERTO**  
+**Status:** Em Aberto  
 **Responsável:** Equipe Técnica / Geoprocessamento  
 **Base Legal:** Art. 4º, II e III e Art. 12 da Minuta do Decreto SEINUC/PA | Benchmark Portaria IEPHA nº 34/2024
 
 ---
 
-## 📄 Escopo da Portaria Técnica
+## 1. Escopo da Portaria Técnica
 
 A Portaria de Diretrizes Técnicas fixará os requisitos formais para formatação, validação e transmissão dos documentos exigidos pelo SEINUC/PA, garantindo padronização digital e integridade cartográfica.
 
 ---
 
-## 🎯 Subtarefas de Execução
+## 2. Subtarefas de Execução
 
 ### Subtarefa 1: Formato e Padrão de Arquivos Digitais
 * **Documentos Textuais e Comprovantes:**

@@ -1,18 +1,18 @@
 # EPIC3-T9: Criar o Checklist de Validação (Triagem)
 
-**Status:** 🟡 **EM ABERTO**  
+**Status:** Em Aberto  
 **Responsável:** Coordenação SEINUC / Análise Técnica  
 **Base Legal:** Art. 4º, I e III da Minuta do Decreto SEINUC/PA
 
 ---
 
-## 📋 Escopo da Triagem e Aceite Preliminar
+## 1. Escopo da Triagem e Aceite Preliminar
 
 Definição dos critérios de adimplência formal que determinam se o processo enviado pela UC está apto a prosseguir para a fase de análise de conteúdo ou se deve ser rejeitado compulsoriamente na entrada.
 
 ---
 
-## 🎯 Subtarefas de Execução
+## 2. Subtarefas de Execução
 
 ### Subtarefa 1: Checklist de Admissibilidade (Fase 1 - Formal)
 

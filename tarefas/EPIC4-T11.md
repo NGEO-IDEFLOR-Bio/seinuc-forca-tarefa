@@ -1,18 +1,18 @@
 # EPIC4-T11: Projetar o Portal de Transparência do SEINUC e Serviços de Mapas
 
-**Status:** 🟡 **EM ABERTO**  
+**Status:** Em Aberto  
 **Responsável:** Equipe de TI / Geoprocessamento  
 **Base Legal:** Art. 67, §1º e Art. 111 da Lei PA nº 10.306/2023 | Art. 7º da Minuta do Decreto SEINUC/PA | Lei de Acesso à Informação (Lei nº 12.527/2011)
 
 ---
 
-## 🌐 Escopo do Portal de Transparência e Cartografia Oficial
+## 1. Escopo do Portal de Transparência e Cartografia Oficial
 
 Garantir o controle social, o livre acesso público e a integração dos dados geográficos do SEINUC com a cartografia e mapas oficiais do Estado do Pará.
 
 ---
 
-## 🎯 Subtarefas de Execução
+## 2. Subtarefas de Execução
 
 ### Subtarefa 1: Módulos de Consulta Pública
 * **Mapa Interativo de UCs:** Visualizador geográfico (WebGIS) contendo polígonos, limites, zoneamento e infraestruturas das UCs estaduais e municipais.

@@ -1,18 +1,18 @@
 # EPIC2-T5: Estruturar Módulo de Georreferenciamento e Fundiário (Quadro II)
 
-**Status:** 🟡 **EM ABERTO**  
+**Status:** Em Aberto  
 **Responsável:** Equipe de Geoprocessamento / Cadastro  
 **Base Legal:** Art. 67, §2º, II e III da Lei PA nº 10.306/2023 | Art. 3º, II e IV da Minuta do Decreto SEINUC/PA | Decreto Federal nº 4.340/2002
 
 ---
 
-## 🗺️ Escopo do Módulo Georreferenciado e Fundiário
+## 1. Escopo do Módulo Georreferenciado e Fundiário
 
 Definição da arquitetura de dados espaciais e fundiários para armazenar polígonos, zoneamento, limites verticais, situação jurídico-dominial e cadastro de Reservas Particulares do Patrimônio Natural (RPPNs).
 
 ---
 
-## 🎯 Subtarefas de Execução
+## 2. Subtarefas de Execução
 
 ### Subtarefa 1: Padrão Geospacial e Vetorial
 * **Mapeamento de Perímetro:** Geometria oficial da UC em Polígono 2D.

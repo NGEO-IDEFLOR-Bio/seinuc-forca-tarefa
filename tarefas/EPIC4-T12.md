@@ -1,18 +1,18 @@
 # EPIC4-T12: Definir a Publicação do Relatório de Efetividade da Gestão
 
-**Status:** 🟡 **EM ABERTO**  
+**Status:** Em Aberto  
 **Responsável:** Coordenação SEINUC / IDEFLOR-Bio  
 **Base Legal:** Art. 68, §4º e Art. 113 da Lei PA nº 10.306/2023 | Diretrizes de Avaliação de Efetividade (RAPPAM / SAMGe)
 
 ---
 
-## 📊 Escopo dos Relatórios de Efetividade da Gestão
+## 1. Escopo dos Relatórios de Efetividade da Gestão
 
 Estruturação dos modelos de relatório para aferição periódica do grau de implementação, proteção e efetividade da gestão das Unidades de Conservação do Sistema Estadual de Unidades de Conservação (SEUC).
 
 ---
 
-## 🎯 Subtarefas de Execução
+## 2. Subtarefas de Execução
 
 ### Subtarefa 1: Relatório Anual de Gestão das UCs
 * Consolidação dos indicadores anuais do SEINUC:

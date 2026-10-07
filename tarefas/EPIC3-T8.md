@@ -1,18 +1,18 @@
 # EPIC3-T8: Desenhar o Fluxo de Envio de Documentos (Upload)
 
-**Status:** 🟡 **EM ABERTO**  
+**Status:** Em Aberto  
 **Responsável:** Equipe de TI / Processos  
 **Base Legal:** Art. 4º, II da Minuta do Decreto SEINUC/PA | Benchmark IEPHA/MG
 
 ---
 
-## 📤 Escopo da Esteira Digital de Envio de Documentos
+## 1. Escopo da Esteira Digital de Envio de Documentos
 
 Desenho da infraestrutura e regras de transmissão para envio dos dados das UCs pelos gestores municipais e executores estaduais ao sistema SEINUC.
 
 ---
 
-## 🎯 Subtarefas de Execução
+## 2. Subtarefas de Execução
 
 ### Subtarefa 1: Arquitetura de Recepção Digital
 * **Portal Web SEINUC (Upload Direto):** Interface web para preenchimento dos formulários dos Quadros I, II e III e envio de arquivos até 50 MB.

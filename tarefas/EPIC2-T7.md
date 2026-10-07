@@ -1,18 +1,18 @@
 # EPIC2-T7: Definir Protocolo de Integração com CNUC, ITERPA e SEMAS Licenciamento
 
-**Status:** 🟡 **EM ABERTO**  
+**Status:** Em Aberto  
 **Responsável:** Equipe de Dados / TI  
 **Base Legal:** Art. 67, §3º e Art. 68, §4º da Lei PA nº 10.306/2023 | Art. 6º da Minuta do Decreto SEINUC/PA
 
 ---
 
-## 🔗 Escopo da Interoperabilidade e Notificação Interinstitucional
+## 1. Escopo da Interoperabilidade e Notificação Interinstitucional
 
 Garantir o alinhamento total das informações estaduais e municipais do Pará com o Cadastro Nacional de Unidades de Conservação (CNUC/MMA) e a transmissão periódica obrigatória aos órgãos fundiário e licenciador estaduais.
 
 ---
 
-## 🎯 Subtarefas de Execução
+## 2. Subtarefas de Execução
 
 ### Subtarefa 1: Identificador Único (Chave Primária)
 * Definição do ID oficial da UC utilizando como chave primária o código originário do CNUC (`COD_CNUC`), impedindo a criação de registros duplicados e sincronizando históricos.

@@ -1,12 +1,12 @@
 # EPIC1-T2: Definição do Ciclo Anual de Gestão (Cronograma Operacional)
 
-**Status:** 🟡 **EM ABERTO**  
+**Status:** Em Aberto  
 **Responsável:** Coordenação SEINUC / IDEFLOR-Bio  
 **Base Legal:** Art. 4º, I da Minuta do Decreto SEINUC/PA | Benchmark IEPHA/MG (Deliberação Normativa CONEP)
 
 ---
 
-## 📅 Definição do Rito Temporal do SEINUC
+## 1. Definição do Rito Temporal do SEINUC
 
 Para garantir a previsibilidade jurídica e técnica no monitoramento das Unidades de Conservação e no cálculo dos repasses do **ICMS Ecológico**, o SEINUC operará em um ciclo anual dividido entre **Ano-Base** e **Ano de Exercício**.
 
@@ -22,7 +22,7 @@ flowchart LR
 
 ---
 
-## 🎯 Subtarefas de Execução
+## 2. Subtarefas de Execução
 
 ### Subtarefa 1: Caracterização dos Períodos
 * **Ano-Base (Ano N-1):** Período compreendido entre **01 de janeiro e 31 de dezembro** em que as ações de gestão, fiscalização, reuniões de conselho e inventários são efetivamente executadas na UC.

@@ -1,18 +1,18 @@
 # EPIC2-T4: Estruturar Módulo de Caracterização Ambiental (Quadro I)
 
-**Status:** 🟡 **EM ABERTO**  
+**Status:** Em Aberto  
 **Responsável:** Analista Ambiental  
 **Base Legal:** Art. 67, §2º, I da Lei PA nº 10.306/2023 | Art. 3º, I da Minuta do Decreto SEINUC/PA
 
 ---
 
-## 🌿 Escopo do Módulo de Caracterização Ambiental
+## 1. Escopo do Módulo de Caracterização Ambiental
 
 Estruturação do dicionário de dados e formulários para registro das informações ecológicas e bióticas das Unidades de Conservação do Estado do Pará.
 
 ---
 
-## 🎯 Subtarefas de Execução
+## 2. Subtarefas de Execução
 
 ### Subtarefa 1: Dicionário de Dados de Fauna e Flora
 * **Padronização Taxonômica:** Restrição de preenchimento a vocabulários controlados (base Flora e Funga do Brasil / Catálogo Taxonômico da Fauna do Brasil).
@@ -32,4 +32,4 @@ Estruturação do dicionário de dados e formulários para registro das informa�
 * Status do Plano de Erradicação/Controle (Não possui, Em elaboração, Em execução).
 
 ### Subtarefa 4: Ficha de Inventário e Matriz JSON/Formulário
-Definição dos esquemas de dados em formato estruturado (JSON/Formulário) para inserção no sistema web SEINUC.
+Definição dos esquemas de dados em formato estruturado para inserção no sistema SEINUC.
