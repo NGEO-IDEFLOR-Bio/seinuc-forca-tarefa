@@ -6,7 +6,7 @@ html_content = '''<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEINUC/PA — Sistema Estadual de Informações sobre Unidades de Conservação</title>
-    <meta name="description" content="Apresentação Institucional Executiva do SEINUC/PA — Regulamentação da Lei Estadual nº 10.306/2023, Portal WebGIS, Módulos de Dados, ICMS Ecológico e Pacote Normativo.">
+    <meta name="description" content="Apresentação Executiva do SEINUC/PA — Regulamentação da Lei Estadual nº 10.306/2023, Portal WebGIS, Módulos de Dados, ICMS Ecológico e Pacote Normativo.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,12 +75,12 @@ html_content = '''<!DOCTYPE html>
             width: 95%;
             margin: 0 auto;
             position: relative;
-            padding-bottom: 30vh;
+            padding-bottom: 25vh;
         }
 
         .folder {
             position: sticky;
-            min-height: 620px;
+            min-height: 580px;
             max-height: 88vh;
             background: transparent;
             display: flex;
@@ -90,7 +90,7 @@ html_content = '''<!DOCTYPE html>
             transition: top 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s ease;
         }
 
-        /* Folder Stacking Top Positions */
+        /* Folder Stacking Top Positions & Theme Colors */
         .folder:nth-child(1) { top: calc(var(--stack-top) + 0px); z-index: 1; --folder-theme: #0A2540; --tab-accent: #38BDF8; }
         .folder:nth-child(2) { top: calc(var(--stack-top) + 48px); z-index: 2; --folder-theme: #04382C; --tab-accent: #34D399; }
         .folder:nth-child(3) { top: calc(var(--stack-top) + 96px); z-index: 3; --folder-theme: #1E1B4B; --tab-accent: #A78BFA; }
@@ -104,7 +104,7 @@ html_content = '''<!DOCTYPE html>
 
         .folder-tab {
             height: 48px;
-            min-width: 340px;
+            min-width: 320px;
             max-width: 100%;
             padding: 0 28px;
             display: flex;
@@ -260,11 +260,11 @@ html_content = '''<!DOCTYPE html>
     <main class="py-12">
         <div class="drawer-container" id="drawer">
             
-            <!-- PASTA 1: MINUTA DO DECRETO ESTADUAL -->
+            <!-- FOLDER 1: MINUTA DO DECRETO ESTADUAL -->
             <div class="folder" id="pasta-decreto">
                 <div class="folder-tab">
                     <span class="folder-tab-badge"></span>
-                    <span>PASTA I • MINUTA DO DECRETO ESTADUAL (ARCABOUÇO NORMATIVO)</span>
+                    <span>I. MINUTA DO DECRETO ESTADUAL (ARCABOUÇO NORMATIVO)</span>
                 </div>
                 <div class="folder-body">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
@@ -272,10 +272,6 @@ html_content = '''<!DOCTYPE html>
                             <span class="text-xs font-mono uppercase text-sky-400 tracking-wider">Regulamentação do Art. 68 da Lei Estadual nº 10.306/2023</span>
                             <h2 class="text-2xl font-bold text-white mt-1">O Instrumento Legal de Instituição do SEINUC/PA</h2>
                         </div>
-                        <a href="producao/docs/docx/minuta-decreto-seinuc.docx" class="inline-flex items-center space-x-2 bg-sky-600 hover:bg-sky-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md">
-                            <i class="fa-solid fa-file-word"></i>
-                            <span>Baixar Minuta do Decreto (.docx)</span>
-                        </a>
                     </div>
 
                     <div class="grid lg:grid-cols-2 gap-6 mb-6">
@@ -319,11 +315,11 @@ html_content = '''<!DOCTYPE html>
                 </div>
             </div>
 
-            <!-- PASTA 2: ARQUITETURA DE DADOS & SCHEMA JSON -->
+            <!-- FOLDER 2: ARQUITETURA DE DADOS & SCHEMA JSON -->
             <div class="folder" id="pasta-schema">
                 <div class="folder-tab">
                     <span class="folder-tab-badge"></span>
-                    <span>PASTA II • ARQUITETURA DE DADOS (OS 4 MÓDULOS REGULADOS)</span>
+                    <span>II. ARQUITETURA DE DADOS (OS 4 MÓDULOS REGULADOS)</span>
                 </div>
                 <div class="folder-body">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
@@ -331,10 +327,6 @@ html_content = '''<!DOCTYPE html>
                             <span class="text-xs font-mono uppercase text-emerald-400 tracking-wider">Modelo Estruturado de Dados • JSON Schema v1.0.0</span>
                             <h2 class="text-2xl font-bold text-white mt-1">Os 4 Módulos do Sistema SEINUC/PA</h2>
                         </div>
-                        <a href="producao/docs/docx/especificacao-modulos-dados-seinuc.docx" class="inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md">
-                            <i class="fa-solid fa-file-word"></i>
-                            <span>Baixar Especificação de Módulos (.docx)</span>
-                        </a>
                     </div>
 
                     <div class="grid lg:grid-cols-4 gap-4 mb-6">
@@ -406,11 +398,11 @@ html_content = '''<!DOCTYPE html>
                 </div>
             </div>
 
-            <!-- PASTA 3: PORTAL PÚBLICO & GEOSERVIÇOS OGC -->
+            <!-- FOLDER 3: PORTAL PÚBLICO & GEOSERVIÇOS OGC -->
             <div class="folder" id="pasta-portal">
                 <div class="folder-tab">
                     <span class="folder-tab-badge"></span>
-                    <span>PASTA III • PORTAL PÚBLICO & GEOSERVIÇOS OGC (WEBGIS ESTADUAL)</span>
+                    <span>III. PORTAL PÚBLICO & GEOSERVIÇOS OGC (WEBGIS ESTADUAL)</span>
                 </div>
                 <div class="folder-body">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
@@ -418,10 +410,6 @@ html_content = '''<!DOCTYPE html>
                             <span class="text-xs font-mono uppercase text-purple-400 tracking-wider">Transparência Ativa & Interoperabilidade Espacial</span>
                             <h2 class="text-2xl font-bold text-white mt-1">O WebGIS do Patrimônio Natural Paraense</h2>
                         </div>
-                        <a href="producao/docs/docx/especificacao-portal-transparencia-ogc.docx" class="inline-flex items-center space-x-2 bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md">
-                            <i class="fa-solid fa-file-word"></i>
-                            <span>Baixar Especificação do WebGIS (.docx)</span>
-                        </a>
                     </div>
 
                     <div class="grid lg:grid-cols-3 gap-6 mb-6">
@@ -461,11 +449,11 @@ html_content = '''<!DOCTYPE html>
                 </div>
             </div>
 
-            <!-- PASTA 4: ICMS ECOLÓGICO / VERDE -->
+            <!-- FOLDER 4: ICMS ECOLÓGICO / VERDE -->
             <div class="folder" id="pasta-icms">
                 <div class="folder-tab">
                     <span class="folder-tab-badge"></span>
-                    <span>PASTA IV • ICMS ECOLÓGICO & REPASSE FINANCEIRO MUNICIPAL</span>
+                    <span>IV. ICMS ECOLÓGICO & REPASSE FINANCEIRO MUNICIPAL</span>
                 </div>
                 <div class="folder-body">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
@@ -473,10 +461,6 @@ html_content = '''<!DOCTYPE html>
                             <span class="text-xs font-mono uppercase text-amber-400 tracking-wider">Cota-Parte Municipal & Decreto Estadual nº 1.064/2020</span>
                             <h2 class="text-2xl font-bold text-white mt-1">O Sistema de Cálculo do Índice IGUC</h2>
                         </div>
-                        <a href="producao/docs/docx/minuta-portaria-diretrizes-tecnicas.docx" class="inline-flex items-center space-x-2 bg-amber-600 hover:bg-amber-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md">
-                            <i class="fa-solid fa-file-word"></i>
-                            <span>Baixar Portaria de Diretrizes (.docx)</span>
-                        </a>
                     </div>
 
                     <p class="text-xs text-slate-300 leading-relaxed mb-6">
@@ -509,11 +493,11 @@ html_content = '''<!DOCTYPE html>
                 </div>
             </div>
 
-            <!-- PASTA 5: MANUAL OPERACIONAL DE TRIAGEM -->
+            <!-- FOLDER 5: MANUAL OPERACIONAL DE TRIAGEM -->
             <div class="folder" id="pasta-manual">
                 <div class="folder-tab">
                     <span class="folder-tab-badge"></span>
-                    <span>PASTA V • MANUAL OPERACIONAL DE TRIAGEM & REQUISITOS TÉCNICOS</span>
+                    <span>V. MANUAL OPERACIONAL DE TRIAGEM & REQUISITOS TÉCNICOS</span>
                 </div>
                 <div class="folder-body">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
@@ -521,10 +505,6 @@ html_content = '''<!DOCTYPE html>
                             <span class="text-xs font-mono uppercase text-emerald-400 tracking-wider">Guia de Envio para Prefeituras e Órgãos Gestores</span>
                             <h2 class="text-2xl font-bold text-white mt-1">Diretrizes de Habilitação e Qualificação Cadastral</h2>
                         </div>
-                        <a href="producao/docs/docx/manual-fluxo-envio-e-triagem.docx" class="inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md">
-                            <i class="fa-solid fa-file-word"></i>
-                            <span>Baixar Manual Operacional (.docx)</span>
-                        </a>
                     </div>
 
                     <div class="grid lg:grid-cols-2 gap-6">
@@ -564,59 +544,52 @@ html_content = '''<!DOCTYPE html>
                 </div>
             </div>
 
-            <!-- PASTA 6: PACOTE COMPLETO DE ENTREGÁVEIS -->
-            <div class="folder" id="pasta-pacote">
+            <!-- FOLDER 6: TRAMITAÇÃO INSTITUCIONAL & ROTEIRO DE IMPLEMENTAÇÃO -->
+            <div class="folder" id="pasta-tramitacao">
                 <div class="folder-tab">
                     <span class="folder-tab-badge"></span>
-                    <span>PASTA VI • PACOTE NORMATIVO & SUÍTE COMPLETA DE ENTREGÁVEIS</span>
+                    <span>VI. PACOTE NORMATIVO & TRAMITAÇÃO INSTITUCIONAL</span>
                 </div>
                 <div class="folder-body">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
                         <div>
-                            <span class="text-xs font-mono uppercase text-amber-400 tracking-wider">Produtos Entregues e Prontos para Tramitação</span>
-                            <h2 class="text-2xl font-bold text-white mt-1">Instrumentos Prontos para Parecer da PGE/PA</h2>
+                            <span class="text-xs font-mono uppercase text-amber-400 tracking-wider">Encaminhamento para Assinatura e Consulta Pública</span>
+                            <h2 class="text-2xl font-bold text-white mt-1">Próximos Passos de Tramitação do Pacote SEINUC/PA</h2>
                         </div>
-                        <span class="inline-flex items-center space-x-2 bg-emerald-950 text-emerald-300 border border-emerald-700 px-4 py-2 rounded-lg text-xs font-bold">
-                            <i class="fa-solid fa-circle-check text-emerald-400"></i>
-                            <span>5 PRODUTOS FINALIZADOS</span>
-                        </span>
                     </div>
 
-                    <p class="text-xs text-slate-300 leading-relaxed mb-6">
-                        A força-tarefa finalizou o conjunto completo de 5 produtos normativos e especificações técnicas necessárias para a imediata implementação do SEINUC/PA. Os documentos estão disponíveis em formato Word (.docx) rigorosamente padronizados conforme as normas ABNT NBR 14724:2023 e a Lei Complementar nº 95/1998:
+                    <div class="grid md:grid-cols-3 gap-6 mb-4">
+                        <div class="bg-slate-900/90 p-5 rounded-xl border border-slate-800">
+                            <div class="text-amber-400 font-bold text-xs uppercase mb-2 flex items-center">
+                                <i class="fa-solid fa-scale-balanced mr-2"></i> 1. Parecer Jurídico PGE/PA
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Encaminhamento formal da Minuta de Decreto e Portaria de Diretrizes para análise da Procuradoria-Geral do Estado do Pará.
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-900/90 p-5 rounded-xl border border-slate-800">
+                            <div class="text-amber-400 font-bold text-xs uppercase mb-2 flex items-center">
+                                <i class="fa-solid fa-people-group mr-2"></i> 2. Consulta Pública FAMEP
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Submissão do manual e requisitos de triagem à Federação das Associações de Municípios do Pará (FAMEP) para alinhamento com os prefeitos.
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-900/90 p-5 rounded-xl border border-slate-800">
+                            <div class="text-amber-400 font-bold text-xs uppercase mb-2 flex items-center">
+                                <i class="fa-solid fa-rocket mr-2"></i> 3. Publicação & Implantação
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Assinatura do Decreto pela Governadoria do Estado e ativação da infraestrutura do Portal WebGIS no IDEFLOR-Bio.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-400 italic text-center">
+                        Consulte abaixo a Central de Documentos de Gabinete para baixar todos os 5 arquivos normativos e técnicos em formato Word (.docx).
                     </p>
-
-                    <div class="grid md:grid-cols-5 gap-3 text-xs">
-                        <a href="producao/docs/docx/minuta-decreto-seinuc.docx" class="bg-slate-950 p-3 rounded border border-slate-800 text-center hover:border-sky-500 transition-colors block">
-                            <i class="fa-solid fa-file-word text-sky-400 text-xl mb-2"></i>
-                            <span class="text-slate-200 font-bold block mb-1">1. Minuta de Decreto</span>
-                            <span class="text-[10px] text-slate-500">Regulamentação Legal</span>
-                        </a>
-
-                        <a href="producao/docs/docx/especificacao-modulos-dados-seinuc.docx" class="bg-slate-950 p-3 rounded border border-slate-800 text-center hover:border-emerald-500 transition-colors block">
-                            <i class="fa-solid fa-file-word text-emerald-400 text-xl mb-2"></i>
-                            <span class="text-slate-200 font-bold block mb-1">2. Especificação Dados</span>
-                            <span class="text-[10px] text-slate-500">Schema & 4 Módulos</span>
-                        </a>
-
-                        <a href="producao/docs/docx/minuta-portaria-diretrizes-tecnicas.docx" class="bg-slate-950 p-3 rounded border border-slate-800 text-center hover:border-purple-500 transition-colors block">
-                            <i class="fa-solid fa-file-word text-purple-400 text-xl mb-2"></i>
-                            <span class="text-slate-200 font-bold block mb-1">3. Portaria Conjunta</span>
-                            <span class="text-[10px] text-slate-500">SEMAS / IDEFLOR</span>
-                        </a>
-
-                        <a href="producao/docs/docx/manual-fluxo-envio-e-triagem.docx" class="bg-slate-950 p-3 rounded border border-slate-800 text-center hover:border-amber-500 transition-colors block">
-                            <i class="fa-solid fa-file-word text-amber-400 text-xl mb-2"></i>
-                            <span class="text-slate-200 font-bold block mb-1">4. Manual do Usuário</span>
-                            <span class="text-[10px] text-slate-500">Triagem & Habilitação</span>
-                        </a>
-
-                        <a href="producao/docs/docx/especificacao-portal-transparencia-ogc.docx" class="bg-slate-950 p-3 rounded border border-slate-800 text-center hover:border-teal-500 transition-colors block">
-                            <i class="fa-solid fa-file-word text-teal-400 text-xl mb-2"></i>
-                            <span class="text-slate-200 font-bold block mb-1">5. Especificação WebGIS</span>
-                            <span class="text-[10px] text-slate-500">Portal & OGC</span>
-                        </a>
-                    </div>
                 </div>
             </div>
 
@@ -628,7 +601,7 @@ html_content = '''<!DOCTYPE html>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-10">
                 <h3 class="text-lg font-bold text-white uppercase tracking-wider mb-2">Central de Documentos de Gabinete (.docx)</h3>
-                <p class="text-slate-400">Arquivos oficiais formatados rigorosamente conforme a Norma ABNT NBR 14724:2023 e a Lei Complementar nº 95/1998.</p>
+                <p class="text-slate-400">Arquivos oficiais do projeto formatados rigorosamente conforme a Norma ABNT NBR 14724:2023 e a Lei Complementar nº 95/1998.</p>
             </div>
 
             <!-- Grid de Downloads -->
@@ -705,4 +678,4 @@ html_content = '''<!DOCTYPE html>
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(html_content)
 
-print("index.html product presentation updated successfully.")
+print("index.html clean folder presentation updated successfully.")
