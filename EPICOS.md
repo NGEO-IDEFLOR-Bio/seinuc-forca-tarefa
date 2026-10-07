@@ -8,14 +8,14 @@ Este repositório contém o planejamento, a estrutura normativa e a arquitetura 
 **Objetivo:** Estabelecer o arcabouço legal, os cronogramas operacionais e as diretrizes técnicas para o funcionamento oficial do SEINUC/PA.
 
 ### Critérios de Conclusão (DoD):
-1. **Minuta do Decreto Regulamentador [Concluído]:** Texto legal regulamentando a governança e os eixos do SEINUC ([minuta-elberth.docx](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-elberth.docx)).
+1. **Minuta do Decreto Regulamentador [Concluído]:** Texto legal regulamentando a governança e os eixos do SEINUC ([minuta-decreto-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md)).
 2. **Ciclo Anual de Gestão:** Definição dos prazos operacionais para o Ano-Base e o Ano de Exercício.
 3. **Minuta da Portaria Técnica:** Diretrizes formais de apresentação (PDF/Shapefile), checklists e modelos de declaração de veracidade.
 
 ### Lista de Tarefas
 | ID | Tarefa | Status | Documento de Trabalho |
 | :--- | :--- | :---: | :--- |
-| **T1** | Minutar o Decreto de Regulamentação do SEINUC | Concluído | [minuta-elberth.docx](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-elberth.docx) / [EPIC1-T1.md](tarefas/EPIC1-T1.md) |
+| **T1** | Minutar o Decreto de Regulamentação do SEINUC | Concluído | [minuta-decreto-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md) / [EPIC1-T1.md](tarefas/EPIC1-T1.md) |
 | **T2** | Definir o Ciclo Anual de Gestão (Cronograma Operacional) | Em Aberto | [EPIC1-T2.md](tarefas/EPIC1-T2.md) |
 | **T3** | Criar a Portaria de Diretrizes Técnicas | Em Aberto | [EPIC1-T3.md](tarefas/EPIC1-T3.md) |
 

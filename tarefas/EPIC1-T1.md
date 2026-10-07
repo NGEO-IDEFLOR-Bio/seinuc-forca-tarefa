@@ -1,7 +1,7 @@
 # EPIC1-T1: Minuta do Decreto de Regulamentação do SEINUC
 
 **Status:** Concluído  
-**Arquivo Entregue:** [`producao/docs/minuta-elberth.docx`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-elberth.docx)  
+**Arquivo Entregue:** [`producao/docs/minuta-decreto-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md) *(Backup `.docx` em [`producao/docs/minuta-elberth.docx`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-elberth.docx))*  
 **Base Legal:** Art. 67, §5º da Lei Estadual nº 10.306/2023 | Lei Estadual nº 8.096/2015 | Lei Federal nº 9.985/2000 (SNUC)
 
 ---
@@ -17,7 +17,7 @@ O Decreto Estadual regulamenta o **Sistema Estadual de Informações sobre Unida
 * **Art. 2º:** Finalidades precípuas:
   1. Subsidiar a gestão do SEUC nas fases de criação, controle, fiscalização, monitoramento e pesquisa.
   2. Servir de base técnica e oficial para o monitoramento e cálculo dos repasses do **ICMS Ecológico** aos municípios (Lei Estadual nº 7.638/2012).
-  3. Garantir controle social por meio de transparência ativa.
+  3. Garantir controle social por meio da transparência ativa.
   4. Promover a integração automatizada com o Cadastro Nacional de Unidades de Conservação (CNUC).
 
 #### Capítulo II - Da Arquitetura de Dados e Módulos (Quadros)
@@ -49,4 +49,4 @@ O Decreto Estadual regulamenta o **Sistema Estadual de Informações sobre Unida
 * **Art. 13:** Vigência na data de publicação.
 
 ---
-*Documento de minuta aprovado e disponível em formato Word em [`producao/docs/minuta-elberth.docx`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-elberth.docx).*
+*Texto integral da minuta disponível em [`producao/docs/minuta-decreto-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md).*
