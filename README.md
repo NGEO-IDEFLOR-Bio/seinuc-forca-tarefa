@@ -61,7 +61,36 @@ Os **produtos consolidados** em `producao/docs/` são as entregas finais do proj
 
 ---
 
-## 4. Estrutura de Épicos do Projeto
+## 4. Base Legal e Fontes Técnicas dos Documentos
+
+Os documentos do projeto foram elaborados tomando como base a **Lei Estadual nº 10.306/2023** (que institui o SEUC e o SEINUC/PA), complementada pelas seguintes fontes:
+
+### Normativas
+
+| Fonte | O que é |
+| :-- | :--- |
+| **Lei Estadual nº 10.306/2023** | Lei-mãe — institui o SEUC/PA e o SEINUC/PA (art. 67). |
+| **Lei Federal nº 9.985/2000 + Decreto Federal nº 4.340/2002** | **SNUC** — normas gerais das unidades de conservação e sua regulamentação. |
+| **Lei Estadual nº 7.638/2012 + Decreto Estadual nº 1.064/2020** | **ICMS Ecológico/Verde** — repasse ambiental aos municípios, metodologia e calendário. |
+| **Lei Estadual nº 8.972/2020** | **LEPA** — processo administrativo no Pará (prazos em dias úteis, contraditório e ampla defesa). |
+| **Lei Federal nº 12.527/2011** | **LAI** — Lei de Acesso à Informação. |
+| **Lei Federal nº 13.709/2018** | **LGPD** — Lei Geral de Proteção de Dados Pessoais. |
+| **Lei Federal nº 13.123/2015** | **Lei da Biodiversidade** — patrimônio genético e conhecimento tradicional associado (**SisGen**). |
+
+### Técnicas
+
+| Fonte | Aplicação |
+| :-- | :--- |
+| **SIRGAS 2000 (EPSG:4674)** | Datum oficial das bases vetoriais do SEINUC/PA. |
+| **Padrões OGC** | Geoserviços WMS 1.3.0, WFS 2.0.0, WCS 2.0.1 e CSW 2.0.2. |
+| **Perfil MGB / INDE** | Catalogação de metadados geográficos na Infraestrutura Nacional de Dados Espaciais. |
+| **CNUC (MMA)** | Integração do cadastro com o Cadastro Nacional de Unidades de Conservação. |
+
+> Os documentos também se apoiaram em **benchmarking de legislação estadual comparada** (referências reunidas em `documentos/referencias/`) e foram validados por revisões técnicas e jurídicas antes de sua consolidação.
+
+---
+
+## 5. Estrutura de Épicos do Projeto
 
 ### Épico 1: Regulamentação e Base Normativa
 Abrange a elaboração do Decreto Regulamentador do SEINUC/PA (Concluído), a fixação do calendário operacional de Ano-Base e Ano de Exercício (Concluído) e a publicação da Portaria Conjunta de Diretrizes Técnicas (Concluído).
@@ -77,7 +106,7 @@ Define os parâmetros para o Portal de Transparência do SEINUC, a disponibiliza
 
 ---
 
-## 5. Estrutura do Repositório
+## 6. Estrutura do Repositório
 
 ```
 .
