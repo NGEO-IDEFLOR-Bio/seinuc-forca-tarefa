@@ -1,9 +1,0 @@
-# Approval Sheet {.unnumbered}
-
-**Este elemento não é aplicável a relatórios técnicos.**
-
-<!-- 
-  Folhas de aprovação com banca examinadora são elementos de trabalhos acadêmicos.
-  Para relatórios técnicos, este elemento foi removido.
-  A gestão responsável está indicada na folha de rosto.
--->

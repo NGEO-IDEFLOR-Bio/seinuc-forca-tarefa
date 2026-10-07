@@ -1,8 +1,0 @@
-# Acknowledgments {.unnumbered}
-
-**Este elemento não é aplicável a relatórios técnicos.**
-
-<!-- 
-  Agradecimentos são elementos de trabalhos acadêmicos.
-  Para relatórios técnicos, este elemento foi removido.
--->
