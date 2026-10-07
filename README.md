@@ -24,12 +24,44 @@ A documentação do projeto está estruturada em formato Markdown (.md) de modo 
 * **Documentação de Tarefas (`tarefas/`):** Contém as especificações técnicas, parâmetros regulatórios e fluxos de cada tarefa individual (`EPIC1-T1.md` a `EPIC4-T12.md`).
 * **Acervo Normativo e Referências (`documentos/referencias/`):** Reúne a legislação federal, estadual comparada, diretrizes do CONAMA e estudos técnicos, catalogados em `INDEX.md`.
 * **Auditoria e Conformidade (`documentos/auditoria-conformidade-seinuc.md`):** Relatório de auditoria técnica e jurídica do acervo, consolidado em 4 rodadas de reavaliação (Partes I a IV).
-* **Produtos Consolidados (`producao/docs/`):** Armazena as minutas de atos normativos e documentos regulamentares finalizados (Texto Final Sanado).
+* **Produtos Consolidados (`producao/docs/`):** Armazena as minutas de atos normativos e documentos regulamentares finalizados.
 * **Arquivados (`producao/arquivados/`):** Versões superadas de documentos produzidos durante o processo (ex.: minuta anterior em `.docx`).
 
 ---
 
-## 3. Estrutura de Épicos do Projeto
+## 3. Catálogo de Produtos (o que é cada documento)
+
+Os **produtos consolidados** em `producao/docs/` são as entregas finais do projeto — textos prontos para tramitação e desenvolvimento. Os demais arquivos do repositório são documentos de **apoio** (planejamento e registros).
+
+### 3.1. Produtos normativos
+
+| Produto | O que é | Finalidade | Base legal |
+| :-- | :--- | :--- | :--- |
+| [`minuta-decreto-seinuc.md`](producao/docs/minuta-decreto-seinuc.md) | **Decreto Regulamentador do SEINUC/PA** (19 artigos, 8 capítulos) — ato do Chefe do Executivo que regulamenta o sistema. | Institui a governança (SEMAS organiza/mantém; IDEFLOR-Bio executa), os Módulos I a IV, o ciclo anual **sincronizado ao ICMS Verde** (Decreto 1.064/2020), a CT-SEINUC, a fase recursal em **15 dias úteis (LEPA)**, a transparência/sigilo/LGPD/SisGen e as sanções. | Lei 10.306/2023 (arts. 67, 68, 110-114); LEPA 8.972/2020; 7.638/2012; 1.064/2020 |
+| [`minuta-portaria-diretrizes-tecnicas.md`](producao/docs/minuta-portaria-diretrizes-tecnicas.md) | **Portaria Conjunta SEMAS/IDEFLOR-Bio** de diretrizes técnicas. | Padrões de arquivos digitais (PDF-OCR; 50 MB/arquivo; 200 MB/pacote), padrão cartográfico **SIRGAS 2000** (Shapefile/GPKG/GML/GeoJSON), topologia (gap/overlap zero), nomenclatura de arquivos, regra de contingência de prazo, autenticação SHA-256 e o modelo da **Declaração de Veracidade** (Anexo I). | Arts. 6º e 16 do Decreto; Lei 10.306/2023 |
+
+### 3.2. Produtos técnico-operacionais
+
+| Produto | O que é | Finalidade | Base legal |
+| :-- | :--- | :--- | :--- |
+| [`especificacao-modulos-dados-seinuc.md`](producao/docs/especificacao-modulos-dados-seinuc.md) | **Especificação Técnica e Dicionário de Dados** dos Módulos I a IV. | Dicionário de campos, tabela DBF no padrão oficial do IDEFLOR-Bio, **JSON Schemas** com validação (inclui regra condicional de conselho e rastreio do Art. 117) e o protocolo de integração com CNUC, ITERPA e SEMAS Licenciamento. | Art. 67, §2º/§3º e Art. 68 da Lei 10.306/2023 |
+| [`manual-fluxo-envio-e-triagem.md`](producao/docs/manual-fluxo-envio-e-triagem.md) | **Manual de Protocolo Digital, Envio e Triagem.** | Estrutura de diretórios do pacote de envio, canais (Portal Web/SFTP), recibo eletrônico com **SHA-256 + selo de tempo ICP-Brasil**, **checklist de admissibilidade** (vícios eliminatórios e sanáveis) e ficha de aceite da triagem. | Arts. 5º-9º do Decreto; Portaria Conjunta |
+| [`especificacao-portal-transparencia-ogc.md`](producao/docs/especificacao-portal-transparencia-ogc.md) | **Especificação do Portal de Transparência e Serviços de Mapas (OGC).** | Três módulos públicos (WebGIS, repositório documental e painel do ICMS Ecológico), geoserviços **WMS/WFS/WCS/CSW**, metadados **MGB/INDE**, **mascaramento de espécies criticamente ameaçadas (CR)** em todos os endpoints, LGPD (SEMAS Controladora) e Lei 13.123/2015 (SisGen). | Art. 67, §6º e Art. 111 da Lei 10.306/2023; Arts. 13-14 do Decreto |
+
+### 3.3. Documentos de apoio (não são produtos normativos)
+
+| Documento | O que é |
+| :-- | :--- |
+| [`ROADMAP.md`](ROADMAP.md) | Trajetória cronológica de fases, milestones e progresso. |
+| [`EPICOS.md`](EPICOS.md) | Painel de épicos e status das tarefas (T1-T12). |
+| [`tarefas/`](tarefas/) | Registro das 12 tarefas executadas (com base legal e produto entregue). |
+| [`documentos/auditoria-conformidade-seinuc.md`](documentos/auditoria-conformidade-seinuc.md) | Relatório de auditoria técnica e jurídica em 4 rodadas (Partes I a IV). |
+| [`documentos/referencias/`](documentos/referencias/) | Acervo normativo (leis, decretos, resoluções) e INDEX.md. |
+| [`producao/arquivados/`](producao/arquivados/) | Versões anteriores de minutas (ex.: `minuta-elberth.docx`). |
+
+---
+
+## 4. Estrutura de Épicos do Projeto
 
 ### Épico 1: Regulamentação e Base Normativa
 Abrange a elaboração do Decreto Regulamentador do SEINUC/PA (Concluído), a fixação do calendário operacional de Ano-Base e Ano de Exercício (Concluído) e a publicação da Portaria Conjunta de Diretrizes Técnicas (Concluído).
@@ -45,7 +77,7 @@ Define os parâmetros para o Portal de Transparência do SEINUC, a disponibiliza
 
 ---
 
-## 4. Estrutura do Repositório
+## 5. Estrutura do Repositório
 
 ```
 .
@@ -67,8 +99,8 @@ Define os parâmetros para o Portal de Transparência do SEINUC, a disponibiliza
 │   └── EPIC4-T12.md               # Relatórios de Efetividade da Gestão (Art. 113) [Concluído]
 ├── producao/
 │   ├── docs/
-│   │   ├── minuta-decreto-seinuc.md            # Minuta do Decreto Regulamentador (Texto Final Sanado)
-│   │   ├── minuta-portaria-diretrizes-tecnicas.md # Portaria Conjunta SEMAS/IDEFLOR-Bio (Texto Final Sanado)
+│   │   ├── minuta-decreto-seinuc.md            # Minuta do Decreto Regulamentador
+│   │   ├── minuta-portaria-diretrizes-tecnicas.md # Portaria Conjunta SEMAS/IDEFLOR-Bio
 │   │   ├── especificacao-modulos-dados-seinuc.md # Especificação Técnica dos Módulos I a IV (SIRGAS 2000)
 │   │   ├── manual-fluxo-envio-e-triagem.md       # Manual de Protocolo Digital, Envio e Triagem
 │   │   ├── especificacao-portal-transparencia-ogc.md # Portal de Transparência e Geoserviços OGC (WMS/WFS)
