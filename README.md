@@ -19,6 +19,7 @@ O SEINUC/PA constitui o banco de dados oficial e padronizado com as informaçõe
 
 A documentação do projeto está estruturada em formato Markdown (.md) de modo modular e padronizado, visando à auditabilidade e à manutenção contínua das informações:
 
+* **Roadmap do Projeto (`ROADMAP.md`):** Trajetória cronológica por Fases, Milestones e percentual de progresso.
 * **Matriz de Acompanhamento (`EPICOS.md`):** Apresenta o detalhamento dos 4 eixos estratégicos do projeto e o estado atual de cada entrega.
 * **Documentação de Tarefas (`tarefas/`):** Contém as especificações técnicas, parâmetros regulatórios e fluxos de cada tarefa individual (`EPIC1-T1.md` a `EPIC4-T12.md`).
 * **Acervo Normativo e Referências (`documentos/referencias/`):** Reúne a legislação federal, estadual comparada, diretrizes do CONAMA e estudos técnicos, catalogados em `INDEX.md`.
@@ -46,6 +47,7 @@ Define os parâmetros para o Portal de Transparência do SEINUC, a disponibiliza
 
 ```
 .
+├── ROADMAP.md                      # Trajetória de Fases, Milestones e Progresso
 ├── EPICOS.md                      # Painel central de Épicos e Status de Tarefas
 ├── README.md                      # Documento descritivo do repositório
 ├── tarefas/                       # Especificações e documentos de tarefas (.md)
@@ -66,5 +68,5 @@ Define os parâmetros para o Portal de Transparência do SEINUC, a disponibiliza
 │       └── minuta-decreto-seinuc.md # Minuta do Decreto Regulamentador (Texto Final)
 └── documentos/
     └── referencias/               # Base legal, resoluções e estudos técnicos (PDFs)
-        └── INDEX.md               # Catálogo sistematizado do acervo de referência
+        └── INDEX.md               # Catálogo systematizado do acervo de referência
 ```
