@@ -29,16 +29,16 @@ A documentação do projeto está estruturada em formato Markdown (.md) de modo 
 ## 3. Estrutura de Épicos do Projeto
 
 ### Épico 1: Regulamentação e Base Normativa
-Abrange a elaboração do Decreto Regulamentador do SEINUC/PA, a fixação do calendário operacional (Ano-Base e Ano de Exercício) e a publicação da Portaria de Diretrizes Técnicas.
+Abrange a elaboração do Decreto Regulamentador do SEINUC/PA (Concluído), a fixação do calendário operacional de Ano-Base e Ano de Exercício (Concluído) e a publicação da Portaria de Diretrizes Técnicas.
 
 ### Épico 2: Arquitetura de Dados e Módulos do Sistema
-Compreende o dicionário de dados dos Módulos Ambiental (Quadro I), Georreferenciado e Fundiário (Quadro II) e de Gestão e Socioeconomia (Quadro III), além dos protocolos de integração com o CNUC, ITERPA e SEMAS.
+Compreende o dicionário de dados dos Módulos Ambiental (Quadro I), Georreferenciado e Fundiário (Quadro II) e de Gestão e Socioeconomia (Quadro III), além dos protocolos de integração com o CNUC, ITERPA e SEMAS (Concluído).
 
 ### Épico 3: Fluxo Operacional e Validação Processual
-Regulamenta os procedimentos digitais de recepção documental, os checklists de triagem e admissibilidade formal, e os ritos de análise técnica e fase recursal.
+Regulamenta os procedimentos digitais de recepção documental, os checklists de triagem e admissibilidade formal, e os ritos de análise técnica e fase recursal (Concluído).
 
 ### Épico 4: Transparência e Avaliação de Efetividade
-Define os parâmetros para o Portal de Transparência do SEINUC, a disponibilização de geoserviços OGC (WMS/WFS) para a Cartografia Oficial do Estado e os relatórios anuais e quadrienais de avaliação de efetividade da gestão.
+Define os parâmetros para o Portal de Transparência do SEINUC, a disponibilização de geoserviços OGC (WMS/WFS) para a Cartografia Oficial do Estado e os relatórios anuais e quadrienais de avaliação de efetividade da gestão (Concluído).
 
 ---
 
@@ -50,20 +50,20 @@ Define os parâmetros para o Portal de Transparência do SEINUC, a disponibiliza
 ├── README.md                      # Documento descritivo do repositório
 ├── tarefas/                       # Especificações e documentos de tarefas (.md)
 │   ├── EPIC1-T1.md                # Minuta do Decreto de Regulamentação [Concluído]
-│   ├── EPIC1-T2.md                # Ciclo Anual de Gestão (Cronograma)
+│   ├── EPIC1-T2.md                # Ciclo Anual de Gestão (Cronograma) [Concluído]
 │   ├── EPIC1-T3.md                # Portaria de Diretrizes Técnicas
 │   ├── EPIC2-T4.md                # Módulo de Caracterização Ambiental (Quadro I)
 │   ├── EPIC2-T5.md                # Módulo Georreferenciado e Fundiário (Quadro II)
 │   ├── EPIC2-T6.md                # Módulo de Gestão e Socioeconomia (Quadro III)
-│   ├── EPIC2-T7.md                # Protocolo de Integração com o CNUC, ITERPA e SEMAS
+│   ├── EPIC2-T7.md                # Protocolo de Integração com o CNUC, ITERPA e SEMAS [Concluído]
 │   ├── EPIC3-T8.md                # Fluxo de Envio e Protocolo Digital
 │   ├── EPIC3-T9.md                # Checklist de Triagem e Admissibilidade
-│   ├── EPIC3-T10.md               # Ciclo de Análise Técnica e Fase Recursal
+│   ├── EPIC3-T10.md               # Ciclo de Análise Técnica e Fase Recursal [Concluído]
 │   ├── EPIC4-T11.md               # Portal de Transparência e Serviços de Mapas (OGC)
-│   └── EPIC4-T12.md               # Relatórios de Efetividade da Gestão (Art. 113)
+│   └── EPIC4-T12.md               # Relatórios de Efetividade da Gestão (Art. 113) [Concluído]
 ├── producao/
 │   └── docs/
-│       └── minuta-elberth.docx    # Minuta do Decreto Regulamentador
+│       └── minuta-decreto-seinuc.md # Minuta do Decreto Regulamentador (Texto Final)
 └── documentos/
     └── referencias/               # Base legal, resoluções e estudos técnicos (PDFs)
         └── INDEX.md               # Catálogo sistematizado do acervo de referência

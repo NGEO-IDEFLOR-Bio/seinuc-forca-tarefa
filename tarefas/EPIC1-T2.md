@@ -1,40 +1,33 @@
 # EPIC1-T2: Definição do Ciclo Anual de Gestão (Cronograma Operacional)
 
-**Status:** Em Aberto  
+**Status:** Concluído  
+**Normatizado em:** Arts. 4º, 5º, 7º, 8º e 9º do Decreto Regulamentador ([`producao/docs/minuta-decreto-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md))  
 **Responsável:** Coordenação SEINUC / IDEFLOR-Bio  
-**Base Legal:** Art. 4º, I da Minuta do Decreto SEINUC/PA | Benchmark IEPHA/MG (Deliberação Normativa CONEP)
+**Base Legal:** Art. 4º, I e Capítulo III da Minuta do Decreto SEINUC/PA | Lei Estadual nº 7.638/2012 (ICMS Ecológico)
 
 ---
 
-## 1. Definição do Rito Temporal do SEINUC
+## 1. Rito Temporal e Calendário Regulamentado pelo Decreto
 
-Para garantir a previsibilidade jurídica e técnica no monitoramento das Unidades de Conservação e no cálculo dos repasses do **ICMS Ecológico**, o SEINUC operará em um ciclo anual dividido entre **Ano-Base** e **Ano de Exercício**.
+Conforme estabelecido nos Arts. 4º a 9º do Decreto Regulamentador do SEINUC/PA, o ciclo anual é composto pelas seguintes janelas e prazos vinculantes:
 
 ```mermaid
 flowchart LR
-    A["Ano-Base (01/Jan a 31/Dez)<br/>Execução das Ações na UC"] --> B["Até 31/Jan<br/>Envio Digital da Documentação"]
-    B --> C["Fev a Jun<br/>Triagem e Análise Técnica"]
-    C --> D["15/Jul<br/>Divulgação da Nota Provisória"]
-    D --> E["16 a 31/Jul<br/>Fase Recursal (15 dias)"]
-    E --> F["Até 31/Ago<br/>Julgamento e Pontuação Definitiva"]
-    F --> G["Setembro<br/>Repasse do ICMS Ecológico / CNUC"]
+    A["Ano-Base (01/Jan a 31/Dez N-1)<br/>Execução de Gestão"] --> B["Até 31/Jan (Ano N)<br/>Protocolo Eletrônico"]
+    B --> C["Fev a Jun<br/>Triagem e Análise pela CT-SEINUC"]
+    C --> D["Até 15/Jul<br/>Publicação do Extrato Provisório"]
+    D --> E["15 Dias Corridos<br/>Fase de Recurso Administrativo"]
+    E --> F["Até 31/Ago<br/>Julgamento dos Recursos"]
+    F --> G["Até 30/Set<br/>Homologação e Envio à SEFA/PA"]
 ```
 
 ---
 
-## 2. Subtarefas de Execução
+## 2. Prazos e Competências Consolidadas
 
-### Subtarefa 1: Caracterização dos Períodos
-* **Ano-Base (Ano N-1):** Período compreendido entre **01 de janeiro e 31 de dezembro** em que as ações de gestão, fiscalização, reuniões de conselho e inventários são efetivamente executadas na UC.
-* **Ano de Exercício (Ano N):** Ano civil subsequente, dedicado ao protocolo, análise, pontuação, recurso e integração dos dados para efeito do ICMS Ecológico.
-
-### Subtarefa 2: Detalhamento do Calendário Anual
-1. **01 de Dezembro a 31 de Janeiro:** Abertura da janela de transmissão digital dos relatórios, cadastros e vetores pelos municípios/gestores.
-2. **01 de Fevereiro a 30 de Junho:** Fase de Triagem e Análise Técnica pelas equipes do IDEFLOR-Bio/SEMAS com emissão de Fichas de Avaliação.
-3. **15 de Julho:** Publicação do Extrato Preliminar de Habilitação e Pontuação Provisória em Diário Oficial e Portal SEINUC.
-4. **16 a 30 de Julho (15 dias corridos):** Prazo para interposição de Recursos Administrativos contra o resultado provisório.
-5. **01 a 31 de Agosto:** Julgamento dos recursos pela Comissão Técnica / COEMA e consolidação da Pontuação Definitiva.
-6. **30 de Setembro:** Envio do índice definitivo à Secretaria de Estado de Fazenda (SEFA/PA) para cálculo do ICMS Ecológico e transmissão automatizada ao CNUC/MMA.
-
-### Subtarefa 3: Minuta da Resolução de Calendário Operacional
-Elaboração do texto normativo complementar especificando que prazos que vencerem em finais de semana ou feriados serão prorrogados até o primeiro dia útil subsequente.
+1. **Ano-Base (N-1):** Período de 01 de janeiro a 31 de dezembro dedicado à execução das ações de gestão, conselhos, inventários e fiscalização nas UCs.
+2. **Protocolo Eletrônico (Até 31 de Janeiro do Ano N):** Transmissão digital dos documentos com OCR e vetores SIRGAS 2000, acompanhada da Declaração de Veracidade.
+3. **Análise Técnica (Fevereiro a Junho):** Exame dos processos pela Comissão Técnica de Avaliação (CT-SEINUC/IDEFLOR-Bio).
+4. **Publicação Provisória (Até 15 de Julho):** Divulgação em Diário Oficial do Estado e Portal SEINUC.
+5. **Fase Recursal (15 Dias Corridos):** Prazo peremptório para impugnação de notas ou indeferimentos.
+6. **Julgamento e Homologação (Até 30 de Setembro):** Julgamento final e envio do índice definitivo de repasse à SEFA/PA.

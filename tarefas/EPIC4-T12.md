@@ -1,30 +1,22 @@
 # EPIC4-T12: Definir a Publicação do Relatório de Efetividade da Gestão
 
-**Status:** Em Aberto  
+**Status:** Concluído  
+**Normatizado em:** Art. 17 do Decreto Regulamentador ([`producao/docs/minuta-decreto-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md))  
 **Responsável:** Coordenação SEINUC / IDEFLOR-Bio  
-**Base Legal:** Art. 68, §4º e Art. 113 da Lei PA nº 10.306/2023 | Diretrizes de Avaliação de Efetividade (RAPPAM / SAMGe)
+**Base Legal:** Art. 68, §4º e Art. 113 da Lei PA nº 10.306/2023 | Diretrizes RAPPAM / SAMGe
 
 ---
 
-## 1. Escopo dos Relatórios de Efetividade da Gestão
+## 1. Diretrizes dos Relatórios de Efetividade Regulamentadas
 
-Estruturação dos modelos de relatório para aferição periódica do grau de implementação, proteção e efetividade da gestão das Unidades de Conservação do Sistema Estadual de Unidades de Conservação (SEUC).
+O Decreto Regulamentador fixou a obrigatoriedade da publicação periódica dos relatórios de avaliação da efetividade da gestão:
 
----
+### I - Relatório Anual de Gestão
+* Consolidação anual dos indicadores de infraestrutura, conselhos, plano de manejo e investimentos nas UCs para instrução do ICMS Ecológico.
 
-## 2. Subtarefas de Execução
+### II - Balanço Trienal Interinstitucional (Art. 11 do Decreto)
+* Transmissão obrigatória a cada 3 anos para o ITERPA e SEMAS Licenciamento.
 
-### Subtarefa 1: Relatório Anual de Gestão das UCs
-* Consolidação dos indicadores anuais do SEINUC:
-  * Número total de UCs cadastradas e regularizadas.
-  * Percentual de UCs com Conselho Gestor ativo e Plano de Manejo vigente.
-  * Quantitativo de ações de fiscalização, combate a incêndios e monitoramento biológico.
-
-### Subtarefa 2: Consolidação Trienal Interinstitucional (Art. 68, §4º)
-* Elaboração do balanço trienal de dados para envio oficial ao ITERPA e à Diretoria de Licenciamento da SEMAS.
-
-### Subtarefa 3: Relatório Quadrienal de Avaliação Global de Efetividade (Art. 113)
-* Modelo de avaliação global a cada **4 (quatro) anos**, conforme exigido pelo Art. 113 da Lei nº 10.306/2023:
-  * Aplicação de metodologias padronizadas de efetividade de gestão (ex: RAPPAM ou SAMGe adaptado).
-  * Análise de tendência de desmatamento, cobertura vegetal e alcance dos objetivos de conservação.
-* Tramitação para apreciação do Conselho Estadual de Meio Ambiente (COEMA/PA) e publicação oficial no SEINUC e Diário Oficial.
+### III - Relatório Quadrienal de Avaliação Global da Efetividade (Art. 17 do Decreto e Art. 113 da Lei)
+* Elaboração e publicação a cada **4 (quatro) anos** do relatório global de efetividade da gestão do SEUC/PA.
+* Tramitação para apreciação do Conselho Estadual de Meio Ambiente (COEMA/PA) e publicação oficial no SEINUC/PA e Diário Oficial.

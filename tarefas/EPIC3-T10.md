@@ -1,33 +1,20 @@
 # EPIC3-T10: Estabelecer o Ciclo de Análise Técnica e Fase Recursal
 
-**Status:** Em Aberto  
+**Status:** Concluído  
+**Normatizado em:** Capítulo IV (Arts. 6º, 7º, 8º e 9º) do Decreto Regulamentador ([`producao/docs/minuta-decreto-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md))  
 **Responsável:** Equipe Jurídica e Técnica / IDEFLOR-Bio  
-**Base Legal:** Princípios do Contraditório e Ampla Defesa | Art. 4º da Minuta do Decreto SEINUC/PA
+**Base Legal:** Princípios do Contraditório e Ampla Defesa | Lei Estadual nº 10.306/2023 | Lei Estadual nº 7.638/2012
 
 ---
 
-## 1. Escopo da Avaliação Técnica e Fase Recursal
+## 1. Rito de Avaliação e Fase Recursal Regulamentados
 
-Regulamentação da metodologia de avaliação qualitativa dos documentos de gestão, da atribuição de notas/ressalvas e do rito processual para interposição e julgamento de recursos administrativos.
+O Capítulo IV do Decreto Regulamentador instituiu a governança processual e as garantias de ampla defesa para a apuração do ICMS Ecológico:
 
----
+### I - Comissão Técnica (CT-SEINUC - Art. 6º)
+* Instituição da Comissão Técnica de Avaliação no âmbito do IDEFLOR-Bio, responsável pela triagem formal, emissão de Fichas de Avaliação Técnica, atribuição de pontuação provisória e julgamento dos recursos.
 
-## 2. Subtarefas de Execução
-
-### Subtarefa 1: Rito de Avaliação Técnica (Fase 2 - Conteúdo)
-* **Atribuição de Status:**
-  * **Aprovado Integralmente:** Atendimento pleno aos requisitos legais e técnicos do parâmetro avaliado.
-  * **Aprovado com Ressalva:** Inconformidades leves que não invalidam o documento no ano-base, mas exigem adequação obrigatória no ciclo subsequente sob pena de perda de pontuação.
-  * **Reprovado / Indeferido:** Ausência de comprovação ou documento em desacordo com as diretrizes da Portaria Técnica.
-
-### Subtarefa 2: Regulamentação da Fase Recursal (15 dias corridos)
-* **Publicação Preliminar:** Divulgação do Extrato Provisório de Habilitação e Pontuação no Diário Oficial e Portal SEINUC.
-* **Prazo para Recurso:** **15 (quinze) dias corridos** contados a partir do primeiro dia útil seguinte à publicação.
-* **Regras de Admissibilidade do Recurso:**
-  * Vedada a apresentação de documentos novos que deveriam ter sido protocolados na fase de envio original (preclusão).
-  * O recurso deve se limitar à contestação da valoração técnica ou à correção de erro material da análise.
-
-### Subtarefa 3: Julgamento e Homologação
-* **Instância Decisória:** Análise dos recursos pela Comissão Técnica de Avaliação do SEINUC / IDEFLOR-Bio.
-* **Prazo de Deliberação:** 30 dias para análise dos recursos protocolados.
-* **Publicação Definitiva:** Homologação do resultado final pela Presidência do IDEFLOR-Bio / Secretaria de Meio Ambiente.
+### II - Fase Recursal (Arts. 8º e 9º)
+* **Prazo Peremptório:** **15 (quinze) dias corridos** contados a partir da publicação do Resultado Provisório (até 15 de julho).
+* **Admissibilidade:** Proibição de juntada de documentos novos extemporâneos (preclusão), restringindo a peça à contestação de valoração técnica ou correção de erro material.
+* **Julgamento e Homologação:** Julgamento dos recursos até 31 de agosto e envio do resultado homologado à SEFA/PA até 30 de setembro.

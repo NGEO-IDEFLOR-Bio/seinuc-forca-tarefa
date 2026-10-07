@@ -8,15 +8,15 @@ Este repositório contém o planejamento, a estrutura normativa e a arquitetura 
 **Objetivo:** Estabelecer o arcabouço legal, os cronogramas operacionais e as diretrizes técnicas para o funcionamento oficial do SEINUC/PA.
 
 ### Critérios de Conclusão (DoD):
-1. **Minuta do Decreto Regulamentador [Concluído]:** Texto legal regulamentando a governança e os eixos do SEINUC ([minuta-decreto-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md)).
-2. **Ciclo Anual de Gestão:** Definição dos prazos operacionais para o Ano-Base e o Ano de Exercício.
+1. **Minuta do Decreto Regulamentador [Concluído]:** Texto legal regulamentando a governança, eixos, rito recursal e integração do SEINUC ([minuta-decreto-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md)).
+2. **Ciclo Anual de Gestão [Concluído]:** Definição dos prazos operacionais para o Ano-Base, Ano de Exercício e publicação do ICMS Ecológico (Arts. 4º, 5º, 7º, 8º e 9º do Decreto).
 3. **Minuta da Portaria Técnica:** Diretrizes formais de apresentação (PDF/Shapefile), checklists e modelos de declaração de veracidade.
 
 ### Lista de Tarefas
 | ID | Tarefa | Status | Documento de Trabalho |
 | :--- | :--- | :---: | :--- |
 | **T1** | Minutar o Decreto de Regulamentação do SEINUC | Concluído | [minuta-decreto-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md) / [EPIC1-T1.md](tarefas/EPIC1-T1.md) |
-| **T2** | Definir o Ciclo Anual de Gestão (Cronograma Operacional) | Em Aberto | [EPIC1-T2.md](tarefas/EPIC1-T2.md) |
+| **T2** | Definir o Ciclo Anual de Gestão (Cronograma Operacional) | Concluído | [EPIC1-T2.md](tarefas/EPIC1-T2.md) |
 | **T3** | Criar a Portaria de Diretrizes Técnicas | Em Aberto | [EPIC1-T3.md](tarefas/EPIC1-T3.md) |
 
 ---
@@ -28,7 +28,7 @@ Este repositório contém o planejamento, a estrutura normativa e a arquitetura 
 1. **Módulo Ambiental (Quadro I):** Estrutura de campos para dados bióticos (fauna, flora) e abióticos (hidrologia, solos, clima).
 2. **Módulo Georreferenciado e Fundiário (Quadro II):** Requisitos cartográficos (SIRGAS 2000), limites, situação dominial e RPPNs.
 3. **Módulo de Gestão e Socioeconomia (Quadro III):** Cadastro de Conselhos Gestores, Planos de Manejo, visitação e rastreamento de UCs legadas.
-4. **Mapa de Integração CNUC, ITERPA e SEMAS:** Protocolo de exportação e tabela De-Para.
+4. **Mapa de Integração CNUC, ITERPA e SEMAS [Concluído]:** Protocolo de exportação e repasse trienal regulamentado (Arts. 10 e 11 do Decreto).
 
 ### Lista de Tarefas
 | ID | Tarefa | Status | Documento de Trabalho |
@@ -36,7 +36,7 @@ Este repositório contém o planejamento, a estrutura normativa e a arquitetura 
 | **T4** | Estruturar Módulo de Caracterização Ambiental | Em Aberto | [EPIC2-T4.md](tarefas/EPIC2-T4.md) |
 | **T5** | Estruturar Módulo de Georreferenciamento e Fundiário | Em Aberto | [EPIC2-T5.md](tarefas/EPIC2-T5.md) |
 | **T6** | Estruturar Módulo de Gestão e Socioeconomia | Em Aberto | [EPIC2-T6.md](tarefas/EPIC2-T6.md) |
-| **T7** | Definir Protocolo de Integração com o CNUC, ITERPA e SEMAS | Em Aberto | [EPIC2-T7.md](tarefas/EPIC2-T7.md) |
+| **T7** | Definir Protocolo de Integração com o CNUC, ITERPA e SEMAS | Concluído | [EPIC2-T7.md](tarefas/EPIC2-T7.md) |
 
 ---
 
@@ -46,14 +46,14 @@ Este repositório contém o planejamento, a estrutura normativa e a arquitetura 
 ### Critérios de Conclusão (DoD):
 1. **Protocolo de Envio e Nomenclatura:** Padrão de transmissão digital, nomeação de arquivos e recibos de protocolo.
 2. **Checklist de Triagem (Admissibilidade):** Critérios formais eliminatórios para aceitação prévia de documentos.
-3. **Fase de Análise Técnica e Recursos:** Regras para atribuição de notas, ressalvas e prazos de impugnação (15 dias).
+3. **Fase de Análise Técnica e Recursos [Concluído]:** Regras para atribuição de notas, ressalvas, Comissão Técnica (CT-SEINUC) e prazo recursal de 15 dias (Capítulo IV do Decreto).
 
 ### Lista de Tarefas
 | ID | Tarefa | Status | Documento de Trabalho |
 | :--- | :--- | :---: | :--- |
 | **T8** | Desenhar o Fluxo de Envio de Documentos (Upload) | Em Aberto | [EPIC3-T8.md](tarefas/EPIC3-T8.md) |
 | **T9** | Criar o Checklist de Validação (Triagem) | Em Aberto | [EPIC3-T9.md](tarefas/EPIC3-T9.md) |
-| **T10** | Estabelecer o Ciclo de Análise Técnica e Fase Recursal | Em Aberto | [EPIC3-T10.md](tarefas/EPIC3-T10.md) |
+| **T10** | Estabelecer o Ciclo de Análise Técnica e Fase Recursal | Concluído | [EPIC3-T10.md](tarefas/EPIC3-T10.md) |
 
 ---
 
@@ -61,14 +61,14 @@ Este repositório contém o planejamento, a estrutura normativa e a arquitetura 
 **Objetivo:** Regulamentar a publicidade dos dados no Portal SEINUC, a integração cartográfica oficial e a prestação de contas periódica.
 
 ### Critérios de Conclusão (DoD):
-1. **Portal de Transparência do SEINUC e Geoserviços:** Diretrizes de publicação pública e serviços OGC (WMS/WFS) para a Cartografia Oficial do Estado.
-2. **Relatórios de Efetividade da Gestão:** Modelos do relatório anual e do relatório quadrienal de efetividade (Art. 113).
+1. **Portal de Transparência do SEINUC e Geoserviços:** Diretrizes de publicação pública e serviços OGC (WMS/WFS) para a Cartografia Oficial do Estado (Art. 12 do Decreto).
+2. **Relatórios de Efetividade da Gestão [Concluído]:** Regulamentação do relatório anual e do relatório quadrienal de efetividade da gestão (Art. 17 do Decreto e Art. 113 da Lei nº 10.306/2023).
 
 ### Lista de Tarefas
 | ID | Tarefa | Status | Documento de Trabalho |
 | :--- | :--- | :---: | :--- |
 | **T11** | Projetar o Portal de Transparência e Serviços de Mapas (OGC) | Em Aberto | [EPIC4-T11.md](tarefas/EPIC4-T11.md) |
-| **T12** | Definir a Publicação do Relatório de Efetividade da Gestão | Em Aberto | [EPIC4-T12.md](tarefas/EPIC4-T12.md) |
+| **T12** | Definir a Publicação do Relatório de Efetividade da Gestão | Concluído | [EPIC4-T12.md](tarefas/EPIC4-T12.md) |
 
 ---
 *SEINUC/PA - Sistema Estadual de Informações sobre Unidades de Conservação do Estado do Pará.*
