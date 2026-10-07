@@ -1,7 +1,7 @@
 # ESPECIFICAÇÃO DO PORTAL DE TRANSPARÊNCIA E SERVIÇOS DE MAPAS OGC (SEINUC/PA)
 
 > **Documento Oficial de Especificação Técnica e Regulamentação da Transparência Ativa e Geoserviços**
-> **Base Legal:** Art. 67, § 1º e Art. 111 da Lei Estadual nº 10.306/2023 | Art. 7º e Art. 12 do Decreto Regulamentador do SEINUC/PA | Lei Federal nº 12.527/2011 (LAI) | Padrões OGC (Open Geospatial Consortium)
+> **Base Legal:** Art. 67, § 6º e Art. 111 da Lei Estadual nº 10.306/2023 | Arts. 13 e 14 do Decreto Regulamentador do SEINUC/PA | Lei Federal nº 12.527/2011 (LAI) | Padrões OGC (Open Geospatial Consortium)
 
 ---
 
@@ -51,16 +51,16 @@ PORTAL PÚBLICO SEINUC/PA (TRANSPARÊNCIA ATIVA)
 
 ---
 
-## 3. Geoserviços OGC e Integração com a Cartografia Oficial do Estado (Art. 111)
+## 3. Geoserviços OGC e Integração com a Cartografia Oficial do Estado (Art. 111 da Lei 10.306/23 e Art. 13 do Decreto)
 
-Em estrito cumprimento ao **Art. 111 da Lei Estadual nº 10.306/2023** e ao **Art. 12 do Decreto Regulamentador**, as bases de dados geográficos do SEINUC/PA serão disponibilizadas em tempo real via geoserviços padronizados pela *Open Geospatial Consortium (OGC)* para consumo obrigatório pelos geoportais oficiais do Estado do Pará (SIEPA, ITERPA, SEMAS e SEFA).
+Em estrito cumprimento ao **Art. 111 da Lei Estadual nº 10.306/2023** e ao **Art. 13 do Decreto Regulamentador**, as bases de dados geográficos do SEINUC/PA serão disponibilizadas em tempo real via geoserviços padronizados pela *Open Geospatial Consortium (OGC)* para consumo obrigatório pelos geoportais oficiais do Estado do Pará (SIEPA, ITERPA, SEMAS e SEFA).
 
 ### 3.1. Especificação dos Geoserviços OGC
 
 | Serviço OGC | Versão Padrão | Endpoint de Acesso | Finalidade e Aplicação na Cartografia Oficial |
 | :--- | :---: | :--- | :--- |
 | **WMS (Web Map Service)** | 1.3.0 | `https://seinuc.ideflor.pa.gov.br/geoserver/wms` | Renderização de mapas dinâmicos e camadas visuais das UCs na confecção das cartas e mapas oficiais do Governo do Estado do Pará. |
-| **WFS (Web Feature Service)** | 2.0.0 | `https://seinuc.ideflor.pa.gov.br/geoserver/wfs` | Download e consumo de vetores brutos em formatos abertos (`GeoJSON`, `Shapefile zip`, `KML`) por órgãos ambientais, pesquisadores e sistemas parceiros. |
+| **WFS (Web Feature Service)** | 2.0.0 | `https://seinuc.ideflor.pa.gov.br/geoserver/wfs` | Download e consumo de vetores brutos em formats abertos (`GeoJSON`, `Shapefile zip`, `KML`) por órgãos ambientais, pesquisadores e sistemas parceiros. |
 | **WCS (Web Coverage Service)** | 2.0.1 | `https://seinuc.ideflor.pa.gov.br/geoserver/wcs` | Transmissão de dados raster e modelos digitais de elevação de UCs quando aplicável. |
 
 ### 3.2. Padrão de Metadados Geográficos (Perfil MGB / INDE)
@@ -71,9 +71,9 @@ Todos os conjuntos de dados geográficos do SEINUC/PA serão catalogados segundo
 
 ---
 
-## 4. Diretrizes de Sigilo, Proteção da Biodiversidade e LGPD (Art. 7º do Decreto)
+## 4. Diretrizes de Sigilo, Proteção da Biodiversidade e LGPD (Art. 14 do Decreto)
 
-A transparência pública no SEINUC/PA observará as ressalvas legais de proteção ao patrimônio biológico e à privacidade, nos termos do Art. 7º do Decreto Regulamentador e da Lei Geral de Proteção de Dados (Lei Federal nº 13.709/2018):
+A transparência pública no SEINUC/PA observará as ressalvas legais de proteção ao patrimônio biológico e à privacidade, nos termos do Art. 14 do Decreto Regulamentador e da Lei Geral de Proteção de Dados (Lei Federal nº 13.709/2018):
 
 ### 4.1. Resguardo da Biodiversidade (Proteção contra Biopirataria)
 * **Regra de Mascaramento Espacial:** As coordenadas geográficas exatas de pontos de nidificação, avistamento ou ocorrência de espécies da fauna e flora criticamente ameaçadas de extinção (CR) suscetíveis à caça, ilícito ou biopirataria serão mascaradas no visualizador público.

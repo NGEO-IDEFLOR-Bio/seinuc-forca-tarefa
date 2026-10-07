@@ -30,7 +30,7 @@ A documentação do projeto está estruturada em formato Markdown (.md) de modo 
 ## 3. Estrutura de Épicos do Projeto
 
 ### Épico 1: Regulamentação e Base Normativa
-Abrange a elaboração do Decreto Regulamentador do SEINUC/PA (Concluído), a fixação do calendário operacional de Ano-Base e Ano de Exercício (Concluído) e a publicação da Portaria de Diretrizes Técnicas.
+Abrange a elaboração do Decreto Regulamentador do SEINUC/PA (Concluído), a fixação do calendário operacional de Ano-Base e Ano de Exercício (Concluído) e a publicação da Portaria Conjunta de Diretrizes Técnicas (Concluído).
 
 ### Épico 2: Arquitetura de Dados e Módulos do Sistema
 Compreende o dicionário de dados dos Módulos Ambiental (Quadro I), Georreferenciado e Fundiário (Quadro II) e de Gestão e Socioeconomia (Quadro III), além dos protocolos de integração com o CNUC, ITERPA e SEMAS (Concluído).
@@ -47,26 +47,31 @@ Define os parâmetros para o Portal de Transparência do SEINUC, a disponibiliza
 
 ```
 .
-├── ROADMAP.md                      # Trajetória de Fases, Milestones e Progresso
-├── EPICOS.md                      # Painel central de Épicos e Status de Tarefas
+├── ROADMAP.md                      # Trajetória de Fases, Milestones e Progresso (100% Concluído)
+├── EPICOS.md                      # Painel central de Épicos e Status de Tarefas (100% Concluído)
 ├── README.md                      # Documento descritivo do repositório
 ├── tarefas/                       # Especificações e documentos de tarefas (.md)
 │   ├── EPIC1-T1.md                # Minuta do Decreto de Regulamentação [Concluído]
 │   ├── EPIC1-T2.md                # Ciclo Anual de Gestão (Cronograma) [Concluído]
-│   ├── EPIC1-T3.md                # Portaria de Diretrizes Técnicas
-│   ├── EPIC2-T4.md                # Módulo de Caracterização Ambiental (Quadro I)
-│   ├── EPIC2-T5.md                # Módulo Georreferenciado e Fundiário (Quadro II)
-│   ├── EPIC2-T6.md                # Módulo de Gestão e Socioeconomia (Quadro III)
+│   ├── EPIC1-T3.md                # Portaria de Diretrizes Técnicas [Concluído]
+│   ├── EPIC2-T4.md                # Módulo de Caracterização Ambiental (Quadro I) [Concluído]
+│   ├── EPIC2-T5.md                # Módulo Georreferenciado e Fundiário (Quadro II) [Concluído]
+│   ├── EPIC2-T6.md                # Módulo de Gestão e Socioeconomia (Quadro III) [Concluído]
 │   ├── EPIC2-T7.md                # Protocolo de Integração com o CNUC, ITERPA e SEMAS [Concluído]
-│   ├── EPIC3-T8.md                # Fluxo de Envio e Protocolo Digital
-│   ├── EPIC3-T9.md                # Checklist de Triagem e Admissibilidade
+│   ├── EPIC3-T8.md                # Fluxo de Envio e Protocolo Digital [Concluído]
+│   ├── EPIC3-T9.md                # Checklist de Triagem e Admissibilidade [Concluído]
 │   ├── EPIC3-T10.md               # Ciclo de Análise Técnica e Fase Recursal [Concluído]
-│   ├── EPIC4-T11.md               # Portal de Transparência e Serviços de Mapas (OGC)
+│   ├── EPIC4-T11.md               # Portal de Transparência e Serviços de Mapas (OGC) [Concluído]
 │   └── EPIC4-T12.md               # Relatórios de Efetividade da Gestão (Art. 113) [Concluído]
 ├── producao/
 │   └── docs/
-│       └── minuta-decreto-seinuc.md # Minuta do Decreto Regulamentador (Texto Final)
+│       ├── minuta-decreto-seinuc.md            # Minuta do Decreto Regulamentador (Texto Final Sanado)
+│       ├── minuta-portaria-diretrizes-tecnicas.md # Portaria Conjunta SEMAS/IDEFLOR-Bio (Texto Final Sanado)
+│       ├── especificacao-modulos-dados-seinuc.md # Especificação Técnica dos Módulos I a IV (SIRGAS 2000)
+│       ├── manual-fluxo-envio-e-triagem.md       # Manual de Protocolo Digital, Envio e Triagem
+│       ├── especificacao-portal-transparencia-ogc.md # Portal de Transparência e Geoserviços OGC (WMS/WFS)
+│       └── auditoria-conformidade-seinuc.md    # Relatório de Auditoria Técnica e Jurídica
 └── documentos/
     └── referencias/               # Base legal, resoluções e estudos técnicos (PDFs)
-        └── INDEX.md               # Catálogo systematizado do acervo de referência
+        └── INDEX.md               # Catálogo sistematizado do acervo de referência
 ```

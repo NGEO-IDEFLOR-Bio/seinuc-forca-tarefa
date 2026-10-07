@@ -3,7 +3,7 @@
 **Status:** Concluído  
 **Produto Entregue:** [`producao/docs/manual-fluxo-envio-e-triagem.md#4-checklist-de-triagem-e-admissibilidade-formal`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/manual-fluxo-envio-e-triagem.md#4-checklist-de-triagem-e-admissibilidade-formal)  
 **Responsável:** Coordenação SEINUC / Análise Técnica  
-**Base Legal:** Art. 4º, I e III e Art. 7º do Decreto Regulamentador do SEINUC/PA
+**Base Legal:** Arts. 7º e 8º do Decreto Regulamentador do SEINUC/PA
 
 ---
 
@@ -13,4 +13,4 @@ O Checklist de Triagem e Ficha de Admissibilidade Formal foi elaborado e consoli
 
 ### Elementos Regulamentados:
 * **Tabela de Itens Eliminatórios:** Critérios formais de verificação (prazos, assinaturas, OCR, SIRGAS 2000 e nomenclatura).
-* **Ficha de Deliberação Técnica:** Enquadramentos de Aceite, Diligência (5 dias) e Indeferimento Sumário.
+* **Ficha de Deliberação Técnica:** Enquadramentos de Aceite, Diligência (5 dias úteis) e Indeferimento Sumário.

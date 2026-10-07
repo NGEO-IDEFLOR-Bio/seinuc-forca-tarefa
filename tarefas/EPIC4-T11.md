@@ -3,7 +3,7 @@
 **Status:** Concluído  
 **Produto Entregue:** [`producao/docs/especificacao-portal-transparencia-ogc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-portal-transparencia-ogc.md)  
 **Responsável:** Equipe de TI / Geoprocessamento  
-**Base Legal:** Art. 67, § 1º e Art. 111 da Lei PA nº 10.306/2023 | Art. 7º e Art. 12 do Decreto Regulamentador do SEINUC/PA | Lei de Acesso à Informação (Lei nº 12.527/2011)
+**Base Legal:** Art. 67, § 6º e Art. 111 da Lei PA nº 10.306/2023 | Arts. 13 e 14 do Decreto Regulamentador do SEINUC/PA | Lei de Acesso à Informação (Lei nº 12.527/2011)
 
 ---
 

@@ -3,7 +3,7 @@
 **Status:** Concluído  
 **Produto Entregue:** [`producao/docs/manual-fluxo-envio-e-triagem.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/manual-fluxo-envio-e-triagem.md)  
 **Responsável:** Equipe de TI / Processos  
-**Base Legal:** Art. 4º, II do Decreto Regulamentador do SEINUC/PA | Portaria Técnica nº ____/202X
+**Base Legal:** Arts. 5º e 6º do Decreto Regulamentador do SEINUC/PA | Portaria Conjunta SEMAS/IDEFLOR-Bio nº ____/202X
 
 ---
 

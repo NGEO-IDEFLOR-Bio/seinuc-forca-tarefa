@@ -1,7 +1,7 @@
 # MANUAL DE PROTOCOLO DIGITAL, FLUXO DE ENVIO E CHECKLIST DE TRIAGEM (SEINUC/PA)
 
 > **Documento Oficial de Instrução Operacional do Sistema Estadual de Informações sobre Unidades de Conservação do Estado do Pará (SEINUC/PA)**
-> **Base Legal:** Arts. 4º, 5º e 7º do Decreto Regulamentador do SEINUC/PA | Portaria Técnica nº ____/202X
+> **Base Legal:** Arts. 5º, 6º, 7º, 8º e 9º do Decreto Regulamentador do SEINUC/PA | Portaria Conjunta SEMAS/IDEFLOR-Bio nº ____/202X
 
 ---
 
@@ -60,7 +60,7 @@ Antes da análise de mérito da documentação pela equipe técnica, o processo 
 | **01** | **Prazo Regulamentar:** Transmissão realizada até 31/Jan do Ano de Exercício | Eliminatório | Data <= 31/Jan | Rejeição Sumária por Intempestividade. |
 | **02** | **Ofício de Encaminhamento:** Anexado e assinado por autoridade competente | Eliminatório | Presente e Assinado | Rejeição do Protocolo. |
 | **03** | **Declaração de Veracidade:** Modelo Anexo I assinado digitalmente (Gov.br/ICP) | Eliminatório | Presente e Válida | Rejeição do Protocolo. |
-| **04** | **Padrão PDF/OCR:** Arquivos textuais pesquisáveis e legíveis | Eliminatório | Camada OCR Válida | Solicitação de Reenvio em 5 dias corridos. |
+| **04** | **Padrão PDF/OCR:** Arquivos textuais pesquisáveis e legíveis | Eliminatório | Camada OCR Válida | Solicitação de Reenvio em 5 (cinco) dias úteis. |
 | **05** | **Padrão Vetorial (Datum):** Shapefile em SIRGAS 2000 (EPSG:4674) | Eliminatório | Datum Correto | Rejeição do Bloco Vetorial. |
 | **06** | **Nomenclatura Oficial:** Arquivos nomeados segundo o padrão oficial da Portaria | Eliminatório | Sintaxe Correta | Rejeição de Arquivos Inconformes. |
 | **07** | **Averbação de RPPN:** Certidão de RGI anexada (quando aplicável) | Eliminatório | Matrícula Válida | Glosa da Pontuação de RPPN. |
@@ -71,5 +71,5 @@ Antes da análise de mérito da documentação pela equipe técnica, o processo 
 
 O parecerista técnico registrará no SEINUC/PA a deliberação da triagem:
 * `HABILITADO PARA ANÁLISE DE MÉRITO` — Todos os itens 01 a 07 em conformidade.
-* `NOTIFICADO PARA DILIGÊNCIA (5 DIAS)` — Vícios formais sanáveis (ex: erro de OCR ou nomenclatura).
+* `NOTIFICADO PARA DILIGÊNCIA (5 DIAS ÚTEIS)` — Vícios formais sanáveis (ex: erro de OCR ou nomenclatura), nos termos do Art. 8º, I do Decreto Regulamentador.
 * `INDEFERIDO SUMARIAMENTE` — Intempestividade ou ausência de Declaração de Veracidade.
