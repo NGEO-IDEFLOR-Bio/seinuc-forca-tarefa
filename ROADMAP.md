@@ -15,11 +15,11 @@ Decreto Regulamentador (T1), Ciclo Anual (T2) e Governança Recursal (T10)
 Módulos de Dados: Ambiental (T4), Geo/Fundiário (T5), Gestão (T6) e Integração (T7)
        │
        ▼
-[FASE 3: ESTEIRA OPERACIONAL] 🟡 (Em Andamento)
+[FASE 3: ESTEIRA OPERACIONAL] 🟢 (Concluído - 100%)
 Portaria Técnica (T3), Protocolo de Envio (T8) e Checklist de Triagem (T9)
        │
        ▼
-[FASE 4: TRANSPARÊNCIA E SERVIÇOS] ⚪ (Pendente)
+[FASE 4: TRANSPARÊNCIA E SERVIÇOS] 🟡 (Em Andamento)
 Portal do SEINUC e Geoserviços OGC (T11)
 ```
 
@@ -43,28 +43,28 @@ Portal do SEINUC e Geoserviços OGC (T11)
 **Status:** Concluído (100%)  
 **Objetivo:** Especificar o Dicionário de Dados, esquemas JSON e regras de validação dos Módulos do SEINUC/PA com base nos padrões oficiais do IDEFLOR-Bio.
 
-* [x] **Milestone 2.1:** Módulo I - Caracterização Ambiental e Biodiversidade ([`EPIC2-T4.md`](tarefas/EPIC2-T4.md)) — `T4`
-* [x] **Milestone 2.2:** Módulo II - Georreferenciamento, Fundiário e RPPNs ([`EPIC2-T5.md`](tarefas/EPIC2-T5.md)) — `T5`
-* [x] **Milestone 2.3:** Módulo III - Gestão, Socioeconomia e UCs Legadas ([`EPIC2-T6.md`](tarefas/EPIC2-T6.md)) — `T6`
-* [x] **Milestone 2.4:** Protocolo de Integração CNUC, ITERPA e SEMAS ([`EPIC2-T7.md`](tarefas/EPIC2-T7.md)) — `T7`
+* [x] **Milestone 2.1:** Módulo I - Caracterização Ambiental e Biodiversidade ([`especificacao-modulos-dados-seinuc.md`](producao/docs/especificacao-modulos-dados-seinuc.md)) — `T4`
+* [x] **Milestone 2.2:** Módulo II - Georreferenciamento, Fundiário e RPPNs ([`especificacao-modulos-dados-seinuc.md`](producao/docs/especificacao-modulos-dados-seinuc.md)) — `T5`
+* [x] **Milestone 2.3:** Módulo III - Gestão, Socioeconomia e UCs Legadas ([`especificacao-modulos-dados-seinuc.md`](producao/docs/especificacao-modulos-dados-seinuc.md)) — `T6`
+* [x] **Milestone 2.4:** Protocolo de Integração CNUC, ITERPA e SEMAS ([`especificacao-modulos-dados-seinuc.md`](producao/docs/especificacao-modulos-dados-seinuc.md)) — `T7`
 
 ---
 
 ### Fase 3: Regras Técnicas, Envio e Triagem
-**Status:** Em Andamento (0% de 3 tarefas)  
+**Status:** Concluído (100%)  
 **Objetivo:** Traduzir os módulos de dados em minuta de Portaria Técnica e instrumentos formais de recebimento e triagem.
 
-* [ ] **Milestone 3.1 (Próximo Passo):** Minuta da Portaria de Diretrizes Técnicas ([`EPIC1-T3.md`](tarefas/EPIC1-T3.md))
-* [ ] **Milestone 3.2:** Protocolo Digital de Transmissão, Nomenclatura e FTP ([`EPIC3-T8.md`](tarefas/EPIC3-T8.md))
-* [ ] **Milestone 3.3:** Checklist de Triagem e Ficha de Admissibilidade Formal ([`EPIC3-T9.md`](tarefas/EPIC3-T9.md))
+* [x] **Milestone 3.1:** Minuta da Portaria de Diretrizes Técnicas ([`minuta-portaria-diretrizes-tecnicas.md`](producao/docs/minuta-portaria-diretrizes-tecnicas.md)) — `T3`
+* [x] **Milestone 3.2:** Protocolo Digital de Transmissão, Nomenclatura e FTP ([`manual-fluxo-envio-e-triagem.md`](producao/docs/manual-fluxo-envio-e-triagem.md)) — `T8`
+* [x] **Milestone 3.3:** Checklist de Triagem e Ficha de Admissibilidade Formal ([`manual-fluxo-envio-e-triagem.md`](producao/docs/manual-fluxo-envio-e-triagem.md)) — `T9`
 
 ---
 
 ### Fase 4: Transparência, Serviços OGC e Divulgação
-**Status:** Pendente  
+**Status:** Em Andamento (Próximo Passo)  
 **Objetivo:** Regulamentar os serviços de publicação de dados abertos e interoperabilidade cartográfica estadual.
 
-* [ ] **Milestone 4.1:** Requisitos do Portal de Transparência e Geoserviços OGC (WMS/WFS) ([`EPIC4-T11.md`](tarefas/EPIC4-T11.md))
+* [ ] **Milestone 4.1 (Próximo Passo):** Requisitos do Portal de Transparência e Geoserviços OGC (WMS/WFS) ([`EPIC4-T11.md`](tarefas/EPIC4-T11.md))
 * [ ] **Milestone 4.2:** Consolidação e Fechamento da Documentação de Produção.
 
 ---

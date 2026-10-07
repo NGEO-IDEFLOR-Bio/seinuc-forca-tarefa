@@ -9,15 +9,15 @@ Este repositório contém o planejamento, a estrutura normativa e a arquitetura 
 
 ### Critérios de Conclusão (DoD):
 1. **Minuta do Decreto Regulamentador [Concluído]:** Texto legal regulamentando a governança, eixos, rito recursal e integração do SEINUC ([`minuta-decreto-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md)).
-2. **Ciclo Anual de Gestão [Concluído]:** Definição dos prazos operacionais para o Ano-Base, Ano de Exercício e publicação do ICMS Ecológico (Arts. 4º, 5º, 7º, 8º e 9º do Decreto).
-3. **Minuta da Portaria Técnica:** Diretrizes formais de apresentação (PDF/Shapefile), checklists e modelos de declaração de veracidade.
+2. **Ciclo Anual de Gestão [Concluído]:** Definição dos prazos operacionais para o Ano-Base, Ano de Exercício e publicação do ICMS Ecológico ([`minuta-decreto-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md)).
+3. **Minuta da Portaria Técnica [Concluído]:** Diretrizes formais de apresentação (PDF/Shapefile), nomenclatura e Declaração de Veracidade ([`minuta-portaria-diretrizes-tecnicas.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-portaria-diretrizes-tecnicas.md)).
 
 ### Lista de Tarefas
-| ID | Tarefa | Status | Documento de Trabalho |
+| ID | Tarefa | Status | Documento de Trabalho / Produto Oficial |
 | :--- | :--- | :---: | :--- |
-| **T1** | Minutar o Decreto de Regulamentação do SEINUC | Concluído | [minuta-decreto-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md) / [EPIC1-T1.md](tarefas/EPIC1-T1.md) |
-| **T2** | Definir o Ciclo Anual de Gestão (Cronograma Operacional) | Concluído | [EPIC1-T2.md](tarefas/EPIC1-T2.md) |
-| **T3** | Criar a Portaria de Diretrizes Técnicas | Em Aberto | [EPIC1-T3.md](tarefas/EPIC1-T3.md) |
+| **T1** | Minutar o Decreto de Regulamentação do SEINUC | Concluído | [minuta-decreto-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md) |
+| **T2** | Definir o Ciclo Anual de Gestão (Cronograma Operacional) | Concluído | [minuta-decreto-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md) |
+| **T3** | Criar a Portaria de Diretrizes Técnicas | Concluído | [minuta-portaria-diretrizes-tecnicas.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-portaria-diretrizes-tecnicas.md) |
 
 ---
 
@@ -44,16 +44,16 @@ Este repositório contém o planejamento, a estrutura normativa e a arquitetura 
 **Objetivo:** Desenhar o rito administrativo e digital desde o protocolo das informações até a análise técnica, pontuação e fase recursal.
 
 ### Critérios de Conclusão (DoD):
-1. **Protocolo de Envio e Nomenclatura:** Padrão de transmissão digital, nomeação de arquivos e recibos de protocolo.
-2. **Checklist de Triagem (Admissibilidade):** Critérios formais eliminatórios para aceitação prévia de documentos.
+1. **Protocolo de Envio e Nomenclatura [Concluído]:** Padrão de transmissão digital, nomeação de arquivos e recibos de protocolo ([`manual-fluxo-envio-e-triagem.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/manual-fluxo-envio-e-triagem.md)).
+2. **Checklist de Triagem (Admissibilidade) [Concluído]:** Critérios formais eliminatórios para aceitação prévia de documentos ([`manual-fluxo-envio-e-triagem.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/manual-fluxo-envio-e-triagem.md)).
 3. **Fase de Análise Técnica e Recursos [Concluído]:** Regras para atribuição de notas, ressalvas, Comissão Técnica (CT-SEINUC) e prazo recursal de 15 dias ([`minuta-decreto-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md)).
 
 ### Lista de Tarefas
-| ID | Tarefa | Status | Documento de Trabalho |
+| ID | Tarefa | Status | Documento de Trabalho / Produto Oficial |
 | :--- | :--- | :---: | :--- |
-| **T8** | Desenhar o Fluxo de Envio de Documentos (Upload) | Em Aberto | [EPIC3-T8.md](tarefas/EPIC3-T8.md) |
-| **T9** | Criar o Checklist de Validação (Triagem) | Em Aberto | [EPIC3-T9.md](tarefas/EPIC3-T9.md) |
-| **T10** | Estabelecer o Ciclo de Análise Técnica e Fase Recursal | Concluído | [EPIC3-T10.md](tarefas/EPIC3-T10.md) |
+| **T8** | Desenhar o Fluxo de Envio de Documentos (Upload) | Concluído | [manual-fluxo-envio-e-triagem.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/manual-fluxo-envio-e-triagem.md) |
+| **T9** | Criar o Checklist de Validação (Triagem) | Concluído | [manual-fluxo-envio-e-triagem.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/manual-fluxo-envio-e-triagem.md) |
+| **T10** | Estabelecer o Ciclo de Análise Técnica e Fase Recursal | Concluído | [minuta-decreto-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md) |
 
 ---
 
@@ -65,10 +65,10 @@ Este repositório contém o planejamento, a estrutura normativa e a arquitetura 
 2. **Relatórios de Efetividade da Gestão [Concluído]:** Regulamentação do relatório anual e do relatório quadrienal de efetividade da gestão ([`minuta-decreto-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md)).
 
 ### Lista de Tarefas
-| ID | Tarefa | Status | Documento de Trabalho |
+| ID | Tarefa | Status | Documento de Trabalho / Produto Oficial |
 | :--- | :--- | :---: | :--- |
 | **T11** | Projetar o Portal de Transparência e Serviços de Mapas (OGC) | Em Aberto | [EPIC4-T11.md](tarefas/EPIC4-T11.md) |
-| **T12** | Definir a Publicação do Relatório de Efetividade da Gestão | Concluído | [EPIC4-T12.md](tarefas/EPIC4-T12.md) |
+| **T12** | Definir a Publicação do Relatório de Efetividade da Gestão | Concluído | [minuta-decreto-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md) |
 
 ---
 *SEINUC/PA - Sistema Estadual de Informações sobre Unidades de Conservação do Estado do Pará.*
