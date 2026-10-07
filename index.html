@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEINUC/PA — Sistema Estadual de Informações sobre Unidades de Conservação</title>
+    <meta name="description" content="Apresentação Executiva Interativa do SEINUC/PA — Regulamentação da Lei Estadual nº 10.306/2023, Arquitetura de Dados, ICMS Verde e Geoserviços OGC.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#00264d',
+                            900: '#001a33',
+                            PRIMARY: '#003366'
+                        },
+                        forest: {
+                            600: '#276738',
+                            PRIMARY: '#1E4D2B'
+                        },
+                        amber: {
+                            PRIMARY: '#D97706'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-header {
+            background: linear-gradient(135deg, #001a33 0%, #003366 50%, #1E4D2B 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <img src="assets/img/logo_ideflor.png" alt="IDEFLOR-Bio" class="h-10 object-contain">
+                <div class="h-8 w-px bg-slate-300 hidden sm:block"></div>
+                <img src="assets/img/logo_governo_para.png" alt="Governo do Pará" class="h-9 object-contain hidden sm:block">
+                <div class="h-8 w-px bg-slate-300 hidden md:block"></div>
+                <img src="assets/img/logo_ngeo.png" alt="NGEO" class="h-8 object-contain hidden md:block">
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-600">
+                <a href="#overview" class="hover:text-navy-PRIMARY transition-colors">Visão Geral</a>
+                <a href="#legal" class="hover:text-navy-PRIMARY transition-colors">Base Legal</a>
+                <a href="#timeline" class="hover:text-navy-PRIMARY transition-colors">ICMS Verde</a>
+                <a href="#modules" class="hover:text-navy-PRIMARY transition-colors">Módulos</a>
+                <a href="#ogc" class="hover:text-navy-PRIMARY transition-colors">Geoserviços</a>
+                <a href="#downloads" class="hover:text-navy-PRIMARY transition-colors font-semibold text-forest-PRIMARY"><i class="fa-solid fa-download mr-1"></i>Downloads</a>
+            </nav>
+
+            <a href="https://github.com/NGEO-IDEFLOR-Bio/seinuc-forca-tarefa" target="_blank" class="inline-flex items-center space-x-2 bg-navy-PRIMARY text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-navy-800 transition-all shadow-sm">
+                <i class="fa-brands fa-github text-lg"></i>
+                <span class="hidden sm:inline">Repositório GitHub</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="overview" class="gradient-header text-white py-16 lg:py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase text-emerald-300 mb-6 border border-white/20">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Documentação Regulamentar Certificada & Aprovada</span>
+                </div>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-6">
+                    Sistema Estadual de Informações sobre Unidades de Conservação do Pará
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-200 font-normal leading-relaxed mb-8">
+                    Plataforma oficial de governança ambiental, geoprocessamento e transparência da gestão do patrimônio natural paraense. Regulamentação estrita da <strong class="text-white">Lei Estadual nº 10.306/2023</strong> e sincronização ao <strong class="text-white">ICMS Verde (Decreto nº 1.064/2020)</strong>.
+                </p>
+
+                <!-- KPI Quick Summary Cards -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-white/10">
+                    <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                        <div class="text-2xl lg:text-3xl font-extrabold text-emerald-400">100%</div>
+                        <div class="text-xs text-slate-300 mt-1">Conformidade Legal & LEPA</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                        <div class="text-2xl lg:text-3xl font-extrabold text-amber-400">4 Módulos</div>
+                        <div class="text-xs text-slate-300 mt-1">Ambiental, Geo, Gestão, Fundiário</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                        <div class="text-2xl lg:text-3xl font-extrabold text-sky-400">SIRGAS 2000</div>
+                        <div class="text-xs text-slate-300 mt-1">Datum Cartográfico Oficial</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                        <div class="text-2xl lg:text-3xl font-extrabold text-purple-400">15 Dias Úteis</div>
+                        <div class="text-xs text-slate-300 mt-1">Rito Recursal Unificado</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative Background Pattern -->
+        <div class="absolute -right-20 -bottom-20 opacity-10 pointer-events-none">
+            <img src="assets/img/brasao_para.png" alt="Brasão do Pará" class="w-96">
+        </div>
+    </section>
+
+    <!-- MATRIZ DE BASE LEGAL & SEGURANÇA JURÍDICA -->
+    <section id="legal" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">Arcabouço Normativo e Segurança Jurídica</h2>
+                <p class="text-slate-600 mt-3 text-base">Alinhamento pleno da governança entre o órgão central (SEMAS) e o órgão executor (IDEFLOR-Bio).</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1: SEMAS vs. IDEFLOR -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-navy-PRIMARY/10 text-navy-PRIMARY rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-landmark"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Governança Institucional</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        A **SEMAS** atua como Órgão Central responsável por organizar e manter o sistema (Art. 68 da Lei nº 10.306/2023), enquanto o **IDEFLOR-Bio** atua como Órgão Executor operacional.
+                    </p>
+                    <span class="inline-block text-xs font-semibold bg-blue-100 text-blue-800 px-2.5 py-1 rounded-full">Portaria Conjunta SEMAS/IDEFLOR</span>
+                </div>
+
+                <!-- Card 2: LEPA e Dias Úteis -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-forest-PRIMARY/10 text-forest-PRIMARY rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Rito Recursal LEPA</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        Contagem estrita de prazos recursais em **15 (quinze) dias úteis**, garantidos o contraditório, a ampla defesa e o efeito suspensivo nos termos da **Lei Estadual nº 8.972/2020**.
+                    </p>
+                    <span class="inline-block text-xs font-semibold bg-emerald-100 text-emerald-800 px-2.5 py-1 rounded-full">Art. 83 da LEPA/PA</span>
+                </div>
+
+                <!-- Card 3: LGPD & SisGen -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-amber-PRIMARY/10 text-amber-PRIMARY rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">LGPD & SisGen</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        SEMAS como **Controladora** dos dados e IDEFLOR-Bio como **Operador** (Lei nº 13.709/2018), além de proteção do patrimônio genético e conhecimento tradicional (**Lei nº 13.123/2015**).
+                    </p>
+                    <span class="inline-block text-xs font-semibold bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full">Capítulo VI do Decreto</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CICLO ANUAL & CALENDÁRIO INTERATIVO ICMS VERDE -->
+    <section id="timeline" class="py-16 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">Sincronização com o ICMS Verde (Decreto nº 1.064/2020)</h2>
+                <p class="text-slate-600 mt-3 text-base">Cronograma operacional unificado para apuração, análise, julgamento de recursos e repasse à SEFA/PA.</p>
+            </div>
+
+            <!-- Interactive Timeline Steps -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                <!-- Step 1 -->
+                <div class="bg-white p-5 rounded-xl border border-slate-200 relative shadow-sm">
+                    <div class="w-8 h-8 bg-navy-PRIMARY text-white rounded-full flex items-center justify-center text-sm font-bold mb-3">1</div>
+                    <div class="text-xs font-bold text-navy-PRIMARY uppercase tracking-wider mb-1">31 de Janeiro</div>
+                    <h4 class="font-bold text-slate-900 text-sm mb-2">Transmissão Ano-Base</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Envio do pacote digital com Hash SHA-256 e Selo de Tempo ICP-Brasil.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white p-5 rounded-xl border border-slate-200 relative shadow-sm">
+                    <div class="w-8 h-8 bg-forest-PRIMARY text-white rounded-full flex items-center justify-center text-sm font-bold mb-3">2</div>
+                    <div class="text-xs font-bold text-forest-PRIMARY uppercase tracking-wider mb-1">28 de Fevereiro</div>
+                    <h4 class="font-bold text-slate-900 text-sm mb-2">Triagem Formal</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Admissibilidade e notificação para diligência em 5 dias úteis (vícios sanáveis).</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-5 rounded-xl border border-slate-200 relative shadow-sm">
+                    <div class="w-8 h-8 bg-forest-PRIMARY text-white rounded-full flex items-center justify-center text-sm font-bold mb-3">3</div>
+                    <div class="text-xs font-bold text-forest-PRIMARY uppercase tracking-wider mb-1">Março a Abril</div>
+                    <h4 class="font-bold text-slate-900 text-sm mb-2">Análise de Mérito</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Avaliação técnica conclusiva e valoração de quesitos pela CT-SEINUC.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white p-5 rounded-xl border border-slate-200 relative shadow-sm">
+                    <div class="w-8 h-8 bg-amber-PRIMARY text-white rounded-full flex items-center justify-center text-sm font-bold mb-3">4</div>
+                    <div class="text-xs font-bold text-amber-PRIMARY uppercase tracking-wider mb-1">31 de Maio</div>
+                    <h4 class="font-bold text-slate-900 text-sm mb-2">Resultado Provisório</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Publicação no DOE e abertura do prazo recursal de 15 dias úteis (LEPA).</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="bg-white p-5 rounded-xl border border-slate-200 relative shadow-sm">
+                    <div class="w-8 h-8 bg-navy-PRIMARY text-white rounded-full flex items-center justify-center text-sm font-bold mb-3">5</div>
+                    <div class="text-xs font-bold text-navy-PRIMARY uppercase tracking-wider mb-1">31 de Julho</div>
+                    <h4 class="font-bold text-slate-900 text-sm mb-2">Resultado Definitivo</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Homologação da SEMAS e encaminhamento definitivo do índice à SEFA/PA.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPLORADOR INTERATIVO DOS 4 MÓDULOS DE DADOS -->
+    <section id="modules" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">Arquitetura Canônica dos Módulos de Dados</h2>
+                <p class="text-slate-600 mt-3 text-base">Estrutura de dados modular padronizada com validação automatizada via JSON Schema.</p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8" id="moduleTabs">
+                <button onclick="switchTab('mod1')" id="tab-mod1" class="px-5 py-2.5 rounded-xl text-sm font-bold bg-navy-PRIMARY text-white transition-all">Módulo I: Ambiental & Clima</button>
+                <button onclick="switchTab('mod2')" id="tab-mod2" class="px-5 py-2.5 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">Módulo II: Geotecnologias & ZA</button>
+                <button onclick="switchTab('mod3')" id="tab-mod3" class="px-5 py-2.5 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">Módulo III: Gestão & UCs Legadas</button>
+                <button onclick="switchTab('mod4')" id="tab-mod4" class="px-5 py-2.5 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">Módulo IV: Fundiário & RPPN</button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+                <!-- Mod 1 Content -->
+                <div id="content-mod1" class="block space-y-4">
+                    <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                        <h3 class="text-xl font-bold text-navy-PRIMARY">Módulo I — Caracterização Ambiental, Biodiversidade e Clima</h3>
+                        <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-3 py-1 rounded-full">Quadro I</span>
+                    </div>
+                    <p class="text-sm text-slate-600">Cadastro sistemático dos aspectos abióticos e bióticos da Unidade de Conservação.</p>
+                    <div class="grid sm:grid-cols-2 gap-4 text-xs">
+                        <div class="bg-white p-3.5 rounded-lg border border-slate-200"><strong>Bioma & Fitofisionomia:</strong> Amazônia, Cerrado, Manguezal, Várzea (Vocabulário IBGE).</div>
+                        <div class="bg-white p-3.5 rounded-lg border border-slate-200"><strong>Hidrografia & Relevo:</strong> Bacias hidrográficas estaduais, principais rios e tipologia de relevo.</div>
+                        <div class="bg-white p-3.5 rounded-lg border border-slate-200"><strong>Espécies Ameaçadas:</strong> Fauna e flora com categorização IUCN/MMA (CR, EN, VU).</div>
+                        <div class="bg-white p-3.5 rounded-lg border border-slate-200"><strong>Espécies Exóticas & Pesquisa:</strong> Planos de controle e inventário de projetos de pesquisa registrados.</div>
+                    </div>
+                </div>
+
+                <!-- Mod 2 Content -->
+                <div id="content-mod2" class="hidden space-y-4">
+                    <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                        <h3 class="text-xl font-bold text-forest-PRIMARY">Módulo II — Geotecnologias, Delimitação e Zonas de Amortecimento</h3>
+                        <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-3 py-1 rounded-full">Quadro II</span>
+                    </div>
+                    <p class="text-sm text-slate-600">Bases vetoriais padronizadas estritamente alinhadas ao dicionário DBF oficial do IDEFLOR-Bio.</p>
+                    <div class="grid sm:grid-cols-2 gap-4 text-xs">
+                        <div class="bg-white p-3.5 rounded-lg border border-slate-200"><strong>Datum Oficial:</strong> SIRGAS 2000 (EPSG:4674) — Coordenadas Geográficas.</div>
+                        <div class="bg-white p-3.5 rounded-lg border border-slate-200"><strong>Formatos Aceitos:</strong> Shapefile (.zip), GeoPackage (.gpkg), GML e GeoJSON (via reprojeção).</div>
+                        <div class="bg-white p-3.5 rounded-lg border border-slate-200"><strong>Topologia Cartográfica:</strong> Validação de fecho topológico perfeito (*gap/overlap zero*).</div>
+                        <div class="bg-white p-3.5 rounded-lg border border-slate-200"><strong>Atributos Reais DBF:</strong> `id`, `cod_cnuc`, `nome_`, `categoria`, `grupo`, `municipio_`, `area_ha`, `za_delim`.</div>
+                    </div>
+                </div>
+
+                <!-- Mod 3 Content -->
+                <div id="content-mod3" class="hidden space-y-4">
+                    <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                        <h3 class="text-xl font-bold text-amber-PRIMARY">Módulo III — Gestão, Governança, Aspectos Antropológicos e UCs Legadas</h3>
+                        <span class="text-xs bg-amber-100 text-amber-800 font-bold px-3 py-1 rounded-full">Quadro III</span>
+                    </div>
+                    <p class="text-sm text-slate-600">Instrução da governança local, reuniões dos Conselhos e monitoramento dos prazos legais.</p>
+                    <div class="grid sm:grid-cols-2 gap-4 text-xs">
+                        <div class="bg-white p-3.5 rounded-lg border border-slate-200"><strong>Conselho Gestor:</strong> Validação automatizada no JSON Schema para mínimo de 2 reuniões comprovadas.</div>
+                        <div class="bg-white p-3.5 rounded-lg border border-slate-200"><strong>Plano de Gestão:</strong> Situação e vigência do Plano de Gestão (equivalente ao manejo federal).</div>
+                        <div class="bg-white p-3.5 rounded-lg border border-slate-200"><strong>UCs Legadas & Art. 114:</strong> Rastreamento do prazo de reavaliação de UCs antigas (`legada_prazo_fim` até 2028).</div>
+                        <div class="bg-white p-3.5 rounded-lg border border-slate-200"><strong>Repasse Municipal (Art. 117):</strong> Rastreamento obrigatório do repasse de ao menos 20% do ICMS a UCs municipais.</div>
+                    </div>
+                </div>
+
+                <!-- Mod 4 Content -->
+                <div id="content-mod4" class="hidden space-y-4">
+                    <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                        <h3 class="text-xl font-bold text-navy-PRIMARY">Módulo IV — Caracterização Fundiária, Dominial e RPPNs</h3>
+                        <span class="text-xs bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full">Quadro IV</span>
+                    </div>
+                    <p class="text-sm text-slate-600">Cadastro dominial e acompanhamento da regularização fundiária de UCs e RPPNs.</p>
+                    <div class="grid sm:grid-cols-2 gap-4 text-xs">
+                        <div class="bg-white p-3.5 rounded-lg border border-slate-200"><strong>Situação Dominial:</strong> Pública Estadual, Pública Federal/Municipal, Privada em Regularização.</div>
+                        <div class="bg-white p-3.5 rounded-lg border border-slate-200"><strong>Percentual Regularizado:</strong> Percentual acumulado de regularização fundiária da UC (0 a 100%).</div>
+                        <div class="bg-white p-3.5 rounded-lg border border-slate-200"><strong>Reservas Particulares (RPPN):</strong> Comprovação da certidão do Registro Geral de Imóveis (RGI).</div>
+                        <div class="bg-white p-3.5 rounded-lg border border-slate-200"><strong>Averbação de Perpetuidade:</strong> Matrícula averbada à margem no RGI para pontuação.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GEOSERVIÇOS OGC & MASCARAMENTO DA BIODIVERSIDADE -->
+    <section id="ogc" class="py-16 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Cartografia Oficial do Estado do Pará</span>
+                <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mt-2">Geoserviços OGC & Sigilo da Biodiversidade</h2>
+                <p class="text-slate-400 mt-3 text-sm">Disponibilização automatizada por ciclo anual (WMS, WFS, WCS e CSW) para SIEPA, ITERPA, SEMAS e SEFA.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 items-center">
+                <!-- OGC Services Grid -->
+                <div class="space-y-4">
+                    <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-blue-500/20 text-blue-400 font-mono font-bold px-2.5 py-1 rounded text-xs">WMS 1.3.0</span>
+                            <h4 class="font-bold text-sm">Web Map Service</h4>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Renderização de mapas dinâmicos das UCs para a Cartografia Oficial do Estado (Art. 111).</p>
+                    </div>
+
+                    <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-emerald-500/20 text-emerald-400 font-mono font-bold px-2.5 py-1 rounded text-xs">WFS 2.0.0</span>
+                            <h4 class="font-bold text-sm">Web Feature Service</h4>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Download e consumo de vetores brutos (GeoJSON, Shapefile, KML) por órgãos ambientais parceiros.</p>
+                    </div>
+
+                    <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-amber-500/20 text-amber-400 font-mono font-bold px-2.5 py-1 rounded text-xs">CSW 2.0.2</span>
+                            <h4 class="font-bold text-sm">Catalog Service for the Web (INDE)</h4>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Catálogo oficial de metadados geográficos segundo o Perfil MGB da Infraestrutura Nacional de Dados Espaciais.</p>
+                    </div>
+                </div>
+
+                <!-- Spatial Masking Box -->
+                <div class="bg-gradient-to-br from-slate-800 to-slate-800/50 p-6 rounded-2xl border border-emerald-500/30">
+                    <div class="flex items-center space-x-2 text-emerald-400 text-sm font-bold mb-3">
+                        <i class="fa-solid fa-shield-cat"></i>
+                        <span>Proteção contra Biopirataria (Art. 14 do Decreto)</span>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Mascaramento Espacial de Espécies CR</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                        Em observância ao Art. 67, § 6º da Lei nº 10.306/2023, as coordenadas exatas de espécies criticamente ameaçadas (CR) são mascaradas em polígonos de <strong class="text-white">quadrícula regional de 10 x 10 km</strong> nos geoserviços públicos (WMS, WFS, WCS e requisições <em>GetFeatureInfo</em>).
+                    </p>
+                    <div class="bg-slate-950 p-4 rounded-xl font-mono text-xs text-emerald-300 border border-slate-800">
+                        // Acesso Restrito ao Corpo Técnico Autorizado (SEMAS/IDEFLOR-Bio)<br>
+                        IF specie.status == 'CR' AND user.role != 'TECH_AUTH':<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;apply_spatial_grid_mask(resolution='10km')
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CENTRAL DE DOWNLOADS E PRODUTOS OFICIAIS -->
+    <section id="downloads" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">Acervo Oficial de Produtos Consolidados</h2>
+                <p class="text-slate-600 mt-3 text-base">Acesse os documentos regulamentares finais em formatos Markdown (.md) e Word (.docx) formatados na norma ABNT NBR 14724:2023.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Doc 1: Decreto -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-bold text-navy-PRIMARY uppercase tracking-wider mb-2">Ato Normativo Central</div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Minuta do Decreto Regulamentador</h3>
+                        <p class="text-xs text-slate-600 mb-4">Texto final regulamentando governança, rito LEPA, ICMS Verde, sigilo e SisGen.</p>
+                    </div>
+                    <div class="flex items-center space-x-2 pt-4 border-t border-slate-200">
+                        <a href="producao/docs/minuta-decreto-seinuc.md" class="flex-1 text-center bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-bold py-2 rounded-lg transition-colors">Markdown (.md)</a>
+                        <a href="producao/docs/docx/minuta-decreto-seinuc.docx" class="flex-1 text-center bg-navy-PRIMARY hover:bg-navy-800 text-white text-xs font-bold py-2 rounded-lg transition-colors">Word ABNT (.docx)</a>
+                    </div>
+                </div>
+
+                <!-- Doc 2: Portaria -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-bold text-forest-PRIMARY uppercase tracking-wider mb-2">Diretrizes Técnicas</div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Portaria Conjunta SEMAS / IDEFLOR</h3>
+                        <p class="text-xs text-slate-600 mb-4">Requisitos de arquivos (PDF/OCR 50MB, Shapefile SIRGAS 2000 200MB) e contingência.</p>
+                    </div>
+                    <div class="flex items-center space-x-2 pt-4 border-t border-slate-200">
+                        <a href="producao/docs/minuta-portaria-diretrizes-tecnicas.md" class="flex-1 text-center bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-bold py-2 rounded-lg transition-colors">Markdown (.md)</a>
+                        <a href="producao/docs/docx/minuta-portaria-diretrizes-tecnicas.docx" class="flex-1 text-center bg-forest-PRIMARY hover:bg-emerald-800 text-white text-xs font-bold py-2 rounded-lg transition-colors">Word ABNT (.docx)</a>
+                    </div>
+                </div>
+
+                <!-- Doc 3: Especificação dos Módulos -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-bold text-amber-PRIMARY uppercase tracking-wider mb-2">Arquitetura de Dados</div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Especificação Técnica de Módulos</h3>
+                        <p class="text-xs text-slate-600 mb-4">Dicionário de dados, atributos DBF oficiais e esquemas JSON de validação (Módulos I a IV).</p>
+                    </div>
+                    <div class="flex items-center space-x-2 pt-4 border-t border-slate-200">
+                        <a href="producao/docs/especificacao-modulos-dados-seinuc.md" class="flex-1 text-center bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-bold py-2 rounded-lg transition-colors">Markdown (.md)</a>
+                        <a href="producao/docs/docx/especificacao-modulos-dados-seinuc.docx" class="flex-1 text-center bg-amber-PRIMARY hover:bg-amber-700 text-white text-xs font-bold py-2 rounded-lg transition-colors">Word ABNT (.docx)</a>
+                    </div>
+                </div>
+
+                <!-- Doc 4: Manual de Envio -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-bold text-navy-PRIMARY uppercase tracking-wider mb-2">Instrução Operacional</div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Manual de Envio e Triagem</h3>
+                        <p class="text-xs text-slate-600 mb-4">Protocolo digital, Hash SHA-256, recibos com selo de tempo e checklist de triagem.</p>
+                    </div>
+                    <div class="flex items-center space-x-2 pt-4 border-t border-slate-200">
+                        <a href="producao/docs/manual-fluxo-envio-e-triagem.md" class="flex-1 text-center bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-bold py-2 rounded-lg transition-colors">Markdown (.md)</a>
+                        <a href="producao/docs/docx/manual-fluxo-envio-e-triagem.docx" class="flex-1 text-center bg-navy-PRIMARY hover:bg-navy-800 text-white text-xs font-bold py-2 rounded-lg transition-colors">Word ABNT (.docx)</a>
+                    </div>
+                </div>
+
+                <!-- Doc 5: Portal OGC -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-bold text-forest-PRIMARY uppercase tracking-wider mb-2">Geoserviços & Transparência</div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Especificação do Portal & OGC</h3>
+                        <p class="text-xs text-slate-600 mb-4">Requisitos dos Módulos A, B e C, WMS/WFS/CSW INDE e diretrizes de mascaramento.</p>
+                    </div>
+                    <div class="flex items-center space-x-2 pt-4 border-t border-slate-200">
+                        <a href="producao/docs/especificacao-portal-transparencia-ogc.md" class="flex-1 text-center bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-bold py-2 rounded-lg transition-colors">Markdown (.md)</a>
+                        <a href="producao/docs/docx/especificacao-portal-transparencia-ogc.docx" class="flex-1 text-center bg-forest-PRIMARY hover:bg-emerald-800 text-white text-xs font-bold py-2 rounded-lg transition-colors">Word ABNT (.docx)</a>
+                    </div>
+                </div>
+
+                <!-- Doc 6: Auditoria Completa -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-2">Certificação Final</div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Relatório de Auditoria</h3>
+                        <p class="text-xs text-slate-600 mb-4">Exame de auditoria completo (4 rodadas de análise) com a Parte IV de Certificação de Aprovação.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200">
+                        <a href="documentos/auditoria-conformidade-seinuc.md" class="block text-center bg-slate-800 hover:bg-slate-900 text-white text-xs font-bold py-2 rounded-lg transition-colors">Ver Relatório de Auditoria (.md)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER INSTITUCIONAL -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-4">
+                <img src="assets/img/logo_ideflor.png" alt="IDEFLOR-Bio" class="h-8 object-contain brightness-200">
+                <img src="assets/img/logo_governo_para.png" alt="Governo do Pará" class="h-7 object-contain brightness-200">
+                <img src="assets/img/logo_ngeo.png" alt="NGEO" class="h-6 object-contain brightness-200">
+            </div>
+
+            <div class="text-xs text-center md:text-right space-y-1">
+                <p class="font-semibold text-slate-300">SEINUC/PA — Sistema Estadual de Informações sobre Unidades de Conservação</p>
+                <p>Governo do Estado do Pará • SEMAS & IDEFLOR-Bio / NGEO (2026)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS TAB SWITCHER -->
+    <script>
+        function switchTab(tabId) {
+            const tabs = ['mod1', 'mod2', 'mod3', 'mod4'];
+            tabs.forEach(id => {
+                const btn = document.getElementById('tab-' + id);
+                const content = document.getElementById('content-' + id);
+                if (id === tabId) {
+                    btn.className = "px-5 py-2.5 rounded-xl text-sm font-bold bg-navy-PRIMARY text-white transition-all shadow-sm";
+                    content.classList.remove('hidden');
+                    content.classList.add('block');
+                } else {
+                    btn.className = "px-5 py-2.5 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all";
+                    content.classList.remove('block');
+                    content.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
