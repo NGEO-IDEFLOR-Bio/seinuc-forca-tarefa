@@ -1,8 +1,8 @@
 # MINUTA DO DECRETO REGULAMENTADOR DO SEINUC/PA
 
-> **Ementa:** Regulamenta o Sistema Estadual de Informações sobre Unidades de Conservação do Estado do Pará (SEINUC/PA), instituído pela Lei Estadual nº 10.306, de 22 de dezembro de 2023, disciplina a governança entre o órgão central (SEMAS) e o órgão executor (IDEFLOR-Bio), estabelece a sincronização com o calendário do ICMS Verde (Decreto Estadual nº 1.064/2020), fixa o rito recursal em dias úteis (Lei Estadual nº 8.972/2020 - LEPA), dispõe sobre o sigilo da biodiversidade e dá outras providências.
+> **Ementa:** Regulamenta o Sistema Estadual de Informações sobre Unidades de Conservação do Estado do Pará (SEINUC/PA), instituído pela Lei Estadual nº 10.306, de 22 de dezembro de 2023, disciplina a governança entre o órgão central (SEMAS) e o órgão executor (IDEFLOR-Bio), estabelece a sincronização com o calendário do ICMS Verde (Decreto Estadual nº 1.064/2020), fixa o rito recursal em dias úteis (Lei Estadual nº 8.972/2020 - LEPA), dispõe sobre o sigilo da biodiversidade, a proteção de dados pessoais (LGPD - Lei nº 13.709/2018), o patrimônio genético (Lei nº 13.123/2015 - SisGen) e dá outras providências.
 
-**O GOVERNADOR DO ESTADO DO PARÁ**, no uso das atribuições que lhe são conferidas pelo art. 135, inciso V, da Constituição Estadual, e considerando o disposto nos arts. 67, 68, 110, 111, 113 e 114 da Lei Estadual nº 10.306, de 22 de dezembro de 2023, na Lei Estadual nº 8.096, de 1º de janeiro de 2015, na Lei Estadual nº 7.638, de 12 de julho de 2012, no Decreto Estadual nº 1.064, de 18 de setembro de 2020, na Lei Estadual nº 8.972, de 13 de janeiro de 2020 (Lei de Processo Administrativo do Estado do Pará - LEPA), e em observância às normas gerais da Lei Federal nº 9.985, de 18 de julho de 2000, e da Lei Federal nº 12.527, de 18 de novembro de 2011,
+**O GOVERNADOR DO ESTADO DO PARÁ**, no uso das atribuições que lhe são conferidas pelo art. 135, inciso V, da Constituição Estadual, e considerando o disposto nos arts. 67, 68, 110, 111, 113 e 114 da Lei Estadual nº 10.306, de 22 de dezembro de 2023, na Lei Estadual nº 8.096, de 1º de janeiro de 2015, na Lei Estadual nº 7.638, de 12 de julho de 2012, no Decreto Estadual nº 1.064, de 28 de setembro de 2020, na Lei Estadual nº 8.972, de 13 de janeiro de 2020 (Lei de Processo Administrativo do Estado do Pará - LEPA), e em observância às normas gerais da Lei Federal nº 9.985, de 18 de julho de 2000, da Lei Federal nº 12.527, de 18 de novembro de 2011, e da Lei Federal nº 13.123, de 20 de maio de 2015,
 
 **DECRETA:**
 
@@ -17,7 +17,7 @@
 **Art. 3º** O SEINUC/PA tem por finalidades precípuas:
 * **I -** Subsidiar a gestão do SEUC/PA nas fases de criação, planejamento, controle, fiscalização, monitoramento e promoção de programas de pesquisa científica;
 * **II -** Integrar a base oficial de dados para o monitoramento e cálculo da parcela ambiental do ICMS Ecológico/Verde devida aos municípios, conforme a Lei Estadual nº 7.638/2012 e o Decreto Estadual nº 1.064/2020;
-* **III -** Garantir o controle social por meio da transparência ativa, em conformidade com a Lei Federal nº 12.527/2011 (LAI) e a Lei Federal nº 13.709/2018 (LGPD), ressalvadas as informações cujo sigilo seja imprescindível à proteção da biodiversidade;
+* **III -** Garantir o controle social por meio da transparência ativa, em conformidade com a Lei Federal nº 12.527/2011 (LAI) e a Lei Federal nº 13.709/2018 (LGPD), ressalvadas as informações cujo sigilo seja imprescindible à proteção da biodiversidade e do patrimônio genético;
 * **IV -** Promover a integração automatizada com o Cadastro Nacional de Unidades de Conservação (CNUC), do Ministério do Meio Ambiente e Mudança do Clima.
 
 ---
@@ -54,7 +54,9 @@
 
 § 1º Em caso de indisponibilidade técnica comprovada do portal de transmissão nas últimas 24 horas do prazo, o termo final será automaticamente prorrogado para o primeiro dia útil subsequente.
 
-§ 2º Todos os documentos textuais serão transmitidos em PDF pesquisável (OCR), acompanhados da **Declaração de Veracidade e Responsabilidade Técnica** assinada pelo gestor competente.
+§ 2º É facultado ao município apresentar justificativa formal de força maior ou falha comprovada na infraestrutura local em até 2 (dois) dias úteis após o termo final, cabendo à CT-SEINUC deliberar fundamentadamente sobre o acolhimento do protocolo.
+
+§ 3º Todos os documentos textuais serão transmitidos em PDF pesquisável (OCR), acompanhados da **Declaração de Veracidade e Responsabilidade Técnica** assinada pelo gestor competente.
 
 ---
 
@@ -67,7 +69,7 @@
 § 2º Compete à CT-SEINUC realizar a triagem formal, a análise de mérito dos processos, emitir pareceres e julgar os recursos administrativos interpostos pelos municípios.
 
 **Art. 8º** O rito de avaliação e publicação observará rigorosamente o calendário unificado do ICMS Verde:
-* **I - Triagem de Admissibilidade Formal:** Realizada até 28 de fevereiro, cabendo intimação motivada para saneamento de vícios formais em até 5 (cinco) dias úteis;
+* **I - Triagem de Admissibilidade Formal:** Realizada até 28 de fevereiro. Inconformidades formais sanáveis (falhas de OCR, nomenclatura ou omissão de documento complementar) ensejarão notificação motivada para saneamento no prazo de 5 (cinco) dias úteis. A intempestividade não justificada ou a ausência de ofício/declaração de veracidade ensejarão o indeferimento sumário;
 * **II - Análise de Mérito:** Realizada entre março e abril pelas equipes técnicas;
 * **III - Publicação dos Resultados Provisórios:** Divulgação no Diário Oficial do Estado (DOE) e Portal SEINUC até o dia **31 de maio do Ano de Exercício** (sincronizado ao Decreto Estadual nº 1.064/2020), acompanhada da Ficha de Avaliação motivada por quesito.
 
@@ -76,6 +78,8 @@
 § 1º O recurso será instruído pela CT-SEINUC e julgado em instância final pelo titular da SEMAS (órgão central), garantido o efeito suspensivo quanto à parcela impugnada.
 
 § 2º Na fase recursal, é vedada a juntada de documentos novos extemporâneos que deveriam ter sido apresentados na fase regular de transmissão.
+
+§ 3º A apreciação do Recurso Administrativo pela CT-SEINUC e a decisão final do titular da SEMAS exaurem a fase de impugnação relativa às Unidades de Conservação e RPPNs para os fins do ICMS Verde (Decreto Estadual nº 1.064, de 28 de setembro de 2020), unificando a via recursal perante o órgão central.
 
 **Art. 10.** O Resultado Definitivo do índice do SEINUC será homologado pelo Secretário de Estado de Meio Ambiente e Sustentabilidade e encaminhado à Secretaria de Estado de Fazenda (SEFA/PA) até o dia **31 de julho do Ano de Exercício** (sincronizado ao Decreto Estadual nº 1.064/2020).
 
@@ -93,20 +97,22 @@
 
 ---
 
-## CAPÍTULO VI - DA TRANSPARÊNCIA, SIGILO DA BIODIVERSIDADE E LGPD
+## CAPÍTULO VI - DA TRANSPARÊNCIA, SIGILO DA BIODIVERSIDADE, LGPD E SISGEN
 
 **Art. 14.** Os dados constantes do SEINUC/PA são públicos, ressalvadas as hipóteses de sigilo imprescindíveis à proteção do patrimônio biológico e à segurança da biodiversidade, nos termos do art. 67, § 6º, da Lei Estadual nº 10.306/2023.
 
-§ 1º As coordenadas geográficas exatas de ocorrência ou nidificação de espécies da fauna e flora criticamente ameaçadas de extinção (CR) serão de acesso restrito ao corpo técnico autorizado, sendo exibidas nos canais públicos de transparência ativas (WebGIS, WMS e WFS) por polígonos de quadrícula regional generalizada.
+§ 1º As coordenadas geográficas exatas de ocorrência ou nidificação de espécies da fauna e flora criticamente ameaçadas de extinção (CR) serão de acesso restrito ao corpo técnico autorizado, sendo exibidas nos canais públicos de transparência ativa (WebGIS, WMS, WFS e WCS) por polígonos de quadrícula regional generalizada (10 x 10 km), aplicando-se idêntica restrição às requisições de consulta puntiforme (*GetFeatureInfo* e *GetFeature*).
 
-§ 2º A gestão e o tratamento de dados pessoais no SEINUC/PA observarão estritamente as diretrizes da Lei Geral de Proteção de Dados Pessoais (Lei Federal nº 13.709/2018 - LGPD).
+§ 2º A SEMAS atuará como Controladora de dados pessoais e o IDEFLOR-Bio como Operador, devendo a gestão de dados pessoais no SEINUC/PA observar estritamente as diretrizes da Lei Geral de Proteção de Dados Pessoais (Lei Federal nº 13.709/2018 - LGPD).
+
+§ 3º O tratamento e a publicidade de informações sobre patrimônio genético e conhecimento tradicional associado a comunidades locais observarão a Lei Federal nº 13.123, de 20 de maio de 2015, e os registros no Sistema Nacional de Gestão do Patrimônio Genético e do Conhecimento Tradicional Associado (SisGen).
 
 ---
 
 ## CAPÍTULO VII - DAS SANÇÕES E RESPONSABILIZAÇÃO
 
 **Art. 15.** A inserção de informações falsas, a adulteração de vetores ou a fraude documental no SEINUC/PA implicará:
-* **I -** A glosa sumária da pontuação da Unidade de Conservação no exercício correspondente;
+* **I -** A glosa cautelar da pontuação da Unidade de Conservação no exercício correspondente, assegurado o contraditório e a ampla defesa no processo administrativo sancionatório sob o rito da Lei Estadual nº 8.972/2020 (LEPA);
 * **II -** A instauração de processo administrativo sancionatório sob o rito da Lei Estadual nº 8.972/2020 (LEPA);
 * **III -** A comunicação imediata ao Ministério Público do Estado do Pará para apuração das sanções penais previstas no art. 299 do Código Penal e na Lei Federal nº 9.605/1998.
 
@@ -118,7 +124,7 @@
 
 **Art. 17.** A SEMAS, por intermédio do IDEFLOR-Bio, fará publicar a cada **4 (quatro) anos** o Relatório de Avaliação Global da Efetividade da Gestão das UCs (art. 113 da Lei 10.306/2023) e encaminhará anualmente o relatório de gestão (§ 1º do art. 113).
 
-**Art. 18.** Para os Sítios Pesqueiros criados antes da edição da Lei nº 10.306/2023 cujo prazo de readequação (art. 112) tenha expirado, a CT-SEINUC concederá prazo transitório de até 12 (doze) meses para a conclusão do processo de transição para Reserva Estadual de Pesca.
+**Art. 18.** Para os Sítios Pesqueiros criados antes da edição da Lei nº 10.306/2023 cujo prazo de readequação (art. 112) tenha expirado, o SEINUC/PA manterá o cadastramento transitório exclusivamente para fins de monitoramento e instrução prioritária do processo de transição para Reserva Estadual de Pesca, sem prejuízo das providências administrativas e legislativas cabíveis.
 
 **Art. 19.** Este Decreto entra em vigor na data de sua publicação.
 

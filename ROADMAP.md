@@ -33,7 +33,7 @@ Portal do SEINUC e Geoserviços OGC (T11)
 
 * [x] **Milestone 1.1:** Minuta do Decreto Regulamentador ([`minuta-decreto-seinuc.md`](producao/docs/minuta-decreto-seinuc.md)) — `T1`
 * [x] **Milestone 1.2:** Definição do Ciclo Anual de Gestão e Cronograma de Prazos — `T2`
-* [x] **Milestone 1.3:** Regulamentação da Comissão Técnica (CT-SEINUC) e Rito Recursal de 15 Dias — `T10`
+* [x] **Milestone 1.3:** Regulamentação da Comissão Técnica (CT-SEINUC) e Rito Recursal de 15 Dias Úteis (LEPA) — `T10`
 * [x] **Milestone 1.4:** Normatização da Integração Trienal com ITERPA e SEMAS Licenciamento — `T7`
 * [x] **Milestone 1.5:** Regulamentação do Relatório Quadrienal de Efetividade (Art. 113 da Lei nº 10.306/2023) — `T12`
 
@@ -43,10 +43,11 @@ Portal do SEINUC e Geoserviços OGC (T11)
 **Status:** Concluído (100%)  
 **Objetivo:** Especificar o Dicionário de Dados, esquemas JSON e regras de validação dos Módulos do SEINUC/PA com base nos padrões oficiais do IDEFLOR-Bio.
 
-* [x] **Milestone 2.1:** Módulo I - Caracterização Ambiental e Biodiversidade ([`especificacao-modulos-dados-seinuc.md`](producao/docs/especificacao-modulos-dados-seinuc.md)) — `T4`
-* [x] **Milestone 2.2:** Módulo II - Georreferenciamento, Fundiário e RPPNs ([`especificacao-modulos-dados-seinuc.md`](producao/docs/especificacao-modulos-dados-seinuc.md)) — `T5`
+* [x] **Milestone 2.1:** Módulo I - Caracterização Ambiental, Biodiversidade e Clima ([`especificacao-modulos-dados-seinuc.md`](producao/docs/especificacao-modulos-dados-seinuc.md)) — `T4`
+* [x] **Milestone 2.2:** Módulo II - Georreferenciamento, Delimitação e Zonas de Amortecimento ([`especificacao-modulos-dados-seinuc.md`](producao/docs/especificacao-modulos-dados-seinuc.md)) — `T5`
 * [x] **Milestone 2.3:** Módulo III - Gestão, Socioeconomia e UCs Legadas ([`especificacao-modulos-dados-seinuc.md`](producao/docs/especificacao-modulos-dados-seinuc.md)) — `T6`
-* [x] **Milestone 2.4:** Protocolo de Integração CNUC, ITERPA e SEMAS ([`especificacao-modulos-dados-seinuc.md`](producao/docs/especificacao-modulos-dados-seinuc.md)) — `T7`
+* [x] **Milestone 2.4:** Módulo IV - Caracterização Fundiária, Dominial e RPPNs ([`especificacao-modulos-dados-seinuc.md`](producao/docs/especificacao-modulos-dados-seinuc.md)) — `T5`
+* [x] **Milestone 2.5:** Protocolo de Integração CNUC, ITERPA e SEMAS ([`especificacao-modulos-dados-seinuc.md`](producao/docs/especificacao-modulos-dados-seinuc.md)) — `T7`
 
 ---
 

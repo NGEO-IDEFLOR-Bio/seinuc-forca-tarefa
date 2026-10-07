@@ -1,6 +1,6 @@
 # MINUTA DA PORTARIA CONJUNTA Nº ____/202X - SEMAS / IDEFLOR-Bio
 
-> **Ementa:** Estabelece as diretrizes técnicas, os padrões de arquivos digitais, a regra de nomenclatura, as especificações cartográficas, a regra de contingência e o modelo de Declaração de Veracidade para o envio de dados e documentos ao Sistema Estadual de Informações sobre Unidades de Conservação do Estado do Pará (SEINUC/PA).
+> **Ementa:** Estabelece as diretrizes técnicas, os padrões de arquivos digitais, a regra de nomenclatura, as especificações cartográficas, a regra de contingência, a autenticação por Hash SHA-256 e o modelo de Declaração de Veracidade para o envio de dados e documentos ao Sistema Estadual de Informações sobre Unidades de Conservação do Estado do Pará (SEINUC/PA).
 
 **O SECRETÁRIO DE ESTADO DE MEIO AMBIENTE E SUSTENTABILIDADE (SEMAS/PA)** e o **PRESIDENTE DO INSTITUTO DE DESENVOLVIMENTO FLORESTAL E DA BIODIVERSIDADE DO ESTADO DO PARÁ (IDEFLOR-Bio)**, no uso das atribuições que lhes são conferidas por lei, e tendo em vista o disposto no art. 68 da Lei Estadual nº 10.306, de 22 de dezembro de 2023, e no Decreto Regulamentador do SEINUC/PA,
 
@@ -22,9 +22,9 @@
 
 § 2º O tamanho máximo por arquivo textual individual é de **50 MB (cinquenta megabytes)**. O tamanho máximo total do pacote compactado de envio por Unidade de Conservação é de **200 MB (duzentos megabytes)**.
 
-**Art. 3º** As bases de dados geoespaciais e vetoriais referente aos limites e zoneamento da Unidade de Conservação deverão obedecer aos seguintes parâmetros cartográficos:
+**Art. 3º** As bases de dados geoespaciais e vetoriais referente aos limites, zoneamento e Zona de Amortecimento da Unidade de Conservação deverão obedecer aos seguintes parâmetros cartográficos:
 * **I - Datum Oficial:** **SIRGAS 2000 (EPSG:4674)** - Coordenadas Geográficas;
-* **II - Formatos Aceitos:** Pacote **Shapefile (.shp, .shx, .dbf, .prj, .cpg)** compactado em formato `.zip`, GeoPackage (`.gpkg`), ou arquivo **KML/KMZ**;
+* **II - Formatos Aceitos:** Pacote **Shapefile (.shp, .shx, .dbf, .prj, .cpg)** compactado em formato `.zip`, GeoPackage (`.gpkg`), GML ou GeoJSON (com reprojeção automatizada para CRS84);
 * **III - Topologia:** As geometrias de polígono deverão apresentar fecho topológico perfeito, isentas de laços, vértices duplicados, sobreposições não justificadas ou lacunas (*gap/overlap zero*).
 
 ---
@@ -40,19 +40,23 @@
 
 § 1º Caso ocorra indisponibilidade técnica comprovada do portal de transmissão oficial nas últimas 24 horas do prazo regulamentar, o termo final de transmissão será automaticamente prorrogado para as 23h59min do primeiro dia útil subsequente.
 
+§ 2º É facultado ao município apresentar justificativa formal de força maior ou falha comprovada no servidor local em até 2 (dois) dias úteis após o encerramento do prazo, submetendo o requerimento de aceitação extemporânea à deliberação motivada da CT-SEINUC.
+
 ---
 
-## CAPÍTULO IV - DA DECLARAÇÃO DE VERACIDADE E RESPONSABILIDADE TÉCNICA
+## CAPÍTULO IV - DA AUTENTICAÇÃO INTEGRADA E DECLARAÇÃO DE VERACIDADE
 
-**Art. 6º** Todo protocolo de envio no SEINUC/PA deverá vir acompanhado da **Declaração de Veracidade e Responsabilidade Técnica**, conforme modelo constante no Anexo I desta Portaria.
+**Art. 6º** Ao finalizar o upload do pacote no portal eletrônico oficial do SEINUC/PA, o sistema gerará o Comprovante de Protocolo Digital contendo o código **Hash SHA-256 de Autenticidade Integrada** e o carimbo de data/hora oficial.
 
-§ 1º A Declaração de Veracidade deverá ser assinada digitalmente (padrão ICP-Brasil ou Gov.br) pelo Prefeito Municipal, Secretário Municipal de Meio Ambiente ou Gestor responsável da Unidade de Conservação.
+**Art. 7º** Todo protocolo de envio no SEINUC/PA deverá vir acompanhado da **Declaração de Veracidade e Responsabilidade Técnica**, conforme modelo constante no Anexo I desta Portaria.
+
+§ 1º A Declaração de Veracidade deverá ser assinada digitalmente (padrão ICP-Brasil ou Gov.br com selo de tempo) pelo Prefeito Municipal, Secretário Municipal de Meio Ambiente ou Gestor responsável da Unidade de Conservação.
 
 ---
 
 ## CAPÍTULO V - DISPOSIÇÕES FINAIS
 
-**Art. 7º** Esta Portaria entra em vigor na data de sua publicação.
+**Art. 8º** Esta Portaria entra em vigor na data de sua publicação.
 
 ---
 
@@ -64,13 +68,13 @@ DECLARAÇÃO DE VERACIDADE E RESPONSABILIDADE TÉCNICA
 Eu, [NOME DO DECLARANTE], inscrito(a) no CPF sob o nº [CPF], ocupante do cargo de [CARGO/FUNÇÃO], representando o município/órgão gestor [NOME DO MUNICÍPIO OU ENTIDADE], DECLARO, sob as penas da lei, para fins de cadastramento e instrução do processo no Sistema Estadual de Informações sobre Unidades de Conservação do Estado do Pará (SEINUC/PA) relativo ao Ano-Base [ANO_BASE]:
 
 1. Que todas as informações, relatórios, atas e dados vetoriais apresentados referentes à Unidade de Conservação [NOME DA UNIDADE DE CONSERVAÇÃO] são autênticos, fidedignos e expressam a exata verdade dos fatos ocorridos no Ano-Base.
-2. Que os dados vetoriais encaminhados obedecem ao Datum SIRGAS 2000 e refletem a real delimitação territorial da Unidade de Conservação.
-3. Estar ciente de que a inserção de informações falsas ou a adulteração de documentos sujeitará o subscritor às sanções administrativas, civis e penais previstas na Lei Federal nº 9.605/1998 e no Código Penal Brasileiro, além do indeferimento da pontuação da UC no ICMS Ecológico.
+2. Que os dados vetoriais encaminhados obedecem ao Datum SIRGAS 2000 (EPSG:4674) e refletem a real delimitação territorial e Zona de Amortecimento da Unidade de Conservação.
+3. Estar ciente de que a inserção de informações falsas ou a adulteração de documentos sujeitará o subscritor às sanções administrativas, civis e penais previstas na Lei Federal nº 9.605/1998, no Código Penal Brasileiro e à glosa cautelar da pontuação no ICMS Ecológico sob o rito da Lei Estadual nº 8.972/2020.
 
 [CIDADE - PA], _____ de _______________ de 202X.
 
 ___________________________________________________
 [NOME DO DECLARANTE]
 [CARGO E INSTITUIÇÃO]
-Assinatura Digital (Gov.br ou ICP-Brasil)
+Assinatura Digital (Gov.br ou ICP-Brasil com Carimbo de Tempo)
 ```

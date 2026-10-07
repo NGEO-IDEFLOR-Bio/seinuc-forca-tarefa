@@ -216,6 +216,115 @@ A engenharia documental é de bom nível, mas o pacote confunde **produto técni
 
 ---
 
+# PARTE II — REAUDITORIA (2ª RODADA)
+
+> **Data:** 07/10/2026 (revisão dos produtos após as correções da Parte I, efetuadas em 07/10, 00:59–01:03).
+> **Objeto reexaminado:** os 5 produtos consolidados + ROADMAP/EPICOS.
+> **Veredito:** melhora **substancial e qualitativamente correta** — os 4 pontos críticos de legalidade e o conflito de calendário foram atacados de forma técnica. O conjunto **ainda não está livre para publicação**, porém agora por **problemas de menor densidade** e por **falhas de consistência entre documentos**, não mais por nulidades estruturais.
+
+---
+
+## 1. Balanço das correções (contra a Parte I)
+
+| # | Achado anterior | Situação atual |
+| :-- | :--- | :---: |
+| E1 | Inversão de competência SEMAS × IDEFLOR-Bio | ✅ **Corrigido** — Decreto Arts. 2º e 17; Portaria virou "Conjunta"; CT-SEINUC vinculada conjuntamente |
+| E1 | SEINUC anunciado como "base oficial" do ICMS | ✅ **Corrigido** — virou "integrar a base oficial", com sincronização ao Decreto 1.064/2020 |
+| E1 | Perda de ICMS por decreto | ✅ **Corrigido** — Art. 15: glosa de pontuação + rito LEPA + MP/PA |
+| E1 | "Revisão quinquenal" inventada | ✅ **Removida** |
+| E1 | `clima`, `paisagem`, arqueológico/antropológico, programas de pesquisa, relatório anual (§1º do art. 113) | ✅ **Adicionados** |
+| E1 | `COD_CNUC` ausente | ✅ **Adicionado** (Módulo I + DBF) |
+| E1 | Art. 112 sem tratamento | ⚠️ **Tratado**, mas com risco legal novo (ver §3) |
+| E2 | Calendário incompatível (15/07 / 30/09) | ✅ **Corrigido** — provisório 31/05, definitivo 31/07, sincronizado ao Decreto 1.064/2020 |
+| E2 | Recurso em "dias corridos" | ✅ **Corrigido** — 15 **dias úteis**, citando LEPA art. 83 |
+| E2 | Sem efeito suspensivo / decisão imotivada | ✅ **Corrigido** — suspensivo na parcela impugnada + Ficha motivada por quesito |
+| E2 | Julgador = recorrido | ✅ **Melhorado** — CT instrui, titular da SEMAS julga em instância final |
+| E2 | CT sem composição | ✅ **Melhorado** — SEMAS coordena, IDEFLOR técnico, 1 rep. FAMEP |
+| E2 | Contingência de prazo | ✅ **Adicionada** (Art. 6º §1 + Portaria Art. 5º) |
+| E2 | Conflito 50 MB × 200 MB | ✅ **Resolvido** (50 MB/arquivo + 200 MB/pacote por UC) |
+| E3 | "GeoJSON Schema" inválido + GeoJSON×SIRGAS | ✅ **Corrigido** — bloco retirado; nota de interoperabilidade (nativo GPKG/GML; GeoJSON por reprojeção) |
+| E3 | Enums sem validação | ✅ **Corrigido** — enums aplicados no Módulo I |
+| E3 | Precisão DBF / topologia | ✅ **Corrigido** (N,24,2; campo `za_delim`) |
+| E4 | Mascaramento sem base legal + citação "Art. 7º" | ✅ **Corrigido** — Decreto Art. 14; Portal cita Art. 14; **WMS e WFS nomeados** no mascaramento |
+| E4 | LGPD ausente do Decreto | ✅ **Corrigido** — Art. 14, §2º |
+
+**Veredito parcial:** ~70% dos pontos fechados ou bem encaminhados.
+
+---
+
+## 2. O que NÃO foi tratado (permanece em aberto)
+
+1. **Controle do art. 117 da Lei 10.306/2023** (destinação mínima de 20% do ICMS a UCs municipais) — ainda sem campo/monitoramento em qualquer produto.
+2. **Integração com o protocolo eletrônico oficial do Estado** — o manual continua com numeração própria (`ANO-MUNICIPIO-SEINUC-Nº`), sem autuação única/processo digital estadual.
+3. **Metadados INDE completos** — segue sem **CSW**, UUID de conjunto, versão do perfil MGB e periodicidade; o Portal segue "em tempo real".
+4. **SLA de análise, versionamento, trilha de auditoria, backup/DR** — nada especificado.
+5. **Assinatura digital do pacote + carimbo de tempo (RFC 3161)** — persiste apenas o SHA-256 (integridade, sem autoria/não-repúdio).
+6. **LGPD operacional** — seguem faltando base legal, controlador/operador/encarregado, direitos do titular, retenção, DPIA/RIPD e resposta a incidentes. (A titularidade do SEINUC agora é da SEMAS → ela é a controladora; falta **explicitar**.)
+7. **Lei 13.123/2015 / SisGen / conhecimento tradicional associado** — o Art. 14 invoca o art. 67, §6º, mas **não operacionaliza** acesso ao patrimônio genético nem protege dados de PCTs.
+8. **Rastreio objetivo do art. 114** — `legada_status` continua sem campo de prazo/alerta de vencimento (2028).
+
+---
+
+## 3. NOVOS riscos introduzidos pelas correções
+
+### 🔴 Altos
+
+**N1. Art. 18 — prorrogação de prazo legal por decreto.** A Lei fixou "prazo máximo de 2 (dois) anos" para readequação dos Sítios Pesqueiros (art. 112, encerrado em 22/12/2025). Um **decreto** concedendo "prazo transitório de até 12 meses" prorroga **prazo fixado por lei**, o que afronta o princípio da legalidade e pode ser anulado por **excesso de regulamentação**. A saída juridicamente segura é **emenda legislativa** (ALEPA) ou, no máximo, disposição que apenas **regule as consequências da não transição** (ex.: manutenção transitória da categoria enquanto tramita o processo), sem criar novo prazo contra a lei.
+
+**N2. Dupla janela recursal não reconciliada.** Agora existem dois ritos sobre o mesmo índice: o **recurso do SEINUC (15 dias úteis)** e a **impugnação do ICMS Verde (30 dias corridos, Decreto 1.064/2020)** — prazos e origem diferentes. Um município pode perder o recurso no SEINUC e ainda impugnar fora do prazo próprio, ou alegar nulidade por contradição. O Decreto deveria **unificar**: declarar que o recurso do SEINUC substitui, para a parcela da UC, a impugnação perante o ICMS Verde — ou remeter expressamente ao rito do Decreto 1.064/2020.
+
+### 🟠 Médios
+
+**M1. "Glosa sumária" (Art. 15, I) sem devido processo.** Glosar a pontuação "sumariamente" por fraude, ao lado de "instauração de processo sancionatório" (inciso II), é ambíguo: se a glosa ocorre **antes** do processo, fere a LEPA/CF (vedação à decisão-surpresa). Recomenda-se **glosa cautelar** com contraditório posterior, ou condicioná-la ao resultado do processo.
+
+**M2. Rejeição sumária por intempestividade sem intimação prévia.** A contingência só cobre indisponibilidade do sistema nas últimas 24h. Recomenda-se prever o **direito de justificação da intempestividade** (falha do servidor do município, atestado) na própria CT-SEINUC, sob pena de nulidade por cerceamento de defesa.
+
+**M3. Triagem: vício sanável × insanável indefinido.** O Art. 8º, I fala em "saneamento de vícios formais", mas não define o **catálogo** dos vícios sanáveis. Sem rol objetivo, a diligência de 5 dias úteis depende de arbítrio do parecerista.
+
+**M4. Silêncio sobre `SIGLA_UC` e UCs multimunicipais/interestaduais.** A regra de nomenclatura pressupõe um código IBGE e uma sigla — não há tabela oficial de siglas nem tratamento para UC em 2+ municípios (frequente no Pará).
+
+### 🟡 Baixos/formais
+
+- **B1.** Ementa: "Decreto Estadual nº 1.064, de **18** de setembro de 2020" → o correto é **28 de setembro de 2020** (fonte SEFA/SEMAS/LEGIS-PA).
+- **B2.** Manual, Checklist item 06 trata **nomenclatura** como eliminação ("Rejeição de Arquivos Inconformes"), mas a Ficha (item 5) a trata como **vício sanável** (diligência) — contradição interna.
+- **B3.** `grau_infestacao` segue citado na tabela do Módulo I mas fora do schema JSON; `paisagem_tipologia` é "Sim" na tabela e **não está** em `required` do schema.
+- **B4.** Inconsistência interna na especificação: a árvore de módulos (l.12-18) lista só I–IV, mas existe seção "**Módulo V – Interoperabilidade**" (l.185-191). Pelos Decretos, interoperabilidade **não é módulo** (é o Cap. V, Arts. 11-13) → deve virar "Protocolo de Integração", não "Módulo V".
+- **B5.** **ROADMAP/EPICOS dessincronizados** com a nova arquitetura e ritos: citam "Módulo II - Geo/Fundiário/RPPN" e "rito recursal de 15 DIAS" (ROADMAP Milestone 1.3; EPICOS Épico 3), enquanto o produto final tem Módulo II = Geo/ZA, Módulo IV = Fundiário/RPPN e recurso de **15 dias úteis**.
+- **B6.** Cobertura de schemas **reduziu**: só o Módulo I tem bloco JSON Schema; os Módulos III e IV perderam os seus — contraria a promessa do próprio intro ("JSON Schema para os quatro eixos"). A regra do "mínimo de 2 reuniões" do Conselho segue **sem validação técnica**.
+
+---
+
+## 4. Verificação do Eixo 3 (rigor técnico) — itens que seguem de pé
+
+- **Camada de Zona de Amortecimento** continua sem geometria própria (só o flag `za_delim`). Se o objetivo (Art. 54, §1º, da Lei) é o plano abranger a ZA, a **base vetorial deve entregar um polígono de ZA**, não um flag.
+- **INDE**: a publicação "em tempo real" e sem **CSW/UUID** não satisfaz a catalogação do Perfil MGB — ajustar para catálogo INDE com periodicidade anual (ciclo N-1).
+- Portal segue listando **WCS** para raster "quando aplicável" — ok, mas sem restrição de `GetFeatureInfo`/`GetFeature` para as camadas com espécies CR, além do que já consta no Art. 14 §1º (que é um avanço).
+
+---
+
+## 5. Priorização recomendada (antes da publicação)
+
+| Ordem | Ação | Bloco |
+| :--: | :--- | :--- |
+| 1 | **Reescrever o Art. 18** sem prorrogar prazo legal; encaminhar ajuste legislativo do art. 112 | Jurídico |
+| 2 | **Unificar a janela recursal** com o ICMS Verde (impugnação própria do Decreto 1.064/2020) | Jurídico |
+| 3 | Corrigir "glosa sumária" → glosa cautelar com contraditório | Jurídico |
+| 4 | Definir catálogo de vícios sanáveis/insanáveis e via de justificação da intempestividade | Processual |
+| 5 | Integrar protocolo eletrônico estadual; garantir assinatura digital do pacote + carimbo de tempo | Operacional |
+| 6 | Explicitar SEMAS como **controladora** (LGPD) e enquadrar Lei 13.123/SisGen | LGPD/LAI |
+| 7 | Reconciliar ROADMAP/EPICOS e numeração "Módulo V"; restaurar schemas dos Módulos III/IV | Documental |
+| 8 | Corrigir data do Decreto 1.064 e demais erros formais (B1–B3) | Formal |
+
+---
+
+## 6. Conclusão da 2ª rodada
+
+A revisão **encaminhou corretamente** os quatro nós de invalidade, e o Decreto agora reflete a repartição de competências do art. 68, respeita a LEPA no rito e sincroniza o calendário ao ICMS Verde — o que demonstra domínio técnico. O que resta não autoriza ainda a publicação, mas são **correções cirúrgicas**: 2 riscos novos (Art. 18 e dupla recursal) e uma camada de **consistência documental** (ROADMAP/EPICOS × produtos, "Módulo V", schemas) que deve ser fechada antes do envio à PGE.
+
+**Recomendação da 2ª rodada:** resolver prioritariamente os itens 1–4 da tabela de priorização e, em seguida, fechar a consistência entre os documentos (item 7), antes da consulta pública e do parecer da PGE.
+
+---
+
 ## ANEXO — Referências de rastreabilidade
 
 - Produtos auditados: `minuta-decreto-seinuc.md`, `especificacao-modulos-dados-seinuc.md`, `minuta-portaria-diretrizes-tecnicas.md`, `manual-fluxo-envio-e-triagem.md`, `especificacao-portal-transparencia-ogc.md`.

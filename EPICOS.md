@@ -25,17 +25,17 @@ Este repositório contém o planejamento, a estrutura normativa e a arquitetura 
 **Objetivo:** Estruturar as fichas, formulários e padrões geográficos do sistema, assegurando conformidade com a legislação estadual e integração com sistemas parceiros (CNUC, ITERPA e SEMAS).
 
 ### Critérios de Conclusão (DoD):
-1. **Módulo Ambiental (Quadro I) [Concluído]:** Estrutura de campos para dados bióticos, abióticos, espécies ameaçadas e exóticas ([`especificacao-modulos-dados-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md)).
-2. **Módulo Georreferenciado e Fundiário (Quadro II) [Concluído]:** Atributos oficiais do Shapefile do IDEFLOR-Bio (SIRGAS 2000), dominialidade e RPPNs ([`especificacao-modulos-dados-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md)).
-3. **Módulo de Gestão e Socioeconomia (Quadro III) [Concluído]:** Cadastro de Conselhos, Planos de Manejo, visitação e rastreamento de UCs legadas ([`especificacao-modulos-dados-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md)).
-4. **Mapa de Integração CNUC, ITERPA e SEMAS [Concluído]:** Protocolo de exportação e repasse trienal regulamentado ([`especificacao-modulos-dados-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md)).
+1. **Módulo Ambiental (Quadro I) [Concluído]:** Estrutura de campos para dados bióticos, abióticos, espécies ameaçadas, exóticas e clima ([`especificacao-modulos-dados-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md)).
+2. **Módulo Georreferenciado e Zonas de Amortecimento (Quadro II) [Concluído]:** Atributos oficiais do Shapefile do IDEFLOR-Bio (SIRGAS 2000), perímetros e Zonas de Amortecimento ([`especificacao-modulos-dados-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md)).
+3. **Módulo de Gestão e Socioeconomia (Quadro III) [Concluído]:** Cadastro de Conselhos, Planos de Manejo, visitação, rastreamento de UCs legadas e repasse municipal (20%) ([`especificacao-modulos-dados-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md)).
+4. **Módulo Fundiário, Dominial e RPPNs (Quadro IV) [Concluído]:** Situação dominial, regularização fundiária acumulada e averbação de RPPN no RGI ([`especificacao-modulos-dados-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md)).
 
 ### Lista de Tarefas
 | ID | Tarefa | Status | Documento de Trabalho / Produto Oficial |
 | :--- | :--- | :---: | :--- |
 | **T4** | Estruturar Módulo de Caracterização Ambiental | Concluído | [especificacao-modulos-dados-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md) |
-| **T5** | Estruturar Módulo de Georreferenciamento e Fundiário | Concluído | [especificacao-modulos-dados-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md) |
-| **T6** | Estruturar Módulo de Gestão e Socioeconomia | Concluído | [especificacao-modulos-dados-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md) |
+| **T5** | Estruturar Módulo de Georreferenciamento e Zonas de Amortecimento | Concluído | [especificacao-modulos-dados-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md) |
+| **T6** | Estruturar Módulo de Gestão, Socioeconomia e UCs Legadas | Concluído | [especificacao-modulos-dados-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md) |
 | **T7** | Definir Protocolo de Integração com o CNUC, ITERPA e SEMAS | Concluído | [especificacao-modulos-dados-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md) |
 
 ---
@@ -45,8 +45,8 @@ Este repositório contém o planejamento, a estrutura normativa e a arquitetura 
 
 ### Critérios de Conclusão (DoD):
 1. **Protocolo de Envio e Nomenclatura [Concluído]:** Padrão de transmissão digital, nomeação de arquivos e recibos de protocolo ([`manual-fluxo-envio-e-triagem.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/manual-fluxo-envio-e-triagem.md)).
-2. **Checklist de Triagem (Admissibilidade) [Concluído]:** Critérios formais eliminatórios para aceitação prévia de documentos ([`manual-fluxo-envio-e-triagem.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/manual-fluxo-envio-e-triagem.md)).
-3. **Fase de Análise Técnica e Recursos [Concluído]:** Regras para atribuição de notas, ressalvas, Comissão Técnica (CT-SEINUC) e prazo recursal de 15 dias ([`minuta-decreto-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md)).
+2. **Checklist de Triagem (Admissibilidade) [Concluído]:** Critérios formais eliminatórios e sanáveis para aceitação prévia de documentos ([`manual-fluxo-envio-e-triagem.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/manual-fluxo-envio-e-triagem.md)).
+3. **Fase de Análise Técnica e Recursos [Concluído]:** Regras para atribuição de notas, ressalvas, Comissão Técnica (CT-SEINUC) e prazo recursal de 15 dias úteis (LEPA) ([`minuta-decreto-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md)).
 
 ### Lista de Tarefas
 | ID | Tarefa | Status | Documento de Trabalho / Produto Oficial |

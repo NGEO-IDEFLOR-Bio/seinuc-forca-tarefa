@@ -48,6 +48,7 @@ PORTAL PÚBLICO SEINUC/PA (TRANSPARÊNCIA ATIVA)
   * Extratos de Pontuação Provisória e Definitiva.
   * Fichas de Avaliação Técnica emitidas pela Comissão Técnica (CT-SEINUC).
   * Relatórios de Julgamento de Recursos Administrativos.
+  * Rastreamento da destinação de ao menos 20% das verbas a UCs municipais (Art. 117 da Lei nº 10.306/2023).
 
 ---
 
@@ -60,24 +61,29 @@ Em estrito cumprimento ao **Art. 111 da Lei Estadual nº 10.306/2023** e ao **Ar
 | Serviço OGC | Versão Padrão | Endpoint de Acesso | Finalidade e Aplicação na Cartografia Oficial |
 | :--- | :---: | :--- | :--- |
 | **WMS (Web Map Service)** | 1.3.0 | `https://seinuc.ideflor.pa.gov.br/geoserver/wms` | Renderização de mapas dinâmicos e camadas visuais das UCs na confecção das cartas e mapas oficiais do Governo do Estado do Pará. |
-| **WFS (Web Feature Service)** | 2.0.0 | `https://seinuc.ideflor.pa.gov.br/geoserver/wfs` | Download e consumo de vetores brutos em formats abertos (`GeoJSON`, `Shapefile zip`, `KML`) por órgãos ambientais, pesquisadores e sistemas parceiros. |
+| **WFS (Web Feature Service)** | 2.0.0 | `https://seinuc.ideflor.pa.gov.br/geoserver/wfs` | Download e consumo de vetores brutos em formatos abertos (`GeoJSON`, `Shapefile zip`, `KML`) por órgãos ambientais, pesquisadores e sistemas parceiros. |
 | **WCS (Web Coverage Service)** | 2.0.1 | `https://seinuc.ideflor.pa.gov.br/geoserver/wcs` | Transmissão de dados raster e modelos digitais de elevação de UCs quando aplicável. |
+| **CSW (Catalog Service for the Web)** | 2.0.2 | `https://seinuc.ideflor.pa.gov.br/geoserver/csw` | Descoberta e catálogo estandardizado de metadados geográficos junto à INDE. |
 
 ### 3.2. Padrão de Metadados Geográficos (Perfil MGB / INDE)
 Todos os conjuntos de dados geográficos do SEINUC/PA serão catalogados segundo o **Perfil de Metadados Geográficos do Brasil (MGB)** da Infraestrutura Nacional de Dados Espaciais (INDE), contendo:
-* Linhagem e histórico do dado vetorial.
+* Linhagem e histórico do dado vetorial e UUID do conjunto de dados.
 * Sistema de Referência: SIRGAS 2000 (EPSG:4674).
-* Responsável técnico pelo mapeamento e data de atualização.
+* Responsável técnico pelo mapeamento e periodicidade de atualização.
 
 ---
 
-## 4. Diretrizes de Sigilo, Proteção da Biodiversidade e LGPD (Art. 14 do Decreto)
+## 4. Diretrizes de Sigilo, Proteção da Biodiversidade, LGPD e SisGen (Art. 14 do Decreto)
 
-A transparência pública no SEINUC/PA observará as ressalvas legais de proteção ao patrimônio biológico e à privacidade, nos termos do Art. 14 do Decreto Regulamentador e da Lei Geral de Proteção de Dados (Lei Federal nº 13.709/2018):
+A transparência pública no SEINUC/PA observará as ressalvas legais de proteção ao patrimônio biológico, à privacidade e ao patrimônio genético, nos termos do Art. 14 do Decreto Regulamentador, da Lei Geral de Proteção de Dados (Lei Federal nº 13.709/2018) e da Lei da Biodiversidade (Lei Federal nº 13.123/2015):
 
 ### 4.1. Resguardo da Biodiversidade (Proteção contra Biopirataria)
-* **Regra de Mascaramento Espacial:** As coordenadas geográficas exatas de pontos de nidificação, avistamento ou ocorrência de espécies da fauna e flora criticamente ameaçadas de extinção (CR) suscetíveis à caça, ilícito ou biopirataria serão mascaradas no visualizador público.
-* **Visualização Generalizada:** Para o público geral, o dado de ocorrência sensível será exibido por polígono de quadrícula regional (ex: 10 x 10 km), mantendo a precisão exata restrita ao corpo técnico autorizado do IDEFLOR-Bio e SEMAS.
+* **Regra de Mascaramento Espacial:** As coordenadas geográficas exatas de pontos de nidificação, avistamento ou ocorrência de espécies da fauna e flora criticamente ameaçadas de extinção (CR) suscetíveis à caça, ilícito ou biopirataria serão mascaradas no visualizador público e nos endpoints OGC.
+* **Visualização Generalizada em Todos os Geoserviços:** Para o público geral, o dado de ocorrência sensível será exibido nos geoserviços públicos (WebGIS, WMS, WFS e WCS) por polígono de quadrícula regional generalizada (10 x 10 km), aplicando-se o mesmo filtro de generalização às requisições de consulta puntiforme (*GetFeatureInfo* e *GetFeature*), mantendo a precisão exata restrita ao corpo técnico autorizado da SEMAS e IDEFLOR-Bio.
 
 ### 4.2. Conformidade com a LGPD
+* A Secretaria de Estado de Meio Ambiente e Sustentabilidade (SEMAS) atua na condição de **Controladora** dos dados e o IDEFLOR-Bio como **Operador**.
 * Os dados pessoais de conselheiros civis ou gestores (CPF, telefone pessoal, endereço residencial) serão tarjados e anonimizados nos documentos públicos colocados para download, preservando-se a identificação institucional e o nome completo.
+
+### 4.3. Conformidade com a Lei do Patrimônio Genético (SisGen)
+* As informações relativas a acessos ao patrimônio genético e conhecimento tradicional associado em Unidades de Conservação observarão as salvaguardas da Lei Federal nº 13.123/2015 e os registros oficiais do Sistema Nacional de Gestão do Patrimônio Genético e do Conhecimento Tradicional Associado (SisGen).
