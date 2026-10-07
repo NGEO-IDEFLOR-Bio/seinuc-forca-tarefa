@@ -159,9 +159,24 @@ flowchart TD
 | `orgao_gest` | C | 254 | 0 | Órgão Gestor responsável | `IDEFLOR-Bio`, `Sema Municipal` |
 | `tipo_flore` | C | 254 | 0 | Tipologia florestal | `TIPO A` |
 | `za_delim` | C | 3 | 0 | Possui Zona de Amortecimento delimitada | `SIM` ou `NAO` |
+| `zoneamento_disponivel` | C | 3 | 0 | Possui camada de zoneamento interno (depende da existência de Plano de Gestão aprovado) | `SIM` ou `NAO` |
 | `obs` | C | 254 | 0 | Observações cartográficas | `Zona de Amortecimento delimitada` |
 
-### 3.2. Esquema JSON de Validação (Módulo II)
+### 3.2. Camada de Zoneamento Interno (Atributos da Camada Geoespacial)
+
+O **zoneamento interno** é uma **camada geográfica própria** (polígonos das zonas da UC), integrante do pacote vetorial do Módulo II, no mesmo Datum **SIRGAS 2000 (EPSG:4674)**. A camada de zoneamento **somente existe quando a UC possui Plano de Gestão aprovado** (`zoneamento_disponivel = SIM`, derivado de `plano_gestao_status = "Aprovado e Vigente"` no Módulo III); UCs sem plano de gestão transmitem apenas as camadas de perímetro e Zona de Amortecimento.
+
+| Nome da Coluna (Shapefile DBF) | Tipo | Tamanho | Precisão | Descrição do Atributo | Exemplo Real |
+| :--- | :---: | :---: | :---: | :--- | :--- |
+| `id` | N | 10 | 0 | Identificador numérico da zona (chave da feição) | `1`, `2` |
+| `zona` | C | 100 | 0 | Nome da zona do Plano de Gestão | `Zona Intangível`, `Zona Primitiva` |
+| `area` | N | 24 | 2 | Área da zona em hectares (calculada pelo GIS) | `1234.56` |
+| `sigla` | C | 20 | 0 | Sigla da zona | `ZI`, `ZP`, `ZUE` |
+| `unidade` | C | 254 | 0 | Identificador da UC associada (`uc_id`/`cod_cnuc`) | `PA00001` |
+
+**Regra de publicação:** nos geoserviços (WMS/WFS) e na Ficha da Unidade, a camada de zoneamento é **publicada apenas quando** `zoneamento_disponivel = SIM`; caso contrário, exibe-se aviso "UC sem Plano de Gestão — zoneamento não disponível", permanecendo visíveis apenas perímetro e Zona de Amortecimento.
+
+### 3.3. Esquema JSON de Validação (Módulo II)
 
 ```json
 {
@@ -185,6 +200,7 @@ flowchart TD
     "orgao_gest": { "type": "string" },
     "tipo_flore": { "type": "string" },
     "za_delim": { "type": "string", "enum": ["SIM", "NAO"] },
+    "zoneamento_disponivel": { "type": "string", "enum": ["SIM", "NAO"] },
     "obs": { "type": "string" }
   }
 }
@@ -212,6 +228,19 @@ flowchart TD
 | **Destinacao Mínima Municipal (Art. 117)**| `repasse_municipal_20pct` | Booleano (Sim/Não) | Sim | Rastreamento do cumprimento do repasse de 20% do ICMS a UCs municipais. |
 | **Visitantes Anuais** | `visitantes_qtd` | Número (Inteiro) | Não | Estimativa ou contagem oficial de visitantes no ano-base. |
 | **Receita de Uso Público** | `receita_arrecadada_brl` | Número (Decimal) | Não | Valor total arrecadado em R$ com bilheteria, serviços ou concessões. |
+| **Gestor Responsável - Nome** | `gestor_responsavel_nome` | Texto (Livre) | Não | Nome do gerente/responsável pela gestão da UC (nível técnico - LGPD). |
+| **Gestor Responsável - Cargo** | `gestor_responsavel_cargo` | Texto (Livre) | Não | Cargo/função do responsável pela UC. |
+| **Gestor Responsável - E-mail** | `gestor_contato_email` | Texto (Livre) | Não | E-mail institucional de contato (nível técnico - LGPD). |
+| **Ato de Designação do Gestor** | `gestor_nomeacao_ato` | Texto (Livre) | Não | Portaria/decreto de designação do gestor responsável. |
+| **Composição do Conselho** | `conselho_composicao` | Lista Objetos | Não | Membros do conselho (nome institucional, segmento e mandato). |
+| **Versão do Plano de Gestão** | `plano_gestao_versao` | Texto (Livre) | Não | Identificação da versão vigente do Plano de Gestão. |
+| **Histórico/Estudos do Plano** | `plano_gestao_atualizacoes` | Texto (Livre) | Não | Histórico de atualizações e estudos complementares do Plano de Gestão. |
+| **Projetos em Execução** | `projetos` | Lista Objetos | Não | Projetos e programas em execução (turismo, educação ambiental, recuperação, pesquisa etc.). |
+| **Cooperações Vigentes** | `cooperacoes` | Lista Objetos | Não | Termos de Cooperação Técnica/convênios vigentes. |
+| **Concessões e Processos Internos** | `concessoes` | Lista Objetos | Não | Concessões e processos internos (manejo florestal, restauração, PROSAF, visitação etc.). |
+| **Estratégia Financeira** | `estrategia_financeira` | Texto (Livre) | Não | Resumo da estratégia financeira da UC (arts. 69-73 da Lei 10.306/2023). |
+| **Recursos Disponíveis (R$)** | `recursos_disponiveis_brl` | Número (Decimal) | Não | Recursos financeiros disponíveis para a UC (nível técnico). |
+| **Plano de Aplicação aprovado na CCA** | `plano_aplicacao_cca` | Texto (Livre) | Não | Planos de aplicação de recursos aprovados na Câmara de Compensação Ambiental (CCA). |
 
 ### 4.2. Esquema JSON de Validação (Módulo III)
 
@@ -241,7 +270,65 @@ flowchart TD
     "antropologico_caracterizacao": { "type": "string" },
     "repasse_municipal_20pct": { "type": "boolean" },
     "visitantes_qtd": { "type": "integer", "minimum": 0 },
-    "receita_arrecadada_brl": { "type": "number", "minimum": 0 }
+    "receita_arrecadada_brl": { "type": "number", "minimum": 0 },
+    "gestor_responsavel_nome": { "type": "string" },
+    "gestor_responsavel_cargo": { "type": "string" },
+    "gestor_contato_email": { "type": "string", "format": "email" },
+    "gestor_nomeacao_ato": { "type": "string" },
+    "conselho_composicao": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "nome_completo": { "type": "string" },
+          "segmento": { "type": "string" },
+          "mandato_inicio": { "type": "string", "format": "date" },
+          "mandato_fim": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "plano_gestao_versao": { "type": "string" },
+    "plano_gestao_atualizacoes": { "type": "string" },
+    "projetos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "nome": { "type": "string" },
+          "tipo": { "type": "string" },
+          "status": { "type": "string" },
+          "parceiro": { "type": "string" },
+          "vigencia_inicio": { "type": "string", "format": "date" },
+          "vigencia_fim": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "cooperacoes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tipo": { "type": "string" },
+          "objeto": { "type": "string" },
+          "parceiro": { "type": "string" },
+          "vigencia_fim": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "concessoes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tipo": { "type": "string" },
+          "objeto": { "type": "string" },
+          "vigencia_fim": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "estrategia_financeira": { "type": "string" },
+    "recursos_disponiveis_brl": { "type": "number", "minimum": 0 },
+    "plano_aplicacao_cca": { "type": "string" }
   },
   "allOf": [
     {
