@@ -45,7 +45,7 @@ Ao finalizar a transmissão, o sistema emitirá automaticamente o **Comprovante 
 * Número do Protocolo Único de Entrada (`ANO-MUNICIPIO-SEINUC-Nº`).
 * Data e Hora exatas do servidor oficial (Horário de Brasília) com carimbo de tempo.
 * Relação nominal de arquivos transmitidos.
-* **Código Hash SHA-256 de Autenticidade Integrada**, garantindo a inalterabilidade e não-repúdio do pacote enviado.
+* **Código Hash SHA-256 e Selo de Tempo ICP-Brasil**, garantindo a integridade e a rastreabilidade do pacote transmitido.
 
 ---
 

@@ -325,6 +325,103 @@ A revisão **encaminhou corretamente** os quatro nós de invalidade, e o Decreto
 
 ---
 
+# PARTE III — REAUDITORIA (3ª RODADA)
+
+> **Data:** 07/10/2026 (revisão dos produtos após as correções da 2ª rodada).
+> **Objeto reexaminado:** os 5 produtos consolidados + ROADMAP/EPICOS (alterações em 07/10).
+> **Veredito:** o pacote **atingiu maturidade para publicação**, com a quase totalidade dos achados **fechada corretamente** e sem novos vícios jurídicos graves. Restam **1 implementação incompleta** (reivindicada, mas não aplicada no schema), **1 erro de digitação** e uma camada curta de **itens de operação/deploy** que não bloqueiam o encaminhamento à PGE.
+
+---
+
+## 1. Verificação item a item das correções declaradas
+
+| Declaração | Verificação | Status |
+| :--- | :--- | :---: |
+| **N1** Art. 18 — manutenção do cadastramento transitório | Decreto l.127: mantém cadastramento **apenas para monitoramento/instrução prioritária**, "sem prejuízo das providências administrativas e legislativas cabíveis". Não cria prazo novo. | ✅ **Corrigido** |
+| **N2** Art. 9º §3 — unificação da via recursal p/ o ICMS Verde | Decreto l.82: CT-SEINUC + titular da SEMAS "exaurem a fase de impugnação relativa às UCs e RPPNs... unificando a via recursal perante o órgão central". Decreto posterior a 1.064/2020 (mesma hierarquia → *lex posterior*), escopo restrito à parcela UC/RPPN. | ✅ **Corrigido** |
+| **M1** Glosa cautelar sob LEPA (Art. 15, I) | Decreto l.115: "glosa cautelar... assegurado o contraditório e a ampla defesa no processo administrativo sancionatório sob o rito da LEPA". | ✅ **Corrigido** |
+| **M2** Justificativa de força maior (Art. 6º §2 + Portaria Art. 5º §2) | Decreto l.57 e Portaria l.43: 2 dias úteis + deliberação motivada da CT. | ✅ **Corrigido** |
+| **M3** Catálogo vícios sanáveis × insanáveis (Art. 8º, I + Manual §4) | Decreto l.72 e Manual: itens 04 e 06 = "Sanável"; 02, 03, 05, 07 = "Eliminatório"; 01 com ressalva de justificativa. | ✅ **Corrigido** |
+| **LGPD** SEMAS = Controladora / IDEFLOR = Operador | Decreto Art. 14 §2 (l.106) e Portal §4.2 (l.85). | ✅ **Corrigido** |
+| **PG/SisGen** Lei 13.123/2015 | Ementa, preâmbulo, Decreto Art. 14 §3 (l.108), Portal §4.3. | ✅ **Corrigido** |
+| **Mascaramento** em todos os endpoints | Decreto Art. 14 §1 (l.104) e Portal §4.1 (l.82): WebGIS, **WMS, WFS, WCS, GetFeatureInfo e GetFeature**. | ✅ **Corrigido** |
+| **B1** Data do Decreto 1.064 | Corrigida para **28 de setembro de 2020** (l.5 e l.82). | ✅ **Corrigido** |
+| **B2** Nomenclatura no Manual | Item 06 agora "Sanável → Notificação/Diligência 5 dias úteis", consistente com a Ficha. | ✅ **Corrigido** |
+| **B3** `paisagem_tipologia` e `grau_infestacao` | `paisagem_tipologia` no `required`; `grau_infestacao` no schema com enum. | ✅ **Corrigido** |
+| **B4** "Módulo V" → "Protocolo de Integração e Interoperabilidade" | Seção 6 da especificação, alinhada aos Arts. 11-13 do Decreto. | ✅ **Corrigido** |
+| **B5** ROADMAP/EPICOS | "15 dias úteis (LEPA)"; estrutura de módulos atualizada. | ✅ **Corrigido** |
+| **B6** Schemas JSON para os 4 módulos + Art. 117 | Schemas I, II, III e IV presentes; `repasse_municipal_20pct` obrigatório (Módulo III) + Painel (Portal §2.3). | ⚠️ **Parcial** (ver §2) |
+
+**Bônus não declarado:** o Portal ganhou **CSW 2.0.2 + UUID + periodicidade** — fechou a lacuna INDE da Parte I.
+
+---
+
+## 2. Única correção reivindicada que NÃO foi plenamente aplicada
+
+### ⚠️ `conselho_reunioes_qtd >= 2` — implementação incompleta no schema
+
+A tabela do Módulo III declara "Mínimo de 2 reuniões... para pontuação", mas o **schema JSON mantém `"conselho_reunioes_qtd": { "type": "integer", "minimum": 0 }`** — o "controle automatizado >= 2" **não existe na validação**.
+
+Como o próprio texto prevê o caso de UC **sem conselho** (`conselho_status: false`), a regra correta é **condicional** (`if/then`):
+
+```json
+"allOf": [
+  {
+    "if": { "properties": { "conselho_status": { "const": true } } },
+    "then": { "properties": { "conselho_reunioes_qtd": { "type": "integer", "minimum": 2 } } }
+  }
+]
+```
+
+Risco associado: a regra de mérito (2 reuniões) é a **única** exigência formal de pontuação de conselho — sem ela no schema, a pontuação pode ser atribuída automaticamente a UC que não comprovou as atas.
+
+---
+
+## 3. Resíduos que NÃO bloqueiam, mas devem constar da lista "antes do go-live"
+
+| # | Item | Tipo | Detalhe |
+| :-- | :--- | :--- | :--- |
+| R1 | **Erro de digitação** no Decreto, Art. 3º, III: "imprescindible" → **imprescindível** | Forma | Correção trivial, obrigatória antes do DOE |
+| R2 | **"não-repúdio" atribuído ao SHA-256** (Manual) | Técnica | SHA-256 garante **integridade**, não autenticidade/não-repúdio. Recomenda-se assinar digitalmente o hash (ICP-Brasil) ou ajustar a redação |
+| R3 | **Protocolo eletrônico estadual** não integrado (numeração própria no Manual) | Processual | Conectar à autuação única do Estado antes do 1º ciclo |
+| R4 | **SLA/versionamento/backup/DR** não especificados | Operacional | Inserir em Anexo da Portaria Conjunta ou IN de TI |
+| R5 | **`SIGLA_UC`** sem tabela oficial e **UCs multimunicipais/interestaduais** sem regra para o código IBGE | Técnica | Portaria poderá definir a tabela de siglas e o município-base |
+| R6 | **Art. 114** sem campo de prazo/alerta (2028) — `legada_status` é só enum | Técnica | Adicionar `legada_prazo_fim` (data) ao Módulo III |
+| R7 | **Vício cartográfico (datum) não listado** no catálogo do Art. 8º, I (Manual o trata como eliminatório) | Processual | Incluir explicitamente "inconformidades cartográficas" como sanáveis ou insanáveis |
+| R8 | **"em tempo real"** (Portal) vs ciclo anual | Forma | Trocar por "disponibilizadas por ciclo anual, com atualização contínua intra-ciclo" |
+| R9 | **`PLANO_MANEJO.pdf`** no Manual e "Planos de Manejo"/"Plano de Gestão" no Portal | Forma | Padronizar para a terminologia estadual ("Plano de Gestão") |
+
+---
+
+## 4. Notas de mérito
+
+- **N2** limita o efeito da unificação à **parcela UC/RPPN**, preservando as demais vias do ICMS Verde para as outras variáveis do índice (CAR, APP, ARL etc.).
+- **Art. 14** virou um capítulo completo e coerente (sigilo + LGPD com papéis + SisGen), dando **base normativa real** às regras do Portal.
+- O **mascaramento em WMS/WFS/WCS/GetFeatureInfo/GetFeature** elimina a abertura de vazamento da 1ª rodada.
+- **Glosa cautelar** + LEPA + MP/PA fecha o tema sancionatório sem usurpar o direito tributário.
+
+---
+
+## 5. Veredito final e caminho de publicação
+
+| Etapa | Status |
+| :--- | :---: |
+| Conformidade legal (competência, rito, calendário, sanções, sigilo/LGPD/SisGen) | ✅ **Pronto** |
+| Processo administrativo (LEPA, contraditório, motivação, efeito suspensivo) | ✅ **Pronto** |
+| Dados/schemas | ⚠️ **1 pendência** (`conselho_reunioes_qtd ≥ 2` no schema) |
+| Consistência documental | ✅ **Pronta** (ROADMAP/EPICOS/Módulos alinhados) |
+| Formal (digitação, data do Decreto 1.064) | ⚠️ **R1 - digitação** |
+
+**Sequência recomendada para fechar:**
+1. Corrigir o schema JSON do Módulo III (regra condicional ≥ 2) — a única pendência funcional.
+2. Corrigir a digitação "imprescindible" → "imprescindível" e as redações R2/R8/R9.
+3. Decidir os itens R3–R7 (podem ser remetidos para a Portaria Conjunta/IN, **antes do 1º ciclo de envio**).
+4. Encaminhar para **parecer da PGE/PA** + **consulta pública com os municípios (FAMEP)** — então assinar.
+
+O Decreto, nas suas funções de regular a lei, sincronizar-se com o ICMS Verde e proteger dados, está **juridicamente sólido** a partir desta rodada.
+
+---
+
 ## ANEXO — Referências de rastreabilidade
 
 - Produtos auditados: `minuta-decreto-seinuc.md`, `especificacao-modulos-dados-seinuc.md`, `minuta-portaria-diretrizes-tecnicas.md`, `manual-fluxo-envio-e-triagem.md`, `especificacao-portal-transparencia-ogc.md`.

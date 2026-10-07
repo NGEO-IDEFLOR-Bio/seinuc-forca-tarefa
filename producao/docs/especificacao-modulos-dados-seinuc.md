@@ -198,6 +198,7 @@ SEINUC/PA - ARQUITETURA CANÔNICA DE MÓDULOS DE DADOS
 | **Ato de Aprovação do Plano** | `plano_gestao_ato` | Texto (Livre) | Não | Portaria/Decreto de aprovação do Plano de Gestão / Manejo. |
 | **Data de Aprovação** | `plano_gestao_data` | Data (AAAA-MM-DD) | Não | Data da publicação do ato de aprovação. |
 | **Status de UC Legada** | `legada_status` | Enum (Texto) | Sim | `Conforme Lei 10.306/2023`, `Sítio Pesqueiro em Adequação (Art. 112)`, `UC Criada em Legislação Anterior em Reavaliação (Art. 114)`. |
+| **Prazo Final da UC Legada** | `legada_prazo_fim` | Data (AAAA-MM-DD) | Não | Data limite para reavaliação ou adequação (ex: 2028 no Art. 114 da Lei nº 10.306/2023). |
 | **Aspectos Arqueológicos/Antropológicos**| `antropologico_caracterizacao` | Texto (Livre) | Não | Descrição de sítios arqueológicos, patrimônio cultural e terras comunitárias (Art. 68, §1º). |
 | **Destinacao Mínima Municipal (Art. 117)**| `repasse_municipal_20pct` | Booleano (Sim/Não) | Sim | Rastreamento do cumprimento do repasse de 20% do ICMS a UCs municipais. |
 | **Visitantes Anuais** | `visitantes_qtd` | Número (Inteiro) | Não | Estimativa ou contagem oficial de visitantes no ano-base. |
@@ -227,11 +228,24 @@ SEINUC/PA - ARQUITETURA CANÔNICA DE MÓDULOS DE DADOS
       "type": "string",
       "enum": ["Conforme Lei 10.306/2023", "Sítio Pesqueiro em Adequação (Art. 112)", "UC Criada em Legislação Anterior em Reavaliação (Art. 114)"]
     },
+    "legada_prazo_fim": { "type": "string", "format": "date" },
     "antropologico_caracterizacao": { "type": "string" },
     "repasse_municipal_20pct": { "type": "boolean" },
     "visitantes_qtd": { "type": "integer", "minimum": 0 },
     "receita_arrecadada_brl": { "type": "number", "minimum": 0 }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "conselho_status": { "const": true } }
+      },
+      "then": {
+        "properties": {
+          "conselho_reunioes_qtd": { "type": "integer", "minimum": 2 }
+        }
+      }
+    }
+  ]
 }
 ```
 

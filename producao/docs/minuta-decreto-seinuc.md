@@ -17,7 +17,7 @@
 **Art. 3º** O SEINUC/PA tem por finalidades precípuas:
 * **I -** Subsidiar a gestão do SEUC/PA nas fases de criação, planejamento, controle, fiscalização, monitoramento e promoção de programas de pesquisa científica;
 * **II -** Integrar a base oficial de dados para o monitoramento e cálculo da parcela ambiental do ICMS Ecológico/Verde devida aos municípios, conforme a Lei Estadual nº 7.638/2012 e o Decreto Estadual nº 1.064/2020;
-* **III -** Garantir o controle social por meio da transparência ativa, em conformidade com a Lei Federal nº 12.527/2011 (LAI) e a Lei Federal nº 13.709/2018 (LGPD), ressalvadas as informações cujo sigilo seja imprescindible à proteção da biodiversidade e do patrimônio genético;
+* **III -** Garantir o controle social por meio da transparência ativa, em conformidade com a Lei Federal nº 12.527/2011 (LAI) e a Lei Federal nº 13.709/2018 (LGPD), ressalvadas as informações cujo sigilo seja imprescindível à proteção da biodiversidade e do patrimônio genético;
 * **IV -** Promover a integração automatizada com o Cadastro Nacional de Unidades de Conservação (CNUC), do Ministério do Meio Ambiente e Mudança do Clima.
 
 ---

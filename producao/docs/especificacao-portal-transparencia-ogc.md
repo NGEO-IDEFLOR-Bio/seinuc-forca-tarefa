@@ -54,7 +54,7 @@ PORTAL PÚBLICO SEINUC/PA (TRANSPARÊNCIA ATIVA)
 
 ## 3. Geoserviços OGC e Integração com a Cartografia Oficial do Estado (Art. 111 da Lei 10.306/23 e Art. 13 do Decreto)
 
-Em estrito cumprimento ao **Art. 111 da Lei Estadual nº 10.306/2023** e ao **Art. 13 do Decreto Regulamentador**, as bases de dados geográficos do SEINUC/PA serão disponibilizadas em tempo real via geoserviços padronizados pela *Open Geospatial Consortium (OGC)* para consumo obrigatório pelos geoportais oficiais do Estado do Pará (SIEPA, ITERPA, SEMAS e SEFA).
+Em estrito cumprimento ao **Art. 111 da Lei Estadual nº 10.306/2023** e ao **Art. 13 do Decreto Regulamentador**, as bases de dados geográficos do SEINUC/PA serão disponibilizadas por ciclo anual (com atualização contínua intra-ciclo) via geoserviços padronizados pela *Open Geospatial Consortium (OGC)* para consumo obrigatório pelos geoportais oficiais do Estado do Pará (SIEPA, ITERPA, SEMAS e SEFA).
 
 ### 3.1. Especificação dos Geoserviços OGC
 
