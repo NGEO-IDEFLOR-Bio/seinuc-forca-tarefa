@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEINUC/PA — Dossiê Técnico-Normativo de Regulamentação</title>
-    <meta name="description" content="Dossiê Técnico-Normativo Executivo do SEINUC/PA — Regulamentação da Lei Estadual nº 10.306/2023, Schema de Dados, Manual de Auditoria e ICMS Ecológico.">
+    <title>SEINUC/PA — Sistema Estadual de Informações sobre Unidades de Conservação</title>
+    <meta name="description" content="Apresentação Institucional Executiva do SEINUC/PA — Regulamentação da Lei Estadual nº 10.306/2023, Portal WebGIS, Módulos de Dados, ICMS Ecológico e Pacote Normativo.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -91,8 +91,8 @@
         /* Folder Stacking Top Positions */
         .folder:nth-child(1) { top: calc(var(--stack-top) + 0px); z-index: 1; --folder-theme: #0A2540; --tab-accent: #38BDF8; }
         .folder:nth-child(2) { top: calc(var(--stack-top) + 48px); z-index: 2; --folder-theme: #04382C; --tab-accent: #34D399; }
-        .folder:nth-child(3) { top: calc(var(--stack-top) + 96px); z-index: 3; --folder-theme: #451A03; --tab-accent: #FB923C; }
-        .folder:nth-child(4) { top: calc(var(--stack-top) + 144px); z-index: 4; --folder-theme: #1E1B4B; --tab-accent: #A78BFA; }
+        .folder:nth-child(3) { top: calc(var(--stack-top) + 96px); z-index: 3; --folder-theme: #1E1B4B; --tab-accent: #A78BFA; }
+        .folder:nth-child(4) { top: calc(var(--stack-top) + 144px); z-index: 4; --folder-theme: #451A03; --tab-accent: #FB923C; }
         .folder:nth-child(5) { top: calc(var(--stack-top) + 192px); z-index: 5; --folder-theme: #064E3B; --tab-accent: #4ADE80; }
         .folder:nth-child(6) { top: calc(var(--stack-top) + 240px); z-index: 6; --folder-theme: #1E293B; --tab-accent: #FBBF24; }
 
@@ -102,7 +102,7 @@
 
         .folder-tab {
             height: 48px;
-            min-width: 320px;
+            min-width: 340px;
             max-width: 100%;
             padding: 0 28px;
             display: flex;
@@ -189,7 +189,7 @@
                     <i class="fa-solid fa-file-signature mr-1.5"></i> Lei Estadual nº 10.306/2023
                 </span>
                 <span class="px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-emerald-400">
-                    <i class="fa-solid fa-shield-halved mr-1.5"></i> PGE/PA & FAMEP
+                    <i class="fa-solid fa-earth-americas mr-1.5"></i> Sistema SEINUC/PA
                 </span>
             </div>
 
@@ -204,8 +204,8 @@
     <section class="hero-bg py-16 lg:py-20 border-b border-slate-800 text-center relative overflow-hidden">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="inline-flex items-center space-x-2 bg-emerald-950/80 border border-emerald-500/30 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-6">
-                <i class="fa-solid fa-scroll"></i>
-                <span>Dossiê Técnico-Normativo • Parecer Executivo</span>
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Apresentação Executiva do Produto Institucional</span>
             </div>
             
             <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-6">
@@ -216,36 +216,40 @@
             </h2>
 
             <p class="text-base sm:text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed mb-8">
-                Instrução normativa e estruturação tecnológica para regulamentação da <strong class="text-slate-200">Lei Estadual nº 10.306/2023</strong>. Consolidação dos arcabouços legal, cadastral, geográfico e financeiro para submissão à <strong class="text-slate-200">Procuradoria-Geral do Estado (PGE/PA)</strong> e consulta municipal.
+                A infraestrutura pública unificada de <strong class="text-slate-200">governança ambiental, geoprocessamento, transparência documental e repasse financeiro do ICMS Verde</strong> do Estado do Pará, desenvolvida para dar cumprimento integral à <strong class="text-slate-200">Lei Estadual nº 10.306/2023</strong>.
             </p>
 
             <!-- Executive Context Box -->
             <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 text-left max-w-4xl mx-auto backdrop-blur-md shadow-2xl">
                 <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
                     <div class="flex items-center space-x-3">
-                        <i class="fa-solid fa-building-columns text-amber-400 text-lg"></i>
-                        <span class="text-xs font-bold uppercase tracking-wider text-slate-300">Sumário de Encaminhamento Institucional</span>
+                        <i class="fa-solid fa-cubes text-emerald-400 text-lg"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-300">Arquitetura Geral da Solução Entregue</span>
                     </div>
-                    <span class="text-xs font-mono bg-emerald-950 text-emerald-300 px-2.5 py-1 rounded border border-emerald-800">Status: ✅ APROVADO</span>
+                    <span class="text-xs font-mono bg-emerald-950 text-emerald-300 px-2.5 py-1 rounded border border-emerald-800">Pronto para Implementação</span>
                 </div>
-                <div class="grid md:grid-cols-3 gap-4 text-xs text-slate-300">
+                <div class="grid md:grid-cols-4 gap-4 text-xs text-slate-300">
                     <div>
-                        <span class="text-slate-500 block font-semibold uppercase">Órgão Central</span>
-                        <strong class="text-slate-200">SEMAS/PA</strong> (Art. 68 da Lei 10.306)
+                        <span class="text-slate-500 block font-semibold uppercase">Minuta Normativa</span>
+                        <strong class="text-slate-200">Decreto Estadual</strong> de Regulamentação
                     </div>
                     <div>
-                        <span class="text-slate-500 block font-semibold uppercase">Órgão Executor</span>
-                        <strong class="text-slate-200">IDEFLOR-Bio</strong> (Gestão Operacional)
+                        <span class="text-slate-500 block font-semibold uppercase">Portal Público</span>
+                        <strong class="text-slate-200">WebGIS & OGC</strong> (SIRGAS 2000)
                     </div>
                     <div>
-                        <span class="text-slate-500 block font-semibold uppercase">Rito Recursal Unificado</span>
-                        <strong class="text-slate-200">15 Dias Úteis</strong> (Lei nº 8.972/2020 - LEPA)
+                        <span class="text-slate-500 block font-semibold uppercase">Padrão de Dados</span>
+                        <strong class="text-slate-200">JSON Schema</strong> Módulos A, B, C, D
+                    </div>
+                    <div>
+                        <span class="text-slate-500 block font-semibold uppercase">Gestão Financeira</span>
+                        <strong class="text-slate-200">ICMS Ecológico</strong> (Calculadora IGUC)
                     </div>
                 </div>
             </div>
 
             <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-xs font-semibold text-slate-400">
-                <span><i class="fa-solid fa-arrow-down-long text-emerald-400 mr-2 animate-bounce"></i> Role a página para abrir as pastas do dossiê técnico</span>
+                <span><i class="fa-solid fa-arrow-down-long text-emerald-400 mr-2 animate-bounce"></i> Role a página para explorar as pastas com os componentes do sistema</span>
             </div>
         </div>
     </section>
@@ -258,54 +262,54 @@
             <div class="folder" id="pasta-decreto">
                 <div class="folder-tab">
                     <span class="folder-tab-badge"></span>
-                    <span>PASTA I • MINUTA DO DECRETO ESTADUAL (EIXO LEGAL)</span>
+                    <span>PASTA I • MINUTA DO DECRETO ESTADUAL (ARCABOUÇO NORMATIVO)</span>
                 </div>
                 <div class="folder-body">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
                         <div>
-                            <span class="text-xs font-mono uppercase text-sky-400 tracking-wider">Regulamentação da Lei Estadual nº 10.306/2023</span>
-                            <h2 class="text-2xl font-bold text-white mt-1">Dispositivos Regulamentares & Segurança Jurídica</h2>
+                            <span class="text-xs font-mono uppercase text-sky-400 tracking-wider">Regulamentação do Art. 68 da Lei Estadual nº 10.306/2023</span>
+                            <h2 class="text-2xl font-bold text-white mt-1">O Instrumento Legal de Instituição do SEINUC/PA</h2>
                         </div>
                         <a href="producao/docs/docx/minuta-decreto-seinuc.docx" class="inline-flex items-center space-x-2 bg-sky-600 hover:bg-sky-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md">
                             <i class="fa-solid fa-file-word"></i>
-                            <span>Baixar Minuta Oficial (.docx ABNT)</span>
+                            <span>Baixar Minuta do Decreto (.docx)</span>
                         </a>
                     </div>
 
                     <div class="grid lg:grid-cols-2 gap-6 mb-6">
                         <div class="space-y-4">
                             <h3 class="text-sm font-bold uppercase text-slate-300 tracking-wider flex items-center">
-                                <i class="fa-solid fa-gavel text-sky-400 mr-2"></i> Pilares da Minuta Regulamentar
+                                <i class="fa-solid fa-gavel text-sky-400 mr-2"></i> Estrutura Normativa Regulamentada
                             </h3>
                             <ul class="space-y-3 text-xs text-slate-300">
                                 <li class="bg-slate-900/80 p-3 rounded-lg border border-slate-800">
-                                    <strong class="text-sky-300 block mb-1">1. Pacificação de Terminologia (Art. 2º, XXII)</strong>
-                                    Fica estabelecida a equivalência jurídica absoluta entre o termo federal "Plano de Manejo" e o termo legal estadual <strong class="text-white">"Plano de Gestão"</strong>, eliminando dupla exigência técnica.
+                                    <strong class="text-sky-300 block mb-1">1. Definição de Competências Institucionais (Arts. 3º e 4º)</strong>
+                                    Fixa a <strong class="text-white">SEMAS/PA</strong> como Órgão Central responsável pela coordenação e o <strong class="text-white">IDEFLOR-Bio</strong> como Órgão Executor encarregado da gestão operacional e geoprocessamento.
                                 </li>
                                 <li class="bg-slate-900/80 p-3 rounded-lg border border-slate-800">
-                                    <strong class="text-sky-300 block mb-1">2. Rito Recursal da LEPA/PA (Lei Estadual nº 8.972/2020)</strong>
-                                    Fixação do prazo de <strong class="text-white">15 (quinze) dias úteis</strong> para interposição de recurso administrativo (Art. 83 da LEPA), garantidos a ampla defesa e o efeito suspensivo.
+                                    <strong class="text-sky-300 block mb-1">2. Pacificação Conceitual do Plano de Gestão (Art. 2º, XXII)</strong>
+                                    Equipara expressamente os <strong class="text-white">Planos de Gestão</strong> estaduais aos Planos de Manejo federais, garantindo segurança jurídica aos atos aprovados no Estado do Pará.
                                 </li>
                                 <li class="bg-slate-900/80 p-3 rounded-lg border border-slate-800">
-                                    <strong class="text-sky-300 block mb-1">3. Minuta Aberta & Flexibilidade Executiva</strong>
-                                    Adoção da técnica legislativa padrão <strong class="text-white">[NOME DO(A) GOVERNADOR(A)]</strong>, garantindo perenidade técnica independente de transição de mandato.
+                                    <strong class="text-sky-300 block mb-1">3. Cadastramento Unificado de UCs e RPPNs (Arts. 7º ao 10)</strong>
+                                    Estabelece as regras de homologação para Unidades de Conservação Estaduais, Municipais e Reservas Particulares do Patrimônio Natural (RPPNs).
                                 </li>
                             </ul>
                         </div>
 
                         <div>
                             <h3 class="text-sm font-bold uppercase text-slate-300 tracking-wider mb-3 flex items-center">
-                                <i class="fa-solid fa-quote-left text-sky-400 mr-2"></i> Excerto Normativo do Decreto
+                                <i class="fa-solid fa-file-contract text-sky-400 mr-2"></i> Minuta do Decreto de Regulamentação
                             </h3>
                             <div class="law-quote space-y-3">
                                 <p class="font-semibold text-slate-200">
                                     "DECRETO Nº [NÚMERO], DE [DIA] DE [MÊS] DE [ANO]
                                 </p>
                                 <p class="italic">
-                                    Regulamenta o Sistema Estadual de Informações sobre Unidades de Conservação do Pará (SEINUC/PA), previsto no Art. 68 da Lei Estadual nº 10.306, de 3 de janeiro de 2023, institui o Portal Público de Transparência e estabelece os procedimentos para apuração dos indicadores do ICMS Ecológico."
+                                    Regulamenta o Sistema Estadual de Informações sobre Unidades de Conservação do Pará (SEINUC/PA), previsto no Art. 68 da Lei Estadual nº 10.306/2023, institui o Portal Público de Transparência e estabelece os procedimentos de homologação para fins do ICMS Ecológico."
                                 </p>
                                 <p class="text-xs text-slate-400 border-t border-slate-800 pt-2">
-                                    <strong>Art. 4º.</strong> O SEINUC/PA integrará as informações das UCs estaduais, municipais e RPPNs em quatro módulos estruturados de dados cadastrais, geográficos, de gestão e de repasse financeiro.
+                                    <strong>Art. 1º.</strong> Fica instituído o SEINUC/PA como sistema informatizado oficial para coleta, validação, organização e disponibilização pública de dados sobre o patrimônio protegido do Estado do Pará.
                                 </p>
                             </div>
                         </div>
@@ -317,76 +321,82 @@
             <div class="folder" id="pasta-schema">
                 <div class="folder-tab">
                     <span class="folder-tab-badge"></span>
-                    <span>PASTA II • ARQUITETURA DE DADOS & SCHEMA JSON (EIXO TECNOLÓGICO)</span>
+                    <span>PASTA II • ARQUITETURA DE DADOS (OS 4 MÓDULOS REGULADOS)</span>
                 </div>
                 <div class="folder-body">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
                         <div>
-                            <span class="text-xs font-mono uppercase text-emerald-400 tracking-wider">Especificação Técnica de Dados v1.0.0-final</span>
-                            <h2 class="text-2xl font-bold text-white mt-1">Validação Estruturada & Regras Condicionais (allOf/if-then)</h2>
+                            <span class="text-xs font-mono uppercase text-emerald-400 tracking-wider">Modelo Estruturado de Dados • JSON Schema v1.0.0</span>
+                            <h2 class="text-2xl font-bold text-white mt-1">Os 4 Módulos do Sistema SEINUC/PA</h2>
                         </div>
                         <a href="producao/docs/docx/especificacao-modulos-dados-seinuc.docx" class="inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md">
                             <i class="fa-solid fa-file-word"></i>
-                            <span>Baixar Especificação de Dados (.docx)</span>
+                            <span>Baixar Especificação de Módulos (.docx)</span>
                         </a>
                     </div>
 
-                    <div class="grid lg:grid-cols-2 gap-6">
-                        <div class="space-y-4">
-                            <p class="text-xs text-slate-300 leading-relaxed">
-                                O schema JSON do SEINUC/PA (Draft-07) unifica os 4 Módulos de Dados. Para evitar inconsistências de preenchimento pelos órgãos gestores e prefeituras, inclui validações rigorosas de tipos, padrões REGEX, enumerações fechadas e estruturas de dependência lógica.
+                    <div class="grid lg:grid-cols-4 gap-4 mb-6">
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+                            <div class="text-emerald-400 font-bold text-xs uppercase mb-2 flex items-center">
+                                <i class="fa-solid fa-passport mr-2"></i> Módulo A: Cadastral
+                            </div>
+                            <p class="text-[11px] text-slate-300 leading-relaxed">
+                                Registro dos atos legais de criação, alteração e recategorização no DOE, dados do órgão gestor e tipologia do SNUC/SEUC.
                             </p>
+                        </div>
 
-                            <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 space-y-3">
-                                <h4 class="text-xs font-bold uppercase text-emerald-400 flex items-center">
-                                    <i class="fa-solid fa-code-branch mr-2"></i> Regra de Validação do Conselho Gestor (Refinamento R1)
-                                </h4>
-                                <p class="text-xs text-slate-300">
-                                    Se o campo <code class="text-emerald-300">conselho_gestor_existente</code> for <code class="text-emerald-300">true</code>, o bloco <code class="text-emerald-300">then</code> exige obrigatoriamente a presença de <code class="text-emerald-300">conselho_reunioes_qtd</code>, impedindo omissão total do quantitativo de reuniões.
-                                </p>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+                            <div class="text-emerald-400 font-bold text-xs uppercase mb-2 flex items-center">
+                                <i class="fa-solid fa-map-location-dot mr-2"></i> Módulo B: Geotecnologias
                             </div>
+                            <p class="text-[11px] text-slate-300 leading-relaxed">
+                                Geometrias oficiais em SIRGAS 2000, polígonos das UCs, Zonas de Amortecimento (ZA), zoneamento interno e mosaicos.
+                            </p>
+                        </div>
 
-                            <div class="grid grid-cols-2 gap-3 text-xs">
-                                <div class="bg-slate-900 p-3 rounded-lg border border-slate-800">
-                                    <span class="text-slate-500 block uppercase font-mono">Datum Cartográfico</span>
-                                    <strong class="text-emerald-400">SIRGAS 2000 (EPSG:4674)</strong>
-                                </div>
-                                <div class="bg-slate-900 p-3 rounded-lg border border-slate-800">
-                                    <span class="text-slate-500 block uppercase font-mono">Formato Espacial</span>
-                                    <strong class="text-emerald-400">GeoJSON / OGC Shapefile</strong>
-                                </div>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+                            <div class="text-emerald-400 font-bold text-xs uppercase mb-2 flex items-center">
+                                <i class="fa-solid fa-users-gear mr-2"></i> Módulo C: Gestão
                             </div>
+                            <p class="text-[11px] text-slate-300 leading-relaxed">
+                                Planos de Gestão vigentes, histórico de reuniões e atas dos Conselhos Gestores, pesquisas e gestão antropológica.
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+                            <div class="text-emerald-400 font-bold text-xs uppercase mb-2 flex items-center">
+                                <i class="fa-solid fa-coins mr-2"></i> Módulo D: ICMS Ecológico
+                            </div>
+                            <p class="text-[11px] text-slate-300 leading-relaxed">
+                                Matriz de indicadores socioambientais e cálculo automatizado do Índice de Gestão de UC (IGUC) para repasse aos municípios.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <h4 class="text-xs font-bold uppercase text-emerald-400 flex items-center">
+                                <i class="fa-solid fa-shield-cat mr-2"></i> Mecanismo Automatizado de Qualidade de Dados
+                            </h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                O motor do SEINUC/PA valida cada submissão via <code class="text-emerald-300">JSON Schema Draft-07</code>. Se um município informar a existência de Conselho Gestor, a regra lógica exige automaticamente a comprovação das atas e reuniões realizadas.
+                            </p>
                         </div>
 
                         <!-- Code Viewer -->
                         <div>
                             <div class="flex items-center justify-between bg-slate-900 px-4 py-2 rounded-t-lg border border-slate-800 border-b-0">
-                                <span class="text-xs font-mono text-emerald-400">schema-seinuc.json [Trecho if-then]</span>
-                                <span class="text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded">JSON Schema Draft-07</span>
+                                <span class="text-xs font-mono text-emerald-400">Payload Padrão SEINUC/PA (Exemplo de Validação)</span>
+                                <span class="text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded">JSON Validado</span>
                             </div>
-                            <div class="code-container p-4 rounded-b-lg max-h-64 overflow-y-auto">
+                            <div class="code-container p-4 rounded-b-lg max-h-48 overflow-y-auto">
 <pre><code>{
-  <span class="text-emerald-400">"allOf"</span>: [
-    {
-      <span class="text-emerald-400">"if"</span>: {
-        <span class="text-emerald-400">"properties"</span>: {
-          <span class="text-emerald-400">"conselho_gestor_existente"</span>: { <span class="text-amber-400">"const"</span>: <span class="text-sky-300">true</span> }
-        }
-      },
-      <span class="text-emerald-400">"then"</span>: {
-        <span class="text-emerald-400">"required"</span>: [
-          <span class="text-sky-300">"conselho_ato_criacao"</span>,
-          <span class="text-sky-300">"conselho_reunioes_qtd"</span>
-        ],
-        <span class="text-emerald-400">"properties"</span>: {
-          <span class="text-emerald-400">"conselho_reunioes_qtd"</span>: {
-            <span class="text-amber-400">"type"</span>: <span class="text-sky-300">"integer"</span>,
-            <span class="text-amber-400">"minimum"</span>: <span class="text-sky-300">0</span>
-          }
-        }
-      }
-    }
-  ]
+  <span class="text-emerald-400">"uc_sigla"</span>: <span class="text-sky-300">"APA-TRIUNFO"</span>,
+  <span class="text-emerald-400">"categoria"</span>: <span class="text-sky-300">"USO_SUSTENTAVEL"</span>,
+  <span class="text-emerald-400">"plano_gestao_vigente"</span>: <span class="text-sky-300">true</span>,
+  <span class="text-emerald-400">"conselho_gestor_existente"</span>: <span class="text-sky-300">true</span>,
+  <span class="text-emerald-400">"conselho_reunioes_qtd"</span>: <span class="text-amber-400">4</span>,
+  <span class="text-emerald-400">"datum_oficial"</span>: <span class="text-sky-300">"EPSG:4674"</span>
 }</code></pre>
                             </div>
                         </div>
@@ -394,223 +404,217 @@
                 </div>
             </div>
 
-            <!-- PASTA 3: MANUAL OPERACIONAL DE AUDITORIA -->
-            <div class="folder" id="pasta-manual">
+            <!-- PASTA 3: PORTAL PÚBLICO & GEOSERVIÇOS OGC -->
+            <div class="folder" id="pasta-portal">
                 <div class="folder-tab">
                     <span class="folder-tab-badge"></span>
-                    <span>PASTA III • MANUAL OPERACIONAL DE AUDITORIA (EIXO DE VÍCIOS)</span>
+                    <span>PASTA III • PORTAL PÚBLICO & GEOSERVIÇOS OGC (WEBGIS ESTADUAL)</span>
                 </div>
                 <div class="folder-body">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
                         <div>
-                            <span class="text-xs font-mono uppercase text-amber-400 tracking-wider">Protocolo de Triagem e Qualificação Cadastral</span>
-                            <h2 class="text-2xl font-bold text-white mt-1">Catálogo de Vícios Sanáveis vs. Insanáveis</h2>
+                            <span class="text-xs font-mono uppercase text-purple-400 tracking-wider">Transparência Ativa & Interoperabilidade Espacial</span>
+                            <h2 class="text-2xl font-bold text-white mt-1">O WebGIS do Patrimônio Natural Paraense</h2>
                         </div>
-                        <a href="producao/docs/docx/manual-fluxo-envio-e-triagem.docx" class="inline-flex items-center space-x-2 bg-amber-600 hover:bg-amber-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md">
+                        <a href="producao/docs/docx/especificacao-portal-transparencia-ogc.docx" class="inline-flex items-center space-x-2 bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md">
+                            <i class="fa-solid fa-file-word"></i>
+                            <span>Baixar Especificação do WebGIS (.docx)</span>
+                        </a>
+                    </div>
+
+                    <div class="grid lg:grid-cols-3 gap-6 mb-6">
+                        <!-- Componente 1: Visualizador WebGIS -->
+                        <div class="bg-slate-900/90 p-5 rounded-xl border border-slate-800">
+                            <div class="w-10 h-10 bg-purple-950 text-purple-400 rounded-lg flex items-center justify-center text-lg font-bold mb-3">
+                                <i class="fa-solid fa-map"></i>
+                            </div>
+                            <h3 class="text-sm font-bold text-white mb-2">Visualizador WebGIS Interativo</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Mapa dinâmico com os limites cartográficos oficiais de todas as 29 UCs estaduais, UCs municipais e RPPNs. Suporta consultas de sobreposição com terras indígenas e quilombolas.
+                            </p>
+                        </div>
+
+                        <!-- Componente 2: Repositório Documental -->
+                        <div class="bg-slate-900/90 p-5 rounded-xl border border-slate-800">
+                            <div class="w-10 h-10 bg-purple-950 text-purple-400 rounded-lg flex items-center justify-center text-lg font-bold mb-3">
+                                <i class="fa-solid fa-box-archive"></i>
+                            </div>
+                            <h3 class="text-sm font-bold text-white mb-2">Repositório Documental Aberto</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Download direto em PDF dos Planos de Gestão aprovados, Decretos de Criação, Zonas de Amortecimento e atas públicas dos Conselhos Gestores.
+                            </p>
+                        </div>
+
+                        <!-- Componente 3: Serviços OGC WMS/WFS -->
+                        <div class="bg-slate-900/90 p-5 rounded-xl border border-slate-800">
+                            <div class="w-10 h-10 bg-purple-950 text-purple-400 rounded-lg flex items-center justify-center text-lg font-bold mb-3">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <h3 class="text-sm font-bold text-white mb-2">Serviços OGC Interoperáveis</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Camadas abertas nos padrões WMS, WFS e GeoJSON no Datum SIRGAS 2000 (EPSG:4674), permitindo integração nativa com o SIMLAM/SEMAS, QGIS, CAR e órgãos federais (ICMBio/IBAMA).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PASTA 4: ICMS ECOLÓGICO / VERDE -->
+            <div class="folder" id="pasta-icms">
+                <div class="folder-tab">
+                    <span class="folder-tab-badge"></span>
+                    <span>PASTA IV • ICMS ECOLÓGICO & REPASSE FINANCEIRO MUNICIPAL</span>
+                </div>
+                <div class="folder-body">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
+                        <div>
+                            <span class="text-xs font-mono uppercase text-amber-400 tracking-wider">Cota-Parte Municipal & Decreto Estadual nº 1.064/2020</span>
+                            <h2 class="text-2xl font-bold text-white mt-1">O Sistema de Cálculo do Índice IGUC</h2>
+                        </div>
+                        <a href="producao/docs/docx/minuta-portaria-diretrizes-tecnicas.docx" class="inline-flex items-center space-x-2 bg-amber-600 hover:bg-amber-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md">
+                            <i class="fa-solid fa-file-word"></i>
+                            <span>Baixar Portaria de Diretrizes (.docx)</span>
+                        </a>
+                    </div>
+
+                    <p class="text-xs text-slate-300 leading-relaxed mb-6">
+                        O SEINUC/PA automatiza a apuração do <strong class="text-white">Índice de Gestão da Unidade de Conservação (IGUC)</strong>. A pontuação de cada município é calculada combinando a extensão territorial protegida com o grau de efetividade de gestão (existência de Plano de Gestão, Conselho atuante e regularidade cadastral).
+                    </p>
+
+                    <!-- Timeline do Ciclo Anual -->
+                    <div class="grid md:grid-cols-4 gap-4 mb-6">
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 relative">
+                            <span class="text-xs font-mono text-amber-400 block font-bold mb-1">FASE 1 • ATÉ 31/01</span>
+                            <h4 class="text-xs font-bold text-white mb-1">Submissão dos Dados</h4>
+                            <p class="text-[11px] text-slate-400 leading-snug">Envio das informações das UCs municipais pelas prefeituras no Portal SEINUC.</p>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 relative">
+                            <span class="text-xs font-mono text-amber-400 block font-bold mb-1">FASE 2 • FEVEREIRO</span>
+                            <h4 class="text-xs font-bold text-white mb-1">Triagem Automatizada</h4>
+                            <p class="text-[11px] text-slate-400 leading-snug">Validação sintática via Schema JSON e análise de sobreposição espacial OGC.</p>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 relative">
+                            <span class="text-xs font-mono text-amber-400 block font-bold mb-1">FASE 3 • MARÇO (15 D.U.)</span>
+                            <h4 class="text-xs font-bold text-white mb-1">Rito Recursal LEPA</h4>
+                            <p class="text-[11px] text-slate-400 leading-snug">Prazo de 15 dias úteis para sanar inconsistências notificadas (Lei nº 8.972/2020).</p>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 relative">
+                            <span class="text-xs font-mono text-amber-400 block font-bold mb-1">FASE 4 • ATÉ 31/05</span>
+                            <h4 class="text-xs font-bold text-white mb-1">Homologação do Índice</h4>
+                            <p class="text-[11px] text-slate-400 leading-snug">Publicação do índice definitivo do ICMS Verde para repasse no exercício posterior.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PASTA 5: MANUAL OPERACIONAL DE TRIAGEM -->
+            <div class="folder" id="pasta-manual">
+                <div class="folder-tab">
+                    <span class="folder-tab-badge"></span>
+                    <span>PASTA V • MANUAL OPERACIONAL DE TRIAGEM & REQUISITOS TÉCNICOS</span>
+                </div>
+                <div class="folder-body">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
+                        <div>
+                            <span class="text-xs font-mono uppercase text-emerald-400 tracking-wider">Guia de Envio para Prefeituras e Órgãos Gestores</span>
+                            <h2 class="text-2xl font-bold text-white mt-1">Diretrizes de Habilitação e Qualificação Cadastral</h2>
+                        </div>
+                        <a href="producao/docs/docx/manual-fluxo-envio-e-triagem.docx" class="inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md">
                             <i class="fa-solid fa-file-word"></i>
                             <span>Baixar Manual Operacional (.docx)</span>
                         </a>
                     </div>
 
                     <div class="grid lg:grid-cols-2 gap-6">
-                        <!-- Vícios Sanáveis -->
-                        <div class="bg-slate-900/90 p-5 rounded-xl border border-amber-500/20">
+                        <!-- Requisitos Formais -->
+                        <div class="bg-slate-900/90 p-5 rounded-xl border border-emerald-500/20">
+                            <div class="flex items-center space-x-2 text-emerald-400 font-bold text-sm uppercase mb-3">
+                                <i class="fa-solid fa-file-circle-check"></i>
+                                <span>Requisitos de Padronização de Arquivos</span>
+                            </div>
+                            <ul class="space-y-2 text-xs text-slate-300">
+                                <li class="flex items-start space-x-2">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                                    <span><strong>Nome dos Documentos:</strong> Adoção de nomenclatura padrão (<code class="text-emerald-300">PLANO_GESTAO.pdf</code>, <code class="text-emerald-300">DECRETO_CRIACAO.pdf</code>).</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                                    <span><strong>Formato dos Polígonos:</strong> Shapefile comprimido em .ZIP ou GeoJSON no Datum SIRGAS 2000.</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                                    <span><strong>Comprovação de Conselho:</strong> Cópia digitalizada das atas de reuniões realizadas no ano de referência.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Critérios de Análise -->
+                        <div class="bg-slate-900/90 p-5 rounded-xl border border-slate-800">
                             <div class="flex items-center space-x-2 text-amber-400 font-bold text-sm uppercase mb-3">
-                                <i class="fa-solid fa-wrench"></i>
-                                <span>Vícios Sanáveis (Prazo Recursal de 15 Dias Úteis)</span>
+                                <i class="fa-solid fa-list-check"></i>
+                                <span>Matriz de Qualificação de Inconformidades</span>
                             </div>
-                            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
-                                Irregularidades formais que admitem correção tempestiva sem perda de habilitação no ciclo de repasse:
-                            </p>
-                            <ul class="space-y-2 text-xs text-slate-300">
-                                <li class="flex items-start space-x-2">
-                                    <i class="fa-solid fa-check text-amber-400 mt-0.5"></i>
-                                    <span>Erro de digitação em nomes de conselheiros ou número da ata.</span>
-                                </li>
-                                <li class="flex items-start space-x-2">
-                                    <i class="fa-solid fa-check text-amber-400 mt-0.5"></i>
-                                    <span>Falta temporária de cópia digitalizada de ata quando houver declaração formal do órgão gestor.</span>
-                                </li>
-                                <li class="flex items-start space-x-2">
-                                    <i class="fa-solid fa-check text-amber-400 mt-0.5"></i>
-                                    <span>Nomenclatura legada (ex: envio do arquivo com o nome oficial estipulado <code class="text-amber-300">PLANO_GESTAO.pdf</code> em substituição ao termo anterior).</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Vícios Insanáveis -->
-                        <div class="bg-slate-900/90 p-5 rounded-xl border border-red-500/20">
-                            <div class="flex items-center space-x-2 text-red-400 font-bold text-sm uppercase mb-3">
-                                <i class="fa-solid fa-circle-xmark"></i>
-                                <span>Vícios Insanáveis / Eliminatórios</span>
-                            </div>
-                            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
-                                Inconformidades graves de natureza jurídica ou cartográfica que resultam no indeferimento imediato:
-                            </p>
-                            <ul class="space-y-2 text-xs text-slate-300">
-                                <li class="flex items-start space-x-2">
-                                    <i class="fa-solid fa-xmark text-red-400 mt-0.5"></i>
-                                    <span><strong>Inconformidades Cartográficas Topológicas:</strong> Sobreposição indevida sobre Terras Indígenas ou Quilombolas sem amparo legal.</span>
-                                </li>
-                                <li class="flex items-start space-x-2">
-                                    <i class="fa-solid fa-xmark text-red-400 mt-0.5"></i>
-                                    <span><strong>Ausência do Ato Legal de Criação:</strong> Falta de publicação do Decreto de Criação no Diário Oficial.</span>
-                                </li>
-                                <li class="flex items-start space-x-2">
-                                    <i class="fa-solid fa-xmark text-red-400 mt-0.5"></i>
-                                    <span><strong>Incompatibilidade de Datum:</strong> Arquivos shapefile gravados fora do Datum oficial SIRGAS 2000.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PASTA 4: ICMS ECOLÓGICO & REPASSE MUNICIPAL -->
-            <div class="folder" id="pasta-icms">
-                <div class="folder-tab">
-                    <span class="folder-tab-badge"></span>
-                    <span>PASTA IV • ICMS ECOLÓGICO & METODOLOGIA DE CÁLCULO (EIXO FINANCEIRO)</span>
-                </div>
-                <div class="folder-body">
-                    <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
-                        <div>
-                            <span class="text-xs font-mono uppercase text-purple-400 tracking-wider">Cota-Parte Municipal & Decreto Estadual nº 1.064/2020</span>
-                            <h2 class="text-2xl font-bold text-white mt-1">Linha do Tempo & Ciclo Anual de Apuração</h2>
-                        </div>
-                        <a href="producao/docs/docx/minuta-portaria-diretrizes-tecnicas.docx" class="inline-flex items-center space-x-2 bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md">
-                            <i class="fa-solid fa-file-word"></i>
-                            <span>Baixar Portaria de Diretrizes (.docx)</span>
-                        </a>
-                    </div>
-
-                    <!-- Timeline Flow -->
-                    <div class="grid md:grid-cols-4 gap-4 mb-6">
-                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 relative">
-                            <span class="text-xs font-mono text-purple-400 block font-bold mb-1">FASE 1 • ATÉ 31/01</span>
-                            <h4 class="text-xs font-bold text-white mb-1">Envio pelos Municípios</h4>
-                            <p class="text-[11px] text-slate-400 leading-snug">Submissão dos dados anuais das UCs municipais no Portal SEINUC.</p>
-                        </div>
-                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 relative">
-                            <span class="text-xs font-mono text-purple-400 block font-bold mb-1">FASE 2 • FEVEREIRO</span>
-                            <h4 class="text-xs font-bold text-white mb-1">Auditoria & Triagem</h4>
-                            <p class="text-[11px] text-slate-400 leading-snug">Processamento sintático via Schema JSON e análise cartográfica OGC.</p>
-                        </div>
-                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 relative">
-                            <span class="text-xs font-mono text-purple-400 block font-bold mb-1">FASE 3 • MARÇO (15 D.U.)</span>
-                            <h4 class="text-xs font-bold text-white mb-1">Janela de Recursos (LEPA)</h4>
-                            <p class="text-[11px] text-slate-400 leading-snug">Notificação dos municípios com vícios sanáveis e prazo de 15 dias úteis.</p>
-                        </div>
-                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 relative">
-                            <span class="text-xs font-mono text-purple-400 block font-bold mb-1">FASE 4 • ATÉ 31/05</span>
-                            <h4 class="text-xs font-bold text-white mb-1">Homologação Final</h4>
-                            <p class="text-[11px] text-slate-400 leading-snug">Publicação do índice definitivo do IGUC para repasse no exercício seguinte.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 text-xs text-slate-300">
-                        <strong class="text-purple-300 block mb-1">Princípio da Atualização Contínua Intra-Ciclo</strong>
-                        Enquanto os índices do ICMS Verde seguem o ciclo anual com trava em 31/05, os dados de geoprocessamento e polígonos de novas UCs no Portal Público possuem <strong class="text-white">atualização contínua e em tempo real</strong>.
-                    </div>
-                </div>
-            </div>
-
-            <!-- PASTA 5: GEOTECNOLOGIAS & INTEROPERABILIDADE OGC -->
-            <div class="folder" id="pasta-ogc">
-                <div class="folder-tab">
-                    <span class="folder-tab-badge"></span>
-                    <span>PASTA V • GEOSERVIÇOS OGC & ZONA DE AMORTECIMENTO (EIXO ESPACIAL)</span>
-                </div>
-                <div class="folder-body">
-                    <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
-                        <div>
-                            <span class="text-xs font-mono uppercase text-emerald-400 tracking-wider">WebGIS Interativo & Serviços de Mapas WMS/WFS</span>
-                            <h2 class="text-2xl font-bold text-white mt-1">Interoperabilidade Espacial & Transparência Activa</h2>
-                        </div>
-                        <a href="producao/docs/docx/especificacao-portal-transparencia-ogc.docx" class="inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md">
-                            <i class="fa-solid fa-file-word"></i>
-                            <span>Baixar Especificação OGC (.docx)</span>
-                        </a>
-                    </div>
-
-                    <div class="grid lg:grid-cols-3 gap-6">
-                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
-                            <div class="text-emerald-400 font-bold text-xs uppercase mb-2 flex items-center">
-                                <i class="fa-solid fa-layer-group mr-2"></i> Módulo A — WebGIS
-                            </div>
-                            <p class="text-xs text-slate-300 leading-relaxed">
-                                Visualizador geográfico de UCs estaduais, municipais, RPPNs e Zonas de Amortecimento (ZA) com suporte a downloads diretos em KML, GeoJSON e Shapefile.
-                            </p>
-                        </div>
-
-                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
-                            <div class="text-emerald-400 font-bold text-xs uppercase mb-2 flex items-center">
-                                <i class="fa-solid fa-folder-tree mr-2"></i> Módulo B — Documental
-                            </div>
-                            <p class="text-xs text-slate-300 leading-relaxed">
-                                Repositório unificado dos Planos de Gestão (equivalentes aos planos de manejo), Atos de Criação, Atas dos Conselhos e Estudos Antropológicos.
-                            </p>
-                        </div>
-
-                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
-                            <div class="text-emerald-400 font-bold text-xs uppercase mb-2 flex items-center">
-                                <i class="fa-solid fa-chart-pie mr-2"></i> Módulo C — Painel ICMS
-                            </div>
-                            <p class="text-xs text-slate-300 leading-relaxed">
-                                Consulta pública aos índices de efetividade de gestão das UCs por município com demonstrativos de repasse financeiro do ICMS Verde.
+                            <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                                O manual classifica inconformidades em **Sanáveis** (erros formais sanáveis no prazo recursal de 15 dias úteis) e **Insanáveis** (incompatibilidade de Datum ou sobreposição espacial indevida sem respaldo legal).
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- PASTA 6: CERTIFICAÇÃO DE APROVAÇÃO & PARECER FINAL -->
-            <div class="folder" id="pasta-certificacao">
+            <!-- PASTA 6: PACOTE COMPLETO DE ENTREGÁVEIS -->
+            <div class="folder" id="pasta-pacote">
                 <div class="folder-tab">
                     <span class="folder-tab-badge"></span>
-                    <span>PASTA VI • CERTIFICAÇÃO DE APROVAÇÃO & ENCAMINHAMENTO PGE/PA</span>
+                    <span>PASTA VI • PACOTE NORMATIVO & SUÍTE COMPLETA DE ENTREGÁVEIS</span>
                 </div>
                 <div class="folder-body">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
                         <div>
-                            <span class="text-xs font-mono uppercase text-amber-400 tracking-wider">Conclusão da 4ª Rodada de Auditoria</span>
-                            <h2 class="text-2xl font-bold text-white mt-1">Veredito: APROVADO PARA ENCAMINHAMENTO</h2>
+                            <span class="text-xs font-mono uppercase text-amber-400 tracking-wider">Produtos Entregues e Prontos para Tramitação</span>
+                            <h2 class="text-2xl font-bold text-white mt-1">Instrumentos Prontos para Parecer da PGE/PA</h2>
                         </div>
                         <span class="inline-flex items-center space-x-2 bg-emerald-950 text-emerald-300 border border-emerald-700 px-4 py-2 rounded-lg text-xs font-bold">
                             <i class="fa-solid fa-circle-check text-emerald-400"></i>
-                            <span>NULIDADE ZERO CERTIFICADA</span>
+                            <span>5 PRODUTOS FINALIZADOS</span>
                         </span>
                     </div>
 
-                    <div class="bg-slate-900/90 p-5 rounded-xl border border-slate-800 mb-6">
-                        <h3 class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-3">Matriz Final de Conformidade Por Eixo</h3>
-                        <div class="grid md:grid-cols-5 gap-3 text-xs">
-                            <div class="bg-slate-950 p-3 rounded border border-slate-800 text-center">
-                                <span class="text-slate-400 block mb-1 font-semibold">1. Eixo Legal</span>
-                                <strong class="text-emerald-400 font-bold">✅ 100% Aprovado</strong>
-                            </div>
-                            <div class="bg-slate-950 p-3 rounded border border-slate-800 text-center">
-                                <span class="text-slate-400 block mb-1 font-semibold">2. Eixo Dados</span>
-                                <strong class="text-emerald-400 font-bold">✅ 100% Aprovado</strong>
-                            </div>
-                            <div class="bg-slate-950 p-3 rounded border border-slate-800 text-center">
-                                <span class="text-slate-400 block mb-1 font-semibold">3. Eixo Operacional</span>
-                                <strong class="text-emerald-400 font-bold">✅ 100% Aprovado</strong>
-                            </div>
-                            <div class="bg-slate-950 p-3 rounded border border-slate-800 text-center">
-                                <span class="text-slate-400 block mb-1 font-semibold">4. Eixo Geográfico</span>
-                                <strong class="text-emerald-400 font-bold">✅ 100% Aprovado</strong>
-                            </div>
-                            <div class="bg-slate-950 p-3 rounded border border-slate-800 text-center">
-                                <span class="text-slate-400 block mb-1 font-semibold">5. Eixo ABNT</span>
-                                <strong class="text-emerald-400 font-bold">✅ 100% Aprovado</strong>
-                            </div>
-                        </div>
-                    </div>
-
-                    <p class="text-xs text-slate-300 leading-relaxed">
-                        O pacote normativo-tecnológico do SEINUC/PA encerrou todas as etapas de revisão jurídica e técnica. O dossiê encontra-se pronto para emissão do parecer conclusivo da <strong class="text-white">Procuradoria-Geral do Estado do Pará (PGE/PA)</strong> e abertura de consulta pública junto à <strong class="text-white">FAMEP</strong>.
+                    <p class="text-xs text-slate-300 leading-relaxed mb-6">
+                        A força-tarefa finalizou o conjunto completo de 5 produtos normativos e especificações técnicas necessárias para a imediata implementação do SEINUC/PA. Os documentos estão disponíveis em formato Word (.docx) rigorosamente padronizados conforme as normas ABNT NBR 14724:2023 e a Lei Complementar nº 95/1998:
                     </p>
+
+                    <div class="grid md:grid-cols-5 gap-3 text-xs">
+                        <a href="producao/docs/docx/minuta-decreto-seinuc.docx" class="bg-slate-950 p-3 rounded border border-slate-800 text-center hover:border-sky-500 transition-colors block">
+                            <i class="fa-solid fa-file-word text-sky-400 text-xl mb-2"></i>
+                            <span class="text-slate-200 font-bold block mb-1">1. Minuta de Decreto</span>
+                            <span class="text-[10px] text-slate-500">Regulamentação Legal</span>
+                        </a>
+
+                        <a href="producao/docs/docx/especificacao-modulos-dados-seinuc.docx" class="bg-slate-950 p-3 rounded border border-slate-800 text-center hover:border-emerald-500 transition-colors block">
+                            <i class="fa-solid fa-file-word text-emerald-400 text-xl mb-2"></i>
+                            <span class="text-slate-200 font-bold block mb-1">2. Especificação Dados</span>
+                            <span class="text-[10px] text-slate-500">Schema & 4 Módulos</span>
+                        </a>
+
+                        <a href="producao/docs/docx/minuta-portaria-diretrizes-tecnicas.docx" class="bg-slate-950 p-3 rounded border border-slate-800 text-center hover:border-purple-500 transition-colors block">
+                            <i class="fa-solid fa-file-word text-purple-400 text-xl mb-2"></i>
+                            <span class="text-slate-200 font-bold block mb-1">3. Portaria Conjunta</span>
+                            <span class="text-[10px] text-slate-500">SEMAS / IDEFLOR</span>
+                        </a>
+
+                        <a href="producao/docs/docx/manual-fluxo-envio-e-triagem.docx" class="bg-slate-950 p-3 rounded border border-slate-800 text-center hover:border-amber-500 transition-colors block">
+                            <i class="fa-solid fa-file-word text-amber-400 text-xl mb-2"></i>
+                            <span class="text-slate-200 font-bold block mb-1">4. Manual do Usuário</span>
+                            <span class="text-[10px] text-slate-500">Triagem & Habilitação</span>
+                        </a>
+
+                        <a href="producao/docs/docx/especificacao-portal-transparencia-ogc.docx" class="bg-slate-950 p-3 rounded border border-slate-800 text-center hover:border-teal-500 transition-colors block">
+                            <i class="fa-solid fa-file-word text-teal-400 text-xl mb-2"></i>
+                            <span class="text-slate-200 font-bold block mb-1">5. Especificação WebGIS</span>
+                            <span class="text-[10px] text-slate-500">Portal & OGC</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -677,12 +681,8 @@
         const folders = document.querySelectorAll('.folder');
 
         function handleScroll() {
-            const scrollTop = window.scrollY;
-            const triggerPoint = 100;
-
             folders.forEach((folder, index) => {
                 const rect = folder.getBoundingClientRect();
-                // Check relative position to apply subtle scale / shadow effect
                 if (rect.top <= (100 + index * 48) && rect.top > 50) {
                     folder.style.transform = 'scale(1)';
                 } else if (rect.top < 50) {
