@@ -1,37 +1,67 @@
 # EPIC2-T6: Estruturar Módulo de Gestão e Socioeconomia (Quadro III)
 
 **Status:** Em Aberto  
-**Responsável:** Analista Socioambiental  
+**Responsável:** Analista Socioambiental / Gestão Pública  
 **Base Legal:** Art. 67, §2º, IV, Art. 112 e Art. 114 da Lei PA nº 10.306/2023 | Art. 3º, III e IV da Minuta do Decreto SEINUC/PA
 
 ---
 
 ## 1. Escopo do Módulo de Gestão e Socioeconomia
 
-Estruturação das informações administrativas, instrumentos de governança, conselho gestor, sustentabilidade financeira, integração social e acompanhamento de adequação de UCs legadas.
+Estruturação da especificação técnica, dicionário de dados de atributos, controle de conselhos, planos de manejo, receitas de uso público e rastreamento de readequação de categorias de UCs legadas.
 
 ---
 
-## 2. Subtarefas de Execução
+## 2. Dicionário de Dados do Módulo de Gestão (Quadro III)
 
-### Subtarefa 1: Conselho Gestor e Governança
-* **Tipo de Conselho:** Consultivo ou Deliberativo.
-* **Ato de Criação do Conselho:** Número da Portaria/Decreto de instituição.
-* **Composição:** Quantitativo de representantes do Poder Público e da Sociedade Civil (paridade).
-* **Frequência de Reuniões:** Quantitativo de reuniões ordinárias e extraordinárias realizadas no ano-base (mínimo exigido: 2 por ano).
+| Campo | Nome Técnico (ID) | Tipo de Dado | Obrigatório | Regra de Validação / Descrição |
+| :--- | :--- | :---: | :---: | :--- |
+| **Identificador da UC** | `uc_id` | Número (Inteiro) | Sim | Chave primária vinculada ao cadastro da UC. |
+| **Possui Conselho Gestor** | `conselho_status` | Booleano (Sim/Não) | Sim | Indica a existência formal de Conselho Gestor. |
+| **Tipo de Conselho** | `conselho_tipo` | Enum (Texto) | Não | `Consultivo`, `Deliberativo`. |
+| **Ato de Criação do Conselho** | `conselho_ato_legal` | Texto (Livre) | Não | Número da Portaria/Decreto de criação do conselho. |
+| **Reuniões no Ano-Base** | `conselho_reunioes_qtd` | Número (Inteiro) | Não | Quantitativo de reuniões ordinárias/extraordinárias realizadas. Exigido mínimo de 2 reuniões comprovadas por ata. |
+| **Possui Plano de Manejo** | `plano_manejo_status` | Enum (Texto) | Sim | `Não Iniciado`, `Em Elaboração`, `Aprovado e Vigente`, `Em Revisão`. |
+| **Ato de Aprovação do Plano** | `plano_manejo_ato` | Texto (Livre) | Não | Portaria/Decreto de aprovação do Plano de Manejo. |
+| **Data de Aprovação** | `plano_manejo_data` | Data (DD/MM/AAAA) | Não | Data da publicação do ato de aprovação. |
+| **Status de UC Legada** | `legada_status` | Enum (Texto) | Sim | `Conforme Lei 10.306/2023`, `Sítio Pesqueiro em Adequação (Art. 112)`, `UC Criada em Legislação Anterior em Reavaliação (Art. 114)`. |
+| **Visitantes Anuais** | `visitantes_qtd` | Número (Inteiro) | Não | Estimativa ou contagem oficial de visitantes no ano-base. |
+| **Receita de Uso Público** | `receita_arrecadada_brl` | Número (Decimal) | Não | Valor total arrecadado em R$ com bilheteria, serviços ou concessões. |
+| **Comunidades Residentes** | `comunidades_tradicionais_qtd` | Número (Inteiro) | Não | Quantitativo de famílias de populações tradicionais residentes no interior ou Zona de Amortecimento. |
 
-### Subtarefa 2: Plano de Manejo e Adequação de Categoria Legada (Art. 112 / 114)
-* **Status do Plano de Manejo:** Não Iniciado, Em Elaboração, Aprovado e Vigente, Em Revisão.
-* **Alerta de Revisão Quinquenal:** Mecanismo automático de aviso aos 5 anos de aprovação.
-* **Status de Adequação de Categoria Legada (Lei PA nº 10.306/2023):**
-  * *Sítios Pesqueiros (Art. 112):* Rastreamento da readequação para a categoria de Reserva Estadual de Pesca (prazo legal: 2 anos).
-  * *UCs Criadas em Legislações Anteriores (Art. 114):* Acompanhamento da reavaliação e readequação de categoria (prazo legal: 5 anos).
+---
 
-### Subtarefa 3: Gestão de RPPNs
-* Cadastro de Portaria de Reconhecimento pelo IDEFLOR-Bio ou órgão municipal.
-* Registro de Termo de Compromisso e Plano de Manejo simplificado para RPPNs.
+## 3. Esquema JSON de Validação (JSON Schema)
 
-### Subtarefa 4: Uso Público, Turismo e Socioeconomia
-* **Estimativa de Visitantes Anuais:** Quantitativo total de uso público.
-* **Arrecadação Financeira:** Bilheteria, serviços, concessões ou compensação ambiental.
-* **Comunidades Tradicionais e Extrativismo:** Quantitativo de famílias e instrumentos de uso (Acordo de Gestão, Termo de Compromisso, CDRU).
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ModuloGestaoESocioeconomia",
+  "type": "object",
+  "required": ["uc_id", "conselho_status", "plano_manejo_status", "legada_status"],
+  "properties": {
+    "uc_id": { "type": "integer" },
+    "conselho_status": { "type": "boolean" },
+    "conselho_tipo": { "type": "string", "enum": ["Consultivo", "Deliberativo"] },
+    "conselho_ato_legal": { "type": "string" },
+    "conselho_reunioes_qtd": { "type": "integer", "minimum": 0 },
+    "plano_manejo_status": {
+      "type": "string",
+      "enum": ["Não Iniciado", "Em Elaboração", "Aprovado e Vigente", "Em Revisão"]
+    },
+    "plano_manejo_ato": { "type": "string" },
+    "plano_manejo_data": { "type": "string" },
+    "legada_status": {
+      "type": "string",
+      "enum": [
+        "Conforme Lei 10.306/2023",
+        "Sítio Pesqueiro em Adequação (Art. 112)",
+        "UC Criada em Legislação Anterior em Reavaliação (Art. 114)"
+      ]
+    },
+    "visitantes_qtd": { "type": "integer", "minimum": 0 },
+    "receita_arrecadada_brl": { "type": "number", "minimum": 0 },
+    "comunidades_tradicionais_qtd": { "type": "integer", "minimum": 0 }
+  }
+}
+```

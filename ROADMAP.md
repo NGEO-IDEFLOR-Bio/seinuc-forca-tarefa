@@ -7,20 +7,20 @@ Este documento apresenta a trajetória cronológica e sequencial para o desenvol
 ## Visão Geral das Fases
 
 ```
-[FASE 1: BASE REGULAMENTAR] 🟢 (Concluído)
+[FASE 1: BASE REGULAMENTAR] 🟢 (Concluído - 100%)
 Decreto Regulamentador (T1), Ciclo Anual (T2) e Governança Recursal (T10)
        │
        ▼
-[FASE 2: ARQUITETURA DE DADOS] 🟡 (Em Andamento)
-Módulos de Dados: Ambiental (T4), Geo/Fundiário (T5) e Gestão (T6)
+[FASE 2: ARQUITETURA DE DADOS] 🟢 (Concluído - 100%)
+Módulos de Dados: Ambiental (T4), Geo/Fundiário (T5), Gestão (T6) e Integração (T7)
        │
        ▼
-[FASE 3: ESTEIRA OPERACIONAL] ⚪ (Pendente)
+[FASE 3: ESTEIRA OPERACIONAL] 🟡 (Em Andamento)
 Portaria Técnica (T3), Protocolo de Envio (T8) e Checklist de Triagem (T9)
        │
        ▼
 [FASE 4: TRANSPARÊNCIA E SERVIÇOS] ⚪ (Pendente)
-Portal do SEINUC, Geoserviços OGC (T11) e Relatório Quadrienal (T12)
+Portal do SEINUC e Geoserviços OGC (T11)
 ```
 
 ---
@@ -40,20 +40,21 @@ Portal do SEINUC, Geoserviços OGC (T11) e Relatório Quadrienal (T12)
 ---
 
 ### Fase 2: Arquitetura e Dicionário de Dados dos Módulos
-**Status:** Em Andamento (0% de 3 tarefas)  
-**Objetivo:** Especificar o Dicionário de Dados, esquemas JSON e regras de validação dos 4 Módulos do SEINUC/PA.
+**Status:** Concluído (100%)  
+**Objetivo:** Especificar o Dicionário de Dados, esquemas JSON e regras de validação dos Módulos do SEINUC/PA com base nos padrões oficiais do IDEFLOR-Bio.
 
-* [ ] **Milestone 2.1 (Próximo Passo):** Módulo I - Caracterização Ambiental e Biodiversidade ([`EPIC2-T4.md`](tarefas/EPIC2-T4.md))
-* [ ] **Milestone 2.2:** Módulo II - Georreferenciamento, Fundiário e RPPNs ([`EPIC2-T5.md`](tarefas/EPIC2-T5.md))
-* [ ] **Milestone 2.3:** Módulo III - Gestão, Socioeconomia e UCs Legadas ([`EPIC2-T6.md`](tarefas/EPIC2-T6.md))
+* [x] **Milestone 2.1:** Módulo I - Caracterização Ambiental e Biodiversidade ([`EPIC2-T4.md`](tarefas/EPIC2-T4.md)) — `T4`
+* [x] **Milestone 2.2:** Módulo II - Georreferenciamento, Fundiário e RPPNs ([`EPIC2-T5.md`](tarefas/EPIC2-T5.md)) — `T5`
+* [x] **Milestone 2.3:** Módulo III - Gestão, Socioeconomia e UCs Legadas ([`EPIC2-T6.md`](tarefas/EPIC2-T6.md)) — `T6`
+* [x] **Milestone 2.4:** Protocolo de Integração CNUC, ITERPA e SEMAS ([`EPIC2-T7.md`](tarefas/EPIC2-T7.md)) — `T7`
 
 ---
 
 ### Fase 3: Regras Técnicas, Envio e Triagem
-**Status:** Pendente  
+**Status:** Em Andamento (0% de 3 tarefas)  
 **Objetivo:** Traduzir os módulos de dados em minuta de Portaria Técnica e instrumentos formais de recebimento e triagem.
 
-* [ ] **Milestone 3.1:** Minuta da Portaria de Diretrizes Técnicas ([`EPIC1-T3.md`](tarefas/EPIC1-T3.md))
+* [ ] **Milestone 3.1 (Próximo Passo):** Minuta da Portaria de Diretrizes Técnicas ([`EPIC1-T3.md`](tarefas/EPIC1-T3.md))
 * [ ] **Milestone 3.2:** Protocolo Digital de Transmissão, Nomenclatura e FTP ([`EPIC3-T8.md`](tarefas/EPIC3-T8.md))
 * [ ] **Milestone 3.3:** Checklist de Triagem e Ficha de Admissibilidade Formal ([`EPIC3-T9.md`](tarefas/EPIC3-T9.md))
 

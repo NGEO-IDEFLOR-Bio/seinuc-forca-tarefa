@@ -25,17 +25,17 @@ Este repositório contém o planejamento, a estrutura normativa e a arquitetura 
 **Objetivo:** Estruturar as fichas, formulários e padrões geográficos do sistema, assegurando conformidade com a legislação estadual e integração com sistemas parceiros (CNUC, ITERPA e SEMAS).
 
 ### Critérios de Conclusão (DoD):
-1. **Módulo Ambiental (Quadro I):** Estrutura de campos para dados bióticos (fauna, flora) e abióticos (hidrologia, solos, clima).
-2. **Módulo Georreferenciado e Fundiário (Quadro II):** Requisitos cartográficos (SIRGAS 2000), limites, situação dominial e RPPNs.
-3. **Módulo de Gestão e Socioeconomia (Quadro III):** Cadastro de Conselhos Gestores, Planos de Manejo, visitação e rastreamento de UCs legadas.
-4. **Mapa de Integração CNUC, ITERPA e SEMAS [Concluído]:** Protocolo de exportação e repasse trienal regulamentado (Arts. 10 e 11 do Decreto).
+1. **Módulo Ambiental (Quadro I) [Concluído]:** Estrutura de campos para dados bióticos, abióticos, espécies ameaçadas e exóticas ([EPIC2-T4.md](tarefas/EPIC2-T4.md)).
+2. **Módulo Georreferenciado e Fundiário (Quadro II) [Concluído]:** Atributos oficiais do Shapefile do IDEFLOR-Bio (SIRGAS 2000), dominialidade e RPPNs ([EPIC2-T5.md](tarefas/EPIC2-T5.md)).
+3. **Módulo de Gestão e Socioeconomia (Quadro III) [Concluído]:** Cadastro de Conselhos, Planos de Manejo, visitação e rastreamento de UCs legadas ([EPIC2-T6.md](tarefas/EPIC2-T6.md)).
+4. **Mapa de Integração CNUC, ITERPA e SEMAS [Concluído]:** Protocolo de exportação e repasse trienal regulamentado ([EPIC2-T7.md](tarefas/EPIC2-T7.md)).
 
 ### Lista de Tarefas
 | ID | Tarefa | Status | Documento de Trabalho |
 | :--- | :--- | :---: | :--- |
-| **T4** | Estruturar Módulo de Caracterização Ambiental | Em Aberto | [EPIC2-T4.md](tarefas/EPIC2-T4.md) |
-| **T5** | Estruturar Módulo de Georreferenciamento e Fundiário | Em Aberto | [EPIC2-T5.md](tarefas/EPIC2-T5.md) |
-| **T6** | Estruturar Módulo de Gestão e Socioeconomia | Em Aberto | [EPIC2-T6.md](tarefas/EPIC2-T6.md) |
+| **T4** | Estruturar Módulo de Caracterização Ambiental | Concluído | [EPIC2-T4.md](tarefas/EPIC2-T4.md) |
+| **T5** | Estruturar Módulo de Georreferenciamento e Fundiário | Concluído | [EPIC2-T5.md](tarefas/EPIC2-T5.md) |
+| **T6** | Estruturar Módulo de Gestão e Socioeconomia | Concluído | [EPIC2-T6.md](tarefas/EPIC2-T6.md) |
 | **T7** | Definir Protocolo de Integração com o CNUC, ITERPA e SEMAS | Concluído | [EPIC2-T7.md](tarefas/EPIC2-T7.md) |
 
 ---
@@ -46,7 +46,7 @@ Este repositório contém o planejamento, a estrutura normativa e a arquitetura 
 ### Critérios de Conclusão (DoD):
 1. **Protocolo de Envio e Nomenclatura:** Padrão de transmissão digital, nomeação de arquivos e recibos de protocolo.
 2. **Checklist de Triagem (Admissibilidade):** Critérios formais eliminatórios para aceitação prévia de documentos.
-3. **Fase de Análise Técnica e Recursos [Concluído]:** Regras para atribuição de notas, ressalvas, Comissão Técnica (CT-SEINUC) e prazo recursal de 15 dias (Capítulo IV do Decreto).
+3. **Fase de Análise Técnica e Recursos [Concluído]:** Regras para atribuição de notas, ressalvas, Comissão Técnica (CT-SEINUC) e prazo recursal de 15 dias ([EPIC3-T10.md](tarefas/EPIC3-T10.md)).
 
 ### Lista de Tarefas
 | ID | Tarefa | Status | Documento de Trabalho |
@@ -61,8 +61,8 @@ Este repositório contém o planejamento, a estrutura normativa e a arquitetura 
 **Objetivo:** Regulamentar a publicidade dos dados no Portal SEINUC, a integração cartográfica oficial e a prestação de contas periódica.
 
 ### Critérios de Conclusão (DoD):
-1. **Portal de Transparência do SEINUC e Geoserviços:** Diretrizes de publicação pública e serviços OGC (WMS/WFS) para a Cartografia Oficial do Estado (Art. 12 do Decreto).
-2. **Relatórios de Efetividade da Gestão [Concluído]:** Regulamentação do relatório anual e do relatório quadrienal de efetividade da gestão (Art. 17 do Decreto e Art. 113 da Lei nº 10.306/2023).
+1. **Portal de Transparência do SEINUC e Geoserviços:** Diretrizes de publicação pública e serviços OGC (WMS/WFS) para a Cartografia Oficial do Estado.
+2. **Relatórios de Efetividade da Gestão [Concluído]:** Regulamentação do relatório anual e do relatório quadrienal de efetividade da gestão ([EPIC4-T12.md](tarefas/EPIC4-T12.md)).
 
 ### Lista de Tarefas
 | ID | Tarefa | Status | Documento de Trabalho |
