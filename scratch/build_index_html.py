@@ -644,7 +644,7 @@ html_content = '''<!DOCTYPE html>
                     <span class="text-[11px] text-slate-500">Governo do Estado do Pará • SEINUC/PA 2026</span>
                 </div>
                 <div class="text-[11px] text-slate-500">
-                    Desenvolvido pela Força-Tarefa de Geotecnologias (NGEO/IDEFLOR-Bio)
+                    Desenvolvido pelo Núcleo de Geotecnologias (NGEO/IDEFLOR-Bio)
                 </div>
             </div>
         </div>
