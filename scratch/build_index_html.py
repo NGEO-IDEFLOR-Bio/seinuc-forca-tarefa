@@ -424,7 +424,7 @@ html_content = '''<!DOCTYPE html>
                     <div class="grid lg:grid-cols-4 gap-4 mb-6">
                         <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
                             <div class="text-emerald-400 font-bold text-xs uppercase mb-2 flex items-center">
-                                <i class="fa-solid fa-passport mr-2"></i> Módulo A: Cadastral
+                                <i class="fa-solid fa-passport mr-2"></i> Cadastro & Atos Legais
                             </div>
                             <p class="text-[11px] text-slate-300 leading-relaxed">
                                 Registro dos atos legais de criação, alteração e recategorização no DOE, dados do órgão gestor e tipologia do SNUC/SEUC.
@@ -433,7 +433,7 @@ html_content = '''<!DOCTYPE html>
 
                         <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
                             <div class="text-emerald-400 font-bold text-xs uppercase mb-2 flex items-center">
-                                <i class="fa-solid fa-map-location-dot mr-2"></i> Módulo B: Geotecnologias
+                                <i class="fa-solid fa-map-location-dot mr-2"></i> Geotecnologias & Zonas de Amortecimento
                             </div>
                             <p class="text-[11px] text-slate-300 leading-relaxed">
                                 Geometrias oficiais em SIRGAS 2000, polígonos das UCs, Zonas de Amortecimento (ZA), zoneamento interno e mosaicos.
@@ -442,7 +442,7 @@ html_content = '''<!DOCTYPE html>
 
                         <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
                             <div class="text-emerald-400 font-bold text-xs uppercase mb-2 flex items-center">
-                                <i class="fa-solid fa-users-gear mr-2"></i> Módulo C: Gestão
+                                <i class="fa-solid fa-users-gear mr-2"></i> Gestão & Conselhos
                             </div>
                             <p class="text-[11px] text-slate-300 leading-relaxed">
                                 Planos de Gestão vigentes, histórico de reuniões e atas dos Conselhos Gestores, pesquisas e gestão antropológica.
@@ -451,7 +451,7 @@ html_content = '''<!DOCTYPE html>
 
                         <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
                             <div class="text-emerald-400 font-bold text-xs uppercase mb-2 flex items-center">
-                                <i class="fa-solid fa-coins mr-2"></i> Módulo D: ICMS Ecológico
+                                <i class="fa-solid fa-coins mr-2"></i> Repasse ICMS Ecológico (IGUC)
                             </div>
                             <p class="text-[11px] text-slate-300 leading-relaxed">
                                 Matriz de indicadores socioambientais e cálculo automatizado do Índice de Gestão de UC (IGUC) para repasse aos municípios.
