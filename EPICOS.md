@@ -8,7 +8,7 @@ Este repositório contém o planejamento, a estrutura normativa e a arquitetura 
 **Objetivo:** Estabelecer o arcabouço legal, os cronogramas operacionais e as diretrizes técnicas para o funcionamento oficial do SEINUC/PA.
 
 ### Critérios de Conclusão (DoD):
-1. **Minuta do Decreto Regulamentador [Concluído]:** Texto legal regulamentando a governança, eixos, rito recursal e integração do SEINUC ([minuta-decreto-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md)).
+1. **Minuta do Decreto Regulamentador [Concluído]:** Texto legal regulamentando a governança, eixos, rito recursal e integração do SEINUC ([`minuta-decreto-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md)).
 2. **Ciclo Anual de Gestão [Concluído]:** Definição dos prazos operacionais para o Ano-Base, Ano de Exercício e publicação do ICMS Ecológico (Arts. 4º, 5º, 7º, 8º e 9º do Decreto).
 3. **Minuta da Portaria Técnica:** Diretrizes formais de apresentação (PDF/Shapefile), checklists e modelos de declaração de veracidade.
 
@@ -25,18 +25,18 @@ Este repositório contém o planejamento, a estrutura normativa e a arquitetura 
 **Objetivo:** Estruturar as fichas, formulários e padrões geográficos do sistema, assegurando conformidade com a legislação estadual e integração com sistemas parceiros (CNUC, ITERPA e SEMAS).
 
 ### Critérios de Conclusão (DoD):
-1. **Módulo Ambiental (Quadro I) [Concluído]:** Estrutura de campos para dados bióticos, abióticos, espécies ameaçadas e exóticas ([EPIC2-T4.md](tarefas/EPIC2-T4.md)).
-2. **Módulo Georreferenciado e Fundiário (Quadro II) [Concluído]:** Atributos oficiais do Shapefile do IDEFLOR-Bio (SIRGAS 2000), dominialidade e RPPNs ([EPIC2-T5.md](tarefas/EPIC2-T5.md)).
-3. **Módulo de Gestão e Socioeconomia (Quadro III) [Concluído]:** Cadastro de Conselhos, Planos de Manejo, visitação e rastreamento de UCs legadas ([EPIC2-T6.md](tarefas/EPIC2-T6.md)).
-4. **Mapa de Integração CNUC, ITERPA e SEMAS [Concluído]:** Protocolo de exportação e repasse trienal regulamentado ([EPIC2-T7.md](tarefas/EPIC2-T7.md)).
+1. **Módulo Ambiental (Quadro I) [Concluído]:** Estrutura de campos para dados bióticos, abióticos, espécies ameaçadas e exóticas ([`especificacao-modulos-dados-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md)).
+2. **Módulo Georreferenciado e Fundiário (Quadro II) [Concluído]:** Atributos oficiais do Shapefile do IDEFLOR-Bio (SIRGAS 2000), dominialidade e RPPNs ([`especificacao-modulos-dados-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md)).
+3. **Módulo de Gestão e Socioeconomia (Quadro III) [Concluído]:** Cadastro de Conselhos, Planos de Manejo, visitação e rastreamento de UCs legadas ([`especificacao-modulos-dados-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md)).
+4. **Mapa de Integração CNUC, ITERPA e SEMAS [Concluído]:** Protocolo de exportação e repasse trienal regulamentado ([`especificacao-modulos-dados-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md)).
 
 ### Lista de Tarefas
-| ID | Tarefa | Status | Documento de Trabalho |
+| ID | Tarefa | Status | Documento de Trabalho / Produto Oficial |
 | :--- | :--- | :---: | :--- |
-| **T4** | Estruturar Módulo de Caracterização Ambiental | Concluído | [EPIC2-T4.md](tarefas/EPIC2-T4.md) |
-| **T5** | Estruturar Módulo de Georreferenciamento e Fundiário | Concluído | [EPIC2-T5.md](tarefas/EPIC2-T5.md) |
-| **T6** | Estruturar Módulo de Gestão e Socioeconomia | Concluído | [EPIC2-T6.md](tarefas/EPIC2-T6.md) |
-| **T7** | Definir Protocolo de Integração com o CNUC, ITERPA e SEMAS | Concluído | [EPIC2-T7.md](tarefas/EPIC2-T7.md) |
+| **T4** | Estruturar Módulo de Caracterização Ambiental | Concluído | [especificacao-modulos-dados-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md) |
+| **T5** | Estruturar Módulo de Georreferenciamento e Fundiário | Concluído | [especificacao-modulos-dados-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md) |
+| **T6** | Estruturar Módulo de Gestão e Socioeconomia | Concluído | [especificacao-modulos-dados-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md) |
+| **T7** | Definir Protocolo de Integração com o CNUC, ITERPA e SEMAS | Concluído | [especificacao-modulos-dados-seinuc.md](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/especificacao-modulos-dados-seinuc.md) |
 
 ---
 
@@ -46,7 +46,7 @@ Este repositório contém o planejamento, a estrutura normativa e a arquitetura 
 ### Critérios de Conclusão (DoD):
 1. **Protocolo de Envio e Nomenclatura:** Padrão de transmissão digital, nomeação de arquivos e recibos de protocolo.
 2. **Checklist de Triagem (Admissibilidade):** Critérios formais eliminatórios para aceitação prévia de documentos.
-3. **Fase de Análise Técnica e Recursos [Concluído]:** Regras para atribuição de notas, ressalvas, Comissão Técnica (CT-SEINUC) e prazo recursal de 15 dias ([EPIC3-T10.md](tarefas/EPIC3-T10.md)).
+3. **Fase de Análise Técnica e Recursos [Concluído]:** Regras para atribuição de notas, ressalvas, Comissão Técnica (CT-SEINUC) e prazo recursal de 15 dias ([`minuta-decreto-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md)).
 
 ### Lista de Tarefas
 | ID | Tarefa | Status | Documento de Trabalho |
@@ -62,7 +62,7 @@ Este repositório contém o planejamento, a estrutura normativa e a arquitetura 
 
 ### Critérios de Conclusão (DoD):
 1. **Portal de Transparência do SEINUC e Geoserviços:** Diretrizes de publicação pública e serviços OGC (WMS/WFS) para a Cartografia Oficial do Estado.
-2. **Relatórios de Efetividade da Gestão [Concluído]:** Regulamentação do relatório anual e do relatório quadrienal de efetividade da gestão ([EPIC4-T12.md](tarefas/EPIC4-T12.md)).
+2. **Relatórios de Efetividade da Gestão [Concluído]:** Regulamentação do relatório anual e do relatório quadrienal de efetividade da gestão ([`minuta-decreto-seinuc.md`](file:///H:/Meu%20Drive/IDEFLOR/SEINUC/producao/docs/minuta-decreto-seinuc.md)).
 
 ### Lista de Tarefas
 | ID | Tarefa | Status | Documento de Trabalho |
